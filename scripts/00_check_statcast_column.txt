@@ -1,0 +1,95 @@
+"""
+Zeigt alle verfügbaren Spalten in Statcast-Daten
+Nutzung: python script.py
+"""
+
+from pybaseball import statcast
+import pandas as pd
+
+print("="*80)
+print("STATCAST SPALTEN-ÜBERSICHT")
+print("="*80)
+
+# Lade Beispiel-Daten (1 Tag)
+print("\n📥 Lade Statcast-Daten (1 Tag als Beispiel)...")
+print("Datum: 2024-05-15\n")
+
+df = statcast(start_dt='2024-05-15', end_dt='2024-05-15')
+
+print(f"✅ Daten geladen!")
+print(f"Anzahl Zeilen (Pitches): {len(df):,}")
+print(f"Anzahl Spalten: {len(df.columns)}")
+
+print("\n" + "="*80)
+print("ALLE VERFÜGBAREN SPALTEN:")
+print("="*80 + "\n")
+
+for i, col in enumerate(df.columns, 1):
+    print(f"  {i:3d}. {col}")
+
+# Suche nach relevanten Keywords
+print("\n" + "="*80)
+print("🔍 SUCHE NACH BASERUNNING-SPALTEN:")
+print("="*80)
+
+keywords = ['lead', 'runner', 'steal', 'secondary', 'base', 'sprint', 'speed']
+
+found_any = False
+for keyword in keywords:
+    matching_cols = [c for c in df.columns if keyword in c.lower()]
+    if matching_cols:
+        found_any = True
+        print(f"\n'{keyword}' im Namen:")
+        for col in matching_cols:
+            print(f"  ✅ {col}")
+
+if not found_any:
+    print("\n❌ KEINE Spalten mit baserunning keywords gefunden!")
+
+# Zeige Beispiel-Daten
+print("\n" + "="*80)
+print("📋 BEISPIEL: Erste 3 Zeilen (wichtigste Spalten)")
+print("="*80 + "\n")
+
+important_cols = [c for c in [
+    'game_date', 'player_name', 'pitcher', 'batter', 'events', 
+    'description', 'pitch_type', 'release_speed', 'on_1b', 'on_2b', 'on_3b',
+    'outs_when_up', 'balls', 'strikes', 'inning'
+] if c in df.columns]
+
+print(df[important_cols].head(3).to_string(index=False))
+
+# Speichere komplette Spaltenliste
+output_file = "statcast_columns.txt"
+with open(output_file, 'w', encoding='utf-8') as f:
+    f.write("STATCAST SPALTEN\n")
+    f.write("="*80 + "\n\n")
+    for i, col in enumerate(df.columns, 1):
+        f.write(f"{i:3d}. {col}\n")
+
+print(f"\n\n💾 Spaltenliste gespeichert: {output_file}")
+
+# Zusammenfassung
+print("\n" + "="*80)
+print("ZUSAMMENFASSUNG")
+print("="*80)
+print(f"""
+✅ Statcast Pitch-by-Pitch Daten haben {len(df.columns)} Spalten
+
+Diese Daten enthalten:
+  • Pitch-Details (speed, type, spin_rate, location)
+  • Batter/Pitcher/Game Kontext
+  • Baserunner auf Basen (on_1b, on_2b, on_3b)
+  • Events (stolen_base_2b, caught_stealing_2b in 'events' Spalte)
+  
+❌ NICHT enthalten (NUR auf Baseball Savant Website):
+  • Lead Distance (primärer Lead)
+  • Secondary Lead (Secondary Lead)
+  • Diese Metriken gibt es nur als Saison-Aggregat, nicht pro Pitch
+  
+💡 Für Lead Distance:
+   → Manuell von https://baseballsavant.mlb.com/leaderboard/lead-distance
+   → Oder Scraping mit pandas.read_html()
+""")
+
+print("\n" + "="*80)

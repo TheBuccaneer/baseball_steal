@@ -1,0 +1,1 @@
+Python 3.11, Pakete: pandas, numpy, statsmodels, linearmodels, pyjanitor, pyarrow, matplotlib, scikit-learn. Optional: polars, patsy.
