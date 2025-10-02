@@ -1,0 +1,249 @@
+game_id,runner_id,start_base,end_base,is_out,out_number,runner_event,runner_event_type,movement_reason,runner_scored
+778498,543760,,,True,1.0,Groundout,field_out,,False
+778498,608369,,,True,2.0,Flyout,field_out,,False
+778498,694671,,score,False,,Home Run,home_run,,True
+778498,592626,,2B,False,,Double,double,,False
+778498,666969,,,True,3.0,Groundout,field_out,,False
+778498,670770,,,True,1.0,Lineout,field_out,,False
+778498,680574,,,True,2.0,Groundout,field_out,,False
+778498,682829,,,True,3.0,Groundout,field_out,,False
+778498,669394,,,True,1.0,Strikeout,strikeout,,False
+778498,669701,,,True,2.0,Strikeout,strikeout,,False
+778498,543309,,,True,3.0,Pop Out,field_out,,False
+778498,666158,,,True,1.0,Groundout,field_out,,False
+778498,600869,,,True,2.0,Groundout,field_out,,False
+778498,669289,,,True,3.0,Groundout,field_out,,False
+778498,665750,,,True,1.0,Strikeout,strikeout,,False
+778498,543760,,,True,2.0,Groundout,field_out,,False
+778498,608369,,1B,False,,Walk,walk,,False
+778498,694671,,1B,False,,Single,single,,False
+778498,608369,1B,2B,False,,Single,single,r_adv_force,False
+778498,694671,1B,,True,3.0,Runner Out,other_out,r_out_stretching,False
+778498,641584,,,True,1.0,Strikeout,strikeout,,False
+778498,694362,,,True,2.0,Strikeout,strikeout,,False
+778498,642851,,,True,3.0,Strikeout,strikeout,,False
+778498,592626,,,True,1.0,Groundout,field_out,,False
+778498,666969,,,True,2.0,Flyout,field_out,,False
+778498,669394,,,True,3.0,Lineout,field_out,,False
+778498,670770,,,True,1.0,Strikeout,strikeout,,False
+778498,680574,,,True,2.0,Strikeout,strikeout,,False
+778498,682829,,,True,3.0,Groundout,field_out,,False
+778498,669701,,,True,1.0,Groundout,field_out,,False
+778498,543309,,1B,False,,Walk,walk,,False
+778498,665750,,,True,2.0,Pop Out,field_out,,False
+778498,543760,,,True,3.0,Strikeout,strikeout,,False
+778498,666158,,1B,False,,Single,single,,False
+778498,600869,,,True,1.0,Strikeout,strikeout,,False
+778498,666158,1B,,True,2.0,Grounded Into DP,grounded_into_double_play,r_force_out,False
+778498,669289,,,True,3.0,Grounded Into DP,grounded_into_double_play,,False
+778498,608369,,,True,1.0,Groundout,field_out,,False
+778498,694671,,,True,2.0,Flyout,field_out,,False
+778498,592626,,1B,False,,Hit By Pitch,hit_by_pitch,,False
+778498,666969,,,True,3.0,Strikeout,strikeout,,False
+778498,641584,,,True,1.0,Strikeout,strikeout,,False
+778498,694362,,,True,2.0,Groundout,field_out,,False
+778498,642851,,1B,False,,Single,single,,False
+778498,670770,,,True,3.0,Strikeout,strikeout,,False
+778498,669394,,,True,1.0,Groundout,field_out,,False
+778498,669701,,1B,False,,Single,single,,False
+778498,669701,1B,2B,False,,Walk,walk,r_adv_force,False
+778498,543309,,1B,False,,Walk,walk,,False
+778498,665750,,,True,2.0,Flyout,field_out,,False
+778498,543309,1B,,True,3.0,Forceout,force_out,r_force_out,False
+778498,543760,,1B,False,,Forceout,force_out,,False
+778498,680574,,1B,False,,Single,single,,False
+778498,682829,,,True,1.0,Groundout,field_out,,False
+778498,680574,1B,2B,False,,Groundout,field_out,r_adv_force,False
+778498,666158,,,True,2.0,Groundout,field_out,,False
+778498,680574,2B,3B,False,,Groundout,field_out,r_adv_play,False
+778498,600869,,,True,3.0,Flyout,field_out,,False
+778498,608369,,,True,1.0,Groundout,field_out,,False
+778498,694671,,,True,2.0,Flyout,field_out,,False
+778498,592626,,1B,False,,Walk,walk,,False
+778498,666969,,,True,3.0,Flyout,field_out,,False
+778498,669289,,,True,1.0,Groundout,field_out,,False
+778498,641584,,,True,2.0,Pop Out,field_out,,False
+778498,694362,,,True,3.0,Groundout,field_out,,False
+778498,669394,,,True,1.0,Strikeout,strikeout,,False
+778498,669701,,1B,False,,Field Error,field_error,,False
+778498,669701,1B,2B,False,,Stolen Base 2B,stolen_base_2b,r_stolen_base_2b,False
+778498,543309,,,True,2.0,Pop Out,field_out,,False
+778498,665750,,,True,3.0,Groundout,field_out,,False
+778498,674441,,1B,False,,Single,single,,False
+778498,674441,1B,,True,1.0,Forceout,force_out,r_force_out,False
+778498,670770,,1B,False,,Forceout,force_out,,False
+778498,680574,,,True,2.0,Lineout,field_out,,False
+778498,670770,1B,2B,False,,Wild Pitch,wild_pitch,r_adv_play,False
+778498,682829,,,True,3.0,Groundout,field_out,,False
+778497,596019,,,True,1.0,Groundout,field_out,,False
+778497,665742,,,True,2.0,Groundout,field_out,,False
+778497,624413,,,True,3.0,Groundout,field_out,,False
+778497,669364,,2B,False,,Double,double,,False
+778497,669065,,score,False,,Home Run,home_run,,True
+778497,669364,2B,score,False,,Home Run,home_run,r_adv_force,True
+778497,672640,,,True,1.0,Groundout,field_out,,False
+778497,670223,,,True,2.0,Groundout,field_out,,False
+778497,665052,,,True,3.0,Flyout,field_out,,False
+778497,607043,,score,False,,Home Run,home_run,,True
+778497,668901,,,True,1.0,Groundout,field_out,,False
+778497,608385,,,True,2.0,Strikeout,strikeout,,False
+778497,620443,,,True,3.0,Groundout,field_out,,False
+778497,681146,,,True,1.0,Strikeout,strikeout,,False
+778497,688363,,,True,2.0,Strikeout,strikeout,,False
+778497,667472,,1B,False,,Field Error,field_error,,False
+778497,667472,1B,,True,3.0,Caught Stealing 2B,caught_stealing_2b,r_caught_stealing_2b,False
+778497,682668,,2B,False,,Double,double,,False
+778497,642350,,,True,1.0,Groundout,field_out,,False
+778497,682668,2B,3B,False,,Groundout,field_out,r_adv_play,False
+778497,596019,,1B,False,,Single,single,,False
+778497,682668,3B,score,False,,Single,single,r_adv_play,True
+778497,665742,,,True,2.0,Lineout,field_out,,False
+778497,596019,1B,2B,False,,Stolen Base 2B,stolen_base_2b,r_stolen_base_2b,False
+778497,624413,,,True,3.0,Groundout,field_out,,False
+778497,663743,,,True,1.0,Strikeout,strikeout,,False
+778497,669364,,,True,2.0,Strikeout,strikeout,,False
+778497,669065,,,True,3.0,Strikeout,strikeout,,False
+778497,607043,,,True,1.0,Strikeout,strikeout,,False
+778497,668901,,,True,2.0,Groundout,field_out,,False
+778497,608385,,,True,3.0,Strikeout,strikeout,,False
+778497,672640,,1B,False,,Field Error,field_error,,False
+778497,670223,,,True,1.0,Strikeout,strikeout,,False
+778497,672640,1B,,True,2.0,Forceout,force_out,r_force_out,False
+778497,665052,,1B,False,,Forceout,force_out,,False
+778497,665052,1B,2B,False,,Walk,walk,r_adv_force,False
+778497,681146,,1B,False,,Walk,walk,,False
+778497,688363,,2B,False,,Double,double,,False
+778497,681146,1B,3B,False,,Double,double,r_adv_force,False
+778497,681146,3B,score,False,,Double,double,r_adv_play,True
+778497,665052,2B,score,False,,Double,double,r_adv_force,True
+778497,667472,,,True,3.0,Strikeout,strikeout,,False
+778497,620443,,,True,1.0,Strikeout,strikeout,,False
+778497,682668,,,True,2.0,Groundout,field_out,,False
+778497,642350,,,True,3.0,Flyout,field_out,,False
+778497,663743,,,True,1.0,Groundout,field_out,,False
+778497,669364,,,True,2.0,Groundout,field_out,,False
+778497,669065,,,True,3.0,Strikeout,strikeout,,False
+778497,596019,,,True,1.0,Strikeout,strikeout,,False
+778497,665742,,,True,2.0,Flyout,field_out,,False
+778497,624413,,,True,3.0,Groundout,field_out,,False
+778497,672640,,,True,1.0,Flyout,field_out,,False
+778497,670223,,,True,2.0,Groundout,field_out,,False
+778497,665052,,,True,3.0,Strikeout,strikeout,,False
+778497,607043,,,True,1.0,Strikeout,strikeout,,False
+778497,668901,,,True,2.0,Flyout,field_out,,False
+778497,608385,,1B,False,,Single,single,,False
+778497,620443,,,True,3.0,Flyout,field_out,,False
+778497,681146,,,True,1.0,Groundout,field_out,,False
+778497,688363,,,True,2.0,Flyout,field_out,,False
+778497,667472,,,True,3.0,Pop Out,field_out,,False
+778497,683146,,,True,1.0,Groundout,field_out,,False
+778497,642350,,,True,2.0,Groundout,field_out,,False
+778497,596019,,,True,3.0,Groundout,field_out,,False
+778497,663743,,,True,1.0,Groundout,field_out,,False
+778497,669364,,,True,2.0,Lineout,field_out,,False
+778497,669065,,,True,3.0,Groundout,field_out,,False
+778497,665742,,1B,False,,Walk,walk,,False
+778497,665742,1B,,True,1.0,Forceout,force_out,r_force_out,False
+778497,624413,,1B,False,,Forceout,force_out,,False
+778497,607043,,1B,False,,Single,single,,False
+778497,624413,1B,2B,False,,Single,single,r_adv_force,False
+778497,668901,,,True,2.0,Flyout,field_out,,False
+778497,608385,,,True,3.0,Groundout,field_out,,False
+778493,669261,,,True,1.0,Strikeout,strikeout,,False
+778493,668804,,,True,2.0,Flyout,field_out,,False
+778493,665833,,,True,3.0,Strikeout,strikeout,,False
+778493,650490,,1B,False,,Single,single,,False
+778493,650490,1B,2B,False,,Walk,walk,r_adv_force,False
+778493,664040,,1B,False,,Walk,walk,,False
+778493,691406,,,True,1.0,Flyout,field_out,,False
+778493,650490,2B,3B,False,,Flyout,field_out,r_adv_play,False
+778493,664040,1B,2B,False,,Flyout,field_out,r_adv_play,False
+778493,663968,,2B,False,,Double,double,,False
+778493,650490,3B,score,False,,Double,double,r_adv_play,True
+778493,664040,2B,3B,False,,Double,double,r_adv_force,False
+778493,664040,3B,score,False,,Double,double,r_adv_play,True
+778493,678554,,,True,2.0,Flyout,field_out,,False
+778493,670224,,1B,False,,Single,single,,False
+778493,670224,1B,2B,False,,Error,error,r_adv_play,False
+778493,663968,2B,score,False,,Error,error,r_adv_play,True
+778493,643376,,1B,False,,Walk,walk,,False
+778493,670764,,,True,3.0,Strikeout,strikeout,,False
+778493,663698,,,True,1.0,Strikeout,strikeout,,False
+778493,502054,,,True,2.0,Groundout,field_out,,False
+778493,665839,,,True,3.0,Strikeout,strikeout,,False
+778493,676356,,,True,1.0,Groundout,field_out,,False
+778493,650490,,,True,2.0,Groundout,field_out,,False
+778493,664040,,1B,False,,Single,single,,False
+778493,691406,,,True,3.0,Groundout,field_out,,False
+778493,663647,,1B,False,,Single,single,,False
+778493,663647,1B,,True,1.0,Grounded Into DP,grounded_into_double_play,r_force_out,False
+778493,669707,,,True,2.0,Grounded Into DP,grounded_into_double_play,,False
+778493,643396,,1B,False,,Single,single,,False
+778493,669261,,,True,3.0,Lineout,field_out,,False
+778493,663968,,1B,False,,Single,single,,False
+778493,663968,1B,2B,False,,Stolen Base 2B,stolen_base_2b,r_stolen_base_2b,False
+778493,678554,,1B,False,,Walk,walk,,False
+778493,663968,2B,3B,False,,Wild Pitch,wild_pitch,r_adv_play,False
+778493,678554,1B,2B,False,,Wild Pitch,wild_pitch,r_adv_play,False
+778493,670224,,,True,1.0,Sac Fly,sac_fly,,False
+778493,678554,2B,3B,False,,Sac Fly,sac_fly,r_adv_play,False
+778493,663968,3B,score,False,,Sac Fly,sac_fly,r_adv_play,True
+778493,643376,,,True,2.0,Pop Out,field_out,,False
+778493,670764,,,True,3.0,Strikeout,strikeout,,False
+778493,668804,,1B,False,,Single,single,,False
+778493,665833,,1B,False,,Single,single,,False
+778493,668804,1B,2B,False,,Single,single,r_adv_force,False
+778493,663698,,,True,1.0,Strikeout,strikeout,,False
+778493,665833,1B,,True,2.0,Grounded Into DP,grounded_into_double_play,r_force_out,False
+778493,502054,,,True,3.0,Grounded Into DP,grounded_into_double_play,,False
+778493,676356,,,True,1.0,Flyout,field_out,,False
+778493,650490,,1B,False,,Walk,walk,,False
+778493,664040,,score,False,,Home Run,home_run,,True
+778493,650490,1B,score,False,,Home Run,home_run,r_adv_force,True
+778493,691406,,1B,False,,Single,single,,False
+778493,663968,,,True,2.0,Groundout,field_out,,False
+778493,691406,1B,2B,False,,Groundout,field_out,r_adv_force,False
+778493,678554,,,True,3.0,Lineout,field_out,,False
+778493,665839,,,True,1.0,Strikeout,strikeout,,False
+778493,663647,,1B,False,,Single,single,,False
+778493,669707,,1B,False,,Single,single,,False
+778493,663647,1B,2B,False,,Single,single,r_adv_force,False
+778493,669707,1B,,True,2.0,Forceout,force_out,r_force_out,False
+778493,663647,2B,3B,False,,Forceout,force_out,r_adv_play,False
+778493,643396,,1B,False,,Forceout,force_out,,False
+778493,669261,,,True,3.0,Strikeout,strikeout,,False
+778493,670224,,,True,1.0,Flyout,field_out,,False
+778493,643376,,,True,2.0,Strikeout,strikeout,,False
+778493,670764,,1B,False,,Walk,walk,,False
+778493,676356,,,True,3.0,Strikeout,strikeout,,False
+778493,668804,,,True,1.0,Strikeout,strikeout,,False
+778493,665833,,,True,2.0,Strikeout,strikeout,,False
+778493,663698,,1B,False,,Single,single,,False
+778493,502054,,,True,3.0,Strikeout,strikeout,,False
+778493,650490,,,True,1.0,Pop Out,field_out,,False
+778493,664040,,,True,2.0,Groundout,field_out,,False
+778493,691406,,1B,False,,Walk,walk,,False
+778493,663968,,1B,False,,Single,single,,False
+778493,691406,1B,2B,False,,Single,single,r_adv_force,False
+778493,691406,2B,3B,False,,Single,single,r_adv_play,False
+778493,678554,,,True,3.0,Pop Out,field_out,,False
+778493,665839,,,True,1.0,Groundout,field_out,,False
+778493,663647,,,True,2.0,Groundout,field_out,,False
+778493,669707,,,True,3.0,Strikeout,strikeout,,False
+778493,670224,,,True,1.0,Groundout,field_out,,False
+778493,643376,,,True,2.0,Pop Out,field_out,,False
+778493,670764,,,True,3.0,Flyout,field_out,,False
+778493,643396,,,True,1.0,Groundout,field_out,,False
+778493,669261,,,True,2.0,Strikeout,strikeout,,False
+778493,668804,,1B,False,,Single,single,,False
+778493,665833,,,True,3.0,Lineout,field_out,,False
+778493,676356,,3B,False,,Triple,triple,,False
+778493,650490,,,True,1.0,Groundout,field_out,,False
+778493,664040,,1B,False,,Single,single,,False
+778493,676356,3B,score,False,,Single,single,r_adv_play,True
+778493,664040,1B,,True,2.0,Grounded Into DP,grounded_into_double_play,r_force_out,False
+778493,691406,,,True,3.0,Grounded Into DP,grounded_into_double_play,,False
+778493,663698,,,True,1.0,Strikeout,strikeout,,False
+778493,502054,,,True,2.0,Strikeout,strikeout,,False
+778493,457705,,1B,False,,Single,single,,False
+778493,663647,,,True,3.0,Strikeout,strikeout,,False
