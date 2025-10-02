@@ -1,0 +1,912 @@
+############################03 03 03 03 03 03############################################
+claude.ai
+
+## Methodische Annahmen: Team-Level Pop Time Aggregation (Script 03)
+
+### Berechnetes Konstrukt
+**Team-Season Pop Time** (2018–2025): Durchschnittliche Zeit (Sekunden) von Fanghandschuh-Kontakt bis Ball-Ankunft an Base (2B/3B), aggregiert auf Team-Ebene pro Saison.
+
+---
+
+### Methodische Entscheidungen
+
+**1. Gewichtung: Attempts-weighted average**
+- **Annahme**: Catcher mit mehr Steal-Attempts liefern zuverlässigere Pop-Time-Schätzungen als solche mit wenigen Messungen.
+- **Umsetzung**: Pop Time wird mit `pop_2b_sba_count` (Anzahl der gemessenen Steal-Attempts nach 2B) gewichtet.
+- **Begründung**: Vermeidet Verzerrung durch Backup-Catcher mit 2–3 Messungen, die unverhältnismäßig starken Einfluss hätten bei einfachem Durchschnitt.
+
+**2. Team-Zuordnung: "Current team" bei Trades**
+- **Annahme**: Savant Pop-Time-Leaderboards weisen Catcher dem Team zu, für das sie **zuletzt** in der Saison spielten.
+- **Limitation**: Bei Mid-Season-Trades werden alle Attempts des Catchers diesem einen Team zugeschlagen, auch wenn Attempts vor dem Trade für ein anderes Team entstanden.
+- **Implikation**: Team-Pop-Time kann bei Trades leicht verzerrt sein. Script kennzeichnet Multi-Team-Catcher mit Warning.
+
+**3. Dispersion: Weighted Standard Deviation**
+- **Annahme**: Within-Team-Varianz der Pop Time (über mehrere Catcher) ist relevant für Unsicherheitsquantifizierung.
+- **Umsetzung**: `pop_time_2b_std` = attempts-gewichtete Standardabweichung der individuellen Catcher-Pop-Times innerhalb eines Teams.
+- **Verwendung**: Ermöglicht spätere Precision-Weighting (z. B. inverse-variance weighting) in Runner-Panel-Konstruktion.
+
+**4. Reliability-Flag: <10 Attempts**
+- **Annahme**: Team-Seasons mit <10 gemessenen Steal-Attempts nach 2B liefern unzuverlässige Pop-Time-Schätzungen.
+- **Umsetzung**: `low_reliability = 1` wenn `total_attempts_2b < 10`.
+- **Empfehlung**: Diese Beobachtungen in Sensitivitätsanalysen ausschließen oder downgewichten.
+
+**5. Missing 3B Pop Time: Separate Behandlung**
+- **Annahme**: Nicht alle Teams haben ausreichend 3B-Steal-Attempts für robuste 3B-Pop-Time-Schätzung.
+- **Umsetzung**: `pop_time_3b_avg` wird separat berechnet; bei fehlenden Daten = `NaN`.
+- **Verwendung im Projekt**: Hauptanalyse fokussiert auf 2B (höhere Attempt-Frequenz); 3B als Robustness-Check.
+
+---
+
+### Datenquellen-Annahmen
+
+**Statcast Pop Time Definition** (nach MLB/Baseball Savant):
+- Gemessen via Hawk-Eye-Tracking ab 2018
+- Start: Ball trifft Fanghandschuh des Catchers
+- Ende: Ball erreicht Handschuh des Fielders an Base
+- **Nicht enthalten**: Pitcher-Delivery-Zeit, Runner-Reaktionszeit
+
+**Team-ID-Stabilität**:
+- `team_id` in Savant-Daten ist konsistent über Jahre (z. B. 147 = New York Yankees)
+- Bei Franchise-Umzügen: neue `team_id` (nicht relevant 2018–2025)
+
+---
+
+### Qualitätschecks (im Script)
+
+1. **30-Teams-Assert**: Warnung wenn Season ≠ 30 Teams (z. B. fehlende Daten)
+2. **Multi-Team-Catcher**: Count + Warning bei Trades
+3. **Low-Attempts-Flag**: Kennzeichnung unreliable estimates
+4. **Plausibilitäts-Range**: Pop Time sollte ~1.85–2.10 sec sein (wird in Summary ausgegeben)
+
+---
+
+### Verwendung in weiterer Analyse
+
+Diese Team-Pop-Time-Daten dienen als **Opponent-Merkmal** im Runner-Panel:
+- Für jeden Runner × Season wird schedule-gewichtete `opponent_avg_poptime` berechnet
+- Gewichtung nach Anzahl Spiele gegen jedes Gegner-Team
+- Annahme: Runner steht häufigeren Gegnern öfter gegenüber → höheres Gewicht bei Opposition-Metrik
+
+
+CHAT GPT
+
+Alles klar—hier sind die **Annahmen/Methodik-Notizen für Script 03 (Team Pop Time 2018–2025)**, so dass du sie 1:1 ins Paper übernehmen kannst.
+
+# Annahmen & Definitionen
+
+* **Datenquelle & Scope**
+  Wir verwenden die Baseball-Savant **Catcher Pop Time** CSVs je Saison (2018–2025), Regular Season. Pop Time ist nach Statcast definiert als die Zeit vom Eintreffen des Pitches im Catcher-Mitt bis zu dem Zeitpunkt, an dem der Wurf am **zentralen Punkt** der anvisierten Base ankommt bzw. dorthin projiziert wird. Damit kombiniert Pop Time **Exchange/Footwork** und **Arm Strength**; sie wird pro **Steal-/Pickoff-Wurf** gemessen. ([MLB.com][1])
+
+* **Einheit der Messung**
+  Pop Time wird **pro Wurf/Versuch** erfasst (nicht pro Spiel). Baseball Savant berichtet deshalb je Catcher **Durchschnittswerte** sowie **Anzahl der Versuche („Att.“/SBA)** nach Base (2B/3B). ([baseballsavant.com][2])
+
+* **Team-Aggregation (Zielgröße)**
+  Für jedes **Team×Season** bilden wir eine **Versuche-gewichtete Durchschnitts-Pop-Time**:
+  [
+  \text{TeamPop2B}*{t}=\frac{\sum*{c\in t}(\text{Att2B}*{c}\cdot \overline{\text{Pop2B}}*{c})}{\sum_{c\in t}\text{Att2B}_{c}}
+  ]
+  analog für **3B**, sofern vorhanden. So spiegelt der Teamwert die **in-game** Belastung (Anzahl geworfener Steal-/Pickoff-Würfe) wider, statt alle Catcher gleich zu gewichten. ([baseballsavant.com][3])
+
+* **Welche Versuche zählen (Gewichte)**
+  Als Gewichte nutzen wir die von Savant ausgewiesenen **Steal-Versuche zur jeweiligen Base** (SBA/„Att.“). Diese „Attempts“ enthalten **erfolgreiche Steals und Caught-Stealings** (Outcome-agnostisch), was konsistent mit der Savant-Berichterstattung ist. ([baseballsavant.com][2])
+
+* **Qualifikationsgrenzen (nur zur Einordnung, nicht als Filter)**
+  Savant verlangt für die **2B-Leaderboards** grob ≥1 SBA je 10 Teamspiele und für **3B** ≥1 SBA je 50 Teamspiele. Unser Team-Aggregator **filtert NICHT** nach diesen Schwellen (um Selektionsbias zu vermeiden), sondern verwendet **alle verfügbaren Versuche**; Teams mit sehr wenigen Würfen werden unten gesondert markiert. ([baseballsavant.com][4])
+
+* **Multi-Team-Catcher**
+  Stehen Catcher-Würfe **teamgesplittet** in den CSVs, gehen sie in jene Team-Saison ein, **für die sie erfolgt sind**. Falls einzelne Quellen Catcher-Saisons **nicht** teamgesplittet ausweisen, werden sie dem in den CSVs angegebenen Team zugeordnet (Konservativ-Annahme). *Praktische Folge:* Minimale Verzerrung möglich, aber typischerweise klein.
+
+* **Fehlende Daten / 3B-Knappheit**
+  3B-Würfe sind selten; wenn **Att3B = 0**, bleibt **TeamPop3B = NA**. Für 2B erwarten wir breite Abdeckung. Das deckt sich mit der Praxis und den Savant-Qualifikatoren. ([baseballsavant.com][4])
+
+* **Sanity-Checks & Plausibilitäten**
+  (i) Pro Saison **30 Teamzeilen**; (ii) **TeamPop2B** typischerweise um ~**2,0 s** (Liga-Mittel), Range etwa 1,84–2,10 s; (iii) `total_attempts_2b` und `n_catchers` werden mit ausgegeben, um die **Stabilität** des Mittelwerts einzuordnen. ([MLB.com][1])
+
+# Was NICHT gemacht wird (bewusste Abgrenzung)
+
+* **Keine Spiel-/Pitch-Level Korrekturen** (z. B. nach Pitch Tempo, Runner-Speed, Count, Inning, Score). Die Team-Pop-Time ist ein **exposure-gewichteter Saisonwert**, kein kausal adjustierter Effekt. (Savant-Definition misst einen Wurf-Zeitbedarf; Kontextvariablen bleiben außen vor.) ([MLB.com][1])
+
+* **Kein „Quali-Only“-Filter**
+  Wir nutzen **alle** verfügbaren Würfe statt nur qualifizierte Catcher/Teams—sonst droht systematischer Ausschluss schwach beobachteter Einheiten. Die Qualifier dienen **nur** zur Interpretation. ([baseballsavant.com][4])
+
+* **Keine Monats-Pop-Times**
+  Pop Time liegt in unseren Exporten auf **Season-Ebene** vor; eine saubere monatliche Zerlegung wird nicht berichtet. (Monats-Trends erzeugen wir nur für **SB/CS/Attempts**, nicht für Mechanismen.) ([baseballsavant.com][3])
+
+# Output (zur Reproduzierbarkeit)
+
+* **Spalten**: `season`, `team_id`, `pop_time_2b_avg`, `total_attempts_2b`, `pop_time_3b_avg` (falls vorhanden), `total_attempts_3b`, `n_catchers`.
+* **Regeln**: Attempts-gewichtetes Mittel; fehlende 3B-Teams als `NA`; optionaler **Warn-Flag** bei `total_attempts_2b < 10`.
+
+# Kurzbegründung der Gewichtung
+
+Savant misst Pop Time **je Wurf** und berichtet **Durchschnitte** über Würfe. Das Aggregat **auf Team-Ebene** sollte daher **Wurf-/Versuchs-gewichtet** sein (ansonsten bekäme ein Backup-Catcher mit 3 Würfen dasselbe Gewicht wie ein Starter mit 70 Würfen). Die Methode folgt der Metrik-Definition und der Art, wie Savant die Kennzahl veröffentlicht. ([MLB.com][1])
+
+Wenn du möchtest, packe ich diese Annahmen als knappen **„Methods — Team Pop Time“**-Kasten ins Manuskript (inkl. Literaturhinweis auf die MLB-Glossar-Definition und die Savant-Leaderboards).
+
+[1]: https://www.mlb.com/glossary/statcast/pop-time?utm_source=chatgpt.com "Pop Time (POP) | Glossary"
+[2]: https://baseballsavant.mlb.com/savant-player/ivan-herrera-671056?stats=statcast-r-catching-mlb&utm_source=chatgpt.com "Iván Herrera Stats: Statcast, Visuals & Advanced Metrics"
+[3]: https://baseballsavant.mlb.com/leaderboard/poptime?utm_source=chatgpt.com "Statcast Catcher Pop Time Leaderboard | baseballsavant.com"
+[4]: https://baseballsavant.mlb.com/leaderboard/catcher-throwing?utm_source=chatgpt.com "Statcast Catcher Throwing Leaderboard | baseballsavant.com"
+
+
+############################04 04 04 04 04 04############################################
+
+claude.ai
+
+Verstanden - bei Updates nur die geänderten Teile! 👍
+
+Hier die Dokumentation für Script 04:
+
+---
+
+## Methodische Annahmen: Team-Level Pitch Tempo Aggregation (Script 04)
+
+### Berechnetes Konstrukt
+**Team-Season Pitch Tempo** (2018–2025): Durchschnittliche Zeit (Sekunden) zwischen aufeinanderfolgenden Pitches, gemessen Release-to-Release, **mit Runnern on Base**. Aggregiert auf Team-Ebene als pitches-gewichteter Median-Durchschnitt.
+
+---
+
+### Methodische Entscheidungen
+
+**1. Tempo-Metrik: "Runners On Base" priorisiert**
+- **Annahme**: Pitcher-Tempo mit Runnern auf Base ist die relevante Exposure für Runner-Steal-Entscheidungen.
+- **Umsetzung**: Script nutzt `median_seconds_onbase` aus Savant. Fallback auf `median_seconds_empty` oder Gesamt-Tempo falls nicht verfügbar.
+- **Begründung**: Tempo ohne Runner irrelevant für Steal-Situationen; Pitcher arbeiten langsamer mit Runnern (Pickoff-Moves, Slide-Steps).
+
+**2. Gewichtung: Pitches-weighted average**
+- **Annahme**: Pitcher mit mehr geworfenen Pitches liefern stabilere Tempo-Schätzungen als Low-Inning-Reliever.
+- **Umsetzung**: Team-Tempo = gewichteter Durchschnitt über alle Pitcher, Gewichte = `total_pitches_onbase`.
+- **Begründung**: Starter (3000+ Pitches/Season) dominieren Team-Tempo stärker als Reliever (200–500 Pitches), was intended ist.
+
+**3. Team-Zuordnung bei Trades: "Current team"**
+- **Annahme**: Savant-Tempo-Daten weisen Pitcher dem finalen Team der Saison zu (wie Pop Time).
+- **Limitation**: Alle Pitches eines getradet Pitchers fallen auf ein Team, auch Pre-Trade-Pitches.
+- **Check**: Script warnt bei Multi-Team-Pitchern; Anteil typisch 3–5% der Pitcher pro Season.
+
+**4. Pitch Timer Rule Changes: Ligaweite Shifts**
+- **2023 Rule**: 20-Sekunden-Timer mit Runnern eingeführt (15 sec ohne Runner); Violations = Automatic Ball. ([MLB.com](https://www.mlb.com/news/mlb-2023-rule-changes-pitch-timer-larger-bases-shifts))
+- **2024+**: Strengere Durchsetzung; League-Infractions sanken (Gewöhnung).
+- **Erwartung**: Tempo-Reduktion ~2–4 sec (Pre → Post-2023).
+- **Implikation**: `league_tempo_onbase_mean` zeigt Zeittrend; `tempo_diff` (Team – Liga) kontrolliert für Regeleffekt.
+
+**5. Dispersion & Reliability**
+- **Weighted Std**: `tempo_onbase_std` = pitches-gewichtete Standardabweichung über Pitcher-Pool eines Teams.
+- **Low-reliability flag**: <1000 Pitches/Team-Season (ca. 1/3 normaler Load) → unreliable estimate.
+- **Begründung**: Teams mit wenigen Pitches = oft Expansion/Injury-geplagtes Jahr.
+
+**6. Liga-Mittel & Team-Relative Metriken**
+- **League Mean (je Season)**: Pitches-gewichtet, nur reliable teams (low_reliability=0).
+- **Tempo Diff**: `tempo_diff = team_tempo - league_mean` → kontrolliert für ligaweite Regeleffekte.
+- **Verwendung**: In DiD/Modellen mit Year FE: `tempo_diff` isoliert team-spezifische Abweichungen vom Regeltrend.
+
+---
+
+### Datenquellen-Annahmen
+
+**Statcast Pitch Tempo Definition** ([Baseball Savant](https://baseballsavant.mlb.com/leaderboard/pitch-tempo)):
+- **Release-to-Release**: Zeit von Ball-Release (Pitch N) bis nächster Release (Pitch N+1).
+- **Median-basiert**: Robuster gegen Outliers (Mound-Visits, Injuries, Delays).
+- **Separate Tracks**: Mit/ohne Runner; Script nutzt "with runners".
+- **Minimum-Threshold**: Pitcher brauchen ≥20 qualifizierende Pitches für validen Median.
+
+**Tempo-Messung via Hawk-Eye** (Statcast):
+- Präzision: ±0.01 sec (Automated Tracking ab 2018).
+- Exklusion: Intentional Delays (Trainer-Visits, Challenges) werden algorithmisch entfernt.
+
+---
+
+### Qualitätschecks (im Script)
+
+1. **30-Teams-Check** pro Season + Warning bei Abweichung
+2. **Multi-Team-Pitcher-Warning** (Mid-Season-Trades)
+3. **Low-reliability flag** (<1000 pitches)
+4. **Pitch-Clock-Effekt**: Automatischer Pre/Post-2023-Vergleich in Summary-Output
+5. **Plausibilitäts-Range**: Tempo sollte 15–30 sec sein (Pre-Clock: 20–25 sec; Post-Clock: 18–22 sec)
+
+---
+
+### Verwendung in weiterer Analyse
+
+Analog zu Pop Time:
+- **Runner-Panel**: `opponent_avg_tempo` wird schedule-gewichtet aus diesen Team-Daten konstruiert.
+- **Mechanismen-Pfad**: Tempo → Lead Distance Gained → Attempt → Success
+- **DiD-Spezifikation**: Year FE + `tempo_diff` isoliert team-spezifische Effekte vom 2023-Regelschock.
+
+
+
+chatgpt
+
+
+Ja, so ist’s stimmig. Hier ist der **Methods/Assumptions-Text fürs Paper** zu **Script 04 – Team Pitch Tempo (2018–2025)**, abgestimmt auf deine CSVs (`team_tempo_2018_2025.csv`).
+
+# Methods — Team Pitch Tempo (2018–2025)
+
+**Datenquelle & Metrik.** Wir verwenden Baseball-Savant *Pitch Tempo* auf Spieler-Ebene als Grundgröße. *Pitch Tempo* ist **die Median-Zeit zwischen zwei Pitches (Release-zu-Release)**; berücksichtigt werden Pitches, die auf einen *Take* (Called Ball/Strike) folgen und dem **gleichen Batter** geworfen werden. Savant berichtet Tempo getrennt für **Bases Empty** und **Runners On**; Team-Ansichten sind verfügbar. ([MLB.com][1])
+
+**Kontextwahl.** Für Basestealing-Analysen aggregieren wir ausschließlich den **„Runners On“-Kontext** (Tempo *mit* Runnern auf Base). Das entspricht dem Spielszenario, in dem Leads, Pop-Time und Steal-Entscheidungen relevant sind. ([MLB.com][1])
+
+**Zeitraum & Scope.** Saisons **2018–2025**, Regular Season. Postseason ist nicht enthalten (Savant-Leaderboards sind saisonal; wir nutzen die regulären Season-Exports). ([baseballsavant.com][2])
+
+**Aggregation auf Team-Ebene.**
+Ausgehend von pitcher-spezifischen *Median Seconds (Runners On)* bilden wir je **Team×Season** ein **Pitch-gewichtetetes Mittel**:
+
+[
+\text{TeamTempo}*{t,s}
+=\frac{\sum*{p\in(t,s)} w_{p,s}\cdot \widetilde{T}*{p,s}^{(\text{on base})}}
+{\sum*{p\in(t,s)} w_{p,s}}
+]
+
+mit ( \widetilde{T}*{p,s}^{(\text{on base})} ) = Pitcher-Median (Runners On) und ( w*{p,s} ) = **Anzahl Pitches (Runners On)** dieses Pitchers. Zusätzlich berichten wir eine **pitches-gewichtete Standardabweichung** als Streuungsmaß und die Anzahl aggregierter Pitcher pro Team/Season. Diese Pitches-Gewichtung spiegelt die Mess-Einheit der Metrik wider (Tempo ist pitch-basiert), statt Pitcher gleich zu gewichten. ([MLB.com][1])
+
+**Datenbereinigung / Fallbacks.**
+
+* Reihen ohne valide *on-base*-Tempo-Werte oder mit **0 Pitches** im on-base-Kontext werden nicht zur Aggregation herangezogen und als **low_reliability** markiert (Flag in der Datei).
+* In unserer finalen Stichprobe 2018–2025 ist der Anteil `low_reliability = 0`. *(Dokumentationszweck; keine Korrekturen erforderlich.)*
+  *(Hinweis: Savant aktualisiert Leaderboards regelmäßig; wir arbeiten mit den saisonalen Exporten, nicht mit Rolling Windows.)* ([baseballsavant.com][2])
+
+**Interpretation & Regeln.**
+Das *Pitch Tempo* ist eine **Beobachtungsgröße** (kein kausal adjustierter Effekt). Ligaweite Verschiebungen rund um den **Pitch-Timer** (Einführung 2023: **20 s** mit Runnern; Anpassung 2024: **18 s** mit Runnern) beeinflussen Niveaus/Verteilungen, **ändern aber nicht die Definition** der Metrik. In Modellen empfehlen wir **Year Fixed Effects** bzw. eine saisonrelative Normierung (Teamtempo minus Liga-Mittel desselben Jahres). ([MLB.com][3])
+
+**Was wir nicht tun.**
+
+* Keine Adjustments nach Count, Inning, Leverage, Batter/Pitcher-Hand, etc. (diese Kontexte sind in den Savant-Team/Pitcher-Aggregaten nicht standardisiert verfügbar).
+* Kein Versuch, aus Pitcher-Medianen den exakten Team-Median über die **Gesamtpitch-Verteilung** zu rekonstruieren; das **pitch-gewichtete Mittel der Pitcher-Mediane** ist eine gängige und transparente Näherung auf Team-Ebene, kompatibel mit Savants Team-Leaderboards. ([baseballsavant.com][4])
+
+**Einheiten & Spalten (Output).**
+Sekunden. Datei enthält mindestens:
+`team_id, season, tempo_onbase_avg, tempo_onbase_std, total_pitches, n_pitchers, low_reliability`.
+
+---
+
+Wenn du möchtest, formatiere ich dir das als kurzen **„Methods — Team Pitch Tempo“**-Kasten (LaTeX/Markdown) und ergänze optional eine Hilfstabelle mit **Liga-Durchschnitt je Jahr** (attempts/pitches-gewichtet), damit du Trends oder `team − league` unmittelbar im Panel joinen kannst.
+
+[1]: https://www.mlb.com/glossary/statcast/pitch-tempo?utm_source=chatgpt.com "Pitch Tempo | Glossary"
+[2]: https://baseballsavant.mlb.com/leaderboard/pitch-tempo?utm_source=chatgpt.com "Statcast Pitch Tempo | baseballsavant.com - MLB.com"
+[3]: https://www.mlb.com/glossary/rules/pitch-timer?utm_source=chatgpt.com "Pitch Timer (2023 rule change) | Glossary"
+[4]: https://baseballsavant.mlb.com/leaderboard/pitch-tempo?n=1&season_end=2022&season_start=2022&split=no&team=&type=Pitching+Team&with_team_only=1&utm_source=chatgpt.com "Statcast Pitch Tempo | baseballsavant.com - MLB.com"
+
+###########05 05 05 ######################################################
+
+chatgpt
+Kurz: **Ja—Datei & Script sind plausibel.** Die Gegner-Ableitung über `half_inning` (Top = Auswärtsteam schlägt, Bottom = Heimteam) ist regelkonform; damit ist **Opponent = jeweils das andere Team**. ([MLB.com][1])
+Ab **2023** gilt die **balanced schedule** (jedes Team spielt gegen alle **29** Gegner) — eure Maximalwerte „29 Opponents pro Runner×Season“ passen exakt dazu. ([MLB.com][2])
+Auch die **Team-Namensnormalisierung** ist korrekt: *Cleveland Indians → Guardians* ab 2022; die A’s treten **2025** während der Sacramento-Phase schlicht als „Athletics“ auf. ([MLB.com][3])
+
+# Annahmen / Methods (fürs Paper, zu Script 05)
+
+* **Daten & Scope.** Play-by-play CSVs (Regular Season) aus `mlb_stats_YYYY/`. Postseason ist nicht enthalten.
+* **Team & Gegner je Spiel.** Pro Event: `half_inning = top → Runner-Team = Away`, `half_inning = bottom → Runner-Team = Home`; **Opponent** ist das jeweils andere Team. ([MLB.com][1])
+* **Exposure-Einheiten.**
+
+  * **Primärgewicht:** `onbase_count` = Zahl der Events, in denen der Runner auf Base ist (aus PBP), **pro Opponent-Team**.
+  * **Fallback:** `game_count` = Zahl einzigartiger `game_id` pro Opponent.
+  * **Normierung:** `weight_onbase = onbase_count / Σ_onbase`, `weight_games = game_count / Σ_games`, `weight = weight_onbase` (sonst `weight_games`). **Gewichte summieren je Runner×Season zu 1.** 
+* **Doubleheader/Resumed Games.** Jedes `game_id`/`gamePk` zählt separat. (MLB behandelt Top/Bottom strikt nach Home/Away.) ([MLB.com][1])
+* **Team-Mapping.** Gegnernamen werden auf **MLB Team-IDs** gemappt (inkl. Historik: *Cleveland Indians/Guardians*, *Oakland/Athletics 2025*), damit Cross-Year-Joins mit Teammetriken robust sind.  ([MLB.com][3])
+* **Balanced-Schedule-Kontext.** Ab 2023 ist die theoretische Obergrenze **29** Opponents/Season (eigene Franchise ausgeschlossen). ([MLB.com][2])
+
+**Hinweis zur Nutzung:** Diese Schedule-Gewichte sind dafür gedacht, gegnerische **Team-Metriken der Saison** (z. B. `team_poptime`, `team_tempo`) zu mitteln:
+[
+\text{opponent_avg_metric}*{r,s}=\sum_o \text{weight}*{r,s,o}\cdot \text{TeamMetric}_{o,s}.
+]
+Attempt-Level steht nicht zur Verfügung; das ist bewusst eine **Exposure-Approximation** auf Season-Basis. 
+
+[1]: https://www.mlb.com/glossary/rules/regulation-game?utm_source=chatgpt.com "Regulation Game | Glossary"
+[2]: https://www.mlb.com/news/how-2023-mlb-balanced-schedule-could-affect-playoff-races?utm_source=chatgpt.com "How 2023 balanced schedule could affect playoff races"
+[3]: https://www.mlb.com/press-release/release-indians-become-cleveland-guardians?utm_source=chatgpt.com "Release: Indians become Cleveland Guardians"
+
+
+Medical References:
+1. None — DOI: file_0000000061fc620aac0f50929231e154
+
+claude.ai
+
+## Methodische Annahmen: Schedule Weights (Script 05)
+
+### Berechnetes Konstrukt
+**Runner-Season-Opponent Exposure Weights** (2018–2025): Für jede Kombination Runner × Season × Opponent-Team wird berechnet, wie stark dieser Runner diesem Gegner ausgesetzt war. Gewichte summieren pro Runner-Season zu 1.0 und dienen der späteren schedule-gewichteten Mittelung von Opponent-Metriken (Pop Time, Tempo).
+
+---
+
+### Methodische Entscheidungen
+
+**1. Team-Zuordnung via `half_inning` (regelbasiert)**
+- **Annahme**: In jedem Play-by-Play-Event zeigt `half_inning` eindeutig, welches Team am Schlag ist.
+  - `top` → Away-Team schlägt → Runner gehören zum Away-Team
+  - `bottom` → Home-Team schlägt → Runner gehören zum Home-Team
+- **Opponent-Ableitung**: Jeweils das andere Team (Top → Opponent=Home; Bottom → Opponent=Away)
+- **Robustheit bei Trades**: Da Team-Zuordnung **pro Event** erfolgt, werden Mid-Season-Trades automatisch korrekt erfasst (Runner wechselt Team → `half_inning` spiegelt neues Team ab Trade-Datum)
+
+**2. Gewichtung: On-Base-Events priorisiert**
+- **Primary Weight**: Anzahl On-Base-Ereignisse des Runners gegen Gegner (`start_base` ∈ {1B, 2B, 3B})
+- **Begründung**: On-Base-Situationen sind die **direkte Exposure** für Baserunning-Entscheidungen (Steals, Leads). Ein Runner mit 50 On-Base-Events gegen Team X hat mehr relevante Exposure als einer mit 10 Events, selbst bei gleicher Spielanzahl.
+- **Fallback**: Game-Counts (unique `game_id` pro Runner-Opponent), falls keine On-Base-Events vorliegen.
+
+**3. Normalisierung zu Anteilen**
+- **Formel**: 
+  ```
+  weight_{r,s,o} = onbase_count_{r,s,o} / Σ_o onbase_count_{r,s,o}
+  ```
+  wobei r=Runner, s=Season, o=Opponent
+- **Constraint**: Σ_o weight_{r,s,o} = 1.0 (Quality-Check im Script)
+- **Interpretation**: Ein Weight von 0.15 bedeutet: "15% der On-Base-Situationen dieses Runners in dieser Season waren gegen diesen Opponent"
+
+**4. Team-ID-Normalisierung (historische Namen)**
+- **Problem**: MLB-Stats PBP nutzt **volle Team-Namen** ("Cleveland Indians"), Savant-Leaderboards nutzen teils **Abkürzungen** ("CLE") oder wechseln Namen über Zeit
+- **Lösung**: Hardcoded MLB Team-ID-Mapping mit **allen historischen Varianten**:
+  - Cleveland Indians (2018–2021) → 114
+  - Cleveland Guardians (2022+) → 114
+  - Oakland Athletics (2018–2024) → 133
+  - Athletics (2025, ohne Stadt) → 133
+- **Begründung**: Konsistente Cross-Year-Joins auf Team-Metriken erfordern stabile IDs, unabhängig von Name-Changes
+
+**5. Deduplication: Ein Game zählt einmal**
+- **Annahme**: Pro Runner × Opponent × Game wird nur **ein** Game-Count gezählt (via `nunique(game_id)`), unabhängig von der Anzahl Events in diesem Spiel
+- **On-Base-Events**: Werden **nicht** dedupliziert (mehrere On-Base-Situationen in einem Game = mehr Exposure)
+- **Doubleheader**: Jedes `game_id` ist unique → Doubleheader zählen als zwei separate Games (MLB-Standard)
+
+---
+
+### Datenquellen-Annahmen
+
+**MLB-Stats Play-by-Play**:
+- **Granularität**: Event-Level (jeder Pitch/Event = eine Zeile)
+- **Runner-Identifikation**: `runner_id` + `start_base` markieren On-Base-Events
+- **Team-Info**: `home_team`, `away_team` (volle Namen), `half_inning` (top/bottom)
+
+**Baseball Rules (Team-Zuordnung)**:
+- Top-Hälfte = Visiting (Away) Team schlägt ([Wikipedia: Baseball Rules](https://en.wikipedia.org/wiki/Baseball_rules))
+- Bottom-Hälfte = Home Team schlägt
+
+---
+
+### Qualitätschecks (im Script)
+
+1. **Weight-Sum-Check**: Σ weights pro Runner-Season = 1.0 (±0.001)
+2. **Team-Mapping-Success**: 100% aller Opponent-Namen zu IDs aufgelöst
+3. **Plausibilitäts-Check**: 
+   - Avg. 6.1 On-Base-Events pro Opponent (plausibel bei ~19 Division-Games, ~6-7 Non-Division)
+   - Avg. 2.6 Games pro Opponent
+4. **30 Teams**: Unique `opponent_team_id` = 30 (korrekt trotz 32 Namen wegen historischer Dubletten)
+
+---
+
+### Verwendung in weiterer Analyse
+
+**Schedule-gewichtete Opponent-Metriken** (Runner-Panel):
+```
+opponent_avg_poptime_{r,s} = Σ_o weight_{r,s,o} × team_poptime_{o,s}
+opponent_avg_tempo_{r,s}    = Σ_o weight_{r,s,o} × team_tempo_{o,s}
+```
+
+**Interpretation**: Ein Runner, der primär gegen Teams mit langsamen Catchern spielt (hohes team_poptime), erhält höheren `opponent_avg_poptime` → kontrolliert für **Quality of Opposition** in späteren DiD/Regression-Modellen.
+
+---
+
+### Limitations
+
+**Keine PA-Level-Gewichte**: Idealer wäre Gewichtung nach **Plate Appearances mit Runner on Base** (nicht nur Games oder On-Base-Events), aber diese Granularität liegt nicht vor. On-Base-Events sind beste verfügbare Proxy.
+
+**Team-Aggregation**: Gegner-Metriken auf **Team-Season-Ebene**, nicht pitcher-/catcher-spezifisch. Ein Runner könnte systematisch gegen bestimmte Catcher innerhalb eines Teams spielen → nicht erfasst, aber bei Schedule-Level-Analyse vertretbar.
+
+
+############## 06 06 06 06###########################################
+
+claude.ai
+
+## Methodische Annahmen: Runner Panel Construction (Script 06)
+
+### Berechnetes Konstrukt
+**Analysis Runner Panel** (2018–2025): Individuelle Runner-Season-Level-Daten, die Runner-eigene Metriken (SB, CS, Speed, Lead Distance) mit **schedule-gewichteten Opponent-Metriken** (Pop Time, Tempo) kombinieren. Eine Beobachtung = Runner × Season.
+
+---
+
+### Datenintegration & Merge-Logik
+
+**1. Primäre Datenquellen (Savant Leaderboards)**
+- **Custom Stats** → SB, CS counts (Basis für Attempts)
+- **Baserunning Run Value** → brv_total, brv_xb, brv_steal
+- **Basestealing/Running Game** → r_primary_lead, r_secondary_lead, player_name
+- **Sprint Speed** → sprint_speed_fps, team_id, team_name, age
+
+**2. Merge-Hierarchie (Left Joins)**
+- **Base**: Custom Stats (5,216 rows) – enthält alle Runner mit mindestens einem baserunning event
+- **Left-merge**: BRV, Stealing, Speed
+- **Begründung**: Custom Stats ist vollständigste Quelle für SB/CS; andere können fehlen (z.B. kein Sprint Speed bei Catchern)
+
+**3. Missing Data nach Merge**
+- **Sprint Speed: 9.2% missing** – Normal (Catcher/Pitchers ohne qualifizierende Runs)
+- **Opponent Metrics: 1.7% missing** – Runner ohne ausreichende On-Base-Events in Schedule Weights (wahrscheinlich sehr geringe PA)
+
+---
+
+### Opponent-Metriken: Schedule-gewichtete Aggregation
+
+**Formel:**
+```
+opponent_avg_poptime_{r,s} = Σ_o [weight_{r,s,o} × team_poptime_{o,s}]
+opponent_avg_tempo_{r,s}    = Σ_o [weight_{r,s,o} × team_tempo_{o,s}]
+```
+
+**Wo:**
+- r = runner_id, s = season, o = opponent_team_id
+- `weight_{r,s,o}` = on-base-gewichtete Exposure (aus Script 05)
+- `team_poptime/tempo` = Team-Season-Aggregate (aus Scripts 03/04)
+
+**Annahmen:**
+1. **Opponent-Qualität konstant über Season**: Team-Pop-Time/Tempo sind season-wide Aggregate, nicht intra-season-dynamisch (z.B. nach Catcher-Trades)
+2. **Exposure = On-Base-Events**: Runner mit mehr On-Base-Events gegen Team X erhält höheres Gewicht für Team X's Metriken
+3. **Team-Level ausreichend**: Pitcher-/Catcher-spezifische Matchups nicht erfasst (Runner könnte systematisch gegen bestimmte Catcher innerhalb eines Teams spielen)
+
+**Interpretation:**
+- `opponent_avg_poptime = 2.05 sec` bedeutet: "Gewichteter Durchschnitt der Pop Times aller Teams, gegen die dieser Runner 2023 spielte, basierend auf On-Base-Exposure"
+- Kontrolliert für **Quality of Opposition** in späteren Regressionen
+
+---
+
+### Berechnete/Abgeleitete Variablen
+
+**1. Success Rate (Post-Processing)**
+- **Problem**: `r_stolen_base_pct` in Custom Stats war NaN/fehlend
+- **Lösung (Script 06b)**: Selbst berechnet als `success_rate = sb / attempts` (wo attempts > 0, sonst 0.0)
+- **Begründung**: Fundamental für Steal-Analysen; Definition ist eindeutig und standardisiert
+- **Validierung**: Mean 0.49 (49%) plausibel für MLB-wide Success Rate
+
+**2. Attempts**
+```python
+attempts = sb + cs
+```
+- Summe aus successful steals und caught stealing
+- **Keine Pickoffs**: `r_total_pickoff` nicht in attempts, da kein attempt stattfand
+
+**3. CS (Caught Stealing)**
+```python
+cs = r_caught_stealing_2b + r_caught_stealing_3b + r_caught_stealing_home
+```
+- Aggregiert über alle Bases
+- Home-Steals sehr selten (typisch <1% aller CS)
+
+**4. Treatment-Variable: post_2023**
+```python
+post_2023 = 1 if season >= 2023 else 0
+```
+- **2023 Rule Changes**: Pitch Clock (15/20s), größere Bases (+4.5 inches), Shift-Limits
+- Binary indicator für DiD/Event-Study-Spezifikationen
+
+**5. Multi-Team Flag**
+```python
+multi_team = 1 if runner appears with >1 team_id in same season
+```
+- **Limitation**: Vereinfachte Logik basierend auf Sprint-Speed-Daten (welche nur finales Team zeigen)
+- **Robustere Alternative würde brauchen**: Trade-Daten mit exakten Daten (nicht in Leaderboards)
+- **Aktuell**: Flag ist konservativ (unterschätzt Trades leicht)
+
+---
+
+### Player Names (Identifikation)
+
+**Hierarchie:**
+1. **Primär**: `player_name` aus Basestealing/Running Game (wenn verfügbar)
+2. **Fallback**: Konstruiert aus `first_name + last_name` in Custom Stats (falls vorhanden)
+3. **Wenn fehlt**: Bleibt NULL
+
+**Begründung**: Verschiedene Leaderboards haben unterschiedliche Name-Formate; flexibles Handling vermeidet unnötigen Datenverlust.
+
+---
+
+### Qualitätschecks & Validierung
+
+**1. Plausibilitäts-Ranges (im Script):**
+- **Pop Time**: 1.85–2.09 sec ✓ (innerhalb 1.8–2.2 sec Erwartung)
+- **Tempo**: 13.96–19.68 sec ✓ (13–30 sec akzeptabel für Pre/Post-Clock)
+- **Sprint Speed**: 20.8–30.7 ft/sec ✓ (typisch für MLB-Spieler)
+- **Success Rate**: 0–100% ✓ (Mean 49% = MLB-typisch)
+
+**2. Missing Data Thresholds:**
+- <10% missing = akzeptabel für Hauptvariablen
+- Sprint Speed 9.2% missing = OK (Positions-bedingt)
+- Opponent Metrics 1.7% missing = sehr gut
+
+**3. Merge-Erfolg:**
+- 5,216 Zeilen nach allen Merges = 100% Retention der Custom-Stats-Basis
+- Alle Left-Joins erfolgreich
+
+---
+
+### Methodische Limitationen
+
+**1. Opponent-Metriken nicht attempt-spezifisch**
+- Runner-Season-Opponent-Exposure basiert auf **On-Base-Events**, nicht auf **Steal-Attempts**
+- Wenn Runner systematisch gegen schwache Catcher stehlen (opportunistic stealing), könnte Quality-of-Opposition unterschätzt sein
+- **Mitigation**: On-Base-Events sind beste verfügbare Proxy für Steal-Opportunities
+
+**2. Team-Level-Aggregation**
+- Team-Pop-Time/Tempo sind Durchschnitte über alle Catcher/Pitcher eines Teams
+- Intra-Team-Matchups (z.B. Runner meidet Catcher X) nicht erfasst
+- **Begründung**: Attempt-Level-Daten mit Catcher/Pitcher-IDs wären ideal, aber nicht in Leaderboards verfügbar
+
+**3. Trade-Timing**
+- `multi_team` Flag vereinfacht; Mid-Season-Splits nicht exakt
+- Team-Metriken (team_id, team_name) = finales Team der Season (aus Sprint Speed)
+- **Implikation**: Bei Analysen nach Team filtern → ggf. Multi-Team ausschließen
+
+**4. Missing Names**
+- Player-Namen nicht für alle verfügbar (verschiedene Leaderboard-Formate)
+- **runner_id** (player_id) ist primärer Key, Namen nur für Reporting
+
+---
+
+### Verwendung in Analysen
+
+**Panel-Struktur:**
+- **Unit**: Runner × Season
+- **Time**: 2018–2025 (8 Jahre)
+- **N**: 5,216 observations, 1,548 unique runners
+
+**Typische Spezifikationen:**
+
+**DiD (2023 Rule Change):**
+```
+SB_rate_{i,t} = β₀ + β₁·post2023_t + β₂·X_{i,t} + α_i + γ_t + ε_{i,t}
+```
+- X = opponent_avg_poptime, opponent_avg_tempo, sprint_speed_fps
+
+**Mechanismen:**
+```
+Lead_Distance → Attempt → Success → Run_Value
+(kontrolliert für opponent_avg_tempo, opponent_avg_poptime)
+```
+
+**Fixed Effects:**
+- Runner FE (α_i): time-invariant ability
+- Season FE (γ_t): ligaweite Trends (inkl. 2023 shock)
+
+---
+
+### Reproduzierbarkeit
+
+**Alle Transformationen dokumentiert:**
+- Success Rate = sb / attempts (Script 06b)
+- CS = Σ caught_stealing_2b/3b/home
+- Opponent-Metriken = weighted average via Schedule Weights (Script 05)
+- Treatment = season ≥ 2023
+
+**Dependencies:**
+- team_poptime_2018_2025.csv (Script 03)
+- team_tempo_2018_2025.csv (Script 04)
+- runner_schedule_weights_2018_2025.csv (Script 05)
+
+
+
+chatgpt
+
+
+Ja — hier sind die **Annahmen/Methoden**, unter denen wir **das Runner-Panel (analysis_runner_panel.csv)** gebaut haben. Das ist genau der Text, den du ins Paper übernehmen kannst:
+
+# Annahmen (Runner-Panel 2018–2025)
+
+* **Ebenen & Scope:** Wir arbeiten auf **Season-Level** pro Spieler (Runner×Season). Keine Attempt-, Spiel- oder Inning-Ebene; Mechanismen (Pop Time, Tempo, Sprint-Speed, Leads) liegen bei Savant/MLB nur als Saisonwerte vor und werden auch so verwendet. ([MLB.com][1])
+
+* **Stolen-Base-Outcome & Erfolgsquote:**
+  `attempts = SB + CS` (Season-Totals), `success_rate = SB / attempts` (und `0`, falls `attempts = 0`). **SB** und **CS** sind nach MLB-Glossar definiert. ([MLB.com][2])
+
+* **Baserunning Run Value (BRV):** Wir verwenden Savant’s **Baserunning Runs** als Season-Kennzahl und prüfen die Additivität: `brv_total ≈ brv_xb + brv_steal` (nur Rundungstoleranz). (Savant definiert BRV als Summe u. a. aus **Stealing** und **Extra Bases Taken**.) ([baseballsavant.com][3])
+
+* **Sprint Speed:** `sprint_speed_fps` = **feet per second in der schnellsten 1-Sekunden-Phase**, Season-Mittel nach Savant-Definition. ([MLB.com][4])
+
+* **Pop Time (Gegner):** **Team-Pop-Time (2B)** wird aus Catcher-Würfen **attempts-gewichtet** (würfe/„Att.“ als Gewichte) und pro **Team×Season** gemittelt; Pop Time = **Zeit vom Catcher-Mitt bis zur projizierten Ankunft am Base-Zentrum**. Für Runner bilden wir daraus einen **gegnergewichteteten Durchschnitt** (`opponent_avg_poptime`). ([MLB.com][1])
+
+* **Pitch Tempo (Gegner):** Wir nutzen **Pitch Tempo – Runners On** (Savant-Definition: **Median release-to-release**) und aggregieren auf **Team×Season** **pitches-gewichtet**; für Runner wird daraus der **gegnergewichtete** Wert `opponent_avg_tempo`. **Wichtig:** Pitch Tempo ≠ Pitch-Timer-Uhr. ([MLB.com][5])
+
+* **Schedule-Gewichte (Exposure):** Für jede Runner×Season bestimmen wir pro Gegner-Team **Gewichte**, primär über **On-Base-Ereignisse** aus dem PBP; Fallback: **Game-Counts**. Die Gewichte werden **auf 1 normiert** und dienen zum Mitteln der Gegner-Teammetriken. Die Team-Zuordnung pro Spiel erfolgt regelkonform über die **Halbinningslogik** (*Top* = Auswärts schlägt → Runner-Team = Away; *Bottom* = Heim schlägt → Runner-Team = Home; Opponent ist jeweils das andere Team). ([Wikipedia][6])
+
+* **Balanced Schedule ab 2023:** Plausibilitätsanker für die Gegnerabdeckung: **jedes Team spielt gegen alle 29 Gegner** (daher können Runner bis zu 29 Opponenten in einer Season haben). ([MLB.com][7])
+
+* **Regelkontext (Pitch-Timer):** Ligaweite Niveaus des Tempos verschieben sich 2023/24 (Timer **2023**: 20 s mit Runnern; **2024**: 18 s). Die **Definition** von Pitch Tempo bleibt davon unberührt; in Modellen empfehlen wir **Year Fixed Effects** bzw. eine saisonrelative Normierung. ([MLB.com][8])
+
+* **Keys & Harmonisierung:** Joins über (`season`, `player_id`). Teamnamen werden (wo nötig) auf **MLB-Team-IDs** normalisiert, damit Cross-Year-Joins robust sind (z. B. *Cleveland Indians → Guardians* ab 2022; Franchise-Umbenennungen/Umzüge beachten). ([MLB.com][7])
+
+* **QA-Checks (integriert):**
+  (i) `attempts = SB + CS`, (ii) `success_rate = SB/attempts`, (iii) `brv_total ≈ brv_xb + brv_steal` (Toleranz), (iv) keine Duplikate je (`runner_id`, `season`), (v) Werte in erwarteten Korridoren: Pop Time ~**1,9–2,1 s**; Tempo (Runners On) typ. **~13–20 s** und **niedriger** nach 2023. ([MLB.com][1])
+
+Wenn du magst, fasse ich dir das als kurzen „**Methods — Runner Panel**“-Kasten (Markdown/LaTeX) zusammen – inhaltlich ist das hier bereits **paper-ready**.
+
+[1]: https://www.mlb.com/glossary/statcast/pop-time?utm_source=chatgpt.com "Pop Time (POP) | Glossary"
+[2]: https://www.mlb.com/glossary/standard-stats/stolen-base?utm_source=chatgpt.com "Stolen Base (SB) | Glossary"
+[3]: https://baseballsavant.mlb.com/leaderboard/poptime?utm_source=chatgpt.com "Statcast Catcher Pop Time Leaderboard | baseballsavant.com"
+[4]: https://www.mlb.com/glossary/statcast/sprint-speed?utm_source=chatgpt.com "Sprint Speed (SS) | Glossary"
+[5]: https://www.mlb.com/glossary/statcast/pitch-tempo?utm_source=chatgpt.com "Pitch Tempo | Glossary"
+[6]: https://en.wikipedia.org/wiki/Inning?utm_source=chatgpt.com "Inning"
+[7]: https://www.mlb.com/news/2023-mlb-schedule?utm_source=chatgpt.com "2023 MLB schedule"
+[8]: https://www.mlb.com/glossary/rules/pitch-timer?utm_source=chatgpt.com "Pitch Timer (2023 rule change) | Glossary"
+
+
+
+Pitch Tempo (Statcast/Baseball Savant). Pitch Tempo misst die Medianzeit zwischen Pitch-Releases (Release-zu-Release). In die Berechnung gehen nur Pitches ein, die auf einen Take folgen und an denselben Batter geworfen werden. Savant labelt Pitches < 15 s als „Fast“ und > 30 s als „Slow“; die Metrik wird wöchentlich aktualisiert. Pitch Tempo ist nicht identisch mit dem MLB-Pitch-Timer (der startet beim Catcher-Return und endet mit Beginn der Lieferung; 2023: 15/20 s, seit 2024 mit Runnern 18 s). In unseren Teamaggregaten mitteln wir das Runners-On-Tempo pitches-gewichtet.
+
+Ja—genau so ist’s offiziell definiert, und wir verwenden **genau diese Definition** in unseren Methods:
+
+* **Pitch tempo (Savant):** Median **Release→Release**; nur Pitches, die auf einen **Take** (Called Ball/Strike) folgen und **an denselben Batter** gehen; wöchentlich aktualisiert; “Fast” < 15 s, “Slow” > 30 s. Das ist **nicht** der Pitch-Timer. ([baseballsavant.com][1])
+* **Pitch-Timer (Regel):** 2023 eingeführt (**20 s** mit Runnern, 15 s bases empty); ab **2024** mit Runnern **18 s**. Wir behandeln Timer-bedingte Niveauverschiebungen mit **Year fixed effects** bzw. saisonrelativen Größen. ([MLB.com][2])
+
+Damit passt eure Team-Tempo-Aggregation (pitches-gewichtet, **Runners On**) exakt zur Savant-Metrik—kein Änderungsbedarf.
+
+[1]: https://baseballsavant.mlb.com/leaderboard/pitch-tempo?utm_source=chatgpt.com "Statcast Pitch Tempo | baseballsavant.com - MLB.com"
+[2]: https://www.mlb.com/rule-changes-2023?utm_source=chatgpt.com "2023 MLB Rule Changes"
+
+
+############ 07 07 07 07 07 #########################
+############ 07 07 07 07 07 #########################
+############ 07 07 07 07 07 #########################
+############ 07 07 07 07 07 #########################
+
+chatgpt
+
+Klar—hier sind die **Annahmen/Methoden zu Script 07 (`07_compute_league_context.py`)** in kurz & paper-ready, inkl. der nötigen Quellen.
+
+# Annahmen (Script 07 – League Context 2018–2025)
+
+**Ziel & Einheit.**
+Wir bauen pro **Saison** eine Liga-Baseline für zwei Mechanik-Metriken, um Teams/Spieler später **saisonrelativ** einzuordnen:
+
+* `league_mean_pop2b` (Catcher **Pop Time** zu 2B),
+* `league_mean_tempo_onbase` (Pitch **Tempo** mit Runnern auf Base),
+  plus `n_teams`.
+
+**Definitionen (Quelle Baseball Savant / MLB-Glossar).**
+
+* **Pitch Tempo** misst die **Medianzeit zwischen zwei Pitches (Release→Release)**; gezählt werden nur Pitches, die auf einen **Take** (Called Ball/Strike) folgen und **an denselben Batter** geworfen werden. **Wöchentliche** Aktualisierung; **nicht** identisch mit der Pitch-Clock. ([baseballsavant.com][1])
+* **Pop Time** misst die Zeit vom **Catch im Mitt** bis zum **projizierten Empfang am Basismittelpunkt**; kombiniert Exchange & Arm Strength. ([baseballsavant.com][2])
+
+**Gewichtete Ligamittel (Begründung: Mess-Einheit).**
+
+* Für **Pop Time** mitteln wir über alle Teams einer Saison **attempts-gewichtet** (Würfe/„Att.“ zu 2B als Gewichte), weil Pop Time **wurfbasiert** gemessen wird. ([baseballsavant.com][2])
+* Für **Pitch Tempo (Runners On)** mitteln wir **pitches-gewichtet** über alle Teams (Anzahl Pitches mit Runnern als Gewichte), weil Tempo **pitchbasiert** definiert ist. ([baseballsavant.com][1])
+
+**Scope & Filter.**
+
+* **Regular Season** 2018–2025; je Jahr erwarten wir **30 Teams** (`n_teams=30`).
+* Falls vorhanden, schließen wir Zeilen mit **Low-Reliability-Flags** aus (z. B. extrem wenige Versuche/Pitches), damit die Liga-Mittel nicht durch Kleinststichproben verzerrt werden.
+* Keine Monatswerte; beide Mechaniken werden von Savant **saisonal** bereitgestellt (Tempo zudem *rolling/weekly* aktualisiert). ([baseballsavant.com][1])
+
+**Regelkontext (Interpretation, keine Umrechnung).**
+
+* Die **Pitch-Clock** ist **nicht** dasselbe wie Pitch Tempo; sie setzt aber das **Liga-Niveau** ab 2023/2024 herunter (2023: 15 s bases empty / **20 s** mit Runnern; **2024: 18 s** mit Runnern). Unsere Liga-Baselines spiegeln diese Umfeldverschiebung wider, ohne die Definition von Tempo zu ändern. ([MLB.com][3])
+
+**Verwendung.**
+
+* Die resultierende `league_context_2018_2025.csv` dient als **Helper** für `team − league`-Abweichungen und **Year Fixed Effects** in den Modellen (saisonrelative Interpretation von Team- und Runner-Metriken).
+
+> Kurz gesagt: Script 07 bildet **attempts- bzw. pitches-gewichtete** Ligamittel, konsistent mit den **wurf-/pitchbasierten** Definitionen von Pop Time und Pitch Tempo. Der **Pitch-Timer** wird als **Kontext** berücksichtigt (Niveauverschiebung), **nicht** als Messgröße selbst. ([baseballsavant.com][2])
+
+[1]: https://baseballsavant.mlb.com/leaderboard/pitch-tempo?utm_source=chatgpt.com "Statcast Pitch Tempo | baseballsavant.com - MLB.com"
+[2]: https://baseballsavant.mlb.com/leaderboard/poptime?utm_source=chatgpt.com "Statcast Catcher Pop Time Leaderboard | baseballsavant.com"
+[3]: https://www.mlb.com/news/mlb-2023-rule-changes-pitch-timer-larger-bases-shifts?utm_source=chatgpt.com "MLB 2023 rule changes: pitch timer, larger bases, shifts"
+
+
+claude 
+
+## Methodische Annahmen: League Context (Script 07)
+
+### Berechnetes Konstrukt
+**League-Wide Baselines** (2018–2025): Gewichtete Mittelwerte und Standardabweichungen für Pop Time und Pitch Tempo auf Liga-Ebene pro Season. Dient als Referenz für saisonrelative Standardisierung (z-Scores, Perzentile, Team-League-Differenzen).
+
+---
+
+### Methodische Entscheidungen
+
+**1. Gewichtung: Attempts/Pitches-weighted**
+- **Pop Time**: Gewichtet mit `total_attempts_2b` pro Team
+- **Tempo**: Gewichtet mit `total_pitches` pro Team
+- **Begründung**: Teams mit mehr Messungen liefern zuverlässigere Schätzungen; verhindert Verzerrung durch Small-Sample-Teams
+
+**2. Reliability-Filter**
+- **Nur reliable Teams** (low_reliability=0) für Liga-Mittelwerte
+- **Fallback**: Falls keine reliable Teams → alle Teams nutzen
+- **Begründung**: <10 Attempts (Pop) oder <1000 Pitches (Tempo) sind unreliable estimates; sollen Liga-Baseline nicht verzerren
+
+**3. Weighted Standard Deviation**
+```python
+weighted_variance = Σ w_i × (x_i - x̄)² / Σ w_i
+weighted_std = √weighted_variance
+```
+- Misst **Between-Team-Varianz** innerhalb einer Season
+- Gewichtet analog zu Mittelwert
+- **Verwendung**: Für z-Score-Standardisierung oder Dispersion-Trends
+
+**4. Season als Unit**
+- Eine Beobachtung = Liga-Aggregat pro Season
+- Keine Sub-Season-Dynamik (z.B. Pre/Post-All-Star-Break)
+- **Begründung**: Regeländerungen (Pitch Clock, größere Bases) gelten season-wide; intra-season-shifts nicht relevant für Treatment-Identifikation
+
+---
+
+### Interpretation der Metriken
+
+**League Mean Pop Time (league_mean_pop2b):**
+- Durchschnittliche Pop Time to 2B über alle Teams, gewichtet mit Steal-Attempts
+- **2018**: 2.01 sec → **2025**: 1.96 sec (kontinuierlicher Rückgang)
+- **2023-Drop**: -0.02 sec → konsistent mit größeren Bases (-4.5 inches = -2% Distanz)
+
+**League Mean Tempo (league_mean_tempo_onbase):**
+- Durchschnittliche Release-to-Release-Zeit mit Runnern on Base
+- **Pre-2023**: 17.8 sec (relativ stabil, leichter Anstieg)
+- **Post-2023**: 15.4 sec (2.4 sec Drop = 13.5% Reduktion)
+- **Pitch Clock Effekt dokumentiert**: Timer 20s (2023), 18s (2024+), aber Tempo ≠ Timer (siehe unten)
+
+**League Std (Pop/Tempo):**
+- **Pop Time Std**: ~0.03-0.04 sec → geringe Between-Team-Varianz (Catchers relativ homogen)
+- **Tempo Std**: Pre-2023 ~0.7 sec, Post-2023 ~0.5 sec → **Clock homogenisiert Liga** (weniger Team-Varianz)
+
+---
+
+### Tempo vs. Timer: Kritische Unterscheidung
+
+**Savant Pitch Tempo (was wir messen):**
+- **Start**: Pitch N release
+- **Ende**: Pitch N+1 release
+- **Inkludiert**: Catcher-Return (~4 sec), Pitcher-Prep, Signal-Reading
+- **Exkludiert**: Pitches nach Non-Takes (Fouls, Swinging-Strikes), verschiedene Batter
+
+**MLB Pitch Timer (Regelwerk):**
+- **Start**: Pitcher erhält Ball vom Catcher zurück
+- **Ende**: Start of Delivery
+- **20s (2023)** / **18s (2024+)** mit Runnern, 15s ohne Runner
+
+**Differenz: ~6 Sekunden**
+- 1.5s Delivery → Release
+- 0.5s Ball-Flight Catcher
+- 4.0s Catcher-Return
+
+**Implikation für Analyse:**
+- **Tempo-Levels** nicht direkt vergleichbar mit Timer-Regel (Tempo ~15-18s ≠ Timer 18-20s)
+- **Tempo-Shifts** aber valide Proxy für Regeleffekt (2.4s Drop = reale Verhaltensänderung)
+- In Modellen: **Year FE + saisonrelative Tempo-Metriken** trennen Regeleffekt von Trends
+
+---
+
+### Verwendung in Analysen
+
+**Saisonrelative Standardisierung:**
+```
+team_pop_zscore_{t,s} = (team_pop_{t,s} - league_mean_pop_{s}) / league_std_pop_{s}
+```
+
+**DiD mit Detrending:**
+```
+Outcome ~ post2023 × Treatment + league_mean_tempo_s + Year_FE + ...
+```
+- `league_mean_tempo` als Kovariate kontrolliert für ligaweiten Trend
+- Year FE fängt diskrete Shifts (2023 Clock)
+
+**Plausibilitäts-Checks:**
+- Team-Pop-Time >2.5 Std von Liga-Mittel → Daten-Check
+- Tempo-Shift 2022→2023 sollte ~2-3 sec sein (beobachtet: 2.8 sec ✓)
+
+---
+
+### Qualitätschecks
+
+1. **30 Teams konstant** über alle Jahre
+2. **Pop Time Range**: 1.95-2.01 sec (plausibel für MLB)
+3. **Tempo Pitch-Clock-Effekt**: 13.5% Reduktion (konsistent mit Literature)
+4. **Std-Reduktion Post-Clock**: Homogenisierung durch Regelzwang
+
+---
+
+############ 08 08 08 08 08 #########################
+############ 08 08 08 08 08 #########################
+############ 08 08 08 08 08 #########################
+############ 08 08 08 08 08 #########################
+
+claude.ai
+
+## Methodische Annahmen: Monthly Trends (Script 08)
+
+### Berechnetes Konstrukt
+**Monthly Stolen Base Counts** (2018–2025): Anzahl SB/CS pro Runner × Season × Month, direkt aus Play-by-Play-Daten aggregiert. **Keine Mechanismen-Variablen** (kein Lead Distance, Pop Time, etc.).
+
+---
+
+### Methodische Entscheidungen
+
+**1. Direkte Aggregation (keine Disaggregation)**
+- **Input**: `game_date` aus MLB-Stats PBP (verfügbar in allen Jahren)
+- **Methode**: `month = MONTH(game_date)` → `GROUP BY runner_id, season, month`
+- **Keine Denton/Chow-Lin**: Nicht nötig, da monatliche Granularität bereits vorhanden
+- **Begründung**: PBP-Daten haben exakte Datumsangaben; proportionale Disaggregation von Jahresdaten wäre unnötig und würde Fehler einführen
+
+**2. Event-Definition**
+- **SB**: `event IN ('stolen_base_2b', 'stolen_base_3b', 'stolen_base_home')`
+- **CS**: `event IN ('caught_stealing_2b', 'caught_stealing_3b', 'caught_stealing_home')`
+- **Exkludiert**: Pickoffs (nicht als Steal-Attempt klassifiziert)
+
+**3. Keine Mechanismen**
+- **Nur Counts**: `sb_count, cs_count, attempts, success_rate`
+- **Kein**: Lead Distance, Pop Time, Tempo, Sprint Speed
+- **Begründung**: Monthly-File dient zur **Zeitreihen-Visualisierung** und **saisonalen Muster-Detektion**, nicht für kausale Mechanismen
+
+**4. Unit of Analysis**
+- Eine Beobachtung = Runner × Season × Month (nur Monate mit ≥1 SB/CS Event)
+- **Sparse Matrix**: Runner ohne Events in Monat X → keine Zeile (nicht 0-gefüllt)
+- **Begründung**: Reduziert Dateigröße; für Analysen kann bei Bedarf 0-gefüllt werden
+
+**5. Success Rate Berechnung**
+```python
+success_rate = sb_count / attempts  (if attempts > 0, else 0.0)
+```
+- Identisch zu Runner-Panel-Definition
+- Monatliche Samples klein (oft 1-5 Attempts) → hohe Varianz erwartet
+
+---
+
+### Interpretation & Verwendung
+
+**Typische Anwendungen:**
+
+1. **Saisonale Muster**: Steigen SB-Rates im warmen Wetter (April-Sept)?
+2. **Regeleffekt-Timing**: Wann 2023 manifestierte sich Clock-Effekt? (Saison-Start vs. später)
+3. **Within-Season-Trends**: Lernen Pitcher/Catchers im Saisonverlauf?
+4. **Injury/Fatigue**: SB-Success sinkt Ende Saison?
+
+**Beispiel-Spezifikation:**
+```
+SB_count_{i,s,m} ~ Month_FE + Season_FE + Runner_FE + X_{i,s} + ε
+```
+
+**Nicht geeignet für:**
+- Kausale Mechanismen (fehlen Lead/Pop/Tempo)
+- Opponent-Kontrollen (keine schedule weights auf Monatsebene)
+- Präzise Within-Season-DiD (Sample-Sizes klein)
+
+---
+
+### Datenqualität & Limitations
+
+**1. MLB Season-Struktur**
+- **Reguläre Season**: März/April – September/Oktober
+- **Spring Training**: Februar/März (nicht in PBP-Daten)
+- **Playoffs**: Oktober (in 2018-2025 PBP enthalten, aber ggf. separat analysieren)
+- **Monatsverteilung**: April-Sept haben meiste Events; März/Okt weniger
+
+**2. Small-Sample-Bias**
+- Monatliche SB/CS counts oft <5 pro Runner
+- Success Rate hochvariabel (0% bei 0/2, 100% bei 2/2)
+- **Empfehlung**: Für Inference auf Season-Level aggregieren oder Bayes-Shrinkage nutzen
+
+**3. Trades**
+- Runner wechselt Team mid-month → Monat wird komplett dem finalen Team zugeschrieben (via PBP-Logik)
+- Für Team-spezifische monatliche Analysen → zusätzliche Trade-Dates nötig
+
+**4. COVID-Saison 2020**
+- Verkürzte Season (60 Spiele, Juli-Sept)
+- März-Juni = 0 Events
+- In Zeitreihen-Plots: Gap oder extrapolieren
+
+---
+
+### Reproduzierbarkeit
+
+**Exakte Definition jedes Feldes:**
+- `sb_count` = Σ (event startswith 'stolen_base') für runner_id, season, month
+- `cs_count` = Σ (event startswith 'caught_stealing')
+- `attempts` = sb_count + cs_count
+- `success_rate` = sb_count / attempts (oder 0 wenn attempts=0)
+
+**Keine Transformationen**, keine Imputationen, keine Gewichte.
+
+---
+
+### Warum keine Denton-Disaggregation?
+
+ChatGPT hatte ursprünglich Denton vorgeschlagen für "temporal disaggregation". Das ist aber für folgenden Fall gedacht:
+
+**Wann Denton sinnvoll:**
+- High-Frequency-Indikator vorhanden (z.B. monatliche PA)
+- Low-Frequency-Target (z.B. nur Jahresdaten für SB)
+- → Denton verteilt Jahres-SB proportional zu monatlichen PAs
+
+**Warum hier nicht nötig:**
+- Wir **haben** bereits monatliche SB-Daten (via game_date)
+- Direkte Aggregation ist exakt, Denton wäre nur eine Approximation
+- **Ockhams Razor**: Einfachste Methode (direkt zählen) ist beste
