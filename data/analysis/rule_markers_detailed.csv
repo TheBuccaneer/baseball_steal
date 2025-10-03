@@ -1,0 +1,5 @@
+season,rule_category,rule_detail
+2023,pitch_timer,Pitch timer 15s (bases empty) / 20s (runners on)
+2023,bases,Larger bases 18 inches (from 15)
+2023,pickoff,Two disengagement limit; third unsuccessful attempt = balk
+2024,pitch_timer,Pitch timer 18s with runners on (15s empty unchanged)

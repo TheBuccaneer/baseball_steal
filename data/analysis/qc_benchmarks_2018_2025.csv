@@ -1,0 +1,9 @@
+season,metric,value_ours,value_bench,delta_abs,delta_pct,status,source
+2018,SB,2468.0,2474.0,-6.0,-0.24,PASS,Baseball Almanac
+2019,SB,2280.0,2280.0,0.0,0.0,PASS,Baseball Almanac
+2020,SB,877.0,884.0,-7.0,-0.79,PASS,Baseball Almanac
+2021,SB,2212.0,2213.0,-1.0,-0.05,PASS,Baseball Almanac
+2022,SB,2481.0,2487.0,-6.0,-0.24,PASS,Baseball Almanac
+2023,SR,0.8019,0.8,0.0019,0.19,PASS,MLB.com 2023 announcement
+2023,SB,3497.0,3503.0,-6.0,-0.17,PASS,MLB.com official (2023)
+2024,SB,3607.0,3617.0,-10.0,-0.28,PASS,MLB.com official (2024)
