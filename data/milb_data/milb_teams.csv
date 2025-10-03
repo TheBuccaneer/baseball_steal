@@ -1,0 +1,629 @@
+team_id,team_name,level_id,level_name,season,parent_org,league_name
+512,Toledo Mud Hens,11,AAA,2019,Detroit Tigers,International League
+1410,Lehigh Valley IronPigs,11,AAA,2019,Philadelphia Phillies,International League
+579,Guerreros de Oaxaca,11,AAA,2019,Office of the Commissioner,Mexican League
+451,Iowa Cubs,11,AAA,2019,Chicago Cubs,Pacific Coast League
+259,Fresno Grizzlies,11,AAA,2019,Washington Nationals,Pacific Coast League
+2310,Reno Aces,11,AAA,2019,Arizona Diamondbacks,Pacific Coast League
+520,Pericos de Puebla,11,AAA,2019,Office of the Commissioner,Mexican League
+523,Piratas de Campeche,11,AAA,2019,Office of the Commissioner,Mexican League
+588,New Orleans Baby Cakes,11,AAA,2019,Miami Marlins,Pacific Coast League
+528,Rieleros de Aguascalientes,11,AAA,2019,Office of the Commissioner,Mexican League
+400,Las Vegas Aviators,11,AAA,2019,Oakland Athletics,Pacific Coast League
+529,Tacoma Rainiers,11,AAA,2019,Seattle Mariners,Pacific Coast League
+5010,Toros de Tijuana,11,AAA,2019,Office of the Commissioner,Mexican League
+531,Scranton/Wilkes-Barre RailRiders,11,AAA,2019,New York Yankees,International League
+532,Diablos Rojos del Mexico,11,AAA,2019,Office of the Commissioner,Mexican League
+533,Pawtucket Red Sox,11,AAA,2019,Boston Red Sox,International League
+342,Albuquerque Isotopes,11,AAA,2019,Colorado Rockies,Pacific Coast League
+534,Rochester Red Wings,11,AAA,2019,Minnesota Twins,International League
+536,Tecos de los Dos Laredos,11,AAA,2019,Office of the Commissioner,Mexican League
+4444,Generales de Durango,11,AAA,2019,Office of the Commissioner,Mexican League
+541,Omaha Storm Chasers,11,AAA,2019,Kansas City Royals,Pacific Coast League
+416,Louisville Bats,11,AAA,2019,Cincinnati Reds,International League
+484,Indianapolis Indians,11,AAA,2019,Pittsburgh Pirates,International League
+102,Round Rock Express,11,AAA,2019,Houston Astros,Pacific Coast League
+422,Buffalo Bisons,11,AAA,2019,Toronto Blue Jays,International League
+4904,El Paso Chihuahuas,11,AAA,2019,San Diego Padres,Pacific Coast League
+552,Syracuse Mets,11,AAA,2019,New York Mets,International League
+105,Sacramento River Cats,11,AAA,2019,San Francisco Giants,Pacific Coast League
+234,Durham Bulls,11,AAA,2019,Tampa Bay Rays,International League
+235,Memphis Redbirds,11,AAA,2019,St. Louis Cardinals,Pacific Coast League
+556,Nashville Sounds,11,AAA,2019,Texas Rangers,Pacific Coast League
+494,Charlotte Knights,11,AAA,2019,Chicago White Sox,International League
+238,Oklahoma City Dodgers,11,AAA,2019,Los Angeles Dodgers,Pacific Coast League
+431,Gwinnett Stripers,11,AAA,2019,Atlanta Braves,International League
+496,Leones de Yucatan,11,AAA,2019,Office of the Commissioner,Mexican League
+560,Acereros del Norte,11,AAA,2019,Office of the Commissioner,Mexican League
+561,Salt Lake Bees,11,AAA,2019,Los Angeles Angels,Pacific Coast League
+562,Sultanes de Monterrey,11,AAA,2019,Office of the Commissioner,Mexican League
+434,Bravos de Leon,11,AAA,2019,Office of the Commissioner,Mexican League
+502,Saraperos de Saltillo,11,AAA,2019,Office of the Commissioner,Mexican League
+568,Norfolk Tides,11,AAA,2019,Baltimore Orioles,International League
+569,Tigres de Quintana Roo,11,AAA,2019,Office of the Commissioner,Mexican League
+3898,Wichita Wind Surge,11,AAA,2019,Miami Marlins,
+442,Olmecas de Tabasco,11,AAA,2019,Office of the Commissioner,Mexican League
+445,Columbus Clippers,11,AAA,2019,Cleveland Indians,International League
+510,San Antonio Missions,11,AAA,2019,Milwaukee Brewers,Pacific Coast League
+447,Algodoneros Union Laguna,11,AAA,2019,Office of the Commissioner,Mexican League
+452,Altoona Curve,12,AA,2019,Pittsburgh Pirates,Eastern League
+260,Tulsa Drillers,12,AA,2019,Los Angeles Dodgers,Texas League
+1350,Northwest Arkansas Naturals,12,AA,2019,Kansas City Royals,Texas League
+522,Reading Fightin Phils,12,AA,2019,Philadelphia Phillies,Eastern League
+463,New Hampshire Fisher Cats,12,AA,2019,Toronto Blue Jays,Eastern League
+3410,Richmond Flying Squirrels,12,AA,2019,San Francisco Giants,Eastern League
+402,Akron RubberDucks,12,AA,2019,Cleveland Indians,Eastern League
+5015,Biloxi Shuckers,12,AA,2019,Milwaukee Brewers,Southern League
+538,Hartford Yard Goats,12,AA,2019,Colorado Rockies,Eastern League
+4124,Pensacola Blue Wahoos,12,AA,2019,Minnesota Twins,Southern League
+540,Frisco RoughRiders,12,AA,2019,Texas Rangers,Texas League
+417,Mobile BayBears,12,AA,2019,Los Angeles Angels,Southern League
+546,Portland Sea Dogs,12,AA,2019,Boston Red Sox,Eastern League
+482,Corpus Christi Hooks,12,AA,2019,Houston Astros,Texas League
+418,Bowie Baysox,12,AA,2019,Baltimore Orioles,Eastern League
+547,Harrisburg Senators,12,AA,2019,Washington Nationals,Eastern League
+421,Montgomery Biscuits,12,AA,2019,Tampa Bay Rays,Southern League
+104,Jackson Generals,12,AA,2019,Arizona Diamondbacks,Southern League
+553,Tennessee Smokies,12,AA,2019,Chicago Cubs,Southern League
+106,Erie SeaWolves,12,AA,2019,Detroit Tigers,Eastern League
+237,Midland RockHounds,12,AA,2019,Oakland Athletics,Texas League
+430,Mississippi Braves,12,AA,2019,Atlanta Braves,Southern League
+559,Rocket City Trash Pandas,12,AA,2019,Los Angeles Angels,
+498,Chattanooga Lookouts,12,AA,2019,Cincinnati Reds,Southern League
+564,Jacksonville Jumbo Shrimp,12,AA,2019,Miami Marlins,Southern League
+567,Trenton Thunder,12,AA,2019,New York Yankees,Eastern League
+247,Birmingham Barons,12,AA,2019,Chicago White Sox,Southern League
+5368,Amarillo Sod Poodles,12,AA,2019,San Diego Padres,Texas League
+440,Springfield Cardinals,12,AA,2019,St. Louis Cardinals,Texas League
+505,Binghamton Rumble Ponies,12,AA,2019,New York Mets,Eastern League
+574,Arkansas Travelers,12,AA,2019,Seattle Mariners,Texas League
+3712,Fayetteville Woodpeckers,13,High-A,2019,Houston Astros,Carolina League
+450,Daytona Tortugas,13,High-A,2019,Cincinnati Reds,Florida State League
+515,Modesto Nuts,13,High-A,2019,Seattle Mariners,California League
+580,Winston-Salem Dash,13,High-A,2019,Chicago White Sox,Carolina League
+516,Visalia Rawhide,13,High-A,2019,Arizona Diamondbacks,California League
+521,Myrtle Beach Pelicans,13,High-A,2019,Chicago Cubs,Carolina League
+587,Tampa Tarpons,13,High-A,2019,New York Yankees,Florida State League
+524,Stockton Ports,13,High-A,2019,Oakland Athletics,California League
+526,Rancho Cucamonga Quakes,13,High-A,2019,Los Angeles Dodgers,California League
+401,Inland Empire 66ers,13,High-A,2019,Los Angeles Angels,California League
+279,Palm Beach Cardinals,13,High-A,2019,St. Louis Cardinals,Florida State League
+476,San Jose Giants,13,High-A,2019,San Francisco Giants,California League
+414,Salem Red Sox,13,High-A,2019,Boston Red Sox,Carolina League
+479,Jupiter Hammerheads,13,High-A,2019,Miami Marlins,Florida State League
+481,Lynchburg Hillcats,13,High-A,2019,Cleveland Indians,Carolina League
+485,Down East Wood Ducks,13,High-A,2019,Texas Rangers,Carolina League
+103,Lake Elsinore Storm,13,High-A,2019,San Diego Padres,California League
+424,Dunedin Blue Jays,13,High-A,2019,Toronto Blue Jays,Florida State League
+2730,Charlotte Stone Crabs,13,High-A,2019,Tampa Bay Rays,Florida State League
+426,Wilmington Blue Rocks,13,High-A,2019,Kansas City Royals,Carolina League
+491,Lancaster JetHawks,13,High-A,2019,Colorado Rockies,California League
+493,Frederick Keys,13,High-A,2019,Baltimore Orioles,Carolina League
+436,Potomac Nationals,13,High-A,2019,Washington Nationals,Carolina League
+566,Clearwater Threshers,13,High-A,2019,Philadelphia Phillies,Florida State League
+503,Florida Fire Frogs,13,High-A,2019,Atlanta Braves,Florida State League
+249,Carolina Mudcats,13,High-A,2019,Milwaukee Brewers,Carolina League
+570,Lakeland Flying Tigers,13,High-A,2019,Detroit Tigers,Florida State League
+507,St. Lucie Mets,13,High-A,2019,New York Mets,Florida State League
+509,Fort Myers Miracle,13,High-A,2019,Minnesota Twins,Florida State League
+3390,Bradenton Marauders,13,High-A,2019,Pittsburgh Pirates,Florida State League
+448,Hickory Crawdads,14,A,2019,Texas Rangers,South Atlantic League
+2498,Bowling Green Hot Rods,14,A,2019,Tampa Bay Rays,Midwest League
+582,West Michigan Whitecaps,14,A,2019,Detroit Tigers,Midwest League
+584,Fort Wayne TinCaps,14,A,2019,San Diego Padres,Midwest League
+456,Great Lakes Loons,14,A,2019,Los Angeles Dodgers,Midwest League
+459,Dayton Dragons,14,A,2019,Cincinnati Reds,Midwest League
+525,West Virginia Power,14,A,2019,Seattle Mariners,South Atlantic League
+477,Greensboro Grasshoppers,14,A,2019,Pittsburgh Pirates,South Atlantic League
+478,Augusta GreenJackets,14,A,2019,San Francisco Giants,South Atlantic League
+548,Delmarva Shorebirds,14,A,2019,Baltimore Orioles,South Atlantic League
+420,Burlington Bees,14,A,2019,Los Angeles Angels,Midwest League
+550,South Bend Cubs,14,A,2019,Chicago Cubs,Midwest League
+487,Kannapolis Intimidators,14,A,2019,Chicago White Sox,South Atlantic League
+233,Charleston RiverDogs,14,A,2019,New York Yankees,South Atlantic League
+554,Beloit Snappers,14,A,2019,Oakland Athletics,Midwest League
+427,Lakewood BlueClaws,14,A,2019,Philadelphia Phillies,South Atlantic League
+492,Cedar Rapids Kernels,14,A,2019,Minnesota Twins,Midwest League
+428,Greenville Drive,14,A,2019,Boston Red Sox,South Atlantic League
+495,Lexington Legends,14,A,2019,Kansas City Royals,South Atlantic League
+432,Rome Braves,14,A,2019,Atlanta Braves,South Atlantic League
+499,Lansing Lugnuts,14,A,2019,Toronto Blue Jays,Midwest League
+563,Hagerstown Suns,14,A,2019,Washington Nationals,South Atlantic League
+500,Clinton LumberKings,14,A,2019,Miami Marlins,Midwest League
+565,Quad Cities River Bandits,14,A,2019,Houston Astros,Midwest League
+437,Lake County Captains,14,A,2019,Cleveland Indians,Midwest League
+3705,Columbia Fireflies,14,A,2019,New York Mets,South Atlantic League
+443,Peoria Chiefs,14,A,2019,St. Louis Cardinals,Midwest League
+572,Wisconsin Timber Rattlers,14,A,2019,Milwaukee Brewers,Midwest League
+573,Asheville Tourists,14,A,2019,Colorado Rockies,South Atlantic League
+446,Kane County Cougars,14,A,2019,Arizona Diamondbacks,Midwest League
+2690,AZL Dodgers Mota,16,Rookie,2019,Los Angeles Dodgers,Arizona League
+404,AZL Angels,16,Rookie,2019,Los Angeles Angels,Arizona League
+405,AZL Athletics Green,16,Rookie,2019,Oakland Athletics,Arizona League
+406,AZL Brewers Gold,16,Rookie,2019,Milwaukee Brewers,Arizona League
+407,AZL Cubs 1,16,Rookie,2019,Chicago Cubs,Arizona League
+408,AZL Giants Black,16,Rookie,2019,San Francisco Giants,Arizona League
+409,AZL Mariners,16,Rookie,2019,Seattle Mariners,Arizona League
+410,AZL Padres 1,16,Rookie,2019,San Diego Padres,Arizona League
+411,AZL Rangers,16,Rookie,2019,Texas Rangers,Arizona League
+412,AZL Royals,16,Rookie,2019,Kansas City Royals,Arizona League
+2097,DSL Cardinals Red,16,Rookie,2019,St. Louis Cardinals,Dominican Summer League
+5426,AZL Athletics Gold,16,Rookie,2019,Oakland Athletics,Arizona League
+5427,AZL Dodgers Lasorda,16,Rookie,2019,Los Angeles Dodgers,Arizona League
+4404,DSL Pirates 2,16,Rookie,2019,Pittsburgh Pirates,Dominican Summer League
+5430,AZL Brewers Blue,16,Rookie,2019,Milwaukee Brewers,Arizona League
+3130,DSL Orioles 2,16,Rookie,2019,Baltimore Orioles,Dominican Summer League
+5316,AZL Padres 2,16,Rookie,2019,San Diego Padres,Arizona League
+2117,DSL Mets 2,16,Rookie,2019,New York Mets,Dominican Summer League
+1991,ACL D-backs,16,Rookie,2019,Arizona Diamondbacks,Arizona League
+1995,AZL Cubs 2,16,Rookie,2019,Chicago Cubs,Arizona League
+1611,DSL Rays 1,16,Rookie,2019,Tampa Bay Rays,Dominican Summer League
+1997,ACL White Sox,16,Rookie,2019,Chicago White Sox,Arizona League
+1998,GCL Astros,16,Rookie,2019,Houston Astros,Gulf Coast League
+5071,GCL Tigers West,16,Rookie,2019,Detroit Tigers,Gulf Coast League
+2128,DSL Royals 2,16,Rookie,2019,Kansas City Royals,Dominican Summer League
+464,GCL Braves,16,Rookie,2019,Atlanta Braves,Gulf Coast League
+2770,AZL Indians Red,16,Rookie,2019,Cleveland Indians,Arizona League
+466,GCL Nationals,16,Rookie,2019,Washington Nationals,Gulf Coast League
+2131,DSL Colorado,16,Rookie,2019,Colorado Rockies,Dominican Summer League
+2003,GCL Rays,16,Rookie,2019,Tampa Bay Rays,Gulf Coast League
+467,GCL Marlins,16,Rookie,2019,Miami Marlins,Gulf Coast League
+2132,DSL Tigers 2,16,Rookie,2019,Detroit Tigers,Dominican Summer League
+468,GCL Mets,16,Rookie,2019,New York Mets,Gulf Coast League
+469,GCL Phillies East,16,Rookie,2019,Philadelphia Phillies,Gulf Coast League
+470,GCL Pirates,16,Rookie,2019,Pittsburgh Pirates,Gulf Coast League
+599,GCL Orioles,16,Rookie,2019,Baltimore Orioles,Gulf Coast League
+471,GCL Red Sox,16,Rookie,2019,Boston Red Sox,Gulf Coast League
+600,DSL Angels,16,Rookie,2019,Los Angeles Angels,Dominican Summer League
+601,DSL Astros,16,Rookie,2019,Houston Astros,Dominican Summer League
+473,FCL Tigers East,16,Rookie,2019,Detroit Tigers,Gulf Coast League
+1370,GCL Cardinals,16,Rookie,2019,St. Louis Cardinals,Gulf Coast League
+602,DSL Athletics,16,Rookie,2019,Oakland Athletics,Dominican Summer League
+474,GCL Twins,16,Rookie,2019,Minnesota Twins,Gulf Coast League
+475,GCL Yankees East,16,Rookie,2019,New York Yankees,Gulf Coast League
+604,DSL Blue Jays,16,Rookie,2019,Toronto Blue Jays,Dominican Summer League
+5085,DSL Phillies White,16,Rookie,2019,Philadelphia Phillies,Dominican Summer League
+605,DSL Braves,16,Rookie,2019,Atlanta Braves,Dominican Summer League
+5086,DSL Rays 2,16,Rookie,2019,Tampa Bay Rays,Dominican Summer League
+2270,DSL Cubs 2,16,Rookie,2019,Chicago Cubs,Dominican Summer League
+5087,DSL D-backs 2,16,Rookie,2019,Arizona Diamondbacks,Dominican Summer League
+607,DSL Brewers,16,Rookie,2019,Milwaukee Brewers,Dominican Summer League
+608,DSL Cardinals Blue,16,Rookie,2019,St. Louis Cardinals,Dominican Summer League
+609,DSL Cubs 1,16,Rookie,2019,Chicago Cubs,Dominican Summer League
+610,DSL D-backs 1,16,Rookie,2019,Arizona Diamondbacks,Dominican Summer League
+611,DSL LAD Bautista,16,Rookie,2019,Los Angeles Dodgers,Dominican Summer League
+612,DSL Dodgers Shoemaker,16,Rookie,2019,Los Angeles Dodgers,Dominican Summer League
+3430,AZL Reds,16,Rookie,2019,Cincinnati Reds,Arizona League
+615,DSL Giants,16,Rookie,2019,San Francisco Giants,Dominican Summer League
+616,DSL Indians,16,Rookie,2019,Cleveland Indians,Dominican Summer League
+617,DSL Indians/Brewers,16,Rookie,2019,,Dominican Summer League
+618,DSL Mariners,16,Rookie,2019,Seattle Mariners,Dominican Summer League
+619,DSL Marlins,16,Rookie,2019,Miami Marlins,Dominican Summer League
+620,DSL Mets 1,16,Rookie,2019,New York Mets,Dominican Summer League
+2413,DSL Rangers 2,16,Rookie,2019,Texas Rangers,Dominican Summer League
+621,DSL Orioles 1,16,Rookie,2019,Baltimore Orioles,Dominican Summer League
+1390,GCL Blue Jays,16,Rookie,2019,Toronto Blue Jays,Gulf Coast League
+622,DSL Padres,16,Rookie,2019,San Diego Padres,Dominican Summer League
+623,DSL Phillies Red,16,Rookie,2019,Philadelphia Phillies,Dominican Summer League
+624,DSL Pirates 1,16,Rookie,2019,Pittsburgh Pirates,Dominican Summer League
+625,DSL Rangers 1,16,Rookie,2019,Texas Rangers,Dominican Summer League
+626,DSL Red Sox 1,16,Rookie,2019,Boston Red Sox,Dominican Summer League
+627,DSL Red Sox 2,16,Rookie,2019,Boston Red Sox,Dominican Summer League
+628,DSL Reds,16,Rookie,2019,Cincinnati Reds,Dominican Summer League
+4725,GCL Yankees West,16,Rookie,2019,New York Yankees,Gulf Coast League
+629,DSL Rockies,16,Rookie,2019,Colorado Rockies,Dominican Summer League
+1270,DSL Nationals,16,Rookie,2019,Washington Nationals,Dominican Summer League
+630,DSL Royals 1,16,Rookie,2019,Kansas City Royals,Dominican Summer League
+631,DSL Tigers 1,16,Rookie,2019,Detroit Tigers,Dominican Summer League
+632,DSL Twins,16,Rookie,2019,Minnesota Twins,Dominican Summer League
+633,DSL White Sox,16,Rookie,2019,Chicago White Sox,Dominican Summer League
+5370,AZL Giants Orange,16,Rookie,2019,San Francisco Giants,Arizona League
+634,DSL Yankees,16,Rookie,2019,New York Yankees,Dominican Summer League
+5372,GCL Phillies West,16,Rookie,2019,Philadelphia Phillies,Gulf Coast League
+5374,AZL Indians Blue,16,Rookie,2019,Cleveland Indians,Arizona League
+512,Toledo Mud Hens,11,AAA,2021,Detroit Tigers,Triple-A East
+1410,Lehigh Valley IronPigs,11,AAA,2021,Philadelphia Phillies,Triple-A East
+451,Iowa Cubs,11,AAA,2021,Chicago Cubs,Triple-A East
+2310,Reno Aces,11,AAA,2021,Arizona Diamondbacks,Triple-A West
+400,Las Vegas Aviators,11,AAA,2021,Oakland Athletics,Triple-A West
+529,Tacoma Rainiers,11,AAA,2021,Seattle Mariners,Triple-A West
+531,Scranton/Wilkes-Barre RailRiders,11,AAA,2021,New York Yankees,Triple-A East
+533,Worcester Red Sox,11,AAA,2021,Boston Red Sox,Triple-A East
+534,Rochester Red Wings,11,AAA,2021,Washington Nationals,Triple-A East
+342,Albuquerque Isotopes,11,AAA,2021,Colorado Rockies,Triple-A West
+541,Omaha Storm Chasers,11,AAA,2021,Kansas City Royals,Triple-A East
+416,Louisville Bats,11,AAA,2021,Cincinnati Reds,Triple-A East
+484,Indianapolis Indians,11,AAA,2021,Pittsburgh Pirates,Triple-A East
+422,Buffalo Bisons,11,AAA,2021,Toronto Blue Jays,Triple-A East
+102,Round Rock Express,11,AAA,2021,Texas Rangers,Triple-A West
+4904,El Paso Chihuahuas,11,AAA,2021,San Diego Padres,Triple-A West
+1960,St. Paul Saints,11,AAA,2021,Minnesota Twins,Triple-A East
+552,Syracuse Mets,11,AAA,2021,New York Mets,Triple-A East
+105,Sacramento River Cats,11,AAA,2021,San Francisco Giants,Triple-A West
+234,Durham Bulls,11,AAA,2021,Tampa Bay Rays,Triple-A East
+235,Memphis Redbirds,11,AAA,2021,St. Louis Cardinals,Triple-A East
+556,Nashville Sounds,11,AAA,2021,Milwaukee Brewers,Triple-A East
+494,Charlotte Knights,11,AAA,2021,Chicago White Sox,Triple-A East
+238,Oklahoma City Dodgers,11,AAA,2021,Los Angeles Dodgers,Triple-A West
+431,Gwinnett Stripers,11,AAA,2021,Atlanta Braves,Triple-A East
+561,Salt Lake Bees,11,AAA,2021,Los Angeles Angels,Triple-A West
+564,Jacksonville Jumbo Shrimp,11,AAA,2021,Miami Marlins,Triple-A East
+568,Norfolk Tides,11,AAA,2021,Baltimore Orioles,Triple-A East
+5434,Sugar Land Skeeters,11,AAA,2021,Houston Astros,Triple-A West
+445,Columbus Clippers,11,AAA,2021,Cleveland Indians,Triple-A East
+452,Altoona Curve,12,AA,2021,Pittsburgh Pirates,Double-A Northeast
+260,Tulsa Drillers,12,AA,2021,Los Angeles Dodgers,Double-A Central
+1350,Northwest Arkansas Naturals,12,AA,2021,Kansas City Royals,Double-A Central
+522,Reading Fightin Phils,12,AA,2021,Philadelphia Phillies,Double-A Northeast
+463,New Hampshire Fisher Cats,12,AA,2021,Toronto Blue Jays,Double-A Northeast
+3410,Richmond Flying Squirrels,12,AA,2021,San Francisco Giants,Double-A Northeast
+402,Akron RubberDucks,12,AA,2021,Cleveland Indians,Double-A Northeast
+5015,Biloxi Shuckers,12,AA,2021,Milwaukee Brewers,Double-A South
+538,Hartford Yard Goats,12,AA,2021,Colorado Rockies,Double-A Northeast
+4124,Pensacola Blue Wahoos,12,AA,2021,Miami Marlins,Double-A South
+540,Frisco RoughRiders,12,AA,2021,Texas Rangers,Double-A Central
+546,Portland Sea Dogs,12,AA,2021,Boston Red Sox,Double-A Northeast
+482,Corpus Christi Hooks,12,AA,2021,Houston Astros,Double-A Central
+418,Bowie Baysox,12,AA,2021,Baltimore Orioles,Double-A Northeast
+547,Harrisburg Senators,12,AA,2021,Washington Nationals,Double-A Northeast
+1956,Somerset Patriots,12,AA,2021,New York Yankees,Double-A Northeast
+421,Montgomery Biscuits,12,AA,2021,Tampa Bay Rays,Double-A South
+553,Tennessee Smokies,12,AA,2021,Chicago Cubs,Double-A South
+106,Erie SeaWolves,12,AA,2021,Detroit Tigers,Double-A Northeast
+237,Midland RockHounds,12,AA,2021,Oakland Athletics,Double-A Central
+430,Mississippi Braves,12,AA,2021,Atlanta Braves,Double-A South
+559,Rocket City Trash Pandas,12,AA,2021,Los Angeles Angels,Double-A South
+498,Chattanooga Lookouts,12,AA,2021,Cincinnati Reds,Double-A South
+247,Birmingham Barons,12,AA,2021,Chicago White Sox,Double-A South
+5368,Amarillo Sod Poodles,12,AA,2021,Arizona Diamondbacks,Double-A Central
+440,Springfield Cardinals,12,AA,2021,St. Louis Cardinals,Double-A Central
+505,Binghamton Rumble Ponies,12,AA,2021,New York Mets,Double-A Northeast
+3898,Wichita Wind Surge,12,AA,2021,Minnesota Twins,Double-A Central
+574,Arkansas Travelers,12,AA,2021,Seattle Mariners,Double-A Central
+510,San Antonio Missions,12,AA,2021,San Diego Padres,Double-A Central
+448,Hickory Crawdads,13,High-A,2021,Texas Rangers,High-A East
+2498,Bowling Green Hot Rods,13,High-A,2021,Tampa Bay Rays,High-A East
+580,Winston-Salem Dash,13,High-A,2021,Chicago White Sox,High-A East
+453,Brooklyn Cyclones,13,High-A,2021,New York Mets,High-A East
+582,West Michigan Whitecaps,13,High-A,2021,Detroit Tigers,High-A Central
+584,Fort Wayne TinCaps,13,High-A,2021,San Diego Padres,High-A Central
+456,Great Lakes Loons,13,High-A,2021,Los Angeles Dodgers,High-A Central
+459,Dayton Dragons,13,High-A,2021,Cincinnati Reds,High-A Central
+460,Tri-City Dust Devils,13,High-A,2021,Los Angeles Angels,High-A West
+461,Eugene Emeralds,13,High-A,2021,San Francisco Giants,High-A West
+403,Everett AquaSox,13,High-A,2021,Seattle Mariners,High-A West
+537,Hudson Valley Renegades,13,High-A,2021,New York Yankees,High-A East
+477,Greensboro Grasshoppers,13,High-A,2021,Pittsburgh Pirates,High-A East
+419,Hillsboro Hops,13,High-A,2021,Arizona Diamondbacks,High-A West
+550,South Bend Cubs,13,High-A,2021,Chicago Cubs,High-A Central
+486,Spokane Indians,13,High-A,2021,Colorado Rockies,High-A West
+488,Aberdeen IronBirds,13,High-A,2021,Baltimore Orioles,High-A East
+554,Beloit Snappers,13,High-A,2021,Miami Marlins,High-A Central
+426,Wilmington Blue Rocks,13,High-A,2021,Washington Nationals,High-A East
+427,Jersey Shore BlueClaws,13,High-A,2021,Philadelphia Phillies,High-A East
+492,Cedar Rapids Kernels,13,High-A,2021,Minnesota Twins,High-A Central
+428,Greenville Drive,13,High-A,2021,Boston Red Sox,High-A East
+432,Rome Braves,13,High-A,2021,Atlanta Braves,High-A East
+499,Lansing Lugnuts,13,High-A,2021,Oakland Athletics,High-A Central
+435,Vancouver Canadians,13,High-A,2021,Toronto Blue Jays,High-A West
+565,Quad Cities River Bandits,13,High-A,2021,Kansas City Royals,High-A Central
+437,Lake County Captains,13,High-A,2021,Cleveland Indians,High-A Central
+443,Peoria Chiefs,13,High-A,2021,St. Louis Cardinals,High-A Central
+572,Wisconsin Timber Rattlers,13,High-A,2021,Milwaukee Brewers,High-A Central
+573,Asheville Tourists,13,High-A,2021,Houston Astros,High-A East
+3712,Fayetteville Woodpeckers,14,A,2021,Houston Astros,Low-A East
+450,Daytona Tortugas,14,A,2021,Cincinnati Reds,Low-A Southeast
+515,Modesto Nuts,14,A,2021,Seattle Mariners,Low-A West
+259,Fresno Grizzlies,14,A,2021,Colorado Rockies,Low-A West
+516,Visalia Rawhide,14,A,2021,Arizona Diamondbacks,Low-A West
+521,Myrtle Beach Pelicans,14,A,2021,Chicago Cubs,Low-A East
+587,Tampa Tarpons,14,A,2021,New York Yankees,Low-A Southeast
+524,Stockton Ports,14,A,2021,Oakland Athletics,Low-A West
+526,Rancho Cucamonga Quakes,14,A,2021,Los Angeles Dodgers,Low-A West
+401,Inland Empire 66ers,14,A,2021,Los Angeles Angels,Low-A West
+279,Palm Beach Cardinals,14,A,2021,St. Louis Cardinals,Low-A Southeast
+476,San Jose Giants,14,A,2021,San Francisco Giants,Low-A West
+478,Augusta GreenJackets,14,A,2021,Atlanta Braves,Low-A East
+414,Salem Red Sox,14,A,2021,Boston Red Sox,Low-A East
+479,Jupiter Hammerheads,14,A,2021,Miami Marlins,Low-A Southeast
+481,Lynchburg Hillcats,14,A,2021,Cleveland Indians,Low-A East
+548,Delmarva Shorebirds,14,A,2021,Baltimore Orioles,Low-A East
+485,Down East Wood Ducks,14,A,2021,Texas Rangers,Low-A East
+487,Kannapolis Cannon Ballers,14,A,2021,Chicago White Sox,Low-A East
+103,Lake Elsinore Storm,14,A,2021,San Diego Padres,Low-A West
+424,Dunedin Blue Jays,14,A,2021,Toronto Blue Jays,Low-A Southeast
+233,Charleston RiverDogs,14,A,2021,Tampa Bay Rays,Low-A East
+436,Fredericksburg Nationals,14,A,2021,Washington Nationals,Low-A East
+566,Clearwater Threshers,14,A,2021,Philadelphia Phillies,Low-A Southeast
+3705,Columbia Fireflies,14,A,2021,Kansas City Royals,Low-A East
+249,Carolina Mudcats,14,A,2021,Milwaukee Brewers,Low-A East
+570,Lakeland Flying Tigers,14,A,2021,Detroit Tigers,Low-A Southeast
+507,St. Lucie Mets,14,A,2021,New York Mets,Low-A Southeast
+509,Fort Myers Mighty Mussels,14,A,2021,Minnesota Twins,Low-A Southeast
+3390,Bradenton Marauders,14,A,2021,Pittsburgh Pirates,Low-A Southeast
+5506,DSL Indians Red,16,Rookie,2021,Cleveland Indians,Dominican Summer League
+404,ACL Angels,16,Rookie,2021,Los Angeles Angels,Arizona Complex League
+406,ACL Brewers Gold,16,Rookie,2021,Milwaukee Brewers,Arizona Complex League
+407,ACL Cubs,16,Rookie,2021,Chicago Cubs,Arizona Complex League
+408,ACL Giants Black,16,Rookie,2021,San Francisco Giants,Arizona Complex League
+409,ACL Mariners,16,Rookie,2021,Seattle Mariners,Arizona Complex League
+410,ACL Padres,16,Rookie,2021,San Diego Padres,Arizona Complex League
+411,ACL Rangers,16,Rookie,2021,Texas Rangers,Arizona Complex League
+412,ACL Royals Blue,16,Rookie,2021,Kansas City Royals,Arizona Complex League
+2097,DSL Cardinals Red,16,Rookie,2021,St. Louis Cardinals,Dominican Summer League
+5426,ACL Athletics,16,Rookie,2021,Oakland Athletics,Arizona Complex League
+5427,ACL Dodgers,16,Rookie,2021,Los Angeles Dodgers,Arizona Complex League
+4404,DSL PIT Gold,16,Rookie,2021,Pittsburgh Pirates,Dominican Summer League
+2101,DSL Brewers 2,16,Rookie,2021,Milwaukee Brewers,Dominican Summer League
+5430,ACL Brewers Blue,16,Rookie,2021,Milwaukee Brewers,Arizona Complex League
+3130,DSL Orioles 2,16,Rookie,2021,Baltimore Orioles,Dominican Summer League
+2117,DSL Mets 2,16,Rookie,2021,New York Mets,Dominican Summer League
+1991,ACL D-backs,16,Rookie,2021,Arizona Diamondbacks,Arizona Complex League
+5578,FCL Orioles Orange,16,Rookie,2021,Baltimore Orioles,Florida Complex League
+1994,ACL Rockies,16,Rookie,2021,Colorado Rockies,Arizona Complex League
+5579,FCL Pirates Gold,16,Rookie,2021,Pittsburgh Pirates,Florida Complex League
+1611,DSL Rays 1,16,Rookie,2021,Tampa Bay Rays,Dominican Summer League
+1996,ACL Royals Gold,16,Rookie,2021,Kansas City Royals,Arizona Complex League
+1997,ACL White Sox,16,Rookie,2021,Chicago White Sox,Arizona Complex League
+1998,FCL Astros,16,Rookie,2021,Houston Astros,Florida Complex League
+5071,FCL Tigers West,16,Rookie,2021,Detroit Tigers,Florida Complex League
+2128,DSL Royals White,16,Rookie,2021,Kansas City Royals,Dominican Summer League
+464,FCL Braves,16,Rookie,2021,Atlanta Braves,Florida Complex League
+466,FCL Nationals,16,Rookie,2021,Washington Nationals,Florida Complex League
+2131,DSL Colorado,16,Rookie,2021,Colorado Rockies,Dominican Summer League
+2003,FCL Rays,16,Rookie,2021,Tampa Bay Rays,Florida Complex League
+467,FCL Marlins,16,Rookie,2021,Miami Marlins,Florida Complex League
+468,FCL Mets,16,Rookie,2021,New York Mets,Florida Complex League
+469,FCL Phillies,16,Rookie,2021,Philadelphia Phillies,Florida Complex League
+2134,DSL Giants Black,16,Rookie,2021,San Francisco Giants,Dominican Summer League
+470,FCL Pirates Black,16,Rookie,2021,Pittsburgh Pirates,Florida Complex League
+599,FCL Orioles Black,16,Rookie,2021,Baltimore Orioles,Florida Complex League
+471,FCL Red Sox,16,Rookie,2021,Boston Red Sox,Florida Complex League
+600,DSL Angels,16,Rookie,2021,Los Angeles Angels,Dominican Summer League
+601,DSL Astros,16,Rookie,2021,Houston Astros,Dominican Summer League
+473,FCL Tigers East,16,Rookie,2021,Detroit Tigers,Florida Complex League
+1370,FCL Cardinals,16,Rookie,2021,St. Louis Cardinals,Florida Complex League
+602,DSL Athletics,16,Rookie,2021,Oakland Athletics,Dominican Summer League
+474,FCL Twins,16,Rookie,2021,Minnesota Twins,Florida Complex League
+475,FCL Yankees,16,Rookie,2021,New York Yankees,Florida Complex League
+604,DSL Blue Jays,16,Rookie,2021,Toronto Blue Jays,Dominican Summer League
+5085,DSL Phillies White,16,Rookie,2021,Philadelphia Phillies,Dominican Summer League
+605,DSL Braves,16,Rookie,2021,Atlanta Braves,Dominican Summer League
+5086,DSL Rays 2,16,Rookie,2021,Tampa Bay Rays,Dominican Summer League
+2270,DSL Cubs Red,16,Rookie,2021,Chicago Cubs,Dominican Summer League
+5087,DSL D-backs 2,16,Rookie,2021,Arizona Diamondbacks,Dominican Summer League
+607,DSL Brewers 1,16,Rookie,2021,Milwaukee Brewers,Dominican Summer League
+608,DSL Cardinals Blue,16,Rookie,2021,St. Louis Cardinals,Dominican Summer League
+609,DSL Cubs Blue,16,Rookie,2021,Chicago Cubs,Dominican Summer League
+610,DSL D-backs 1,16,Rookie,2021,Arizona Diamondbacks,Dominican Summer League
+611,DSL LAD Bautista,16,Rookie,2021,Los Angeles Dodgers,Dominican Summer League
+612,DSL Dodgers Shoemaker,16,Rookie,2021,Los Angeles Dodgers,Dominican Summer League
+3430,ACL Reds,16,Rookie,2021,Cincinnati Reds,Arizona Complex League
+615,DSL Giants Orange,16,Rookie,2021,San Francisco Giants,Dominican Summer League
+616,DSL Indians Blue,16,Rookie,2021,Cleveland Indians,Dominican Summer League
+618,DSL Mariners,16,Rookie,2021,Seattle Mariners,Dominican Summer League
+619,DSL Marlins,16,Rookie,2021,Miami Marlins,Dominican Summer League
+620,DSL Mets 1,16,Rookie,2021,New York Mets,Dominican Summer League
+2413,DSL Rangers 2,16,Rookie,2021,Texas Rangers,Dominican Summer League
+621,DSL Orioles 1,16,Rookie,2021,Baltimore Orioles,Dominican Summer League
+1390,FCL Blue Jays,16,Rookie,2021,Toronto Blue Jays,Florida Complex League
+622,DSL Padres,16,Rookie,2021,San Diego Padres,Dominican Summer League
+623,DSL Phillies Red,16,Rookie,2021,Philadelphia Phillies,Dominican Summer League
+624,DSL PIT Black,16,Rookie,2021,Pittsburgh Pirates,Dominican Summer League
+625,DSL Rangers 1,16,Rookie,2021,Texas Rangers,Dominican Summer League
+626,DSL BOS Blue,16,Rookie,2021,Boston Red Sox,Dominican Summer League
+627,DSL BOS Red,16,Rookie,2021,Boston Red Sox,Dominican Summer League
+628,DSL Reds,16,Rookie,2021,Cincinnati Reds,Dominican Summer League
+629,DSL Rockies,16,Rookie,2021,Colorado Rockies,Dominican Summer League
+1270,DSL Nationals,16,Rookie,2021,Washington Nationals,Dominican Summer League
+630,DSL Royals Blue,16,Rookie,2021,Kansas City Royals,Dominican Summer League
+631,DSL Tigers,16,Rookie,2021,Detroit Tigers,Dominican Summer League
+632,DSL Twins,16,Rookie,2021,Minnesota Twins,Dominican Summer League
+633,DSL White Sox,16,Rookie,2021,Chicago White Sox,Dominican Summer League
+5370,ACL Giants Orange,16,Rookie,2021,San Francisco Giants,Arizona Complex League
+634,DSL Yankees 1,16,Rookie,2021,New York Yankees,Dominican Summer League
+635,DSL Yankees 2,16,Rookie,2021,New York Yankees,Dominican Summer League
+5374,ACL Indians,16,Rookie,2021,Cleveland Indians,Arizona Complex League
+512,Toledo Mud Hens,11,AAA,2022,Detroit Tigers,International League
+1410,Lehigh Valley IronPigs,11,AAA,2022,Philadelphia Phillies,International League
+451,Iowa Cubs,11,AAA,2022,Chicago Cubs,International League
+2310,Reno Aces,11,AAA,2022,Arizona Diamondbacks,Pacific Coast League
+400,Las Vegas Aviators,11,AAA,2022,Oakland Athletics,Pacific Coast League
+529,Tacoma Rainiers,11,AAA,2022,Seattle Mariners,Pacific Coast League
+531,Scranton/Wilkes-Barre RailRiders,11,AAA,2022,New York Yankees,International League
+533,Worcester Red Sox,11,AAA,2022,Boston Red Sox,International League
+534,Rochester Red Wings,11,AAA,2022,Washington Nationals,International League
+342,Albuquerque Isotopes,11,AAA,2022,Colorado Rockies,Pacific Coast League
+541,Omaha Storm Chasers,11,AAA,2022,Kansas City Royals,International League
+416,Louisville Bats,11,AAA,2022,Cincinnati Reds,International League
+484,Indianapolis Indians,11,AAA,2022,Pittsburgh Pirates,International League
+422,Buffalo Bisons,11,AAA,2022,Toronto Blue Jays,International League
+102,Round Rock Express,11,AAA,2022,Texas Rangers,Pacific Coast League
+4904,El Paso Chihuahuas,11,AAA,2022,San Diego Padres,Pacific Coast League
+1960,St. Paul Saints,11,AAA,2022,Minnesota Twins,International League
+552,Syracuse Mets,11,AAA,2022,New York Mets,International League
+105,Sacramento River Cats,11,AAA,2022,San Francisco Giants,Pacific Coast League
+234,Durham Bulls,11,AAA,2022,Tampa Bay Rays,International League
+235,Memphis Redbirds,11,AAA,2022,St. Louis Cardinals,International League
+556,Nashville Sounds,11,AAA,2022,Milwaukee Brewers,International League
+494,Charlotte Knights,11,AAA,2022,Chicago White Sox,International League
+238,Oklahoma City Dodgers,11,AAA,2022,Los Angeles Dodgers,Pacific Coast League
+431,Gwinnett Stripers,11,AAA,2022,Atlanta Braves,International League
+561,Salt Lake Bees,11,AAA,2022,Los Angeles Angels,Pacific Coast League
+564,Jacksonville Jumbo Shrimp,11,AAA,2022,Miami Marlins,International League
+568,Norfolk Tides,11,AAA,2022,Baltimore Orioles,International League
+5434,Sugar Land Space Cowboys,11,AAA,2022,Houston Astros,Pacific Coast League
+445,Columbus Clippers,11,AAA,2022,Cleveland Guardians,International League
+452,Altoona Curve,12,AA,2022,Pittsburgh Pirates,Eastern League
+260,Tulsa Drillers,12,AA,2022,Los Angeles Dodgers,Texas League
+1350,Northwest Arkansas Naturals,12,AA,2022,Kansas City Royals,Texas League
+522,Reading Fightin Phils,12,AA,2022,Philadelphia Phillies,Eastern League
+463,New Hampshire Fisher Cats,12,AA,2022,Toronto Blue Jays,Eastern League
+3410,Richmond Flying Squirrels,12,AA,2022,San Francisco Giants,Eastern League
+402,Akron RubberDucks,12,AA,2022,Cleveland Guardians,Eastern League
+5015,Biloxi Shuckers,12,AA,2022,Milwaukee Brewers,Southern League
+538,Hartford Yard Goats,12,AA,2022,Colorado Rockies,Eastern League
+4124,Pensacola Blue Wahoos,12,AA,2022,Miami Marlins,Southern League
+540,Frisco RoughRiders,12,AA,2022,Texas Rangers,Texas League
+546,Portland Sea Dogs,12,AA,2022,Boston Red Sox,Eastern League
+482,Corpus Christi Hooks,12,AA,2022,Houston Astros,Texas League
+418,Bowie Baysox,12,AA,2022,Baltimore Orioles,Eastern League
+547,Harrisburg Senators,12,AA,2022,Washington Nationals,Eastern League
+1956,Somerset Patriots,12,AA,2022,New York Yankees,Eastern League
+421,Montgomery Biscuits,12,AA,2022,Tampa Bay Rays,Southern League
+553,Tennessee Smokies,12,AA,2022,Chicago Cubs,Southern League
+106,Erie SeaWolves,12,AA,2022,Detroit Tigers,Eastern League
+237,Midland RockHounds,12,AA,2022,Oakland Athletics,Texas League
+430,Mississippi Braves,12,AA,2022,Atlanta Braves,Southern League
+559,Rocket City Trash Pandas,12,AA,2022,Los Angeles Angels,Southern League
+498,Chattanooga Lookouts,12,AA,2022,Cincinnati Reds,Southern League
+247,Birmingham Barons,12,AA,2022,Chicago White Sox,Southern League
+5368,Amarillo Sod Poodles,12,AA,2022,Arizona Diamondbacks,Texas League
+440,Springfield Cardinals,12,AA,2022,St. Louis Cardinals,Texas League
+505,Binghamton Rumble Ponies,12,AA,2022,New York Mets,Eastern League
+3898,Wichita Wind Surge,12,AA,2022,Minnesota Twins,Texas League
+574,Arkansas Travelers,12,AA,2022,Seattle Mariners,Texas League
+510,San Antonio Missions,12,AA,2022,San Diego Padres,Texas League
+448,Hickory Crawdads,13,High-A,2022,Texas Rangers,South Atlantic League
+2498,Bowling Green Hot Rods,13,High-A,2022,Tampa Bay Rays,South Atlantic League
+580,Winston-Salem Dash,13,High-A,2022,Chicago White Sox,South Atlantic League
+453,Brooklyn Cyclones,13,High-A,2022,New York Mets,South Atlantic League
+582,West Michigan Whitecaps,13,High-A,2022,Detroit Tigers,Midwest League
+584,Fort Wayne TinCaps,13,High-A,2022,San Diego Padres,Midwest League
+456,Great Lakes Loons,13,High-A,2022,Los Angeles Dodgers,Midwest League
+459,Dayton Dragons,13,High-A,2022,Cincinnati Reds,Midwest League
+460,Tri-City Dust Devils,13,High-A,2022,Los Angeles Angels,Northwest League
+461,Eugene Emeralds,13,High-A,2022,San Francisco Giants,Northwest League
+403,Everett AquaSox,13,High-A,2022,Seattle Mariners,Northwest League
+537,Hudson Valley Renegades,13,High-A,2022,New York Yankees,South Atlantic League
+477,Greensboro Grasshoppers,13,High-A,2022,Pittsburgh Pirates,South Atlantic League
+419,Hillsboro Hops,13,High-A,2022,Arizona Diamondbacks,Northwest League
+550,South Bend Cubs,13,High-A,2022,Chicago Cubs,Midwest League
+486,Spokane Indians,13,High-A,2022,Colorado Rockies,Northwest League
+488,Aberdeen IronBirds,13,High-A,2022,Baltimore Orioles,South Atlantic League
+554,Beloit Sky Carp,13,High-A,2022,Miami Marlins,Midwest League
+426,Wilmington Blue Rocks,13,High-A,2022,Washington Nationals,South Atlantic League
+427,Jersey Shore BlueClaws,13,High-A,2022,Philadelphia Phillies,South Atlantic League
+492,Cedar Rapids Kernels,13,High-A,2022,Minnesota Twins,Midwest League
+428,Greenville Drive,13,High-A,2022,Boston Red Sox,South Atlantic League
+432,Rome Braves,13,High-A,2022,Atlanta Braves,South Atlantic League
+499,Lansing Lugnuts,13,High-A,2022,Oakland Athletics,Midwest League
+435,Vancouver Canadians,13,High-A,2022,Toronto Blue Jays,Northwest League
+565,Quad Cities River Bandits,13,High-A,2022,Kansas City Royals,Midwest League
+437,Lake County Captains,13,High-A,2022,Cleveland Guardians,Midwest League
+443,Peoria Chiefs,13,High-A,2022,St. Louis Cardinals,Midwest League
+572,Wisconsin Timber Rattlers,13,High-A,2022,Milwaukee Brewers,Midwest League
+573,Asheville Tourists,13,High-A,2022,Houston Astros,South Atlantic League
+3712,Fayetteville Woodpeckers,14,A,2022,Houston Astros,Carolina League
+450,Daytona Tortugas,14,A,2022,Cincinnati Reds,Florida State League
+515,Modesto Nuts,14,A,2022,Seattle Mariners,California League
+259,Fresno Grizzlies,14,A,2022,Colorado Rockies,California League
+516,Visalia Rawhide,14,A,2022,Arizona Diamondbacks,California League
+521,Myrtle Beach Pelicans,14,A,2022,Chicago Cubs,Carolina League
+587,Tampa Tarpons,14,A,2022,New York Yankees,Florida State League
+524,Stockton Ports,14,A,2022,Oakland Athletics,California League
+526,Rancho Cucamonga Quakes,14,A,2022,Los Angeles Dodgers,California League
+401,Inland Empire 66ers,14,A,2022,Los Angeles Angels,California League
+279,Palm Beach Cardinals,14,A,2022,St. Louis Cardinals,Florida State League
+476,San Jose Giants,14,A,2022,San Francisco Giants,California League
+478,Augusta GreenJackets,14,A,2022,Atlanta Braves,Carolina League
+414,Salem Red Sox,14,A,2022,Boston Red Sox,Carolina League
+479,Jupiter Hammerheads,14,A,2022,Miami Marlins,Florida State League
+481,Lynchburg Hillcats,14,A,2022,Cleveland Guardians,Carolina League
+548,Delmarva Shorebirds,14,A,2022,Baltimore Orioles,Carolina League
+485,Down East Wood Ducks,14,A,2022,Texas Rangers,Carolina League
+487,Kannapolis Cannon Ballers,14,A,2022,Chicago White Sox,Carolina League
+103,Lake Elsinore Storm,14,A,2022,San Diego Padres,California League
+424,Dunedin Blue Jays,14,A,2022,Toronto Blue Jays,Florida State League
+233,Charleston RiverDogs,14,A,2022,Tampa Bay Rays,Carolina League
+436,Fredericksburg Nationals,14,A,2022,Washington Nationals,Carolina League
+566,Clearwater Threshers,14,A,2022,Philadelphia Phillies,Florida State League
+3705,Columbia Fireflies,14,A,2022,Kansas City Royals,Carolina League
+249,Carolina Mudcats,14,A,2022,Milwaukee Brewers,Carolina League
+570,Lakeland Flying Tigers,14,A,2022,Detroit Tigers,Florida State League
+507,St. Lucie Mets,14,A,2022,New York Mets,Florida State League
+509,Fort Myers Mighty Mussels,14,A,2022,Minnesota Twins,Florida State League
+3390,Bradenton Marauders,14,A,2022,Pittsburgh Pirates,Florida State League
+5506,DSL CLE Red,16,Rookie,2022,Cleveland Guardians,Dominican Summer League
+5005,DSL HOU Orange,16,Rookie,2022,Houston Astros,Dominican Summer League
+404,ACL Angels,16,Rookie,2022,Los Angeles Angels,Arizona Complex League
+6038,ACL D-backs Red,16,Rookie,2022,Arizona Diamondbacks,Arizona Complex League
+406,ACL Brewers Gold,16,Rookie,2022,Milwaukee Brewers,Arizona Complex League
+407,ACL Cubs,16,Rookie,2022,Chicago Cubs,Arizona Complex League
+408,ACL Giants Black,16,Rookie,2022,San Francisco Giants,Arizona Complex League
+409,ACL Mariners,16,Rookie,2022,Seattle Mariners,Arizona Complex League
+410,ACL Padres,16,Rookie,2022,San Diego Padres,Arizona Complex League
+411,ACL Rangers,16,Rookie,2022,Texas Rangers,Arizona Complex League
+412,ACL Royals,16,Rookie,2022,Kansas City Royals,Arizona Complex League
+5426,ACL Athletics,16,Rookie,2022,Oakland Athletics,Arizona Complex League
+5427,ACL Dodgers,16,Rookie,2022,Los Angeles Dodgers,Arizona Complex League
+4404,DSL PIT Gold,16,Rookie,2022,Pittsburgh Pirates,Dominican Summer League
+2101,DSL Brewers 2,16,Rookie,2022,Milwaukee Brewers,Dominican Summer League
+5430,ACL Brewers Blue,16,Rookie,2022,Milwaukee Brewers,Arizona Complex League
+3130,DSL BAL Orange,16,Rookie,2022,Baltimore Orioles,Dominican Summer League
+2117,DSL Mets 2,16,Rookie,2022,New York Mets,Dominican Summer League
+1991,ACL D-backs Black,16,Rookie,2022,Arizona Diamondbacks,Arizona Complex League
+1994,ACL Rockies,16,Rookie,2022,Colorado Rockies,Arizona Complex League
+1611,DSL Rays,16,Rookie,2022,Tampa Bay Rays,Dominican Summer League
+1997,ACL White Sox,16,Rookie,2022,Chicago White Sox,Arizona Complex League
+1998,FCL Astros Blue,16,Rookie,2022,Houston Astros,Florida Complex League
+2127,DSL Miami,16,Rookie,2022,Miami Marlins,Dominican Summer League
+2128,DSL KC Stewart,16,Rookie,2022,Kansas City Royals,Dominican Summer League
+2000,FCL Astros Orange,16,Rookie,2022,Houston Astros,Florida Complex League
+464,FCL Braves,16,Rookie,2022,Atlanta Braves,Florida Complex League
+466,FCL Nationals,16,Rookie,2022,Washington Nationals,Florida Complex League
+2131,DSL Colorado,16,Rookie,2022,Colorado Rockies,Dominican Summer League
+2003,FCL Rays,16,Rookie,2022,Tampa Bay Rays,Florida Complex League
+467,FCL Marlins,16,Rookie,2022,Miami Marlins,Florida Complex League
+2132,DSL Tigers 2,16,Rookie,2022,Detroit Tigers,Dominican Summer League
+468,FCL Mets,16,Rookie,2022,New York Mets,Florida Complex League
+469,FCL Phillies,16,Rookie,2022,Philadelphia Phillies,Florida Complex League
+2134,DSL Giants Black,16,Rookie,2022,San Francisco Giants,Dominican Summer League
+470,FCL Pirates,16,Rookie,2022,Pittsburgh Pirates,Florida Complex League
+599,FCL Orioles,16,Rookie,2022,Baltimore Orioles,Florida Complex League
+471,FCL Red Sox,16,Rookie,2022,Boston Red Sox,Florida Complex League
+600,DSL Angels,16,Rookie,2022,Los Angeles Angels,Dominican Summer League
+601,DSL HOU Blue,16,Rookie,2022,Houston Astros,Dominican Summer League
+473,FCL Tigers,16,Rookie,2022,Detroit Tigers,Florida Complex League
+1370,FCL Cardinals,16,Rookie,2022,St. Louis Cardinals,Florida Complex League
+602,DSL Athletics,16,Rookie,2022,Oakland Athletics,Dominican Summer League
+474,FCL Twins,16,Rookie,2022,Minnesota Twins,Florida Complex League
+475,FCL Yankees,16,Rookie,2022,New York Yankees,Florida Complex League
+604,DSL Blue Jays,16,Rookie,2022,Toronto Blue Jays,Dominican Summer League
+5085,DSL Phillies White,16,Rookie,2022,Philadelphia Phillies,Dominican Summer League
+605,DSL Braves,16,Rookie,2022,Atlanta Braves,Dominican Summer League
+5086,DSL Tampa Bay,16,Rookie,2022,Tampa Bay Rays,Dominican Summer League
+2270,DSL Cubs Red,16,Rookie,2022,Chicago Cubs,Dominican Summer League
+5087,DSL D-backs Red,16,Rookie,2022,Arizona Diamondbacks,Dominican Summer League
+607,DSL Brewers 1,16,Rookie,2022,Milwaukee Brewers,Dominican Summer League
+608,DSL Cardinals,16,Rookie,2022,St. Louis Cardinals,Dominican Summer League
+609,DSL Cubs Blue,16,Rookie,2022,Chicago Cubs,Dominican Summer League
+610,DSL D-backs Black,16,Rookie,2022,Arizona Diamondbacks,Dominican Summer League
+611,DSL LAD Bautista,16,Rookie,2022,Los Angeles Dodgers,Dominican Summer League
+612,DSL LAD Mega,16,Rookie,2022,Los Angeles Dodgers,Dominican Summer League
+3430,ACL Reds,16,Rookie,2022,Cincinnati Reds,Arizona Complex League
+615,DSL Giants Orange,16,Rookie,2022,San Francisco Giants,Dominican Summer League
+616,DSL CLE Blue,16,Rookie,2022,Cleveland Guardians,Dominican Summer League
+618,DSL Mariners,16,Rookie,2022,Seattle Mariners,Dominican Summer League
+619,DSL Marlins,16,Rookie,2022,Miami Marlins,Dominican Summer League
+620,DSL Mets 1,16,Rookie,2022,New York Mets,Dominican Summer League
+2413,DSL TEX Red,16,Rookie,2022,Texas Rangers,Dominican Summer League
+621,DSL BAL Black,16,Rookie,2022,Baltimore Orioles,Dominican Summer League
+1390,FCL Blue Jays,16,Rookie,2022,Toronto Blue Jays,Florida Complex League
+622,DSL Padres,16,Rookie,2022,San Diego Padres,Dominican Summer League
+623,DSL Phillies Red,16,Rookie,2022,Philadelphia Phillies,Dominican Summer League
+624,DSL PIT Black,16,Rookie,2022,Pittsburgh Pirates,Dominican Summer League
+625,DSL TEX Blue,16,Rookie,2022,Texas Rangers,Dominican Summer League
+626,DSL BOS Blue,16,Rookie,2022,Boston Red Sox,Dominican Summer League
+627,DSL BOS Red,16,Rookie,2022,Boston Red Sox,Dominican Summer League
+628,DSL Reds,16,Rookie,2022,Cincinnati Reds,Dominican Summer League
+629,DSL Rockies,16,Rookie,2022,Colorado Rockies,Dominican Summer League
+1270,DSL Nationals,16,Rookie,2022,Washington Nationals,Dominican Summer League
+630,DSL KC Glass,16,Rookie,2022,Kansas City Royals,Dominican Summer League
+631,DSL Tigers 1,16,Rookie,2022,Detroit Tigers,Dominican Summer League
+632,DSL Twins,16,Rookie,2022,Minnesota Twins,Dominican Summer League
+633,DSL White Sox,16,Rookie,2022,Chicago White Sox,Dominican Summer League
+5370,ACL Giants Orange,16,Rookie,2022,San Francisco Giants,Arizona Complex League
+634,DSL NYY Bombers,16,Rookie,2022,New York Yankees,Dominican Summer League
+635,DSL NYY Yankees,16,Rookie,2022,New York Yankees,Dominican Summer League
+5374,ACL Guardians,16,Rookie,2022,Cleveland Guardians,Arizona Complex League

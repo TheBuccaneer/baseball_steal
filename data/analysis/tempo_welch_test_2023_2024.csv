@@ -1,0 +1,2 @@
+comparison,mean_2023,mean_2024,delta,t_stat,df,p_value,ci_lower,ci_upper,n_2023,n_2024,cohens_d
+2023_vs_2024_runners_on,15.254,15.363,-0.108,-1.485,1685.0,0.13786067807106583,-0.252,0.035,846,841,-0.057

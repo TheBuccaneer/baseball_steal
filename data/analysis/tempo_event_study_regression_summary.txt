@@ -1,0 +1,34 @@
+                                WLS Regression Results                                
+======================================================================================
+Dep. Variable:     tempo_with_runners_on_base   R-squared:                       0.303
+Model:                                    WLS   Adj. R-squared:                  0.302
+Method:                         Least Squares   F-statistic:                     206.3
+Date:                        Fri, 03 Oct 2025   Prob (F-statistic):          2.75e-255
+Time:                                16:36:38   Log-Likelihood:                -15266.
+No. Observations:                        6446   AIC:                         3.055e+04
+Df Residuals:                            6437   BIC:                         3.061e+04
+Df Model:                                   8                                         
+Covariance Type:                      cluster                                         
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept     18.8670      0.117    161.541      0.000      18.638      19.096
+year_2018     -0.8134      0.111     -7.301      0.000      -1.032      -0.595
+year_2019     -0.3769      0.106     -3.544      0.000      -0.585      -0.168
+year_2020     -0.5144      0.117     -4.390      0.000      -0.744      -0.285
+year_2021      0.1818      0.083      2.185      0.029       0.019       0.345
+year_2023     -2.8521      0.081    -35.360      0.000      -3.010      -2.694
+year_2024     -2.7463      0.096    -28.663      0.000      -2.934      -2.558
+year_2025     -2.4255      0.104    -23.255      0.000      -2.630      -2.221
+n_init        -0.0014      0.000     -7.939      0.000      -0.002      -0.001
+==============================================================================
+Omnibus:                      418.865   Durbin-Watson:                   2.004
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              768.398
+Skew:                           0.479   Prob(JB):                    1.39e-167
+Kurtosis:                       4.394   Cond. No.                     4.97e+03
+==============================================================================
+
+Notes:
+[1] Standard Errors are robust to cluster correlation (cluster)
+[2] The condition number is large, 4.97e+03. This might indicate that there are
+strong multicollinearity or other numerical problems.

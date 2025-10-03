@@ -1,0 +1,12 @@
+metric,value
+t1_2022_total,198.0
+t1_2023_total,147.0
+retained,147.0
+exited,51.0
+new,0.0
+retention_rate,74.24242424242425
+tempo_2023_retained_mean,14.06873469387755
+tempo_2023_new_mean,
+tempo_diff_new_vs_retained,
+within_pitcher_delta_mean,-1.7620476190476189
+within_pitcher_delta_median,-1.943999999999999

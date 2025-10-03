@@ -1,0 +1,2 @@
+test,f_stat,df_num,df_denom,p_value,interpretation
+parallelism_T3_T2,6.301066423041872,4.0,395,6.357148374948649e-05,Tests whether T3-T2 differs across pre-years

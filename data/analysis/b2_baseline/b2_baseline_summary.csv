@@ -1,0 +1,20 @@
+metric,value,notes
+total_pitchers_2022,848.0,Before minimum pitch filter
+total_pitches_2022,117645.0,Before minimum pitch filter
+min_pitch_cutoff,50.0,Main analysis threshold
+pitchers_retained,594.0,70.0% of total
+pitches_retained,112344.0,95.5% of total (QC: ≥90%)
+tercile_cut_33,17.17,T1/T2 boundary (seconds)
+tercile_cut_67,19.58,T2/T3 boundary (seconds)
+T1_n_pitchers,198.0,33.3% of sample
+T1_mean_tempo,15.84,Weighted mean (seconds)
+T1_median_tempo,16.0,Median (seconds)
+T1_total_pitches,43355.0,Sum of exposure
+T2_n_pitchers,198.0,33.3% of sample
+T2_mean_tempo,18.28,Weighted mean (seconds)
+T2_median_tempo,18.25,Median (seconds)
+T2_total_pitches,36311.0,Sum of exposure
+T3_n_pitchers,198.0,33.3% of sample
+T3_mean_tempo,21.31,Weighted mean (seconds)
+T3_median_tempo,20.98,Median (seconds)
+T3_total_pitches,32678.0,Sum of exposure
