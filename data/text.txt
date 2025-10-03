@@ -910,3 +910,912 @@ ChatGPT hatte ursprünglich Denton vorgeschlagen für "temporal disaggregation".
 - Wir **haben** bereits monatliche SB-Daten (via game_date)
 - Direkte Aggregation ist exakt, Denton wäre nur eine Approximation
 - **Ockhams Razor**: Einfachste Methode (direkt zählen) ist beste
+
+######################09 09 09 09###############################
+######################09 09 09 09###############################
+######################09 09 09 09###############################
+######################09 09 09 09###############################
+######################09 09 09 09###############################
+######################09 09 09 09###############################
+
+claude.ai
+
+Hier ist die vollständige Dokumentation für das Catcher Panel Script:
+
+```markdown
+# Script 09: Catcher Panel Construction - Dokumentation
+
+## Überblick
+**Script**: `09_build_catcher_panel.py`  
+**Input**: `leaderboards/catcher_throwing_YYYY.csv` (2018-2025)  
+**Output**: `analysis/analysis_catcher_panel.csv`  
+**Zweck**: Catcher-Season-Level Panel mit Caught Stealing Rates, Pop Time, Arm Strength und Regeländerungs-Treatment
+
+---
+
+## Kernentscheidungen & Annahmen
+
+### 1. Datenquelle: Catcher Throwing Leaderboard (nicht Pop Time)
+**Entscheidung**: Nutzung von `catcher_throwing_*.csv` statt `poptime_*.csv`
+
+**Begründung**:
+- Catcher Throwing Leaderboard enthält **Count-Daten** (`n_cs`, `sb_attempts`), die für korrekte CS-Raten-Berechnung erforderlich sind
+- Pop Time Leaderboard enthält nur **Zeit-Metriken** (`pop_2b_cs`, `pop_2b_sb` = Sekunden, keine Counts)
+- Frühere Version des Scripts teilte fälschlicherweise Zeiten durch Zeiten → artifizielle CS-Raten ~0.50
+
+**Implikation**: 
+- CS-Raten sind nun wissenschaftlich korrekt: `cs_rate = n_cs / sb_attempts`
+- Validierung gegen Savant's `rate_cs` zeigt 100% Übereinstimmung (max diff = 0.000)
+
+---
+
+### 2. Metrik-Definitionen (Baseball Savant)
+
+**Pop Time** (`pop_time`):
+- Zeit vom Mitt-Kontakt (Pitch) bis Ball-Ankunft an Base
+- MLB-Durchschnitt: ~2.0 sec zu 2B
+- Typischer Range: 1.6-2.5 sec (2B), 1.2-2.5 sec (3B)
+- **Quelle**: Baseball Savant Statcast, dokumentiert in MLB Glossary
+
+**Arm Strength** (`arm_strength`):
+- Maximale Wurfgeschwindigkeit (mph) bei Throws zu 2B/3B
+- Liga-Durchschnitt: ~82 mph (historisch ~81.8 mph)
+- Elite-Catcher: ~88 mph (Gary Sánchez, J.T. Realmuto)
+- **Quelle**: Statcast Catcher Throwing Leaderboard
+
+**Exchange Time** (`exchange_time`):
+- Zeit von Mitt-Kontakt bis Ball-Release
+- Typischer Range: 0.4-1.3 sec
+- **Quelle**: Baseball Savant Statcast
+
+**CS Rate** (`cs_rate`):
+- Anteil der Caught Stealings an allen Steal Attempts
+- Berechnung: `n_cs / sb_attempts`
+- Liga-Baseline: ~24-25% (2018-2022), ~20% (2023-2024 post-Regeländerung)
+- **Quelle**: Statcast Catcher Throwing, validiert gegen MLB league-wide SB success rates
+
+---
+
+### 3. Aggregationslevel: Season-Total per Catcher
+
+**Annahme**: Catcher Throwing Leaderboards sind bereits **season-level aggregiert**
+- Ein Catcher-ID × Season = eine Zeile
+- Alle Metriken (Pop Time, Arm Strength, CS Rate) sind saisongewichtete Durchschnitte/Summen
+
+**Multi-Team-Handling**:
+- **Limitation**: `multi_team` Flag ist Placeholder (= 0 für alle)
+- Catcher Throwing Daten aggregieren über alle Teams einer Saison
+- Für team-spezifische Analysen wären Play-by-Play-Daten erforderlich
+- **Begründung**: Für kausale DiD-Analyse (Pre/Post-2023) ist season-level ausreichend
+
+---
+
+### 4. Behandlung von Small Sample Sizes
+
+**Problem**: Catchers mit wenigen Steal Attempts haben unreliable Metriken
+
+**QA-Maßnahmen**:
+1. **Arm Strength <70 mph + <10 Attempts**: Flagged als "review" (small sample outliers)
+2. **Keine automatische Filterung**: Alle Catchers bleiben im Dataset
+3. **Empfehlung für Analysen**: 
+   - Minimum-Threshold setzen (z.B. ≥10 sb_attempts) für robuste Schätzungen
+   - Analog zu Savant Qualifiers (~1 SBA per 10 team games)
+
+**Begründung**: 
+- Transparenz: Forscher entscheiden selbst über Inclusion-Kriterien
+- Alternative Analysen: Weighted Regressions (by `sb_attempts`) statt Hard Cutoffs
+
+---
+
+### 5. Treatment Variable: Post-2023 Rule Changes
+
+**Definition**: `post_2023 = 1` wenn `season >= 2023`, sonst `0`
+
+**Regeländerungen 2023** (MLB):
+- Pitch Clock (15/20 sec)
+- Pickoff/Disengagement Limit (max. 2 ohne Balk)
+- Größere Bases (18" statt 15", verkürzt Distanz um ~4.5 Zoll)
+
+**Expected Impact auf Catcher Metrics**:
+- ↓ CS Rate (Catchers haben weniger Zeit/Optionen)
+- ↑ SB Attempts (Runner profitieren von Regeländerungen)
+- Beobachtet im Dataset: **24.6% → 17.5%** CS Rate (-7.1 pp)
+
+**Quelle**: MLB Rule Change Announcement 2023
+
+---
+
+## Methodische Schritte (Reproducibility)
+
+### Input-Daten
+```
+leaderboards/
+├── catcher_throwing_2018.csv  (108 catchers)
+├── catcher_throwing_2019.csv  (105 catchers)
+├── catcher_throwing_2020.csv  ( 95 catchers, COVID-shortened)
+├── catcher_throwing_2021.csv  (106 catchers)
+├── catcher_throwing_2022.csv  (111 catchers)
+├── catcher_throwing_2023.csv  ( 99 catchers)
+├── catcher_throwing_2024.csv  ( 94 catchers)
+└── catcher_throwing_2025.csv  (101 catchers)
+```
+
+### Prozessschritte
+
+1. **Load & Concatenate** (Zeilen 17-31)
+   - Alle Jahre einlesen, `season`-Spalte hinzufügen
+   - Total: 819 Catcher-Seasons
+
+2. **Derive Metrics** (Zeilen 52-76)
+   - `n_sb = sb_attempts - n_cs` (erfolgreiche Steals)
+   - `cs_rate_calc = n_cs / sb_attempts` (eigene Berechnung)
+   - `cs_rate = rate_cs` (von Savant, als Primary)
+   - `sb_success_rate = n_sb / sb_attempts` (Runner-Perspektive)
+
+3. **Validation** (Zeilen 61-70)
+   - Vergleich `cs_rate_calc` vs. `rate_cs`
+   - Max Differenz: 0.000 → 100% Übereinstimmung
+   - Fallback: Wenn `rate_cs` missing, nutze `cs_rate_calc`
+
+4. **Treatment Assignment** (Zeilen 78-79)
+   - `post_2023 = (season >= 2023)`
+
+5. **Column Selection** (Zeilen 87-101)
+   - 19 finale Spalten: IDs, Metriken, Treatment
+   - Sort by `season`, `catcher_id`
+
+6. **Quality Assurance** (Zeilen 103-195)
+   - Missing Data Check
+   - Range Validation (Pop Time, Arm Strength, CS Rate)
+   - Pre/Post-2023 Comparison
+   - Outlier Flagging
+
+---
+
+## Qualitätschecks & Validierung
+
+### 1. CS Rate Plausibility
+**Check**: Median/Mean im erwarteten Range?
+- **Ergebnis**: Median = 20.0%, Mean = 22.0%
+- **Benchmark**: ~24-25% pre-2023, ~20% post-2023 ✓
+- **Extremwerte**: Min = 0%, Max = 100% (bei kleinen Samples normal)
+
+### 2. Pop Time Plausibility
+**Check**: Innerhalb MLB-dokumentierter Ranges?
+- **Ergebnis**: Median = 1.944 sec, Range = 1.599-2.439 sec
+- **Benchmark**: MLB avg ~2.0 sec, Range 1.6-2.5 sec ✓
+
+### 3. Arm Strength Plausibility
+**Check**: Innerhalb bekannter Catcher-Ranges?
+- **Ergebnis**: Mean = 78.8 mph, 99th percentile = 85.4 mph, Max = 87.8 mph
+- **Benchmark**: Liga ~82 mph, Elite ~88 mph ✓
+- **Outliers**: Keiner >90 mph (Gary Sánchez ~87.8 mph historisch korrekt)
+
+### 4. Rule Change Impact
+**Check**: Erwarteter Rückgang in CS Rate post-2023?
+- **Ergebnis**: 24.6% → 17.5% (-7.1 pp) ✓
+- **Kontext**: Liga-SB-Success ~80% in 2023-24 (impliziert ~20% CS)
+
+---
+
+## Limitationen
+
+1. **Multi-Team Catchers**
+   - Aggregierte Daten zeigen nicht Team-Splits
+   - `multi_team` Flag nicht verfügbar (Placeholder = 0)
+   - **Workaround**: Für Team-Heterogenität separate Analysen mit PBP-Daten
+
+2. **Small Sample Sizes**
+   - Catchers mit <10 Attempts haben unreliable Arm/Pop-Metriken
+   - **Empfehlung**: Qualifier-Threshold in Regressionen (z.B. ≥10 SBA)
+
+3. **Fehlende Season-Teile**
+   - 2020: COVID-shortened season (nur 60 Games)
+   - 2025: Daten möglicherweise unvollständig (je nach Zeitpunkt des Exports)
+
+4. **Keine Within-Season Dynamics**
+   - Aggregation auf Season-Level
+   - Keine monatlichen Trends erkennbar
+   - **Alternative**: Runner-Event-Level-Daten für granulare Analysen
+
+---
+
+## Output-Struktur
+
+**Datei**: `analysis/analysis_catcher_panel.csv`  
+**Zeilen**: 819 (Catcher × Season)  
+**Spalten**: 19
+
+### Schlüssel-Spalten
+
+**Identifiers**:
+- `season` (2018-2025)
+- `catcher_id` (Savant Player ID)
+- `catcher_name` (String)
+- `team_name` (String, aggregiert falls multi-team)
+
+**Count Metrics**:
+- `sb_attempts` (Total Steal Attempts)
+- `n_cs` (Caught Stealing Count)
+- `n_sb` (Successful Steals Count)
+
+**Rate Metrics**:
+- `cs_rate` (CS Rate, 0-1)
+- `sb_success_rate` (SB Success Rate, 0-1)
+
+**Performance Metrics**:
+- `pop_time` (sec, avg 2B/3B weighted)
+- `exchange_time` (sec)
+- `arm_strength` (mph)
+- `catcher_stealing_runs` (runs saved vs. average)
+- `caught_stealing_above_average` (CS above expectation)
+
+**Context Metrics**:
+- `seasonal_runner_speed` (opponent runner speed, fps)
+- `runner_distance_from_second` (lead distance context, ft)
+- `est_cs_pct` (expected CS% based on context)
+- `cs_aa_per_throw` (CS above average per throw)
+
+**Treatment**:
+- `post_2023` (0/1, rule change indicator)
+- `multi_team` (0 für alle, Placeholder)
+
+---
+
+## Reproduzierbarkeit
+
+### Dependencies
+```python
+pandas>=1.3.0
+numpy>=1.20.0
+pathlib (Standard Library)
+```
+
+### Ausführung
+```bash
+cd data/
+python 09_build_catcher_panel.py
+```
+
+**Erwartete Ausgabe**:
+- Console: QA-Report mit Validierungen
+- File: `analysis/analysis_catcher_panel.csv` (~167 KB)
+
+### Erwartete Runtime
+- ~2-5 Sekunden (819 rows, 8 files)
+
+### Validation Steps
+1. Check: 819 rows (108+105+95+106+111+99+94+101)
+2. Check: `cs_rate` validation max diff < 0.001
+3. Check: Pre/Post-2023 CS Rate Decline > 5 pp
+4. Check: Pop Time Median ~1.94 sec
+5. Check: No missing data in `sb_attempts`, `n_cs`, `cs_rate`
+
+---
+
+## Verwendung in Analysen
+
+### Empfohlene Anwendungen
+
+1. **DiD: Rule Change Impact**
+   ```python
+   # Pre/Post-2023 comparison
+   model = smf.ols('cs_rate ~ post_2023 + C(season)', data=df).fit()
+   ```
+
+2. **Catcher Quality Heterogeneity**
+   ```python
+   # How do elite catchers respond to rule changes?
+   df['elite_arm'] = (df['arm_strength'] > df['arm_strength'].quantile(0.75))
+   model = smf.ols('cs_rate ~ post_2023 * elite_arm + controls', data=df).fit()
+   ```
+
+3. **Opponent-Weighted Analysis**
+   - Merge mit `runner_schedule_weights` für opponent exposure
+   - Kontrolliere für `seasonal_runner_speed` (opponent quality)
+
+### Filter-Empfehlungen für Robustheit
+```python
+# Minimum attempts threshold
+df_robust = df[df['sb_attempts'] >= 10]
+
+# Exclude COVID-shortened season (optional)
+df_robust = df[df['season'] != 2020]
+
+# Weighted regression by attempts
+model = smf.wls('cs_rate ~ post_2023', data=df, weights=df['sb_attempts']).fit()
+```
+
+---
+
+## Changelog
+
+**v1.0** (Original, fehlerhaft):
+- Nutzte `poptime_*.csv`
+- Berechnete CS Rate aus Zeiten: `pop_2b_cs / (pop_2b_cs + pop_2b_sb)`
+- Resultat: Artifizielle CS-Raten ~0.50 (Datenmüll)
+
+**v2.0** (Current, korrekt):
+- Nutzt `catcher_throwing_*.csv`
+- Berechnet CS Rate aus Counts: `n_cs / sb_attempts`
+- Validiert gegen Savant's `rate_cs` (100% Übereinstimmung)
+- Erweiterte QA mit MLB-Benchmarks
+- Pre/Post-2023 Comparison integriert
+
+---
+
+## Referenzen
+
+1. **Baseball Savant Catcher Throwing Leaderboard**: https://baseballsavant.mlb.com/leaderboard/catcher-throwing
+2. **MLB Pop Time Definition**: https://www.mlb.com/glossary/statcast/pop-time
+3. **MLB 2023 Rule Changes**: https://www.mlb.com/news/mlb-2023-rule-changes-pitch-timer-larger-bases-shifts
+4. **Statcast Arm Strength Documentation**: https://www.mlb.com/news/statcast-adds-pop-time-exchange-arm-strength
+
+---
+
+**Dokumentation erstellt**: 2025-10-02  
+**Script Version**: 2.0  
+**Status**: Production-ready, validated gegen MLB/Savant Benchmarks
+```
+
+Diese Dokumentation ist **methods-chapter-ready** und kann direkt ins Paper/Appendix übernommen werden. Soll ich sie als separate Datei speichern?
+
+
+chatGPT
+
+Hier ist eine **knappe Doku/Annahmen** zu `09_build_catcher_panel.py` – was wichtig ist, was das Skript tut und wie man es **reproduzierbar** fährt.
+
+# Annahmen (fachlich)
+
+* **Definitionen aus Savant:**
+
+  * *Pop Time* ist die Zeit vom Catch bis zur Basis; MLB-Ø zu 2B ≈ **2.0 s**, typische Range **1.6–2.5 s**, Exchange **0.4–1.3 s**. Diese Skalen nutzt das QA des Skripts für Plausibilitätsgrenzen. ([baseballsavant.com][1])
+  * *Catcher Throwing* enthält **Zählwerte** zu Steal-Versuchen (SBA), **Caught Stealing** (CS), **CS-Rate**, sowie Mechanik-Metriken (Pop Time, Exchange, Arm Strength). Diese Werte sind die **Quelle** für unsere Raten – nicht die Zeitspalten. ([baseballsavant.com][2])
+* **Regelkontext:** Ab **2023** (Pitch Timer, größere Bases, Disengagement-Limits) stiegen **Versuche** und die **SB-Erfolgsquote** ligaweit (≈ 80 %), ergo **CS-Raten** fielen. Das Skript erwartet daher einen Pre/Post-Bruch in den Jahresmitteln. ([MLB.com][3])
+
+# Was das Skript macht (Inhalt & Logik)
+
+1. **Input laden:** Savant-Exporte (z. B. `catcher_throwing.csv`) mit Spalten für **SBA/CS/CS%** sowie **PopTime/Exchange/ArmStrength**. ([baseballsavant.com][2])
+2. **Kennzahlen berechnen:**
+
+   * `cs_rate = n_cs / sb_attempts` (aus **Counts**, keine Zeit-Quotienten).
+   * Ableitungen wie `sb_count = sb_attempts - n_cs`, `attempts_total`, ggf. 2B/3B-Splits, je **Catcher×Season**.
+3. **QA/Validierung:**
+
+   * Bereichschecks gegen die Savant-Skalen (PopTime 1.6–2.5 s, ArmStrength realistisch ≈ 70–88 mph). ([baseballsavant.com][1])
+   * Konsistenzcheck: gefundene `cs_rate` ≈ Savant-`rate_cs` aus demselben Export (Diff nahe 0).
+4. **Trend-Checks:** Pre-2023 vs. Post-2023 Mittelwerte auf Team-/Liga-Ebene zur Plausibilisierung des Regel-Effekts (Versuche ↑, CS-Rate ↓). ([ESPN.com][4])
+5. **Ausreißerbehandlung (empfohlen):** Bei extremen `cs_rate` (0 % / 100 %) **Versuchs-Schwelle** setzen (z. B. `sb_attempts ≥ 10`) analog zu Savant-Qualifiers. ([baseballsavant.com][2])
+
+# Was **nicht** gemacht wird
+
+* **Keine Monatswerte**: Die Savant-Catcher-Datei ist **saisonal**. Monats-Trends erfordern **Game-Feed/StatsAPI** (Runner-Events pro Play), nicht die Statcast-Pitch-CSV. ([baseballsavant.com][5])
+
+# Reproduzierbarkeit (How-to)
+
+1. **Quellen & Versionen dokumentieren:**
+
+   * Notiere zu jedem Input die **Savant-Seite** (Catcher Throwing/Pop Time), Jahr(e), Filter & Export-Datum. ([baseballsavant.com][2])
+2. **Export/Download fixieren:**
+
+   * Exporte als **CSV** speichern; lege die Rohdateien in einen `/data/raw/` Ordner und **checke sie mit ein** (oder versiegle sie mit einem Hash).
+   * (Optional) notiere kurz den Download-Pfad der Savant-Exports/Custom Leaderboards. ([baseballsavant.com][6])
+3. **Environment pinnen:**
+
+   * `python>=3.10`, `pandas`, `numpy` in `requirements.txt` fixieren; `pip install -r requirements.txt`.
+4. **Runbook:**
+
+   * `python 09_build_catcher_panel.py --in data/raw/catcher_throwing.csv --out data/processed/analysis_catcher_panel.csv`
+   * Skript schreibt zusätzlich eine **Konsolen-QA** (Min/Max/Median für Pop Time, Arm, CS-Rate & Pre/Post-2023-Vergleich).
+5. **Externe Plausibilisierung:**
+
+   * Spot-Check Pop-Time-Ø≈2.0 s (2B), Range 1.6–2.5 s, Exchange 0.4–1.3 s. ([baseballsavant.com][1])
+   * Liga-Kontext 2023+: mehr Steals, höhere Erfolgsquote ⇒ CS-Rate ~20 % (Medien/MLB-Recaps). ([ESPN.com][4])
+
+# Kurzrisiken & Mitigations
+
+* **Falsche Spalten (Zeit vs. Count):** Sicherstellen, dass `cs_rate` **nur** mit **Counts** berechnet wird (kein Dividieren von Sekundenwerten). Quelle bestätigt die Existenz dieser Count-Spalten im Catcher-Throwing-Export. ([baseballsavant.com][2])
+* **Geringe Stichproben:** Setze einen **Attempts-Qualifier** (z. B. ≥10) oder markiere geringe SBA als „low sample“. ([baseballsavant.com][2])
+
+Damit ist das Skript fachlich sauber verankert (Definitionen & Regelkontext), rechnerisch korrekt (Counts-basiert) und **leicht reproduzierbar** (gepinntes Env, dokumentierte Exporte, klarer Run-Befehl).
+
+[1]: https://baseballsavant.mlb.com/leaderboard/poptime?utm_source=chatgpt.com "Statcast Catcher Pop Time Leaderboard | baseballsavant.com"
+[2]: https://baseballsavant.mlb.com/leaderboard/catcher-throwing?utm_source=chatgpt.com "Statcast Catcher Throwing Leaderboard | baseballsavant.com"
+[3]: https://www.mlb.com/news/mlb-2023-rule-changes-pitch-timer-larger-bases-shifts?utm_source=chatgpt.com "MLB 2023 rule changes: pitch timer, larger bases, shifts"
+[4]: https://www.espn.com/mlb/story/_/id/38513200/mlb-2023-rule-changes-takeaways-impact-pitch-clock-bigger-bases?utm_source=chatgpt.com "MLB Rule Changes: Takeaways on pitch clock, bigger ..."
+[5]: https://baseballsavant.mlb.com/csv-docs?utm_source=chatgpt.com "Statcast Search CSV Documentation | baseballsavant.com"
+[6]: https://baseballsavant.mlb.com/leaderboard/custom?year=2025&utm_source=chatgpt.com "Statcast Custom Leaderboards | baseballsavant.com - MLB.com"
+
+
+######################10 10 10 10 10###########################
+######################10 10 10 10 10###########################
+######################10 10 10 10 10###########################
+######################10 10 10 10 10###########################
+######################10 10 10 10 10###########################
+
+```markdown
+# Script 10: Pitcher Panel Construction - Dokumentation
+
+## Überblick
+**Script**: `10_build_pitcher_panel.py`  
+**Input**: 
+- `leaderboards/pitcher_running_game_YYYY.csv` (2018-2025)
+- `leaderboards/pitch_tempo_YYYY.csv` (2018-2025)
+- `leaderboards/pitch_timer_infractions_pitchers_YYYY.csv` (2023-2025)
+
+**Output**: `analysis/analysis_pitcher_panel.csv`  
+**Zweck**: Pitcher-Season-Level Panel mit Running Game Control, Pitch Tempo und Regeländerungs-Treatment
+
+---
+
+## Kernentscheidungen & Annahmen
+
+### 1. Datenquelle: Pitcher Running Game Leaderboard
+
+**Entscheidung**: Nutzung von `pitcher_running_game_*.csv` als Hauptquelle
+
+**Begründung**:
+- Enthält alle Running Game Control Metriken (Steals allowed, Pickoffs, Lead Distances)
+- Aggregiert auf Pitcher-Season-Level mit `key_target_base = "All"` Filter
+- Umfasst sowohl Attempt-Counts als auch Lead-Distance-Kontext
+
+**Key_target_base Filter**:
+- CSVs enthalten separate Zeilen für 2B, 3B und "All"
+- Script filtert auf `key_target_base = "All"` für season-level aggregate
+- Eliminiert Base-spezifische Duplikate (von 6,652 Records bleiben 6,652 → alle waren bereits "All")
+
+---
+
+### 2. Metrik-Definitionen (Baseball Savant)
+
+**CS Rate** (`cs_rate`, Pitcher-Perspektive):
+- Anteil der Caught Stealings an allen Steal Attempts gegen diesen Pitcher
+- Berechnung: `n_cs / (n_cs + n_sb)` = `n_cs / total_sb_attempts`
+- Liga-Baseline: ~26% (2018-2022), ~20% (2023-2024)
+- Inverses Maß zur Runner SB Success Rate
+- **Quelle**: Statcast Pitcher Running Game Leaderboard
+
+**Pickoff Rate** (`pickoff_rate`):
+- Pickoffs pro Opportunity (Runner on Base)
+- Berechnung: `n_pk / n_init`
+- Sehr niedrige Rate: Ø 0.04% (Pickoffs sind selten)
+- Post-2023: Durch 2-Disengagement-Limit weiter eingeschränkt
+- **Quelle**: Statcast Pitcher Running Game
+
+**Lead Distance** (`r_primary_lead`, `r_secondary_lead`, `lead_gain`):
+- Primary Lead: Lead bei Pitch-Release (ft)
+- Secondary Lead: Lead nach sekundärem Move (ft)
+- Lead Gain: Differenz Secondary - Primary
+- Typischer Range: Primary 10-14 ft, Lead Gain 3-4 ft
+- Bei Steal Attempts (`r_primary_lead_sbx`, `r_secondary_lead_sbx`): deutlich größer
+- **Quelle**: Statcast Lead Distance Tracking
+
+**Pitch Tempo** (`tempo_with_runners_on_base`):
+- Median Zeit zwischen Pitches mit Runners on Base (sec)
+- Pre-2023: ~17-18 sec
+- Post-2023: ~15 sec (Pitch Clock: 20s mit Runners, 15s ohne)
+- **Quelle**: Statcast Pitch Tempo Leaderboard
+
+**Pitch Timer Infractions** (`all_violations`, `pitcher_timer`, `violation_rate`):
+- Regelverstoß-Counts durch Pitcher (2023+ only)
+- Violation Rate: `all_violations / pitches`
+- Nur für 2023-2025 verfügbar (vor Pitch Clock gab es diese Regel nicht)
+- **Quelle**: MLB Pitch Timer Infractions Leaderboard
+
+**Runs Prevented Attribution** (`runs_prevented_on_running_attr`, `n_pitcher_cs_aa`):
+- Runs saved/cost durch Pitcher's Running Game Control vs. Average
+- CS Above Average: Caught Stealings über Erwartung
+- **Quelle**: Statcast Running Game Attribution Model
+
+---
+
+### 3. Aggregationslevel: Season-Total per Pitcher
+
+**Annahme**: Daten sind bereits **season-level aggregiert**
+- Ein Pitcher-ID × Season = eine Zeile
+- Alle Metriken sind saisongewichtete Durchschnitte (Tempo, Leads) oder Summen (Attempts, CS)
+
+**Multi-Team-Handling**:
+- **Limitation**: `multi_team` Flag ist Placeholder (= 0 für alle)
+- Pitcher Running Game aggregiert über alle Teams einer Saison
+- Für team-spezifische Effekte wären Play-by-Play-Daten erforderlich
+
+---
+
+### 4. Behandlung von Duplizierten Spaltennamen (Pitch Tempo)
+
+**Problem**: `pitch_tempo_*.csv` enthält duplizierte Spaltennamen:
+- `total_pitches` (3x: gesamt, empty, onbase)
+- `median_seconds_empty` (2x: empty, onbase - zweite ist fälschlicherweise gleich benannt)
+
+**Lösung**: Custom `load_tempo_with_fix()` Funktion
+- Erkennt duplizierte Spalten via Pattern-Matching
+- Benennt intelligently um:
+  - Spalte mit ".1" suffix oder "on"/"runner" im Namen → `median_seconds_onbase`
+  - Spalte mit "total" + "pitch" + ("on"/"runner") → `total_pitches_onbase`
+- Verhindert mehrfache Umbenennung durch Flags (`onbase_found`)
+
+**Validierung**: Nach Merge 0.9% missing tempo data → erfolgreicher Match für 99.1%
+
+---
+
+### 5. Behandlung von Season vs. Year (Infractions)
+
+**Problem**: Infractions CSVs haben `year` Spalte, `load_all_years()` fügt automatisch `season` hinzu
+
+**Lösung**: 
+```python
+if 'year' in infractions.columns and 'season' in infractions.columns:
+    infractions = infractions.drop(columns=['season'])
+infractions = infractions.rename(columns={'year': 'season'})
+```
+
+**Resultat**: Sauberer Merge ohne duplizierte `season` Spalten
+
+---
+
+### 6. Treatment Variable: Post-2023 Rule Changes
+
+**Definition**: `post_2023 = 1` wenn `season >= 2023`, sonst `0`
+
+**Regeländerungen 2023** (MLB):
+- Pitch Clock: 15 sec (bases empty), 20 sec (runners on)
+- Pickoff/Disengagement Limit: max. 2 ohne Balk
+- Größere Bases: 18" (kürzere Distanzen)
+- 2024: Timer mit Runners auf 18 sec reduziert
+
+**Expected Impact auf Pitcher Metrics**:
+- ↓ CS Rate (weniger Zeit/Disengagements zur Kontrolle)
+- ↓ Pickoff Rate (2-Attempt-Limit)
+- ↑ Lead Distances (Runner aggressiver)
+- ↓ Tempo (Pitch Clock forciert schnelleres Spiel)
+
+**Observed Impact (aus QA-Check)**:
+- CS Rate: 26.1% → 20.5% (-5.7 pp) ✓
+- Pickoff Rate: 0.04% → 0.04% (-0.01 pp, praktisch unverändert - bereits sehr selten)
+- Primary Lead: 11.75 ft → 11.72 ft (-0.03 ft, überraschend stabil)
+- Tempo: 17.88 sec → 15.22 sec (-2.67 sec) ✓
+
+**Quelle**: MLB Rule Change Announcement 2023
+
+---
+
+## Methodische Schritte (Reproducibility)
+
+### Input-Daten
+```
+leaderboards/
+├── pitcher_running_game_2018.csv  (790 pitchers)
+├── pitcher_running_game_2019.csv  (818 pitchers)
+├── pitcher_running_game_2020.csv  (727 pitchers, COVID)
+├── pitcher_running_game_2021.csv  (891 pitchers)
+├── pitcher_running_game_2022.csv  (859 pitchers)
+├── pitcher_running_game_2023.csv  (851 pitchers)
+├── pitcher_running_game_2024.csv  (849 pitchers)
+├── pitcher_running_game_2025.csv  (867 pitchers)
+├── pitch_tempo_2018-2025.csv      (6,728 total records)
+└── pitch_timer_infractions_pitchers_2023-2025.csv (895 records)
+```
+
+### Prozessschritte
+
+1. **Load Running Game Data** (Zeilen 69-81)
+   - Alle Jahre einlesen, `season`-Spalte hinzufügen
+   - Total: 6,652 Pitcher-Records
+   - Filter auf `key_target_base == "All"`: 6,652 (alle waren bereits "All")
+
+2. **Load Pitch Tempo with Duplicate Fix** (Zeilen 31-65, 83-95)
+   - Custom Funktion behandelt duplizierte Spaltennamen
+   - Pattern-basiertes Umbenennen zu `median_seconds_onbase`, `total_pitches_onbase`
+   - Total: 6,728 Tempo-Records
+
+3. **Load Pitch Timer Infractions** (Zeilen 97-106, 200-226)
+   - Nur 2023-2025 (895 Records)
+   - Handle `year` vs. `season` Konflikt durch Drop + Rename
+
+4. **Derive Metrics** (Zeilen 113-141)
+   - `total_sb_attempts = n_sb + n_cs`
+   - `sb_success_rate = n_sb / total_sb_attempts` (Runner-Perspektive)
+   - `cs_rate = n_cs / total_sb_attempts` (Pitcher-Perspektive)
+   - `pickoff_rate = n_pk / n_init`
+   - `lead_gain = r_secondary_lead - r_primary_lead`
+
+5. **Merge Tempo** (Zeilen 143-195)
+   - Merge on `pitcher_id`, `season`
+   - Left join: alle Running Game Pitchers bleiben erhalten
+   - Missing: 61 (0.9%)
+
+6. **Merge Infractions** (Zeilen 197-227)
+   - Merge on `pitcher_id`, `season`
+   - Left join: nur 2023+ haben Infraction Data
+   - Calculate `violation_rate = all_violations / pitches`
+   - Coverage: 895 rows (13.5% of total, expected für 2023+)
+
+7. **Treatment Assignment** (Zeilen 229-230)
+   - `post_2023 = (season >= 2023)`
+
+8. **Column Selection** (Zeilen 237-266)
+   - 32 finale Spalten
+   - Conditional: Tempo/Infractions nur wenn verfügbar
+   - Sort by `season`, `pitcher_id`
+
+9. **Quality Assurance** (Zeilen 268-395)
+   - Missing Data Check
+   - Range Validation
+   - Pre/Post-2023 Comparison
+   - Small Sample Warning
+
+---
+
+## Qualitätschecks & Validierung
+
+### 1. CS Rate Plausibility (Pitcher Perspective)
+**Check**: Median/Mean im erwarteten Range?
+- **Ergebnis**: Median = 14.3%, Mean = 23.8%
+- **Benchmark**: ~26% pre-2023, ~20% post-2023 ✓
+- **Extremwerte**: Min = 0%, Max = 100% (bei kleinen Samples normal)
+- **Pre→Post**: 26.1% → 20.5% (-5.7 pp) ✓
+
+### 2. Pickoff Rate Plausibility
+**Check**: Sehr niedrige Raten erwartet (Pickoffs sind selten)
+- **Ergebnis**: Mean = 0.04%, Median = 0.00%
+- **Range**: 0.00% - 5.88%
+- **Interpretation**: Die meisten Pitcher haben 0 Pickoffs, einige wenige nutzen es aktiv
+- **Pre→Post**: Praktisch unverändert (-0.01 pp) - bereits so selten, dass 2-Limit kaum bindet
+
+### 3. Lead Distance Plausibility
+**Check**: Innerhalb MLB-dokumentierter Ranges?
+- **Primary Lead**: Mean = 11.74 ft (Range: 4.12 - 19.36 ft)
+- **Benchmark**: 10-14 ft typisch ✓
+- **Lead Gain**: Mean = 3.55 ft (Range: -1.98 - 8.09 ft)
+- **Pre→Post**: -0.03 ft (praktisch unverändert)
+- **Interpretation**: Überraschend stabil - erwartet war Anstieg. Mögliche Erklärung: Aggregation über alle Situationen (nicht nur Steal Attempts). Check `r_primary_lead_sbx` / `r_secondary_lead_sbx` für Steal-spezifische Leads.
+
+### 4. Pitch Tempo Plausibility
+**Check**: Drop durch Pitch Clock sichtbar?
+- **Ergebnis**: Pre = 17.88 sec, Post = 15.22 sec (-2.67 sec) ✓
+- **Externe Benchmark**: ~23.2 sec (2022) → ~19.1 sec (2023), -4.1 sec
+- **Diskrepanz**: Dein Drop ist kleiner (2.67 vs. 4.1 sec)
+- **Mögliche Erklärung**: 
+  - Unterschiedliche Baseline (17.88 vs. 23.2 sec)
+  - Dataset-Selektion (alle Pitcher vs. nur qualifizierte Starter)
+  - Tempo-Definition (median vs. mean)
+- **Fazit**: Effekt ist vorhanden und statistisch bedeutsam, auch wenn absolut kleiner als externes Benchmark
+
+### 5. Infractions Coverage
+**Check**: Nur 2023+ erwartet
+- **Ergebnis**: 895 rows (13.5% of 6,652 total)
+- **Coverage**: 86.5% missing (expected - nur 38.5% der Rows sind 2023+)
+- **Validierung**: 895 / 2,567 (Post-2023 Pitchers) = 34.9% haben Infraction Data
+- **Interpretation**: Nicht alle Pitcher haben genug Pitches für Infraction Reporting
+
+---
+
+## Limitationen
+
+1. **Multi-Team Pitchers**
+   - Aggregierte Daten zeigen nicht Team-Splits
+   - `multi_team` Flag nicht verfügbar (Placeholder = 0)
+   - **Workaround**: Für Team-Heterogenität separate PBP-Analysen
+
+2. **Small Sample Sizes**
+   - 307 Pitchers (4.6%) mit <10 Opportunities (`n_init`)
+   - Unreliable CS/Pickoff Rates bei wenigen Versuchen
+   - **Empfehlung**: Filter `n_init >= 10` oder 25 für robuste Analysen
+
+3. **CS Rate Missing (31.1%)**
+   - 2,070 Pitcher-Seasons ohne CS Rate
+   - Ursache: `total_sb_attempts = 0` (keine Steal Attempts gegen sie)
+   - **Handling**: Explizit als missing kodiert, nicht 0%
+
+4. **Tempo-Diskrepanz zu externen Benchmarks**
+   - Dein Drop: -2.67 sec
+   - Externe Benchmarks: -4.1 sec
+   - **Mögliche Ursachen**: Unterschiedliche Aggregation, Sample Selection
+   - **Fazit**: Effekt ist vorhanden, absoluter Wert könnte durch Dataset-Charakteristika erklärt werden
+
+5. **Lead Distances: Keine Anstieg Post-2023**
+   - Erwartet: Größere Leads (Runner aggressiver)
+   - Beobachtet: -0.03 ft (praktisch unverändert)
+   - **Erklärung**: Aggregation über alle Situationen verwässert Effekt
+   - **Alternative**: Nutze `r_primary_lead_sbx` / `r_secondary_lead_sbx` für Steal-spezifische Analysen
+
+6. **Keine Within-Season Dynamics**
+   - Season-Level-Aggregation
+   - Keine monatlichen Trends sichtbar
+   - **Alternative**: Runner-Event-Level-Daten für granulare Analysen
+
+---
+
+## Output-Struktur
+
+**Datei**: `analysis/analysis_pitcher_panel.csv`  
+**Zeilen**: 6,652 (Pitcher × Season)  
+**Spalten**: 32
+
+### Schlüssel-Spalten
+
+**Identifiers**:
+- `season` (2018-2025)
+- `pitcher_id` (Savant Player ID)
+- `pitcher_name` (String)
+- `team_name` (String, aggregiert falls multi-team)
+
+**Opportunity Metrics**:
+- `n_init` (Opportunities = Times with Runner on Base)
+- `total_sb_attempts` (Total Steal Attempts gegen Pitcher)
+- `n_sb` (Successful Steals)
+- `n_cs` (Caught Stealings)
+- `n_pk` (Pickoffs)
+- `n_bk` (Balks)
+
+**Rate Metrics**:
+- `sb_success_rate` (SB Success Rate, Runner-Perspektive, 0-1)
+- `cs_rate` (CS Rate, Pitcher-Perspektive, 0-1)
+- `pickoff_rate` (Pickoffs per Opportunity, 0-1)
+- `rate_sbx` (Steal Attempt Rate)
+
+**Lead Distance Metrics**:
+- `r_primary_lead` (ft, alle Situationen)
+- `r_secondary_lead` (ft, alle Situationen)
+- `lead_gain` (ft, Secondary - Primary)
+- `r_primary_lead_sbx` (ft, nur Steal Attempts)
+- `r_secondary_lead_sbx` (ft, nur Steal Attempts)
+
+**Tempo Metrics**:
+- `tempo_with_runners_on_base` (sec, median)
+- `pitches_with_runners_on_base` (count)
+
+**Infractions (2023+ only)**:
+- `all_violations` (count)
+- `pitcher_timer` (count, pitcher-caused)
+- `violation_rate` (violations per pitch)
+
+**Attribution Metrics**:
+- `runs_prevented_on_running_attr` (runs saved vs. average)
+- `n_pitcher_cs_aa` (CS above average)
+- `n_plus` / `n_minus` (attribution counts)
+- `net_attr_plus` / `net_attr_minus` (net attribution)
+
+**Treatment**:
+- `post_2023` (0/1, rule change indicator)
+- `multi_team` (0 für alle, Placeholder)
+
+---
+
+## Reproduzierbarkeit
+
+### Dependencies
+```python
+pandas>=1.3.0
+numpy>=1.20.0
+pathlib (Standard Library)
+```
+
+### Ausführung
+```bash
+cd data/
+python 10_build_pitcher_panel.py
+```
+
+**Erwartete Ausgabe**:
+- Console: QA-Report mit Pre/Post-2023 Comparison
+- File: `analysis/analysis_pitcher_panel.csv` (~1.5 MB)
+
+### Erwartete Runtime
+- ~5-10 Sekunden (6,652 rows, 3 data sources)
+
+### Validation Steps
+1. Check: 6,652 rows (sum of all pitcher_running_game files)
+2. Check: `tempo_with_runners_on_base` missing < 2%
+3. Check: Pre/Post-2023 CS Rate Drop > 5 pp
+4. Check: Pre/Post-2023 Tempo Drop > 2 sec
+5. Check: Infractions only for 2023+ (86.5% missing pre-2023)
+
+---
+
+## Verwendung in Analysen
+
+### Empfohlene Anwendungen
+
+1. **DiD: Rule Change Impact on Pitcher Control**
+   ```python
+   # Pre/Post-2023 comparison
+   df_robust = df[df['n_init'] >= 25]  # Filter small samples
+   model = smf.ols('cs_rate ~ post_2023 + C(season)', data=df_robust).fit()
+   ```
+
+2. **Mechanismen-Pfad: Tempo → Leads → Control**
+   ```python
+   # Mediation analysis
+   # Stage 1: Tempo → Lead Distance
+   model1 = smf.ols('r_primary_lead ~ tempo_with_runners_on_base + controls', data=df).fit()
+   
+   # Stage 2: Lead Distance → CS Rate
+   model2 = smf.ols('cs_rate ~ r_primary_lead + tempo_with_runners_on_base + controls', data=df).fit()
+   ```
+
+3. **Pitcher Quality Heterogeneity**
+   ```python
+   # Do elite control pitchers lose more from rule changes?
+   df['elite_control'] = (df['cs_rate'] > df['cs_rate'].quantile(0.75))
+   model = smf.ols('cs_rate ~ post_2023 * elite_control + controls', data=df).fit()
+   ```
+
+4. **Pickoff Constraint Analysis**
+   ```python
+   # Effect of 2-Disengagement Limit
+   # Note: Pickoffs already rare pre-2023, hard to detect effect
+   model = smf.ols('pickoff_rate ~ post_2023 + controls', data=df).fit()
+   ```
+
+5. **Merge mit Runner Panel für Full Story**
+   ```python
+   # Pitcher tempo affects runner success?
+   runner_pitcher = runner_panel.merge(
+       pitcher_panel[['pitcher_id', 'season', 'tempo_with_runners_on_base']], 
+       on=['pitcher_id', 'season']  # needs pitcher_id in runner panel
+   )
+   ```
+
+### Filter-Empfehlungen für Robustheit
+```python
+# Minimum opportunities threshold
+df_robust = df[df['n_init'] >= 10]  # 95.4% of data
+# OR
+df_robust = df[df['n_init'] >= 25]  # More conservative
+
+# Exclude COVID-shortened season (optional)
+df_robust = df[df['season'] != 2020]
+
+# Only pitchers with steal attempts
+df_with_cs = df[df['total_sb_attempts'] > 0]  # 68.9% of data
+
+# Weighted regression by opportunities
+model = smf.wls('cs_rate ~ post_2023', data=df, weights=df['n_init']).fit()
+```
+
+---
+
+## Changelog
+
+**v1.0** (Original, failed):
+- Tempo-Merge scheiterte wegen duplizierten Spaltennamen
+- `median_seconds_empty` wurde nicht korrekt zu `median_seconds_onbase` umbenannt
+- Resultat: `tempo_with_runners_on_base` fehlte im Output
+
+**v2.0** (Duplikat-Fix, failed):
+- Versuch mit Index-basierter Umbenennung
+- Funktionierte nicht, weil pandas Duplikate als `.1`, `.2` etc. liest
+
+**v3.0** (Pattern-Matching, failed):
+- Robuste Pattern-basierte Umbenennung
+- Problem: Mehrere Spalten wurden auf gleichen Namen gemappt → Series statt Scalar
+
+**v4.0** (Current, korrekt):
+- Pattern-Matching mit Flags (`onbase_found`, `onbase_pitches_found`)
+- Verhindert mehrfache Umbenennung auf gleichen Zielnamen
+- Tempo-Merge erfolgreich (0.9% missing)
+- CS Rate Drop (-5.7 pp), Tempo Drop (-2.67 sec) sichtbar
+- Infractions korrekt gemerged (nur 2023+)
+
+---
+
+## Referenzen
+
+1. **Baseball Savant Pitcher Running Game Leaderboard**: https://baseballsavant.mlb.com/leaderboard/running-splits
+2. **Baseball Savant Pitch Tempo Leaderboard**: https://baseballsavant.mlb.com/leaderboard/pitch-tempo
+3. **MLB 2023 Rule Changes**: https://www.mlb.com/news/mlb-2023-rule-changes-pitch-timer-larger-bases-shifts
+4. **MLB Pitch Timer Glossary**: https://www.mlb.com/glossary/rules/pitch-timer
+5. **Pitch Clock Analysis (External Benchmark)**: https://msabr.com/2024/03/01/breaking-down-the-pitch-clock-an-analysis-of-baseballs-big-rule-change/
+6. **Stolen Base Trends 2023-2024**: https://blogs.fangraphs.com/the-stolen-base-explosion-hasnt-continued/
+
+---
+
+**Dokumentation erstellt**: 2025-10-02  
+**Script Version**: 4.0  
+**Status**: Production-ready, validiert gegen MLB/Savant Benchmarks mit kleinen Diskrepanzen in Lead Distance und Tempo (dokumentiert)
+```
+
+Die Dokumentation ist fertig und methods-chapter-ready. Soll ich sie als separate Datei speichern oder direkt mit den Analysen weitermachen?
+
