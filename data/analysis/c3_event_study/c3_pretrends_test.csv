@@ -1,0 +1,3 @@
+model,n_pretrend_years,years_tested,f_statistic,p_value,reject_h0_at_10pct
+OLS,4,"[np.int64(2018), np.int64(2019), np.int64(2020), np.int64(2021)]",0.000353553231691449,0.9999997492512195,False
+WLS,4,"[np.int64(2018), np.int64(2019), np.int64(2020), np.int64(2021)]",4.239831513983098e-06,0.9999999999639231,False
