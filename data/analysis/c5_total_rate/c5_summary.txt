@@ -1,0 +1,40 @@
+C5 TOTAL STEAL RATE ANALYSIS
+======================================================================
+
+Model: FE-PPML with log(opportunities) offset
+Sample: Pitchers with ≥50 pitches in 2022
+Robustness: 2020 (COVID) excluded
+Base year: 2022
+Baseline rate: 0.0114
+
+Sample statistics:
+  Observations: 2,574
+  Pitchers: 594
+
+----------------------------------------------------------------------
+PRE-TREND TEST
+----------------------------------------------------------------------
+Wald Chi² = 2.148 (df=3)
+P-value = 0.5423
+✓ Pre-trends jointly insignificant
+
+----------------------------------------------------------------------
+TREATMENT EFFECTS (T2, 2023-2024)
+----------------------------------------------------------------------
+
+2023:
+  Coefficient: +0.3348 (p=0.0001)
+  Rate Ratio: 1.398
+  % Change: +39.8%
+
+2024:
+  Coefficient: +0.5273 (p=0.0000)
+  Rate Ratio: 1.694
+  % Change: +69.4%
+
+----------------------------------------------------------------------
+DECOMPOSITION
+----------------------------------------------------------------------
+ year  c5_direct  c3_attempt  c4_success  c3_x_c4  difference
+ 2023   1.397705     1.30786    1.075396 1.406468   -0.008763
+ 2024   1.694336     1.61572    1.042196 1.683897    0.010439

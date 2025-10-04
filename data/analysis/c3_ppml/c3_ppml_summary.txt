@@ -1,0 +1,33 @@
+C3 ATTEMPT RATE ANALYSIS (PPML)
+======================================================================
+
+Model: FE-PPML with log(opportunities) offset
+Sample: Pitchers with ≥50 pitches in 2022
+Robustness: 2020 (COVID) excluded
+Base year: 2022
+Baseline rate: 0.0150
+
+Sample statistics:
+  Observations: 2,574
+  Pitchers: 594
+
+----------------------------------------------------------------------
+PRE-TREND TEST
+----------------------------------------------------------------------
+Wald Chi² = 0.612 (df=3)
+P-value = 0.8936
+✓ Pre-trends jointly insignificant
+
+----------------------------------------------------------------------
+TREATMENT EFFECTS (T2, 2023-2024)
+----------------------------------------------------------------------
+
+2023:
+  Coefficient: +0.2684 (p=0.0002)
+  Rate Ratio: 1.308
+  % Change: +30.8%
+
+2024:
+  Coefficient: +0.4798 (p=0.0000)
+  Rate Ratio: 1.616
+  % Change: +61.6%

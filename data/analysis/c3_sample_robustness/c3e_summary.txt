@@ -1,0 +1,19 @@
+C3E SAMPLE ROBUSTNESS SUMMARY
+======================================================================
+
+SAMPLE DEFINITIONS
+----------------------------------------------------------------------
+1. Main (≥50):      2,574 obs, 594 pitchers
+2. Strict (≥100):   1,763 obs, 381 pitchers
+3. Balanced Panel:  936 obs, 156 pitchers
+
+2023 TREATMENT EFFECTS (T2)
+----------------------------------------------------------------------
+Main:     +0.00501
+Strict:   +0.00681 (diff: 0.00180)
+Balanced: +0.00630 (diff: 0.00129)
+
+STABILITY ASSESSMENT
+----------------------------------------------------------------------
+✓ GOOD: Effects reasonably stable
+Minor variations within expected range.
