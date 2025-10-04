@@ -1,0 +1,20 @@
+C1 COVERAGE REPORT
+======================================================================
+
+Data source: Savant Pitcher Running Game (target_base=2B)
+Years: 2018-2024
+Total observations: 5,719
+Unique pitchers: 1,922
+
+Pitchers per year:
+ year  n_pitchers_csv  n_zero_opp  pct_zero_opp
+ 2018             780           0           0.0
+ 2019             810           0           0.0
+ 2020             718           0           0.0
+ 2021             879           0           0.0
+ 2022             853           0           0.0
+ 2023             842           0           0.0
+ 2024             837           0           0.0
+
+Note: Zero opportunities = pitcher had no 1B→2B steal situations
+      These are kept in panel (opportunities=0, attempts=0, sb=0)
