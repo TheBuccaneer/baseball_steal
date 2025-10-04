@@ -1,0 +1,24 @@
+C2 QC REPORT
+======================================================================
+
+Input files:
+  C1: analysis\c_running_game\c_opportunities_panel.csv
+  B2: analysis\b2_baseline\b2_baseline_groups.csv
+
+Join results:
+  Total observations: 5,719
+  Observations with baseline: 2,943 (51.5%)
+  Pitchers in baseline: 594
+
+Sample composition:
+  Post-2023 only: 353 pitchers
+  Balanced 2018-2024: 150 pitchers
+
+Data quality:
+  Duplicates: None
+  Arithmetic checks: Passed
+  Logical constraints: Passed
+
+Zero-inflation:
+  Observations with 0 attempts: 1,930 (33.7%)
+  Note: Zero-inflation will be handled in C3/C4 models (Hurdle/ZIP)
