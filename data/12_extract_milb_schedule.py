@@ -24,7 +24,7 @@ LEVEL_IDS = {
     16: 'Rookie'  # Optional
 }
 
-SEASONS = [2019, 2021, 2022]  # Skip 2020 (no regular MiLB season)
+SEASONS = [2019, 2021, 2022, 2023]  # Skip 2020 (no regular MiLB season)
 
 BASE_URL = "https://statsapi.mlb.com/api/v1"
 
