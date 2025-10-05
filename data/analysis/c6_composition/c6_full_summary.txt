@@ -1,0 +1,10 @@
+C6 COMPOSITION ROBUSTNESS (FIXED VERSION)
+======================================================================
+
+      model  year  baseline_rr  event_rr   opp_rr  event_pct_change  opp_pct_change  event_stable  opp_stable
+C3_Attempts  2023     1.307860  1.307860 1.307860      2.546655e-12   -2.886209e-13          True        True
+C3_Attempts  2024     1.615720  1.615720 1.615720      3.092123e-12    1.511705e-13          True        True
+   C5_Total  2023     1.397705  1.397705 1.397705     -9.214095e-13    1.080273e-12          True        True
+   C5_Total  2024     1.694336  1.694336 1.694336     -1.900241e-12    1.048409e-13          True        True
+
+✓ Treatment effects robust to opportunity-weighted controls
