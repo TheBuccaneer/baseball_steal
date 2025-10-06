@@ -2,6 +2,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 572067,2019,AA,10,606996,Kyle Hart,663897,,3,3,2,1__,SB,second
 572067,2019,AA,43,606996,Kyle Hart,660614,,0,2,1,1_3,SB,second
 572067,2019,AA,66,656936,Zach Schellenger,656514,,4,1,2,1__,CS,second
+574419,2019,AA,57,641889,Dalton Moats,642350,,2,2,3,12_,CS,third
 574419,2019,AA,75,670579,Aaron Fossas,665138,,4,0,1,1__,SB,second
 571855,2019,AA,24,622506,Marcos Molina,607207,,2,2,3,1__,CS,second
 571855,2019,AA,41,630263,James Bourque,676625,,3,3,2,1__,SB,second
@@ -85,6 +86,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 584472,2019,AA,56,669854,Ronel Blanco,671250,,4,2,2,1__,SB,second
 572070,2019,AA,16,663559,Bailey Falter,621469,,0,3,3,12_,CS,second
 571858,2019,AA,3,643532,Sterling Sharp,642488,,2,2,3,1_3,CS,home
+571858,2019,AA,54,607555,Taylor Guilbeau,666783,,4,2,1,1__,CS,second
 571858,2019,AA,64,663394,Jacob Condra-Bogan,670133,,1,2,3,1__,SB,second
 572000,2019,AA,6,660874,Michael Gibbons,656668,,1,1,3,1__,SB,second
 571787,2019,AA,44,621089,José Mesa Jr.,657668,,1,1,3,1__,CS,second
@@ -166,6 +168,8 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 574349,2019,AA,11,621383,Tanner Banks,670461,,2,3,3,12_,SB,third
 574349,2019,AA,22,668338,Tyson Miller,650520,,3,2,3,1__,SB,second
 574349,2019,AA,65,641457,Bailey Clark,641870,,0,3,3,1__,SB,second
+584701,2019,AA,18,669114,Jace Vines,607632,,0,0,3,1__,CS,second
+584767,2019,AA,30,670970,Adrian Morejon,670148,,4,2,2,1__,CS,second
 584767,2019,AA,60,667378,Dauris Valdez,641521,,2,3,1,1__,SB,second
 572073,2019,AA,6,621256,Joe Shaw,641453,,2,3,1,1__,SB,second
 572073,2019,AA,41,622490,Robinson Leyer,608325,,1,2,2,12_,SB,second
@@ -189,18 +193,21 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 574770,2019,AA,36,667681,Daniel Brown,660821,,2,3,3,1_3,SB,second
 584260,2019,AA,9,642546,Jonathan Hernández,608383,,0,1,1,1__,SB,second
 584260,2019,AA,58,608381,Walker Weickel,608383,,1,3,3,1__,SB,second
+574350,2019,AA,2,669424,Jimmy Lambert,676724,,2,3,3,1__,CS,second
 574350,2019,AA,20,641672,Thomas Hatch,670768,,1,3,3,1__,SB,second
 584768,2019,AA,18,669947,Jesse Scholtens,650560,,1,1,1,1__,CS,second
 584768,2019,AA,28,670986,Jose Bravo,670410,,4,2,2,1__,SB,second
 584768,2019,AA,29,670986,Jose Bravo,642002,,1,0,2,123,SB,second
 584625,2019,AA,11,665751,Yadier Álvarez,664162,,2,3,1,1__,SB,second
 584625,2019,AA,14,665751,Yadier Álvarez,643268,,4,2,2,1_3,SB,home
+584400,2019,AA,1,676358,Evan Kruczynski,666137,,3,3,2,1__,CS,second
 584400,2019,AA,26,642520,Gerson Garabito,608422,,2,2,3,12_,SB,third
 584400,2019,AA,87,642571,Merandy Gonzalez,656274,,3,2,2,123,SB,second
 584400,2019,AA,88,656828,Jacob Patterson,666137,,3,3,3,1__,SB,second
 572277,2019,AA,35,656061,Albert Abreu,657035,,3,2,2,1__,CS,second
 572277,2019,AA,81,669054,Matthew Gorst,643590,,1,2,2,_23,SB,third
 574491,2019,AA,25,625974,Sam Lewis,666211,,4,2,1,1__,CS,second
+571926,2019,AA,6,656657,Zach Logue,641385,,4,2,2,1__,CS,second
 571926,2019,AA,57,543234,Rayan González,675656,,2,2,3,1__,CS,second
 571716,2019,AA,58,592630,Ronald Peña,666783,,1,3,3,1__,SB,second
 584261,2019,AA,66,548337,Logan Verrett,664938,,3,2,3,_2_,CS,third
@@ -215,17 +222,21 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 584626,2019,AA,46,670090,Wyatt Mills,656716,,4,2,1,1__,SB,second
 584401,2019,AA,20,641861,Casey Meisner,663708,,0,3,2,1__,SB,second
 584401,2019,AA,60,664019,Mike O'Reilly,666137,,1,2,1,12_,SB,second
+571576,2019,AA,40,657213,Luke Eubank,641301,,1,0,2,1__,CS,second
 571576,2019,AA,66,641394,Jake Brentz,669675,,3,3,2,1__,SB,second
 571646,2019,AA,36,666796,Jaison Vilera,670623,,1,2,1,1_3,SB,second
 571646,2019,AA,45,642637,Adonis Uceta,656765,,1,3,3,1__,SB,second
+572137,2019,AA,1,650810,José Taveras,607389,,0,2,2,1__,CS,second
 572137,2019,AA,13,545404,Brandon Beachy,669737,,0,2,3,1__,SB,second
 572137,2019,AA,31,650810,José Taveras,605370,,1,3,3,1__,CS,second
+574631,2019,AA,16,663776,Patrick Sandoval,621457,,4,1,2,1__,CS,second
 572277,2019,AA,35,656061,Albert Abreu,657035,,3,2,2,1__,CS,second
 572277,2019,AA,81,669054,Matthew Gorst,643590,,1,2,2,_23,SB,third
 572278,2019,AA,41,606996,Kyle Hart,620442,,2,3,3,1__,SB,second
 584402,2019,AA,41,666005,Andres Sotillet,644407,,2,3,3,1__,SB,second
 584402,2019,AA,56,641995,Roel Ramírez,666137,,1,3,1,1__,SB,second
 584402,2019,AA,57,641995,Roel Ramírez,663708,,1,1,1,_23,SB,third
+571576,2019,AA,40,657213,Luke Eubank,641301,,1,0,2,1__,CS,second
 571576,2019,AA,66,641394,Jake Brentz,669675,,3,3,2,1__,SB,second
 572138,2019,AA,7,669214,Conner Menez,669742,,1,2,2,12_,SB,second
 572138,2019,AA,47,595237,Ryan Halstead,663897,,2,2,1,12_,SB,second
@@ -249,8 +260,10 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 572279,2019,AA,17,660593,Denyi Reyes,664060,,2,1,1,1__,SB,second
 572279,2019,AA,49,665321,Andrew Schwaab,620442,,3,2,3,1__,CS,second
 571928,2019,AA,20,621127,Andrew Sopko,664883,,2,3,1,1__,SB,second
+571718,2019,AA,26,675912,Zac Lowther,606240,,1,2,2,1__,CS,second
 574633,2019,AA,35,608167,Jonathan Aro,622561,,4,2,2,1__,SB,second
 574633,2019,AA,47,642041,Zac Ryan,680769,,2,1,2,1_3,SB,second
+574631,2019,AA,16,663776,Patrick Sandoval,621457,,4,1,2,1__,CS,second
 571648,2019,AA,23,656412,Alex Faedo,657780,,1,1,3,1__,SB,second
 571648,2019,AA,62,656290,Drew Carlton,657780,,1,1,3,1__,SB,second
 574843,2019,AA,55,664092,Sean Poppen,675649,,1,3,3,1__,SB,second
@@ -264,6 +277,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 584403,2019,AA,8,641632,Conner Greene,657247,,4,2,2,1__,SB,second
 584403,2019,AA,40,670651,Anthony Shew,663708,,2,3,2,1__,SB,second
 584403,2019,AA,53,640453,Connor Jones,657629,,3,2,1,1__,SB,second
+574353,2019,AA,1,543594,Sean Nolin,663538,,2,0,2,1__,CS,second
 574353,2019,AA,6,623490,Brad Markey,657757,,2,1,1,1_3,CS,second
 574353,2019,AA,75,605507,Zach Thompson,664731,,1,1,2,_2_,CS,third
 571578,2019,AA,46,656904,Jared Robinson,664930,,4,2,2,1__,SB,second
@@ -271,19 +285,23 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 571719,2019,AA,4,624519,Logan Shore,642851,,4,2,1,1__,CS,second
 571719,2019,AA,12,600355,Tyler Herb,642727,,2,3,2,1__,SB,second
 571649,2019,AA,17,660874,Michael Gibbons,600931,,3,1,0,12_,SB,second
+571649,2019,AA,18,660874,Michael Gibbons,675656,,3,3,2,1__,CS,second
 572140,2019,AA,5,656557,Tanner Houck,669737,,4,2,1,1__,SB,second
 572140,2019,AA,47,670456,JD Hammer,641892,,2,2,1,1__,CS,second
 574914,2019,AA,33,668338,Tyson Miller,642092,,0,3,3,1_3,SB,home
 572280,2019,AA,1,643340,Nick Green,669675,,3,2,1,12_,SB,second
 572280,2019,AA,41,656885,James Reeves,664088,,0,2,2,_2_,SB,third
+572280,2019,AA,49,656885,James Reeves,600902,,1,1,1,1__,CS,second
 574564,2019,AA,15,657511,Dustin Beggs,554054,,2,2,2,1__,CS,second
 574564,2019,AA,32,656727,Kodi Medeiros,622700,,4,0,0,12_,SB,second
 574564,2019,AA,61,676607,Hunter Schryver,624417,,1,1,3,1__,CS,second
+574564,2019,AA,66,676607,Hunter Schryver,622700,,1,1,2,1__,CS,second
 571929,2019,AA,49,642565,Alexander Guillen,665240,,4,2,2,1__,CS,second
 584474,2019,AA,29,622797,Pedro Payano,647351,,1,2,3,1__,CS,second
 584474,2019,AA,71,606227,Yoel Espinal,642020,,1,1,0,1_3,SB,second
 584264,2019,AA,39,642629,Emmanuel Ramirez,642456,,4,0,2,1__,SB,second
 574284,2019,AA,40,660896,Jorge Alcala,664120,,3,2,3,1__,SB,second
+584629,2019,AA,2,643290,Justin Dunn,663708,,0,1,3,_2_,CS,third
 584629,2019,AA,26,643290,Justin Dunn,663708,,0,3,1,1__,SB,second
 584629,2019,AA,44,643290,Justin Dunn,670084,,1,3,1,1__,SB,second
 584629,2019,AA,49,628708,Yunior Marte,622268,,0,2,2,1__,SB,second
@@ -293,6 +311,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 584265,2019,AA,67,667378,Dauris Valdez,641971,,4,2,0,1__,SB,second
 574565,2019,AA,2,656746,McKenzie Mills,670768,,3,2,2,12_,SB,second
 574565,2019,AA,18,669424,Jimmy Lambert,593347,,1,3,3,1__,SB,second
+574565,2019,AA,21,656746,McKenzie Mills,606213,,3,1,2,1__,CS,second
 574565,2019,AA,25,669424,Jimmy Lambert,656388,,1,2,3,1__,CS,second
 584405,2019,AA,6,669160,Dustin May,546992,,1,3,3,12_,CS,third
 584405,2019,AA,31,676358,Evan Kruczynski,666784,,3,2,2,12_,SB,second
@@ -341,11 +360,14 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 574706,2019,AA,49,622400,Michael Santos,665650,,3,3,3,12_,SB,second
 574286,2019,AA,19,656970,Devin Smeltzer,641323,,4,2,1,1__,SB,second
 574286,2019,AA,77,594891,Aaron Kurcz,676628,,2,3,1,1__,SB,second
+572074,2019,AA,47,670065,Trevor Lane,621469,,4,2,2,1__,CS,second
 571791,2019,AA,8,656083,Harol González,670623,,3,0,1,_23,SB,third
+571862,2019,AA,54,675971,Kyle Dohy,664921,,2,2,3,1__,CS,second
 572004,2019,AA,22,670329,Rico Garcia,600931,,2,3,3,1__,CS,second
 572214,2019,AA,42,656613,Sean Keselica,622046,,1,0,3,1__,CS,second
 574917,2019,AA,1,656522,Zach Hedges,656976,,1,1,1,1__,SB,second
 584558,2019,AA,63,658791,Wei-Chieh Huang,657267,,1,1,2,1__,SB,second
+574567,2019,AA,36,656077,Félix Paulino,670965,,0,1,1,1__,CS,second
 574427,2019,AA,60,571751,Jordan Harrison,670770,,1,2,3,1__,SB,second
 574427,2019,AA,66,571751,Jordan Harrison,642462,,4,2,1,1__,SB,second
 574427,2019,AA,67,571751,Jordan Harrison,663886,,2,1,3,_2_,CS,third
@@ -361,6 +383,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 574708,2019,AA,14,641506,Adrian De Horta,641882,,4,2,1,_2_,SB,third
 574708,2019,AA,15,641506,Adrian De Horta,665650,,4,2,1,1__,SB,second
 574708,2019,AA,32,676596,Josh Fleming,669049,,1,1,2,12_,SB,second
+574708,2019,AA,41,676596,Josh Fleming,667674,,3,3,3,1__,CS,second
 574708,2019,AA,53,663326,Ryan Clark,666139,,4,2,2,1__,SB,second
 574288,2019,AA,28,676424,Alec Bettinger,640459,,3,2,1,12_,SB,second
 574288,2019,AA,39,623437,Justin Topa,670797,,4,1,1,1__,SB,second
@@ -389,6 +412,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 571864,2019,AA,10,664069,Ben Braymer,660614,,4,2,2,1__,SB,second
 571864,2019,AA,65,630263,James Bourque,664866,,2,0,3,1__,SB,second
 571514,2019,AA,41,649144,Alex Wells,623513,,4,2,2,1__,SB,second
+571793,2019,AA,34,657093,Spenser Watkins,570489,,3,2,2,1__,CS,second
 571792,2019,AA,21,624519,Logan Shore,664850,,1,2,2,12_,SB,second
 571792,2019,AA,33,642236,Joe Zanghi,657668,,3,2,2,1__,CS,second
 571792,2019,AA,37,620978,Liarvis Breto,657780,,4,1,1,1__,SB,second
@@ -423,6 +447,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 574920,2019,AA,7,593977,Johendí Jiminian,664731,,1,2,1,12_,SB,second
 574920,2019,AA,47,641682,Ryan Hendrix,681083,,4,1,2,_2_,SB,third
 574290,2019,AA,17,657022,Trey Supak,624417,,1,3,3,1__,CS,second
+574290,2019,AA,26,656746,McKenzie Mills,642215,,0,0,1,1_3,CS,second
 574355,2019,AA,25,649963,Bo Takahashi,670768,,4,2,1,1__,SB,second
 574845,2019,AA,28,612792,Jesús Castillo,641625,,2,3,3,1__,SB,second
 574845,2019,AA,74,663326,Ryan Clark,670797,,2,3,1,1__,SB,second
@@ -440,6 +465,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 584477,2019,AA,16,642520,Gerson Garabito,669008,,1,1,3,1__,SB,second
 584477,2019,AA,34,677415,Kit Scheetz,666137,,3,2,2,1__,SB,second
 584267,2019,AA,18,669160,Dustin May,657267,,1,3,1,1__,SB,second
+584267,2019,AA,52,665661,Shea Spitzbarth,657267,,4,2,2,1__,CS,second
 584407,2019,AA,3,676358,Evan Kruczynski,650531,,3,2,3,12_,CS,third
 574846,2019,AA,45,677161,Zack Kelly,605221,,1,2,2,1__,CS,second
 574291,2019,AA,6,667498,Robert Dugger,605504,,3,3,1,_2_,SB,third
@@ -559,7 +585,9 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 571654,2019,AA,25,660593,Denyi Reyes,664850,,3,2,2,1__,SB,second
 571583,2019,AA,2,664275,Pedro Vasquez,595426,,4,1,1,1__,SB,second
 571583,2019,AA,61,661536,Melvin Adón,676632,,1,3,3,1__,CS,second
+571583,2019,AA,64,676620,Blake Weiman,665000,,1,1,2,1__,CS,second
 571934,2019,AA,18,664069,Ben Braymer,669344,,1,3,3,__3,SB,home
+571934,2019,AA,37,664069,Ben Braymer,663527,,0,3,3,1__,CS,second
 571934,2019,AA,45,664069,Ben Braymer,661531,,3,2,3,1__,SB,second
 572284,2019,AA,28,657203,Will Carter,640492,,0,1,3,1__,CS,second
 572283,2019,AA,27,621593,Anthony Castro,642470,,1,3,3,1__,SB,second
@@ -569,6 +597,8 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 572145,2019,AA,68,676754,Addison Russ,656668,,1,1,0,123,SB,second
 571724,2019,AA,9,649144,Alex Wells,623513,,4,2,1,1__,SB,second
 574776,2019,AA,8,641576,Bernardo Flores Jr.,656484,,1,2,3,1__,SB,second
+574776,2019,AA,16,641576,Bernardo Flores Jr.,642134,,3,2,3,1__,CS,second
+574776,2019,AA,19,670046,Kenny Rosenberg,666164,,2,2,3,1__,CS,second
 574496,2019,AA,11,642496,Emilio Vargas,675003,,2,3,3,_2_,CS,third
 574496,2019,AA,26,642496,Emilio Vargas,663905,,2,3,2,1__,SB,second
 574496,2019,AA,35,642496,Emilio Vargas,640459,,2,3,2,1__,SB,second
@@ -603,6 +633,8 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 572146,2019,AA,58,641907,Patrick Murphy,664866,,1,1,2,123,SB,second
 572146,2019,AA,66,621143,Jackson McClelland,656514,,2,0,2,12_,SB,second
 574432,2019,AA,35,670102,Bowden Francis,642350,,2,1,3,1__,SB,second
+574432,2019,AA,61,622780,Angel Perdomo,643271,,1,1,2,1__,CS,second
+584273,2019,AA,2,670161,Parker Dunshee,663708,,1,3,3,1__,CS,second
 574777,2019,AA,17,656713,Brendan McKay,670768,,2,2,3,1__,SB,second
 574777,2019,AA,21,656077,Félix Paulino,666139,,1,1,2,1_3,SB,home
 574777,2019,AA,37,656077,Félix Paulino,666139,,2,3,1,1__,SB,second
@@ -611,6 +643,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 584638,2019,AA,7,669947,Jesse Scholtens,657108,,3,2,3,1__,CS,second
 584638,2019,AA,32,669947,Jesse Scholtens,643268,,2,3,3,1__,SB,second
 584638,2019,AA,41,681585,Matt Willrodt,680911,,4,0,0,1__,SB,second
+584638,2019,AA,66,572089,Paco Rodríguez,641929,,0,1,2,12_,CS,second
 584483,2019,AA,28,669160,Dustin May,676801,,3,1,3,12_,SB,second
 584413,2019,AA,31,458220,Esmerling Vasquez,656734,,1,2,1,_23,SB,third
 571655,2019,AA,14,668560,Yeizo Campos,623517,,3,2,1,1__,SB,second
@@ -625,6 +658,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 574713,2019,AA,5,666205,Kyle Muller,657444,,3,1,2,1__,CS,second
 574573,2019,AA,32,657141,Jordan Yamamoto,622736,,1,2,1,12_,SB,second
 574573,2019,AA,41,656522,Zach Hedges,547001,,0,1,3,1__,SB,second
+574573,2019,AA,59,542587,Elvis Araujo,656378,,0,1,1,1__,CS,second
 574498,2019,AA,63,571440,Jeff Ames,650346,,0,3,2,1__,SB,second
 584414,2019,AA,6,622797,Pedro Payano,644407,,4,2,2,1__,SB,second
 584414,2019,AA,7,622797,Pedro Payano,608422,,3,3,3,12_,SB,third
@@ -657,6 +691,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 572288,2019,AA,44,660546,Yennsy Díaz,664060,,2,2,1,12_,SB,second
 571938,2019,AA,31,606996,Kyle Hart,661531,,4,2,2,1__,SB,second
 571938,2019,AA,49,665142,Adam Lau,641385,,1,1,3,12_,SB,second
+571728,2019,AA,20,640451,Hunter Harvey,641689,,3,2,0,12_,CS,second
 571728,2019,AA,25,640451,Hunter Harvey,643198,,4,2,2,12_,CS,third
 572149,2019,AA,43,605356,Tyler Mapes,676730,,1,1,1,1_3,SB,second
 584565,2019,AA,55,657766,Locke St. John,622268,,1,3,2,1__,CS,second
@@ -675,6 +710,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 584775,2019,AA,20,554234,Williams Pérez,680911,,3,1,3,1__,SB,second
 584775,2019,AA,31,554234,Williams Pérez,642629,,3,2,2,123,SB,second
 574780,2019,AA,20,656726,Sam McWilliams,622561,,2,3,2,12_,SB,second
+574780,2019,AA,36,656726,Sam McWilliams,622561,,1,2,2,1__,CS,second
 584706,2019,AA,2,669114,Jace Vines,647351,,1,2,1,1__,SB,second
 584706,2019,AA,35,664353,José Urquidy,666137,,2,3,1,1__,SB,second
 584706,2019,AA,50,650608,Gabriel Valdez,656274,,1,3,3,1__,CS,second
@@ -757,6 +793,8 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 574783,2019,AA,47,641889,Dalton Moats,592629,,1,1,1,12_,SB,second
 584709,2019,AA,74,640448,Kyle Finnegan,642279,,1,3,3,1__,CS,second
 574363,2019,AA,3,656077,Félix Paulino,642462,,2,3,3,1__,SB,second
+574363,2019,AA,23,663574,Tony Santillan,657757,,3,2,3,1_3,CS,home
+574363,2019,AA,57,676607,Hunter Schryver,666211,,1,2,3,1__,CS,second
 584569,2019,AA,53,670912,Johan Oviedo,664938,,2,2,2,12_,SB,second
 571871,2019,AA,43,630263,James Bourque,622197,,2,3,3,1__,SB,second
 584345,2019,AA,45,621048,Nolan Long,605248,,3,2,2,12_,SB,second
@@ -769,11 +807,14 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 574499,2019,AA,40,642092,Riley Smith,641870,,2,3,3,1__,SB,second
 574434,2019,AA,16,641900,Scott Moss,605353,,2,2,3,1__,SB,second
 574434,2019,AA,29,641900,Scott Moss,656378,,2,2,2,1__,CS,second
+574644,2019,AA,64,670179,Justin Kelly,670054,,3,1,2,1__,CS,second
 574294,2019,AA,26,591611,Johan Belisario,665138,,3,2,1,1__,CS,second
 584570,2019,AA,38,458220,Esmerling Vasquez,656734,,1,2,3,1__,CS,second
 584711,2019,AA,15,641632,Conner Greene,680118,,4,2,0,1__,SB,second
+584711,2019,AA,18,641632,Conner Greene,641680,,2,3,3,__3,CS,home
 584711,2019,AA,25,641632,Conner Greene,664970,,1,0,2,12_,SB,second
 584711,2019,AA,41,667050,Grant Gavin,641521,,2,2,2,1__,CS,second
+571589,2019,AA,4,675912,Zac Lowther,602112,,3,2,1,1__,CS,second
 572084,2019,AA,7,606996,Kyle Hart,656668,,3,3,1,1__,SB,second
 572084,2019,AA,66,660546,Yennsy Díaz,657129,,0,1,3,1__,SB,second
 571801,2019,AA,41,607895,Fernando Perez,664088,,0,2,2,12_,SB,second
@@ -842,9 +883,12 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 574717,2019,AA,44,664102,Adam Hofacket,642423,,1,2,3,1__,SB,second
 584641,2019,AA,18,669160,Dustin May,664162,,1,1,1,12_,SB,second
 584641,2019,AA,19,669160,Dustin May,607632,,2,2,1,123,SB,second
+574298,2019,AA,14,656713,Brendan McKay,669450,,4,2,2,1__,CS,second
 574297,2019,AA,50,667681,Daniel Brown,650339,,4,2,1,_2_,SB,third
 574297,2019,AA,51,667681,Daniel Brown,670156,,4,0,1,123,SB,third
+574297,2019,AA,52,667681,Daniel Brown,666139,,3,1,3,1__,CS,second
 574297,2019,AA,55,596052,Benton Moss,621560,,0,2,3,1__,CS,second
+572289,2019,AA,14,650382,Darwinzon Hernández,623278,,4,2,1,1__,CS,second
 572289,2019,AA,20,650738,Adonis Rosa,676071,,2,3,2,1_3,SB,second
 572289,2019,AA,23,650382,Darwinzon Hernández,670352,,4,0,0,1__,CS,second
 571659,2019,AA,6,660874,Michael Gibbons,656668,,4,0,1,1__,SB,second
@@ -855,6 +899,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 572153,2019,AA,31,664045,Thomas Eshelman,656822,,1,0,3,1__,SB,second
 572153,2019,AA,44,669212,Eli Morgan,656514,,0,3,1,1__,SB,second
 572153,2019,AA,49,606939,Aaron Brown,668681,,2,2,2,1__,SB,second
+572153,2019,AA,52,656991,David Speer,661439,,1,3,2,1__,CS,second
 574438,2019,AA,6,642601,Oscar De La Cruz,642350,,2,3,1,1__,SB,second
 574438,2019,AA,33,642601,Oscar De La Cruz,656642,,3,2,1,1__,SB,second
 574438,2019,AA,61,667297,Tommy Nance,642462,,2,3,3,12_,SB,third
@@ -878,6 +923,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 574574,2019,AA,37,547001,Cody Poteet,605504,,1,3,3,1__,SB,second
 574929,2019,AA,46,668338,Tyson Miller,641870,,1,3,3,1__,SB,second
 574929,2019,AA,65,641662,Alec Hansen,676679,,1,2,1,1__,CS,second
+572290,2019,AA,20,642381,Dedgar Jimenez,620442,,1,1,2,1__,CS,second
 572290,2019,AA,44,657203,Will Carter,657129,,2,3,3,1__,SB,second
 574784,2019,AA,52,668683,Jeremy Walker,664954,,1,2,1,123,SB,second
 584417,2019,AA,2,670912,Johan Oviedo,663708,,3,2,2,1__,SB,second
@@ -917,7 +963,9 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 572155,2019,AA,11,650810,José Taveras,656822,,2,1,3,1__,SB,second
 572155,2019,AA,15,656991,David Speer,660614,,1,3,3,1__,SB,second
 572155,2019,AA,17,650810,José Taveras,664789,,1,0,2,1__,CS,second
+572155,2019,AA,29,656991,David Speer,640488,,2,2,2,1__,CS,second
 574931,2019,AA,2,657006,Justin Steele,670768,,2,2,1,12_,SB,second
+574931,2019,AA,7,665417,Kyle Kubat,676724,,1,3,3,1__,CS,second
 574786,2019,AA,26,656353,Tucker Davidson,656713,,1,1,2,_2_,CS,third
 574441,2019,AA,15,660896,Jorge Alcala,642461,,2,2,2,1__,SB,second
 571875,2019,AA,51,502578,Aaron Barrett,623278,,1,3,1,1__,SB,second
@@ -951,6 +999,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 572014,2019,AA,8,658431,Adonis Medina,675656,,1,3,1,_2_,SB,third
 572014,2019,AA,9,658431,Adonis Medina,600931,,4,2,2,1__,CS,second
 571662,2019,AA,4,666802,Joel Cesar,664059,,4,2,1,1__,CS,second
+571523,2019,AA,26,675912,Zac Lowther,600902,,1,2,2,1__,CS,second
 574932,2019,AA,1,641672,Thomas Hatch,642772,,3,2,2,1__,CS,second
 574932,2019,AA,20,656727,Kodi Medeiros,622736,,4,1,1,1__,CS,second
 574932,2019,AA,40,656727,Kodi Medeiros,622736,,4,1,1,1__,SB,second
@@ -977,6 +1026,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 584783,2019,AA,5,664942,James Naile,658668,,2,1,2,12_,SB,second
 584783,2019,AA,20,664942,James Naile,631227,,2,2,1,12_,SB,second
 571524,2019,AA,38,656529,Sam Hentges,642488,,1,3,3,1__,CS,second
+571524,2019,AA,51,656991,David Speer,669200,,1,2,1,1__,CS,second
 571664,2019,AA,64,553883,Jose Campos,664850,,4,1,1,1__,SB,second
 572016,2019,AA,20,663559,Bailey Falter,657088,,2,3,2,1__,SB,second
 572016,2019,AA,40,641907,Patrick Murphy,666160,,0,2,3,1__,CS,second
@@ -987,6 +1037,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 574578,2019,AA,40,657141,Jordan Yamamoto,605504,,2,2,3,1__,SB,second
 584421,2019,AA,52,643290,Justin Dunn,657247,,1,1,3,1__,SB,second
 574933,2019,AA,31,676265,Cory Abbott,670144,,0,1,2,12_,SB,second
+574933,2019,AA,41,641576,Bernardo Flores Jr.,622736,,3,1,0,12_,CS,second
 584491,2019,AA,38,627218,Emerson Martinez,668942,,1,0,3,12_,CS,third
 584491,2019,AA,49,657572,Justin Ferrell,641779,,4,2,2,1__,SB,second
 584491,2019,AA,55,620440,Jairo Beras,647351,,2,1,3,1__,SB,second
@@ -1005,13 +1056,17 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 571942,2019,AA,18,621346,Ty Culbreth,657088,,4,2,2,1__,CS,second
 571942,2019,AA,26,660431,Hector Perez,663527,,1,0,2,12_,SB,second
 571942,2019,AA,34,660431,Hector Perez,641385,,1,3,3,1__,CS,second
+571942,2019,AA,36,621346,Ty Culbreth,675656,,0,0,1,1__,CS,second
 571942,2019,AA,38,621346,Ty Culbreth,656989,,2,2,3,1__,SB,second
 574504,2019,AA,70,670151,Wyatt Short,641884,,2,3,2,1__,CS,second
 574579,2019,AA,1,660422,Jorge Guzmán,642134,,2,3,2,1__,CS,second
+574854,2019,AA,38,650347,Luís Madero,641625,,1,0,2,1__,CS,second
+574299,2019,AA,8,641900,Scott Moss,642215,,3,2,3,1__,CS,second
 574299,2019,AA,15,641900,Scott Moss,664120,,3,2,2,12_,SB,second
 574299,2019,AA,24,641900,Scott Moss,596018,,4,2,2,1__,SB,second
 574299,2019,AA,44,676424,Alec Bettinger,666211,,2,2,3,1__,SB,second
 584279,2019,AA,47,622169,Angel Duno,647351,,2,2,0,12_,SB,second
+574364,2019,AA,2,669424,Jimmy Lambert,664104,,0,3,3,1__,CS,second
 574364,2019,AA,40,668683,Jeremy Walker,642772,,2,3,2,_2_,SB,third
 574364,2019,AA,59,592422,Jason Hursh,642772,,1,3,3,1__,SB,second
 584715,2019,AA,2,642520,Gerson Garabito,656734,,2,3,2,_2_,SB,third
@@ -1030,6 +1085,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 574580,2019,AA,49,641889,Dalton Moats,624417,,1,1,1,12_,SB,second
 572228,2019,AA,47,650644,Aaron Civale,621323,,1,0,3,1__,SB,second
 572157,2019,AA,15,642381,Dedgar Jimenez,669737,,3,3,3,1__,SB,second
+572157,2019,AA,21,642381,Dedgar Jimenez,664068,,1,1,1,1__,CS,second
 572157,2019,AA,23,642381,Dedgar Jimenez,656514,,4,0,1,12_,SB,third
 574300,2019,AA,42,622088,Tejay Antone,596018,,3,3,3,_2_,SB,third
 584280,2019,AA,30,663959,Tyler Ivey,680118,,2,3,2,1__,SB,second
@@ -1084,6 +1140,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 584282,2019,AA,5,656266,J.B. Bukauskas,680118,,3,3,1,1__,SB,second
 584282,2019,AA,35,664942,James Naile,647351,,2,3,2,12_,CS,third
 584718,2019,AA,8,677369,Austin Warner,656896,,3,3,3,1__,SB,second
+584718,2019,AA,40,677369,Austin Warner,657629,,0,1,3,1__,CS,second
 574302,2019,AA,19,656876,Drew Rasmussen,666211,,1,3,3,1__,CS,second
 574302,2019,AA,46,593977,Johendí Jiminian,596018,,1,1,1,12_,SB,second
 574367,2019,AA,1,676732,Blake Battenfield,665506,,2,3,1,1__,SB,second
@@ -1091,6 +1148,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 584575,2019,AA,54,620986,Jefferson Medina,668888,,2,2,2,123,SB,second
 574583,2019,AA,53,621333,Ivan Pelaez,656448,,1,1,3,1__,SB,second
 574508,2019,AA,1,649963,Bo Takahashi,605353,,2,2,2,12_,SB,second
+574508,2019,AA,70,476595,Lucas Luetge,622736,,2,2,2,_2_,CS,third
 574508,2019,AA,84,643232,Matt Brill,642836,,1,2,2,123,SB,third
 572296,2019,AA,16,600011,Daniel McGrath,623278,,3,2,2,1__,SB,second
 572291,2019,AA,18,665620,Deivi García,596122,,3,1,2,12_,SB,second
@@ -1166,6 +1224,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 584492,2019,AA,61,641962,CD Pelham,647351,,4,1,1,1__,SB,second
 574790,2019,AA,30,676617,Riley O'Brien,600861,,4,0,1,_2_,SB,third
 574650,2019,AA,6,547001,Cody Poteet,592205,,3,2,2,12_,SB,second
+574725,2019,AA,14,677867,Max Herrmann,641323,,4,1,2,1__,CS,second
 584351,2019,AA,2,455605,J.D. Martin,666137,,4,2,1,1__,SB,second
 584351,2019,AA,3,455605,J.D. Martin,656896,,0,2,2,12_,SB,third
 584788,2019,AA,24,642629,Emmanuel Ramirez,670148,,0,1,3,1__,CS,second
@@ -1256,6 +1315,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 584354,2019,AA,56,621048,Nolan Long,663708,,0,1,2,12_,SB,second
 571668,2019,AA,1,681935,Tommy Wilson,643590,,3,3,2,1__,CS,second
 571668,2019,AA,6,663986,Trevor Stephan,657780,,4,1,2,1__,SB,second
+571668,2019,AA,58,595389,David Roseboom,664060,,1,3,2,1__,CS,second
 571810,2019,AA,24,666159,Matt Manning,656340,,1,2,3,1__,SB,second
 571810,2019,AA,59,641641,Taylor Grover,640492,,0,3,1,1__,SB,second
 572023,2019,AA,12,660431,Hector Perez,641385,,2,3,1,1__,SB,second
@@ -1287,6 +1347,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 584719,2019,AA,9,645307,Ricardo Sánchez,656896,,2,1,3,12_,SB,second
 584719,2019,AA,23,645307,Ricardo Sánchez,663708,,3,2,1,123,SB,third
 584719,2019,AA,70,665093,Zac Grotz,650619,,3,2,0,123,SB,second
+584579,2019,AA,2,643478,Joe Palumbo,658668,,3,3,3,1__,CS,second
 574510,2019,AA,41,670552,Bryan Valdez,642350,,2,3,3,1__,SB,second
 574492,2019,AA,2,625974,Sam Lewis,642350,,1,1,2,12_,SB,second
 574370,2019,AA,5,669424,Jimmy Lambert,664954,,4,1,2,1__,SB,second
@@ -1333,6 +1394,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 572236,2019,AA,28,595263,Mickey Jannis,643198,,1,0,3,1__,CS,second
 572236,2019,AA,44,595263,Mickey Jannis,621323,,0,2,1,1__,SB,second
 572236,2019,AA,52,595237,Ryan Halstead,663894,,1,1,1,123,SB,second
+572236,2019,AA,55,594580,Sam Moll,664850,,1,2,2,1_3,CS,second
 572236,2019,AA,73,656818,Connor Overton,664850,,3,2,1,12_,SB,second
 572162,2019,AA,22,624519,Logan Shore,663897,,4,1,1,123,SB,second
 572162,2019,AA,40,624519,Logan Shore,669742,,4,1,2,1__,CS,second
@@ -1377,6 +1439,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 572164,2019,AA,6,624526,Garrett Williams,666160,,1,2,1,1__,SB,second
 572164,2019,AA,20,658431,Adonis Medina,641689,,2,2,3,1__,SB,second
 572164,2019,AA,28,658431,Adonis Medina,665000,,0,2,3,1__,SB,second
+572164,2019,AA,30,624526,Garrett Williams,663897,,3,3,2,1__,CS,second
 571670,2019,AA,1,681935,Tommy Wilson,676071,,3,3,2,1__,CS,second
 571670,2019,AA,6,664236,Matthew Kent,608627,,2,0,1,12_,SB,second
 571599,2019,AA,19,608323,Sean Brady,665227,,2,0,3,1__,SB,second
@@ -1401,6 +1464,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 574308,2019,AA,46,676265,Cory Abbott,656449,,0,3,2,1__,SB,second
 574308,2019,AA,55,664123,Scott Effross,663757,,4,2,1,12_,SB,third
 584287,2019,AA,58,622169,Angel Duno,620443,,3,1,2,_23,SB,third
+572137,2019,AA,1,650810,José Taveras,607389,,0,2,2,1__,CS,second
 572137,2019,AA,13,545404,Brandon Beachy,669737,,0,2,3,1__,SB,second
 572137,2019,AA,31,650810,José Taveras,605370,,1,3,3,1__,CS,second
 571655,2019,AA,14,668560,Yeizo Campos,623517,,3,2,1,1__,SB,second
@@ -1447,6 +1511,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 571655,2019,AA,14,668560,Yeizo Campos,623517,,3,2,1,1__,SB,second
 571655,2019,AA,16,668560,Yeizo Campos,657129,,1,3,2,12_,SB,third
 571655,2019,AA,41,664687,Durbin Feltman,665926,,1,3,3,1__,SB,second
+572166,2019,AA,18,663982,David Parkinson,663692,,2,1,3,1__,CS,second
 572166,2019,AA,53,670125,Jonathan Hennigan,643198,,3,1,1,123,SB,third
 572166,2019,AA,56,670125,Jonathan Hennigan,665000,,1,3,3,1__,SB,second
 574375,2019,AA,47,669424,Jimmy Lambert,665862,,3,3,1,1__,SB,second
@@ -1462,6 +1527,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 574865,2019,AA,14,547001,Cody Poteet,670054,,1,2,1,12_,SB,second
 574865,2019,AA,28,547001,Cody Poteet,666163,,1,2,1,12_,SB,second
 574865,2019,AA,32,547001,Cody Poteet,675003,,0,1,2,12_,SB,second
+574865,2019,AA,37,656212,Charlie Barnes,657064,,1,3,3,1__,CS,second
 574655,2019,AA,17,656353,Tucker Davidson,663757,,3,1,1,12_,SB,second
 574655,2019,AA,30,591611,Johan Belisario,592205,,0,3,2,1__,SB,second
 574655,2019,AA,67,621050,Josh Graham,641323,,2,3,3,1__,SB,second
@@ -1477,8 +1543,11 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 571952,2019,AA,38,670329,Rico Garcia,660829,,1,3,3,_2_,SB,third
 574451,2019,AA,59,656561,Nick Howard,593137,,3,0,2,12_,SB,second
 574451,2019,AA,67,622426,Adrian Almeida,636072,,4,1,2,12_,SB,second
+574796,2019,AA,18,657006,Justin Steele,656821,,2,0,3,1__,CS,second
+574796,2019,AA,33,657006,Justin Steele,650907,,4,2,2,1__,CS,second
 574866,2019,AA,30,660896,Jorge Alcala,659003,,2,2,2,1__,CS,second
 574866,2019,AA,48,660896,Jorge Alcala,656448,,0,1,1,123,SB,third
+574656,2019,AA,10,657022,Trey Supak,664104,,1,2,3,1__,CS,second
 574376,2019,AA,20,642092,Riley Smith,670768,,2,2,3,1__,SB,second
 584356,2019,AA,36,670955,Edwin Uceta,668227,,4,0,2,1__,SB,second
 584356,2019,AA,37,670955,Edwin Uceta,657247,,3,2,3,12_,SB,third
@@ -1494,11 +1563,13 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 584794,2019,AA,11,669947,Jesse Scholtens,664938,,3,3,2,1__,CS,second
 584794,2019,AA,43,639238,Edgar Arredondo,680911,,3,2,3,1__,SB,second
 584794,2019,AA,60,669618,Joe Barlow,664963,,2,1,3,12_,CS,second
+572095,2019,AA,10,621591,Alfred Gutierrez,666915,,2,1,2,_2_,CS,third
 572095,2019,AA,20,660593,Denyi Reyes,643198,,2,2,2,1__,SB,second
 572095,2019,AA,54,607179,Jordan Weems,641561,,2,3,3,1__,SB,second
 572095,2019,AA,60,607179,Jordan Weems,641689,,3,1,0,12_,SB,second
 571886,2019,AA,23,595263,Mickey Jannis,605356,,1,2,1,1__,SB,second
 572025,2019,AA,20,660546,Yennsy Díaz,669720,,1,2,1,12_,SB,second
+572025,2019,AA,41,669145,Bruce Zimmermann,665227,,2,2,2,1__,CS,second
 571953,2019,AA,39,642758,Domingo Acevedo,666213,,0,2,2,1__,CS,second
 571953,2019,AA,61,664875,Justin Lawrence,656467,,4,1,0,12_,SB,second
 584498,2019,AA,9,641709,Brian Howard,666179,,0,3,3,1__,SB,second
@@ -1535,6 +1606,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 574798,2019,AA,17,676265,Cory Abbott,630034,,1,2,3,_2_,SB,third
 574798,2019,AA,30,676265,Cory Abbott,656821,,4,2,2,1__,SB,second
 574798,2019,AA,72,641889,Dalton Moats,676724,,3,1,2,123,SB,third
+574658,2019,AA,2,666205,Kyle Muller,656449,,1,3,3,1__,CS,second
 584289,2019,AA,5,642546,Jonathan Hernández,642362,,4,2,0,1__,SB,second
 584289,2019,AA,67,620440,Jairo Beras,656736,,1,3,2,1__,SB,second
 574378,2019,AA,6,606303,Joel Payamps,657757,,0,1,3,_2_,SB,third
@@ -1547,6 +1619,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 584725,2019,AA,8,656828,Jacob Patterson,663708,,1,2,2,_2_,SB,third
 584725,2019,AA,21,666924,J.C. Cloney,656734,,2,2,2,_2_,CS,third
 584725,2019,AA,45,656828,Jacob Patterson,656896,,0,1,0,123,SB,third
+584359,2019,AA,1,669160,Dustin May,657108,,1,1,2,1__,CS,second
 584726,2019,AA,10,554234,Williams Pérez,605227,,3,2,0,123,SB,second
 584726,2019,AA,13,676736,Will Latcham,657629,,2,1,2,1_3,SB,second
 584726,2019,AA,46,642571,Merandy Gonzalez,666137,,4,2,2,12_,SB,third
@@ -1667,6 +1740,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 571535,2019,AA,29,605182,Mike Clevinger,657253,,3,2,2,_2_,CS,third
 571535,2019,AA,30,605182,Mike Clevinger,657431,,3,3,3,1__,SB,second
 571535,2019,AA,62,641959,Jake Paulson,664081,,3,1,3,1__,CS,second
+584431,2019,AA,1,677369,Austin Warner,608383,,2,2,1,1__,CS,second
 584431,2019,AA,43,641709,Brian Howard,644407,,2,2,2,12_,SB,second
 584431,2019,AA,60,642119,Cody Stull,668843,,2,3,3,1__,CS,second
 584654,2019,AA,4,670159,Carson LaRue,657108,,3,3,2,1__,CS,second
@@ -1677,6 +1751,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 584432,2019,AA,46,640453,Connor Jones,670148,,2,2,1,1__,SB,second
 584432,2019,AA,54,676220,Seth Elledge,680118,,3,2,3,12_,SB,second
 571605,2019,AA,5,656557,Tanner Houck,607088,,0,3,3,1__,CS,second
+571605,2019,AA,20,608323,Sean Brady,657740,,1,1,2,1__,CS,second
 571605,2019,AA,33,656557,Tanner Houck,641973,,3,3,3,12_,SB,second
 571605,2019,AA,67,553883,Jose Campos,657035,,2,0,1,12_,SB,second
 571746,2019,AA,41,660431,Hector Perez,666783,,2,3,2,1__,SB,second
@@ -1719,6 +1794,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 584587,2019,AA,19,622703,Ronald Herrera,656716,,4,1,0,1__,SB,second
 574380,2019,AA,7,660422,Jorge Guzmán,642772,,4,2,2,1__,CS,second
 574380,2019,AA,8,660422,Jorge Guzmán,657757,,2,3,3,1__,SB,second
+574380,2019,AA,26,621383,Tanner Banks,622700,,3,2,3,1__,CS,second
 574380,2019,AA,44,660422,Jorge Guzmán,642772,,4,1,1,1__,SB,second
 584797,2019,AA,2,671790,Ronald Bolaños,666137,,3,1,1,12_,SB,second
 584797,2019,AA,3,671790,Ronald Bolaños,656896,,2,1,1,12_,SB,second
@@ -1742,11 +1818,13 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 574521,2019,AA,48,656876,Drew Rasmussen,670370,,4,2,0,1__,SB,second
 574661,2019,AA,57,656450,Joe Gatto,592205,,2,2,1,12_,SB,second
 574661,2019,AA,64,593580,Dario Beltre,642751,,3,1,1,1__,SB,second
+574801,2019,AA,53,641388,Ty Boyles,670156,,4,2,2,1__,CS,second
 574801,2019,AA,67,641889,Dalton Moats,636072,,2,0,3,12_,SB,third
 574871,2019,AA,3,656212,Charlie Barnes,666558,,4,0,1,12_,SB,third
 574871,2019,AA,69,592848,Zack Weiss,676724,,2,2,3,1__,SB,second
 574871,2019,AA,85,682446,Tyler Palm,622736,,1,0,3,1__,SB,second
 574871,2019,AA,88,656378,Christian Donahue,630063,,3,3,2,1__,SB,second
+584588,2019,AA,18,643478,Joe Palumbo,657629,,2,3,3,1__,CS,second
 584588,2019,AA,24,642520,Gerson Garabito,663478,,1,1,2,12_,SB,second
 584798,2019,AA,36,518603,Justin De Fratus,669106,,2,2,2,1__,SB,second
 584657,2019,AA,6,645307,Ricardo Sánchez,641521,,2,3,2,_2_,SB,third
@@ -1818,6 +1896,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 572030,2019,AA,71,642637,Adonis Uceta,641943,,2,1,2,_2_,CS,third
 572310,2019,AA,24,665620,Deivi García,595878,,1,3,1,1__,SB,second
 571821,2019,AA,15,656412,Alex Faedo,680776,,1,3,3,1__,SB,second
+571821,2019,AA,26,664236,Matthew Kent,640492,,2,1,3,1__,CS,second
 572173,2019,AA,29,656529,Sam Hentges,663524,,2,2,2,12_,SB,second
 572173,2019,AA,30,656529,Sam Hentges,660614,,4,2,2,1__,SB,second
 572173,2019,AA,60,641401,Connor Brogdon,664789,,2,2,1,1__,SB,second
@@ -1827,6 +1906,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 584504,2019,AA,78,605521,Art Warren,671242,,3,3,2,1__,SB,second
 584294,2019,AA,26,670912,Johan Oviedo,641521,,3,2,1,1__,SB,second
 584363,2019,AA,38,642546,Jonathan Hernández,660688,,4,2,2,1__,SB,second
+584730,2019,AA,2,666924,J.C. Cloney,658668,,3,2,2,1__,CS,second
 584730,2019,AA,4,666924,J.C. Cloney,650839,,3,2,3,1_3,SB,second
 584730,2019,AA,38,671790,Ronald Bolaños,641531,,3,3,1,1__,SB,second
 584364,2019,AA,12,518603,Justin De Fratus,663478,,3,3,3,1__,SB,second
@@ -1840,6 +1920,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 572155,2019,AA,11,650810,José Taveras,656822,,2,1,3,1__,SB,second
 572155,2019,AA,15,656991,David Speer,660614,,1,3,3,1__,SB,second
 572155,2019,AA,17,650810,José Taveras,664789,,1,0,2,1__,CS,second
+572155,2019,AA,29,656991,David Speer,640488,,2,2,2,1__,CS,second
 572031,2019,AA,28,595263,Mickey Jannis,600931,,0,2,1,12_,SB,second
 572311,2019,AA,2,656061,Albert Abreu,663692,,3,1,2,123,SB,second
 572311,2019,AA,7,669946,Brandon Lawson,669137,,1,0,3,1__,SB,second
@@ -1852,6 +1933,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 572155,2019,AA,11,650810,José Taveras,656822,,2,1,3,1__,SB,second
 572155,2019,AA,15,656991,David Speer,660614,,1,3,3,1__,SB,second
 572155,2019,AA,17,650810,José Taveras,664789,,1,0,2,1__,CS,second
+572155,2019,AA,29,656991,David Speer,640488,,2,2,2,1__,CS,second
 572032,2019,AA,12,681935,Tommy Wilson,600931,,3,2,1,1__,CS,second
 572032,2019,AA,35,670722,William Ouellette,657780,,1,2,3,1__,CS,second
 572312,2019,AA,38,656793,Nick Nelson,643198,,2,2,1,_23,SB,third
@@ -1934,6 +2016,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 574597,2019,AA,16,660896,Jorge Alcala,657669,,0,3,3,1_3,SB,home
 574317,2019,AA,7,666205,Kyle Muller,642215,,4,2,1,1__,SB,second
 574317,2019,AA,15,666205,Kyle Muller,650694,,0,3,2,1__,SB,second
+574317,2019,AA,22,666205,Kyle Muller,546994,,3,2,2,1__,CS,second
 574317,2019,AA,44,657022,Trey Supak,661388,,1,1,2,12_,SB,second
 574947,2019,AA,3,641672,Thomas Hatch,656484,,4,2,2,1__,SB,second
 574947,2019,AA,41,670046,Kenny Rosenberg,593800,,2,2,2,123,SB,second
@@ -1946,12 +2029,14 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 571648,2019,AA,62,656290,Drew Carlton,657780,,1,1,3,1__,SB,second
 571681,2019,AA,4,624519,Logan Shore,607249,,3,1,1,12_,SB,second
 571681,2019,AA,43,624519,Logan Shore,608627,,3,2,2,1__,SB,second
+571894,2019,AA,16,669212,Eli Morgan,594872,,3,3,3,12_,CS,third
 572243,2019,AA,69,664202,Tyler Cyr,641973,,3,3,2,1__,SB,second
 572243,2019,AA,71,664202,Tyler Cyr,676426,,2,3,3,12_,SB,third
 572103,2019,AA,1,664236,Matthew Kent,657089,,3,2,1,1__,SB,second
 572313,2019,AA,7,663559,Bailey Falter,656467,,3,2,2,12_,SB,second
 572313,2019,AA,23,663559,Bailey Falter,656467,,1,2,2,1__,SB,second
 572313,2019,AA,55,664076,Garrett Cleavinger,664060,,2,0,0,12_,SB,second
+571751,2019,AA,18,622506,Marcos Molina,650513,,2,2,2,_2_,CS,third
 574598,2019,AA,21,592761,Caleb Smith,650331,,0,1,2,12_,SB,second
 574598,2019,AA,53,571440,Jeff Ames,543589,,4,2,0,1__,SB,second
 574458,2019,AA,2,641900,Scott Moss,670768,,3,2,1,123,SB,second
@@ -2029,10 +2114,12 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 584660,2019,AA,55,670443,Jack Anderson,656716,,2,3,2,1__,SB,second
 584437,2019,AA,39,682418,Tommy Parsons,666137,,1,1,0,12_,SB,second
 584437,2019,AA,55,676831,Kodi Whitley,663708,,4,1,1,1__,SB,second
+571611,2019,AA,70,621098,Eric Hanhold,621437,,0,3,2,12_,CS,third
 572317,2019,AA,9,641907,Patrick Murphy,656467,,4,2,2,1__,SB,second
 572317,2019,AA,55,668754,Braden Bristo,656668,,1,2,1,12_,SB,second
 571824,2019,AA,33,657093,Spenser Watkins,664921,,2,2,1,12_,SB,second
 572247,2019,AA,22,622063,Jack Wynkoop,663692,,1,1,3,1__,SB,second
+572247,2019,AA,34,622063,Jack Wynkoop,621591,,1,3,3,1__,CS,second
 572247,2019,AA,44,622063,Jack Wynkoop,641689,,4,2,1,_2_,SB,third
 572247,2019,AA,58,664875,Justin Lawrence,663692,,2,2,3,_2_,CS,third
 572177,2019,AA,20,663982,David Parkinson,641453,,4,2,2,1__,SB,second
@@ -2081,6 +2168,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 572249,2019,AA,40,665134,Tate Scioneaux,663692,,0,3,3,1__,SB,second
 572249,2019,AA,73,643539,Caleb Simpson,666213,,3,3,3,1__,SB,second
 571757,2019,AA,18,675912,Zac Lowther,664789,,3,3,1,1__,SB,second
+572179,2019,AA,52,664236,Matthew Kent,661439,,1,1,2,1__,CS,second
 572179,2019,AA,63,670125,Jonathan Hennigan,621469,,0,2,2,1__,CS,second
 572179,2019,AA,68,664687,Durbin Feltman,664866,,2,2,2,12_,SB,second
 574949,2019,AA,4,668879,Vince Arobio,670097,,1,3,1,1__,SB,second
@@ -2092,6 +2180,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 574879,2019,AA,34,592422,Jason Hursh,663905,,2,3,3,1__,SB,second
 574524,2019,AA,31,621153,Kevin McCanna,650907,,4,1,1,123,SB,third
 574524,2019,AA,35,670119,Connor Grey,666139,,3,3,3,1__,SB,second
+574524,2019,AA,44,676596,Josh Fleming,642197,,2,2,1,1__,CS,second
 574524,2019,AA,56,670119,Connor Grey,660821,,2,2,2,1__,SB,second
 584594,2019,AA,21,664942,James Naile,641779,,3,2,1,123,SB,second
 584594,2019,AA,34,664942,James Naile,665750,,1,2,3,1__,SB,second
@@ -2112,6 +2201,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 572106,2019,AA,53,571479,Andrew Bellatti,641453,,0,3,2,1__,SB,second
 572106,2019,AA,54,571479,Andrew Bellatti,666915,,1,1,2,_23,SB,third
 574525,2019,AA,3,642104,Cole Stapler,656484,,3,2,1,123,SB,third
+574525,2019,AA,4,642104,Cole Stapler,664954,,4,1,2,1__,CS,second
 574525,2019,AA,6,642104,Cole Stapler,642134,,0,2,3,1_3,SB,home
 574525,2019,AA,14,642104,Cole Stapler,670764,,4,1,2,1__,SB,second
 574525,2019,AA,72,656237,Blake Bivens,662139,,4,2,1,1__,SB,second
@@ -2162,6 +2252,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 571546,2019,AA,20,656529,Sam Hentges,674671,,3,3,3,1__,SB,second
 571546,2019,AA,37,656529,Sam Hentges,676426,,1,2,2,123,SB,third
 571546,2019,AA,60,596111,Jordan Stephens,674671,,3,2,1,12_,SB,second
+571829,2019,AA,33,624519,Logan Shore,650700,,3,2,3,1__,CS,second
 571966,2019,AA,11,657508,Mike Baumann,641385,,3,2,2,1__,CS,second
 584443,2019,AA,33,676358,Evan Kruczynski,476633,,3,2,2,12_,SB,second
 572182,2019,AA,23,660431,Hector Perez,650506,,0,1,2,1__,CS,second
@@ -2184,6 +2275,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 572320,2019,AA,19,641620,Brandon Gold,664060,,0,3,3,1__,CS,second
 572320,2019,AA,49,665621,Rony García,641385,,2,3,3,1__,SB,second
 572320,2019,AA,54,543234,Rayan González,656467,,4,2,2,1__,SB,second
+574389,2019,AA,2,641949,John Parke,650331,,2,2,3,1__,CS,second
 574389,2019,AA,19,643377,Griffin Jax,666164,,1,2,3,12_,SB,third
 574389,2019,AA,58,622415,Anthony Vizcaya,663611,,4,1,1,12_,SB,second
 572036,2019,AA,46,656657,Zach Logue,676071,,1,2,2,12_,SB,second
@@ -2217,6 +2309,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 574740,2019,AA,23,664904,Josh Roeder,676825,,1,3,2,1__,SB,second
 574740,2019,AA,47,605255,Brett Graves,593137,,1,3,3,1__,SB,second
 574740,2019,AA,63,669746,Tommy Eveld,624645,,1,3,3,1__,SB,second
+584370,2019,AA,1,487675,Edward Paredes,666137,,1,1,1,1__,CS,second
 584370,2019,AA,3,487675,Edward Paredes,650619,,1,3,3,1__,SB,second
 584370,2019,AA,18,487675,Edward Paredes,670084,,4,1,0,_2_,SB,third
 574390,2019,AA,17,676614,Bryan Sammons,554054,,4,2,1,1__,CS,second
@@ -2243,6 +2336,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 572323,2019,AA,36,668757,Matt Dennis,622197,,4,2,2,1__,CS,second
 572253,2019,AA,6,664121,Seth McGarry,663692,,4,0,1,1__,SB,second
 572253,2019,AA,18,669946,Brandon Lawson,663897,,2,0,1,12_,SB,second
+572253,2019,AA,47,664076,Garrett Cleavinger,669369,,1,1,2,1__,CS,second
 572039,2019,AA,3,641907,Patrick Murphy,657035,,2,2,3,12_,SB,second
 572039,2019,AA,33,667356,Bryan Mata,657806,,2,3,1,1__,SB,second
 571617,2019,AA,11,660781,Domingo Robles,656765,,1,1,1,1__,SB,second
@@ -2319,6 +2413,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 574953,2019,AA,23,612797,Erick Leal,663330,,1,2,2,12_,SB,second
 574953,2019,AA,46,677867,Max Herrmann,642836,,1,1,0,12_,SB,second
 574953,2019,AA,53,677867,Max Herrmann,663538,,4,2,0,1__,SB,second
+571900,2019,AA,18,621591,Alfred Gutierrez,671277,,2,2,3,1__,CS,second
 571900,2019,AA,28,608723,Austin Voth,643198,,1,2,1,12_,SB,second
 571900,2019,AA,38,592438,Chase Johnson,664921,,2,1,1,12_,SB,second
 571900,2019,AA,53,502522,Justin Miller,669369,,3,2,2,12_,SB,second
@@ -2363,6 +2458,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 571901,2019,AA,63,663394,Jacob Condra-Bogan,643198,,0,1,3,1__,SB,second
 571901,2019,AA,67,642563,Raffi Vizcaíno,596143,,2,2,1,12_,SB,second
 574529,2019,AA,27,621383,Tanner Banks,656403,,2,2,3,1__,SB,second
+574529,2019,AA,49,642104,Cole Stapler,554054,,4,2,2,12_,CS,third
 571548,2019,AA,3,656529,Sam Hentges,666783,,1,3,2,_2_,SB,third
 571548,2019,AA,36,670078,Ben Krauth,666783,,1,0,3,1__,SB,second
 571548,2019,AA,73,622459,Cristian Alvarado,608364,,2,3,3,1__,SB,second
@@ -2398,6 +2494,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 574955,2019,AA,6,641440,Tyler Carpenter,640902,,2,3,3,12_,CS,third
 574955,2019,AA,11,656638,Alex Lange,593137,,2,2,2,123,SB,home
 574955,2019,AA,12,656638,Alex Lange,669049,,3,0,2,1__,SB,second
+571549,2019,AA,40,681792,Adam Scott,666783,,4,0,2,1_3,CS,home
 571549,2019,AA,58,622465,Francisco Jimenez,666134,,4,1,2,1__,SB,second
 571832,2019,AA,7,675989,Cody Bolton,670623,,3,2,2,1__,CS,second
 574885,2019,AA,12,669294,Paul Campbell,676628,,0,1,1,1__,CS,second
@@ -2424,16 +2521,19 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 574604,2019,AA,48,669746,Tommy Eveld,605343,,2,2,1,1_3,SB,second
 584742,2019,AA,9,642068,Jordan Sheffield,663708,,2,3,2,1__,SB,second
 584742,2019,AA,35,628709,Ofreidy Gómez,642137,,1,2,3,1__,SB,second
+571970,2019,AA,59,670288,Jake Fishman,676701,,1,3,3,1__,CS,second
 574956,2019,AA,13,650347,Luís Madero,642836,,4,2,1,1__,SB,second
 574956,2019,AA,14,650347,Luís Madero,593800,,4,1,1,12_,SB,third
 574956,2019,AA,21,641457,Bailey Clark,669016,,1,1,2,12_,SB,second
 574956,2019,AA,33,593580,Dario Beltre,622736,,0,3,3,1__,SB,second
+574956,2019,AA,42,606208,Luis Lugo,663330,,3,2,2,1__,CS,second
 574956,2019,AA,64,664102,Adam Hofacket,642836,,1,2,1,12_,SB,second
 574886,2019,AA,13,660896,Jorge Alcala,630034,,3,3,1,1__,SB,second
 574886,2019,AA,14,660896,Jorge Alcala,641882,,4,2,2,_2_,CS,third
 574886,2019,AA,15,660896,Jorge Alcala,660644,,3,2,3,1__,SB,second
 574886,2019,AA,17,670046,Kenny Rosenberg,664334,,3,2,1,1__,SB,second
 574886,2019,AA,26,670046,Kenny Rosenberg,643348,,4,1,2,1__,CS,second
+574886,2019,AA,30,660896,Jorge Alcala,664954,,1,0,2,1__,CS,second
 574886,2019,AA,40,607755,Andrew Vasquez,656821,,4,0,2,12_,SB,third
 584604,2019,AA,24,669947,Jesse Scholtens,676900,,2,1,2,12_,SB,second
 584604,2019,AA,39,669947,Jesse Scholtens,660634,,2,1,2,1__,CS,second
@@ -2512,6 +2612,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 572324,2019,AA,25,665621,Rony García,663527,,3,1,2,1__,SB,second
 572324,2019,AA,29,665621,Rony García,641891,,2,1,2,123,SB,second
 571765,2019,AA,55,664852,Jay Flaa,664930,,2,3,3,1__,SB,second
+571551,2019,AA,46,606198,Anderson Polanco,650700,,1,1,3,1__,CS,second
 572187,2019,AA,10,663678,Colton Eastman,656989,,2,1,1,12_,SB,second
 574470,2019,AA,58,670376,Alejandro Mateo,670895,,4,0,2,1__,SB,second
 584516,2019,AA,30,656266,J.B. Bukauskas,666023,,2,2,2,12_,SB,second
@@ -2561,6 +2662,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 574746,2019,AA,31,676755,Isaac Mattson,596018,,2,2,1,123,SB,second
 584812,2019,AA,1,669022,MacKenzie Gore,656736,,2,2,0,123,SB,second
 584812,2019,AA,2,669022,MacKenzie Gore,663708,,1,2,0,12_,SB,second
+584812,2019,AA,18,669022,MacKenzie Gore,663708,,2,2,1,1__,CS,second
 584812,2019,AA,55,641632,Conner Greene,631227,,3,2,3,1__,SB,second
 584812,2019,AA,61,641632,Conner Greene,680911,,1,0,1,1__,CS,second
 584812,2019,AA,69,641632,Conner Greene,642002,,4,2,1,1__,SB,second
@@ -2574,11 +2676,15 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 574817,2019,AA,72,641889,Dalton Moats,656976,,0,2,1,123,SB,third
 571553,2019,AA,28,519096,Dan Otero,669686,,2,2,3,1__,SB,second
 584675,2019,AA,10,656954,Justus Sheffield,621505,,3,3,3,_2_,SB,third
+584675,2019,AA,54,656954,Justus Sheffield,643396,,1,0,3,1__,CS,second
+574472,2019,AA,23,675923,Ryan Lillie,672906,,1,0,1,1__,CS,second
 574397,2019,AA,44,642601,Oscar De La Cruz,656431,,1,2,2,123,SB,third
 574747,2019,AA,20,650347,Luís Madero,605504,,2,1,1,12_,SB,second
+584813,2019,AA,18,628709,Ofreidy Gómez,631227,,1,2,1,1_3,CS,second
 584518,2019,AA,72,656365,Tommy DeJuneas,663457,,4,0,2,1__,CS,second
 574677,2019,AA,14,594985,Ben Rowen,676940,,2,2,2,12_,SB,second
 574677,2019,AA,19,663485,Cole Sands,624523,,2,0,2,12_,SB,second
+574677,2019,AA,40,622382,Gabriel Moya,624523,,0,2,1,1__,CS,second
 572257,2019,AA,4,663554,Casey Mize,665285,,0,3,1,_2_,SB,third
 572257,2019,AA,11,663554,Casey Mize,606189,,1,2,1,123,SB,third
 572257,2019,AA,43,621591,Alfred Gutierrez,615697,,3,3,3,1__,SB,second
@@ -2612,6 +2718,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 584520,2019,AA,59,656377,Bryan Dobzanski,669008,,3,1,3,1__,CS,second
 584382,2019,AA,14,605184,Trey Cochran-Gill,606196,,4,2,1,1__,CS,second
 584382,2019,AA,28,518603,Justin De Fratus,682079,,1,1,2,12_,SB,second
+584815,2019,AA,9,676606,Nick Margevicius,656896,,1,2,1,1__,CS,second
 584815,2019,AA,76,670280,David Bednar,656736,,2,1,2,1__,SB,second
 584677,2019,AA,1,669302,Logan Gilbert,660634,,0,1,1,12_,SB,second
 584677,2019,AA,21,669302,Logan Gilbert,650957,,1,0,2,1__,CS,second
@@ -2680,11 +2787,13 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 572309,2019,AA,29,621593,Anthony Castro,643590,,4,1,2,1__,SB,second
 574612,2019,AA,13,676424,Alec Bettinger,656950,,1,2,2,12_,SB,second
 574612,2019,AA,14,676424,Alec Bettinger,622700,,4,0,2,_2_,SB,third
+574612,2019,AA,50,641754,Jeff Kinley,621560,,3,3,2,1_3,CS,second
 574892,2019,AA,43,641440,Tyler Carpenter,676940,,4,2,2,1__,SB,second
 574890,2019,AA,10,622415,Anthony Vizcaya,624645,,1,0,3,1__,SB,second
 571624,2019,AA,6,669946,Brandon Lawson,666931,,4,2,1,_2_,SB,third
 571624,2019,AA,7,669946,Brandon Lawson,664930,,1,0,2,1_3,CS,second
 571624,2019,AA,66,666802,Joel Cesar,669369,,1,1,2,12_,SB,second
+571691,2019,AA,23,663325,Kevin Smith,666783,,2,3,2,1__,CS,second
 571691,2019,AA,28,675912,Zac Lowther,665926,,3,3,2,_2_,SB,third
 571691,2019,AA,35,675912,Zac Lowther,664059,,1,1,2,1__,CS,second
 571691,2019,AA,73,622459,Cristian Alvarado,607249,,3,1,3,1__,SB,second
@@ -2717,6 +2826,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 571692,2019,AA,32,649144,Alex Wells,669686,,2,2,3,12_,SB,third
 572047,2019,AA,30,675921,Spencer Howard,600931,,1,3,2,1__,SB,second
 572047,2019,AA,38,670125,Jonathan Hennigan,656989,,4,2,2,1__,SB,second
+572047,2019,AA,46,670125,Jonathan Hennigan,600931,,3,2,3,1__,CS,second
 571975,2019,AA,2,641620,Brandon Gold,670092,,3,2,2,1__,SB,second
 571838,2019,AA,13,656793,Nick Nelson,623238,,3,3,3,1__,CS,second
 584312,2019,AA,51,664942,James Naile,622268,,3,2,1,12_,SB,second
@@ -2780,6 +2890,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 574475,2019,AA,79,622576,Juan Martinez,605353,,3,2,3,1__,SB,second
 584314,2019,AA,23,664851,Kyle Friedrichs,666784,,2,2,3,1__,CS,second
 584314,2019,AA,43,518603,Justin De Fratus,642362,,0,3,3,1__,CS,second
+574750,2019,AA,31,657670,Greg Mahle,674677,,3,2,3,1__,CS,second
 584747,2019,AA,11,669199,Lake Bachar,605227,,4,2,1,1__,CS,second
 584747,2019,AA,27,669199,Lake Bachar,667651,,2,3,3,1__,SB,second
 584747,2019,AA,33,669199,Lake Bachar,656274,,4,2,2,1__,CS,second
@@ -2843,6 +2954,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 571909,2019,AA,64,502202,Brad Boxberger,664081,,2,3,2,1__,SB,second
 571556,2019,AA,36,656529,Sam Hentges,669289,,2,2,2,12_,SB,second
 572262,2019,AA,12,670056,Caleb Baragar,676071,,2,1,1,12_,SB,second
+572262,2019,AA,17,600011,Daniel McGrath,669369,,2,1,3,1__,CS,second
 572262,2019,AA,55,572406,Sam Wolff,621575,,3,3,3,1__,SB,second
 571771,2019,AA,16,649144,Alex Wells,666160,,0,3,3,1__,SB,second
 571771,2019,AA,60,674342,Jakob Hernandez,656775,,4,0,2,1__,SB,second
@@ -2862,6 +2974,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 571557,2019,AA,55,641959,Jake Paulson,657088,,2,2,3,1__,SB,second
 571557,2019,AA,71,670288,Jake Fishman,668681,,1,1,1,12_,SB,second
 572333,2019,AA,22,664275,Pedro Vasquez,670352,,2,2,2,12_,SB,second
+572333,2019,AA,42,664275,Pedro Vasquez,643590,,2,3,3,1__,CS,second
 572301,2019,AA,40,676111,Shawn Semple,664930,,1,3,3,1__,CS,second
 572263,2019,AA,1,621591,Alfred Gutierrez,642344,,4,1,0,1__,SB,second
 572263,2019,AA,70,592438,Chase Johnson,657740,,3,2,2,1__,CS,second
@@ -2873,11 +2986,13 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 574824,2019,AA,57,605495,Wyatt Strahan,664954,,2,0,1,12_,SB,second
 574679,2019,AA,3,664940,Kurt Hoekstra,665066,,0,3,2,12_,SB,third
 574679,2019,AA,11,664940,Kurt Hoekstra,593800,,4,2,1,1__,SB,second
+574679,2019,AA,27,606208,Luis Lugo,671221,,4,2,2,1__,CS,second
 574334,2019,AA,6,641447,Daniel Castano,642215,,2,2,3,_2_,CS,third
 584383,2019,AA,39,664700,Daniel Tillo,682183,,2,2,1,12_,SB,second
 584816,2019,AA,42,663969,Tyler Phillips,620443,,2,2,2,12_,SB,second
 571911,2019,AA,4,605356,Tyler Mapes,621323,,4,1,1,12_,SB,third
 574540,2019,AA,7,657670,Greg Mahle,656976,,1,3,2,1__,SB,second
+574540,2019,AA,30,657670,Greg Mahle,656403,,3,3,2,1__,CS,second
 571842,2019,AA,26,656412,Alex Faedo,641943,,2,2,0,12_,SB,second
 571842,2019,AA,72,681915,Ethan DeCaster,641943,,3,3,2,1__,SB,second
 571772,2019,AA,12,592831,Konner Wade,542208,,2,3,3,1__,SB,second
@@ -2895,6 +3010,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 574680,2019,AA,9,641733,Connor Johnstone,670461,,1,3,2,1_3,SB,second
 574680,2019,AA,27,676265,Cory Abbott,671221,,3,3,1,1__,SB,second
 574680,2019,AA,46,676265,Cory Abbott,665506,,2,1,3,1__,SB,second
+574335,2019,AA,39,670375,Cameron Roegner,656746,,1,3,2,_2_,CS,third
 584679,2019,AA,67,656377,Bryan Dobzanski,664162,,2,2,2,123,SB,second
 584522,2019,AA,6,670343,Matt Milburn,656953,,1,1,2,_2_,CS,third
 584522,2019,AA,18,670343,Matt Milburn,671242,,3,2,3,_2_,SB,third
@@ -2960,6 +3076,8 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 584317,2019,AA,36,595966,John Gorman,666211,,1,0,2,1__,SB,second
 574828,2019,AA,31,642664,Wendolyn Bautista,670113,,2,1,2,1__,CS,second
 574828,2019,AA,53,642664,Wendolyn Bautista,670113,,3,2,3,_23,SB,third
+574898,2019,AA,23,656212,Charlie Barnes,670768,,3,2,2,1__,CS,second
+574898,2019,AA,49,650959,Marcos Diplán,642772,,2,3,3,_2_,CS,third
 584612,2019,AA,5,650556,Bryan Abreu,665750,,1,3,1,1__,SB,second
 584612,2019,AA,34,676599,Jason Bahr,650559,,1,2,3,1__,CS,second
 584612,2019,AA,49,621082,Jacob Lemoine,660620,,1,1,0,12_,SB,second
@@ -2967,6 +3085,8 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 584682,2019,AA,34,643290,Justin Dunn,666023,,2,3,3,1__,SB,second
 584682,2019,AA,48,643290,Justin Dunn,666137,,1,1,1,1_3,SB,second
 584682,2019,AA,67,650618,Franco Terrero,622268,,4,1,1,1__,CS,second
+572120,2019,AA,2,600011,Daniel McGrath,640492,,3,3,3,1__,CS,second
+572120,2019,AA,8,600011,Daniel McGrath,622057,,0,3,2,1__,CS,second
 572050,2019,AA,6,681792,Adam Scott,641943,,1,2,3,1__,SB,second
 572050,2019,AA,23,681792,Adam Scott,656180,,4,2,2,1__,SB,second
 572050,2019,AA,55,641959,Jake Paulson,656180,,1,2,2,12_,SB,second
@@ -2981,6 +3101,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 584613,2019,AA,35,670990,Yohan Ramírez,665750,,2,2,3,1__,SB,second
 584683,2019,AA,1,656954,Justus Sheffield,656274,,2,1,2,1__,CS,second
 584683,2019,AA,20,656954,Justus Sheffield,663708,,3,3,2,12_,SB,second
+572335,2019,AA,54,656473,Brian Gonzalez,661733,,0,1,3,1__,CS,second
 571630,2019,AA,21,608323,Sean Brady,664031,,2,0,1,12_,SB,second
 572121,2019,AA,69,667677,Zac Houston,657129,,1,3,3,1__,SB,second
 574964,2019,AA,21,682163,Jack Patterson,669450,,4,2,1,1__,CS,second
@@ -2988,6 +3109,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 574619,2019,AA,1,641154,Pablo López,624523,,4,2,0,1__,SB,second
 574619,2019,AA,5,641154,Pablo López,661388,,4,2,2,1__,CS,second
 572198,2019,AA,54,606939,Aaron Brown,663527,,2,2,3,_2_,SB,third
+574479,2019,AA,55,664079,Tyler Jay,666179,,0,3,3,1__,CS,second
 574479,2019,AA,69,571911,Damien Magnifico,608360,,4,1,2,1__,SB,second
 584319,2019,AA,38,643414,Kyle Lloyd,657267,,1,1,1,12_,SB,second
 584319,2019,AA,55,643414,Kyle Lloyd,657267,,1,3,1,1__,SB,second
@@ -2997,9 +3119,11 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 574404,2019,AA,47,656727,Kodi Medeiros,656484,,4,0,1,12_,SB,third
 584684,2019,AA,5,656240,Scott Blewett,657108,,2,2,1,1_3,SB,second
 584684,2019,AA,59,666924,J.C. Cloney,663728,,1,3,2,1__,SB,second
+572122,2019,AA,8,592831,Konner Wade,615697,,1,3,3,1__,CS,second
 572122,2019,AA,32,592831,Konner Wade,642727,,2,2,3,1__,SB,second
 572122,2019,AA,48,656638,Alex Lange,670429,,2,3,3,_2_,CS,third
 572052,2019,AA,10,641672,Thomas Hatch,669743,,1,2,2,12_,SB,second
+572335,2019,AA,54,656473,Brian Gonzalez,661733,,0,1,3,1__,CS,second
 571700,2019,AA,46,641851,Kyle McGowin,608627,,4,2,2,1__,SB,second
 572336,2019,AA,17,656793,Nick Nelson,570716,,1,3,3,1__,SB,second
 572336,2019,AA,50,664784,Steven Klimek,661733,,4,2,1,1__,SB,second
@@ -3015,6 +3139,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 584320,2019,AA,1,664851,Kyle Friedrichs,660620,,2,3,2,1__,CS,second
 584320,2019,AA,72,664116,Zack Erwin,650560,,2,3,2,1__,SB,second
 584320,2019,AA,73,664116,Zack Erwin,650559,,2,2,2,_23,SB,third
+584320,2019,AA,74,664116,Zack Erwin,660620,,1,2,3,1__,CS,second
 574405,2019,AA,59,677742,Tyler Zombro,656431,,4,1,2,1__,SB,second
 574405,2019,AA,63,606291,Mauricio Cabrera,660644,,4,2,1,1__,SB,second
 574405,2019,AA,64,606291,Mauricio Cabrera,670764,,4,0,2,12_,CS,third
@@ -3056,6 +3181,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 572259,2019,AA,46,622465,Francisco Jimenez,641689,,3,3,3,12_,CS,second
 572259,2019,AA,50,572406,Sam Wolff,676278,,1,3,3,1__,SB,second
 571633,2019,AA,1,664074,Cody Ponce,666160,,1,1,1,1_3,SB,second
+571633,2019,AA,39,663982,David Parkinson,666931,,1,3,2,1__,CS,second
 571982,2019,AA,66,607225,Jordan Foley,607249,,2,2,3,1__,SB,second
 572338,2019,AA,58,669711,Greg Weissert,664921,,1,1,2,1__,SB,second
 572338,2019,AA,62,657117,Austen Williams,622197,,0,2,1,12_,SB,second
@@ -3108,8 +3234,10 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 584525,2019,AA,6,622703,Ronald Herrera,650559,,0,1,2,1__,SB,second
 584525,2019,AA,46,622703,Ronald Herrera,656695,,3,3,2,1__,SB,second
 584390,2019,AA,3,602929,Markus Solbach,657247,,2,3,3,1__,SB,second
+584390,2019,AA,6,670912,Johan Oviedo,476633,,3,2,3,1__,CS,second
 584390,2019,AA,29,670912,Johan Oviedo,642137,,2,2,3,1__,SB,second
 584390,2019,AA,44,676601,Logan Salow,660707,,1,2,2,1__,SB,second
+584390,2019,AA,52,676601,Logan Salow,666185,,4,1,1,1__,CS,second
 584390,2019,AA,59,658724,Mitchell Osnowitz,682183,,1,2,2,12_,SB,second
 584390,2019,AA,68,664082,Michael Boyle,676761,,4,1,2,1__,SB,second
 584820,2019,AA,10,643414,Kyle Lloyd,657267,,3,3,2,1__,CS,second
@@ -3119,6 +3247,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 571661,2019,AA,17,680765,Joey Murray,657780,,1,2,3,1__,CS,second
 571661,2019,AA,21,595263,Mickey Jannis,675925,,1,1,2,12_,SB,second
 571775,2019,AA,45,593163,Carlos Navas,663630,,3,3,3,1__,SB,second
+571914,2019,AA,13,676194,Jackson Tetreault,608323,,2,3,3,12_,CS,third
 584820,2019,AA,10,643414,Kyle Lloyd,657267,,3,3,2,1__,CS,second
 571845,2019,AA,19,624519,Logan Shore,664761,,4,2,2,1__,SB,second
 571984,2019,AA,36,641620,Brandon Gold,657740,,3,2,2,1__,CS,second
@@ -3156,9 +3285,12 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 584392,2019,AA,34,682418,Tommy Parsons,642021,,2,2,1,12_,SB,second
 584392,2019,AA,49,656377,Bryan Dobzanski,642021,,4,0,1,1__,SB,second
 584687,2019,AA,61,680702,Joey Gerber,663368,,0,3,3,1__,SB,second
+574340,2019,AA,61,677076,Clayton Andrews,669016,,1,2,1,1__,CS,second
 571703,2019,AA,50,657697,Vinny Nittoli,650700,,3,2,2,12_,SB,second
+574341,2019,AA,11,670375,Cameron Roegner,657444,,4,2,1,1__,CS,second
 574341,2019,AA,48,644677,Tyler Spurlin,669049,,4,2,0,1__,SB,second
 574341,2019,AA,59,646081,Rodrigo Benoit,622561,,2,3,2,1__,CS,second
+574340,2019,AA,61,677076,Clayton Andrews,669016,,1,2,1,1__,CS,second
 574971,2019,AA,81,641457,Bailey Clark,657669,,2,3,2,1__,SB,second
 574546,2019,AA,17,663556,Shane McClanahan,600861,,4,2,2,1__,CS,second
 574546,2019,AA,18,663556,Shane McClanahan,662139,,3,2,2,12_,SB,second
@@ -3187,6 +3319,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 571635,2019,AA,2,660781,Domingo Robles,570716,,2,2,2,_2_,SB,third
 571635,2019,AA,27,660781,Domingo Robles,623222,,0,3,2,1__,CS,second
 574972,2019,AA,65,670376,Alejandro Mateo,656378,,2,1,2,12_,SB,second
+571848,2019,AA,9,666214,Joey Wentz,608364,,2,3,2,1__,CS,second
 571848,2019,AA,18,666214,Joey Wentz,669743,,3,3,3,_2_,CS,third
 574547,2019,AA,5,657044,Ryan Thompson,656403,,4,1,1,1__,SB,second
 571704,2019,AA,7,668757,Matt Dennis,665926,,2,1,2,1__,CS,second
@@ -3209,6 +3342,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 571705,2019,AA,66,624575,Joshua Torres,676701,,1,2,2,1__,SB,second
 571705,2019,AA,69,571727,Scott Griggs,650700,,1,1,1,12_,SB,second
 571705,2019,AA,73,571727,Scott Griggs,608627,,2,3,3,1__,SB,second
+572201,2019,AA,22,663982,David Parkinson,656467,,1,3,2,1__,CS,second
 571849,2019,AA,6,664871,Kyle Dowdy,623507,,2,2,3,1__,SB,second
 571849,2019,AA,72,660302,Dalbert Siri,676695,,0,2,3,1__,CS,second
 574548,2019,AA,57,592329,Jason García,656976,,4,0,0,1__,SB,second
@@ -3216,13 +3350,16 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 574688,2019,AA,28,554431,Tyler Matzek,664689,,3,2,3,12_,SB,third
 572057,2019,AA,1,660431,Hector Perez,676071,,4,1,0,1__,SB,second
 572057,2019,AA,12,660431,Hector Perez,623517,,3,1,2,1__,SB,second
+572057,2019,AA,38,600011,Daniel McGrath,681962,,2,3,3,1__,CS,second
 574903,2019,AA,6,642664,Wendolyn Bautista,663616,,3,2,3,1__,SB,second
 584460,2019,AA,8,664714,Ljay Newsome,640900,,3,2,2,1__,CS,second
 584530,2019,AA,11,650556,Bryan Abreu,600301,,4,1,1,1__,SB,second
 572269,2019,AA,8,641850,Kevin McGowan,671218,,4,2,0,1__,SB,second
 572269,2019,AA,28,641850,Kevin McGowan,607389,,0,1,0,123,SB,second
 571850,2019,AA,3,669373,Tarik Skubal,608364,,3,3,3,1__,SB,second
+571850,2019,AA,6,681792,Adam Scott,623507,,0,2,3,1__,CS,second
 571850,2019,AA,26,669373,Tarik Skubal,660757,,1,2,3,1__,SB,second
+571850,2019,AA,33,669373,Tarik Skubal,666134,,1,3,3,1__,CS,second
 572058,2019,AA,36,664236,Matthew Kent,675925,,1,0,1,1__,SB,second
 572202,2019,AA,3,595191,Jerad Eickhoff,656467,,3,1,3,12_,SB,second
 584756,2019,AA,6,642068,Jordan Sheffield,656736,,3,1,0,12_,SB,second
@@ -3246,6 +3383,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 584826,2019,AA,25,622703,Ronald Herrera,680911,,3,2,1,12_,SB,second
 574677,2019,AA,14,594985,Ben Rowen,676940,,2,2,2,12_,SB,second
 574677,2019,AA,19,663485,Cole Sands,624523,,2,0,2,12_,SB,second
+574677,2019,AA,40,622382,Gabriel Moya,624523,,0,2,1,1__,CS,second
 571638,2019,AA,9,665733,Antonio Santos,676632,,2,1,2,123,SB,third
 571638,2019,AA,24,665733,Antonio Santos,664930,,3,3,3,1__,SB,second
 571638,2019,AA,51,665733,Antonio Santos,650832,,3,2,3,1__,CS,second
@@ -3299,18 +3437,21 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 574551,2019,AA,9,642496,Emilio Vargas,665066,,2,3,2,1__,SB,second
 574551,2019,AA,56,641457,Bailey Clark,667719,,2,1,3,1__,SB,second
 572272,2019,AA,52,643539,Caleb Simpson,640492,,1,3,3,1__,SB,second
+572272,2019,AA,107,681915,Ethan DeCaster,641561,,3,1,3,1__,CS,second
 571566,2019,AA,20,669212,Eli Morgan,572191,,3,2,1,12_,SB,second
 571566,2019,AA,31,669212,Eli Morgan,571851,,1,2,2,1__,SB,second
 571566,2019,AA,74,670078,Ben Krauth,668663,,3,2,2,123,SB,third
 574552,2019,AA,52,625974,Sam Lewis,663538,,1,1,3,1__,CS,second
 584325,2019,AA,18,642520,Gerson Garabito,682079,,2,3,3,1__,CS,second
 584325,2019,AA,50,656809,Emilio Ogando,676782,,3,1,3,1__,SB,second
+584325,2019,AA,63,664116,Zack Erwin,656896,,2,2,3,1__,CS,second
 584325,2019,AA,66,667050,Grant Gavin,656364,,1,3,3,1__,CS,second
 574762,2019,AA,9,665665,Reiver Sanmartin,622561,,1,2,3,1__,SB,second
 574832,2019,AA,3,663556,Shane McClanahan,656449,,1,1,3,1__,SB,second
 574412,2019,AA,5,641447,Daniel Castano,666164,,2,3,2,1__,SB,second
 584395,2019,AA,4,669947,Jesse Scholtens,666784,,1,3,1,1__,SB,second
 584395,2019,AA,15,669947,Jesse Scholtens,642021,,4,1,0,1__,SB,second
+584395,2019,AA,20,660587,Leo Crawford,622668,,0,1,2,1__,CS,second
 584395,2019,AA,48,667445,Marshall Kasowski,669947,,0,3,2,1__,SB,second
 584690,2019,AA,18,643290,Justin Dunn,671242,,3,1,2,1__,CS,second
 584690,2019,AA,54,660600,Enoli Paredes,657779,,2,3,3,1__,SB,second
@@ -3339,6 +3480,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 574413,2019,AA,14,669432,Trevor Rogers,621545,,1,3,2,1__,SB,second
 584691,2019,AA,7,666215,Forrest Whitley,672284,,3,0,0,123,SB,third
 584691,2019,AA,18,666215,Forrest Whitley,664162,,1,3,3,1__,CS,second
+584691,2019,AA,23,666215,Forrest Whitley,643268,,2,1,2,1__,CS,second
 584691,2019,AA,54,621343,Matt Tenuta,656695,,3,3,2,1__,SB,second
 571918,2019,AA,47,669373,Tarik Skubal,506703,,3,2,2,12_,SB,second
 574974,2019,AA,12,629496,Chih-Wei Hu,670768,,0,1,1,123,SB,second
@@ -3360,6 +3502,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 571919,2019,AA,50,667677,Zac Houston,605142,,2,2,3,1__,SB,second
 571919,2019,AA,53,622747,Eduardo Vera,656537,,2,3,3,1__,CS,second
 572131,2019,AA,55,660825,Eduard Bazardo,657446,,1,2,3,1__,SB,second
+571989,2019,AA,37,658431,Adonis Medina,663527,,0,0,3,1__,CS,second
 574975,2019,AA,34,606208,Luis Lugo,642772,,2,2,2,12_,SB,second
 574975,2019,AA,52,641576,Bernardo Flores Jr.,670461,,1,2,3,1__,SB,second
 572061,2019,AA,11,641907,Patrick Murphy,660662,,1,0,3,1__,SB,second
@@ -3421,6 +3564,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 571991,2019,AA,40,605356,Tyler Mapes,650513,,3,2,2,_23,SB,third
 574627,2019,AA,5,657670,Greg Mahle,665862,,2,1,1,1__,SB,second
 574627,2019,AA,58,622426,Adrian Almeida,650331,,4,2,1,12_,SB,second
+571851,2019,AA,2,666214,Joey Wentz,663698,,0,3,3,1__,CS,second
 571851,2019,AA,56,643539,Caleb Simpson,640492,,2,3,3,1__,SB,second
 571851,2019,AA,76,670154,Nolan Blackwood,663692,,0,3,2,1__,CS,second
 584532,2019,AA,8,669064,Brandon Bailey,663728,,2,1,1,12_,SB,second
@@ -3432,6 +3576,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 584757,2019,AA,45,664116,Zack Erwin,665009,,2,1,1,_23,SB,third
 574347,2019,AA,34,623437,Justin Topa,624523,,1,1,2,123,SB,second
 571708,2019,AA,1,675914,Tony Dibrell,657129,,2,0,0,12_,SB,second
+571708,2019,AA,24,600011,Daniel McGrath,656260,,1,0,2,1__,CS,second
 571655,2019,AA,14,668560,Yeizo Campos,623517,,3,2,1,1__,SB,second
 571655,2019,AA,16,668560,Yeizo Campos,657129,,1,3,2,12_,SB,third
 571655,2019,AA,41,664687,Durbin Feltman,665926,,1,3,3,1__,SB,second
@@ -3463,19 +3608,23 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 571852,2019,AA,19,622774,José Manuel Fernández,671218,,1,0,2,_2_,CS,third
 571852,2019,AA,30,667700,Joe Navilhon,663692,,3,1,2,12_,SB,second
 572205,2019,AA,7,649144,Alex Wells,669742,,1,2,3,1__,SB,second
+572205,2019,AA,28,649144,Alex Wells,668706,,0,3,2,1__,CS,second
 572205,2019,AA,40,675921,Spencer Howard,542208,,1,2,1,12_,SB,second
 571993,2019,AA,38,641850,Kevin McGowan,650513,,4,2,2,_2_,SB,third
 571993,2019,AA,58,595995,Andrew Istler,650513,,4,2,1,12_,SB,second
 584534,2019,AA,5,664714,Ljay Newsome,656695,,0,3,2,1__,SB,second
 584534,2019,AA,26,664714,Ljay Newsome,656953,,3,2,1,12_,SB,second
+584534,2019,AA,34,664714,Ljay Newsome,650560,,0,1,3,1__,CS,second
 584534,2019,AA,58,670443,Jack Anderson,650559,,2,2,3,_2_,SB,third
 584464,2019,AA,52,641962,CD Pelham,640900,,0,1,1,12_,SB,second
 584759,2019,AA,51,670343,Matt Milburn,665009,,2,2,2,123,SB,second
+571644,2019,AA,14,656529,Sam Hentges,641938,,1,3,3,_2_,CS,third
 571710,2019,AA,30,656731,Tylor Megill,623517,,3,3,1,1__,SB,second
 572066,2019,AA,23,643340,Nick Green,656180,,3,3,2,1__,SB,second
 571994,2019,AA,8,608723,Austin Voth,669344,,1,2,2,1__,CS,second
 571994,2019,AA,22,608723,Austin Voth,664081,,0,1,0,12_,SB,second
 571994,2019,AA,23,608723,Austin Voth,663527,,4,2,0,1__,SB,second
+574554,2019,AA,36,656746,McKenzie Mills,656976,,2,0,3,1__,CS,second
 571854,2019,AA,16,621593,Anthony Castro,663692,,1,2,1,1__,SB,second
 571854,2019,AA,17,621593,Anthony Castro,663698,,4,1,1,_2_,SB,third
 571854,2019,AA,34,621593,Anthony Castro,663692,,4,2,1,1__,CS,second
@@ -3492,6 +3641,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 584760,2019,AA,13,641709,Brian Howard,665009,,1,1,0,123,SB,second
 584760,2019,AA,32,641709,Brian Howard,666023,,2,1,2,1_3,SB,second
 584760,2019,AA,42,641709,Brian Howard,656896,,2,1,2,1__,CS,second
+574414,2019,AA,25,641576,Bernardo Flores Jr.,669450,,4,2,2,1__,CS,second
 574414,2019,AA,70,668879,Vince Arobio,650694,,3,2,2,12_,SB,second
 584830,2019,AA,6,471174,Luis Vasquez,680911,,3,3,3,1__,SB,second
 584830,2019,AA,16,471174,Luis Vasquez,643414,,2,2,3,1__,SB,second
@@ -3500,6 +3650,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 584465,2019,AA,28,639238,Edgar Arredondo,546992,,1,0,2,1__,SB,second
 584465,2019,AA,58,676891,Alex FaGalde,641779,,1,2,2,1__,CS,second
 574835,2019,AA,19,670046,Kenny Rosenberg,663616,,2,3,2,1__,CS,second
+574835,2019,AA,38,676614,Bryan Sammons,657634,,1,3,2,1__,CS,second
 574835,2019,AA,56,622415,Anthony Vizcaya,664954,,1,3,2,1__,SB,second
 574836,2019,AA,10,657746,Joe Ryan,675003,,1,2,3,1__,SB,second
 574836,2019,AA,16,657746,Joe Ryan,663905,,3,2,2,12_,SB,second
@@ -3520,6 +3671,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 572273,2019,AA,40,600355,Tyler Herb,663692,,2,3,1,1__,SB,second
 574695,2019,AA,34,676050,Packy Naughton,642720,,4,1,2,1__,SB,second
 574765,2019,AA,4,606208,Luis Lugo,663330,,3,0,0,12_,SB,second
+574765,2019,AA,14,606208,Luis Lugo,669049,,3,2,2,1__,CS,second
 574765,2019,AA,19,661383,Oliver Ortega,663538,,1,2,3,1__,SB,second
 574765,2019,AA,39,606208,Luis Lugo,622561,,2,1,2,12_,SB,second
 574415,2019,AA,49,623437,Justin Topa,623610,,0,2,3,1__,SB,second

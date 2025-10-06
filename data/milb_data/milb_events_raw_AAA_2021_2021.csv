@@ -2,6 +2,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 647494,2021,AAA,3,640463,Braden Shipley,656252,,2,1,1,123,SB,second
 647494,2021,AAA,70,605521,Art Warren,656252,,1,3,3,1__,SB,second
 646372,2021,AAA,7,543557,Mike Montgomery,620453,,2,1,3,1__,SB,second
+646372,2021,AAA,14,543557,Mike Montgomery,621420,,2,3,3,1__,CS,second
 646372,2021,AAA,22,543557,Mike Montgomery,541600,,1,1,2,_2_,CS,third
 646372,2021,AAA,34,595191,Jerad Eickhoff,572228,,2,1,2,1__,SB,second
 646372,2021,AAA,55,596035,Reggie McClain,606993,,3,2,2,123,SB,second
@@ -10,6 +11,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 642922,2021,AAA,31,665417,Kyle Kubat,570560,,2,3,3,1__,CS,second
 642922,2021,AAA,74,605218,Carl Edwards Jr.,620998,,1,3,1,1__,SB,second
 647453,2021,AAA,73,624526,Garrett Williams,656484,,2,0,2,12_,SB,second
+647910,2021,AAA,2,596049,Shawn Morimando,663330,,1,1,3,1__,CS,second
 647910,2021,AAA,57,664852,Jay Flaa,650331,,1,0,0,_23,SB,third
 647016,2021,AAA,6,656212,Charlie Barnes,664728,,3,1,0,12_,SB,second
 647495,2021,AAA,63,542960,Brad Brach,656252,,3,3,3,1__,SB,second
@@ -35,6 +37,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 649829,2021,AAA,21,676265,Cory Abbott,596012,,0,2,2,1__,SB,second
 649829,2021,AAA,46,676265,Cory Abbott,656275,,1,3,2,1__,SB,second
 645000,2021,AAA,71,596082,Jake Reed,656403,,1,3,1,1__,SB,second
+646041,2021,AAA,32,622063,Jack Wynkoop,621008,,3,1,2,1__,CS,second
 646041,2021,AAA,65,664910,Logan Cozart,621008,,2,2,2,12_,SB,second
 646041,2021,AAA,66,664910,Logan Cozart,679727,,4,2,2,1__,SB,second
 644660,2021,AAA,20,547176,Daniel Camarena,623323,,1,1,3,1__,SB,second
@@ -48,6 +51,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 647476,2021,AAA,47,658305,Edgar García,605548,,3,3,3,12_,CS,third
 650283,2021,AAA,10,643615,T.J. Zeuch,664750,,2,1,3,1__,SB,second
 650283,2021,AAA,27,643615,T.J. Zeuch,657129,,1,2,1,123,SB,second
+647834,2021,AAA,21,592831,Konner Wade,660821,,0,3,3,1__,CS,second
 647834,2021,AAA,37,663734,Nick Neidert,663330,,3,2,3,1__,CS,second
 647834,2021,AAA,54,543258,Preston Guilmet,663330,,3,0,2,1__,SB,second
 647678,2021,AAA,25,642609,Joan Baez,666160,,1,3,2,1__,SB,second
@@ -57,6 +61,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 646961,2021,AAA,32,643377,Griffin Jax,605490,,0,1,3,1__,SB,second
 646961,2021,AAA,71,607755,Andrew Vasquez,658668,,2,3,2,1__,SB,second
 649804,2021,AAA,52,621074,Michael Rucker,676426,,2,3,3,1__,SB,second
+647451,2021,AAA,16,675977,Drew Strotman,663457,,0,3,3,1__,CS,second
 644998,2021,AAA,15,571676,Seth Frankoff,596071,,1,3,3,1__,SB,second
 644998,2021,AAA,66,622492,Keury Mella,656449,,3,2,3,_23,SB,third
 646040,2021,AAA,40,641620,Brandon Gold,679727,,2,2,2,12_,CS,third
@@ -87,6 +92,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 645730,2021,AAA,84,657518,Matt Blackham,663411,,3,3,3,1__,SB,second
 649803,2021,AAA,45,676662,Alex Manasa,663845,,4,2,1,1__,SB,second
 650244,2021,AAA,2,656818,Connor Overton,657136,,1,2,2,12_,SB,second
+650244,2021,AAA,15,543901,Ryan Weber,492802,,1,3,3,1__,CS,second
 650244,2021,AAA,29,543901,Ryan Weber,657089,,1,3,1,1__,SB,second
 650244,2021,AAA,36,676886,Jeremy Beasley,656807,,2,1,2,1__,SB,second
 650244,2021,AAA,45,621143,Jackson McClelland,543302,,3,3,3,1__,SB,second
@@ -112,6 +118,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 644995,2021,AAA,47,594985,Ben Rowen,670084,,0,1,2,12_,SB,second
 644995,2021,AAA,48,594985,Ben Rowen,642736,,1,2,3,1__,SB,second
 646018,2021,AAA,1,624418,Ryan Castellani,669008,,4,2,1,1__,CS,second
+646018,2021,AAA,27,670057,Ryan Hartman,600301,,3,3,3,1__,CS,second
 644656,2021,AAA,5,669947,Jesse Scholtens,622268,,1,2,2,1__,SB,second
 644656,2021,AAA,17,679327,Reeves Martin,641741,,4,1,0,1__,SB,second
 644656,2021,AAA,33,669947,Jesse Scholtens,642451,,3,3,3,1__,SB,second
@@ -161,21 +168,26 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 647328,2021,AAA,14,676879,Aaron Ashby,621559,,1,0,3,1__,SB,second
 646585,2021,AAA,16,592411,Ben Holmes,542979,,1,3,2,1__,SB,second
 646585,2021,AAA,45,621074,Michael Rucker,680777,,3,2,2,12_,SB,second
+650176,2021,AAA,8,675977,Drew Strotman,606336,,1,3,2,1__,CS,second
 650176,2021,AAA,40,643239,Parker Bugg,666139,,2,1,1,12_,SB,second
 650173,2021,AAA,4,666005,Andres Sotillet,676391,,2,2,1,1__,CS,second
 650173,2021,AAA,40,664871,Kyle Dowdy,656896,,1,1,2,_2_,CS,third
+650175,2021,AAA,1,641506,Adrian De Horta,672701,,1,2,1,1__,CS,second
 650175,2021,AAA,9,663734,Nick Neidert,624416,,2,3,3,1__,SB,second
 650175,2021,AAA,11,641506,Adrian De Horta,640459,,4,2,0,1__,SB,second
 650175,2021,AAA,23,572383,Brian Moran,640459,,2,3,3,1__,SB,second
 650175,2021,AAA,34,608650,Dietrich Enns,672701,,3,2,2,12_,SB,second
 650175,2021,AAA,60,592105,Stetson Allie,640459,,4,1,1,12_,SB,second
+650176,2021,AAA,8,675977,Drew Strotman,606336,,1,3,2,1__,CS,second
 650176,2021,AAA,40,643239,Parker Bugg,666139,,2,1,1,12_,SB,second
 646054,2021,AAA,5,663378,Thomas Szapucki,543302,,2,2,1,12_,SB,second
 646054,2021,AAA,11,624427,Stephen Gonsalves,548431,,4,1,2,1__,SB,second
+646054,2021,AAA,25,663378,Thomas Szapucki,669023,,2,3,3,1__,CS,second
 646607,2021,AAA,47,675971,Kyle Dohy,593647,,4,0,2,1__,SB,second
 650259,2021,AAA,4,660494,Rogelio Armenteros,591971,,4,1,0,1__,SB,second
 650259,2021,AAA,21,660494,Rogelio Armenteros,591971,,3,1,0,12_,SB,second
 650259,2021,AAA,33,622446,Jefry Rodriguez,657088,,3,2,3,1__,SB,second
+650259,2021,AAA,41,622446,Jefry Rodriguez,643603,,1,2,3,1__,CS,second
 650019,2021,AAA,50,592254,José De León,453527,,4,1,1,1__,SB,second
 650019,2021,AAA,60,678226,Daysbel Hernández,596144,,2,3,3,123,SB,third
 649930,2021,AAA,74,571656,Buck Farmer,657061,,1,2,3,1__,SB,second
@@ -202,6 +214,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 646696,2021,AAA,51,665759,Ramón Rosso,657446,,4,1,2,_2_,SB,third
 646696,2021,AAA,52,665759,Ramón Rosso,669137,,2,1,3,1__,SB,second
 650260,2021,AAA,51,592630,Ronald Peña,591971,,1,0,3,1__,SB,second
+650222,2021,AAA,2,656077,Félix Paulino,676625,,2,2,3,1__,CS,second
 650222,2021,AAA,10,656077,Félix Paulino,623222,,1,2,3,1__,SB,second
 650222,2021,AAA,22,675912,Zac Lowther,666164,,2,2,2,123,SB,second
 649995,2021,AAA,41,676617,Riley O'Brien,641513,,3,3,3,1__,SB,second
@@ -225,6 +238,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 646050,2021,AAA,73,656726,Sam McWilliams,622168,,3,3,3,12_,SB,second
 646692,2021,AAA,55,656793,Nick Nelson,663897,,1,3,2,12_,SB,second
 646692,2021,AAA,56,668754,Braden Bristo,666160,,0,3,3,1__,SB,second
+650018,2021,AAA,21,666205,Kyle Muller,547170,,4,1,2,1__,CS,second
 650258,2021,AAA,52,607560,Ryne Harper,675925,,4,1,2,1__,SB,second
 650158,2021,AAA,5,642565,Alexander Guillen,677551,,1,0,1,1__,SB,second
 650171,2021,AAA,17,669212,Eli Morgan,665650,,3,2,2,_23,SB,third
@@ -321,15 +335,19 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 646030,2021,AAA,28,621097,Jacob Waguespack,656455,,0,1,1,12_,SB,second
 646320,2021,AAA,1,595191,Jerad Eickhoff,641477,,4,2,1,1__,CS,second
 646320,2021,AAA,3,595191,Jerad Eickhoff,676730,,3,2,3,1__,SB,second
+646320,2021,AAA,14,650911,Cristopher Sánchez,623515,,2,3,2,1__,CS,second
 646320,2021,AAA,31,650911,Cristopher Sánchez,680722,,1,2,1,12_,SB,second
 646320,2021,AAA,45,660853,Enyel De Los Santos,676378,,4,1,2,12_,SB,third
 646773,2021,AAA,14,622446,Jefry Rodriguez,660829,,2,1,3,12_,SB,second
 646773,2021,AAA,38,607560,Ryne Harper,660829,,1,3,2,1__,CS,second
 646773,2021,AAA,52,621139,Brooks Kriske,671277,,1,3,3,1__,SB,second
 646773,2021,AAA,69,502522,Justin Miller,657446,,3,3,1,1__,SB,second
+647268,2021,AAA,2,641778,Eric Lauer,518960,,2,3,3,1__,CS,second
 647268,2021,AAA,42,641425,Thomas Burrows,608339,,1,3,2,1__,SB,second
 647268,2021,AAA,51,595255,Mitch Horacek,523253,,1,3,3,1__,CS,second
+646494,2021,AAA,14,452027,Andrew Albers,641511,,1,1,2,1__,CS,second
 646494,2021,AAA,29,664337,Miguel Yajure,680777,,3,2,3,1__,SB,second
+644792,2021,AAA,2,666672,Jojanse Torres,669134,,1,3,3,1__,CS,second
 644792,2021,AAA,5,670377,Evan Miller,621008,,3,2,1,123,SB,third
 645996,2021,AAA,57,665321,Andrew Schwaab,595885,,1,1,1,12_,SB,second
 644652,2021,AAA,1,621289,Jaime Schultz,660731,,2,2,0,12_,SB,second
@@ -343,11 +361,13 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 646748,2021,AAA,6,651002,Steven Fuentes,666524,,1,2,3,1__,SB,second
 646748,2021,AAA,33,642609,Joan Baez,660829,,3,3,3,1__,CS,second
 647059,2021,AAA,12,641632,Conner Greene,656509,,2,3,3,1__,SB,second
+647059,2021,AAA,53,663399,Brandon Waddell,650331,,2,2,3,1__,CS,second
 647059,2021,AAA,63,518649,Brett Eibner,656340,,2,2,1,1__,SB,second
 647200,2021,AAA,32,666205,Kyle Muller,523253,,4,1,1,1__,SB,second
 647200,2021,AAA,43,666205,Kyle Muller,669374,,4,1,1,_2_,SB,third
 647200,2021,AAA,57,642233,Eric Yardley,622666,,3,2,3,1__,SB,second
 647200,2021,AAA,68,445926,Jesse Chavez,523253,,4,2,2,1__,CS,second
+647200,2021,AAA,72,571948,Hoby Milner,606115,,0,0,3,1__,CS,second
 649799,2021,AAA,20,571946,Shelby Miller,658668,,3,2,2,12_,SB,second
 649799,2021,AAA,24,671790,Ronald Bolaños,656494,,2,0,3,1__,CS,second
 649799,2021,AAA,45,669114,Jace Vines,656494,,2,1,1,12_,SB,second
@@ -407,6 +427,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 650136,2021,AAA,2,675977,Drew Strotman,669394,,2,2,1,1_3,SB,second
 650136,2021,AAA,11,675977,Drew Strotman,593523,,1,1,2,12_,SB,second
 650136,2021,AAA,13,675977,Drew Strotman,666164,,2,2,2,12_,SB,second
+644789,2021,AAA,4,547176,Daniel Camarena,669008,,1,2,2,1__,CS,second
 645979,2021,AAA,6,502212,Austin Bibens-Dirkx,656541,,0,1,1,1_3,SB,second
 645979,2021,AAA,37,502212,Austin Bibens-Dirkx,656541,,2,1,2,12_,SB,second
 644643,2021,AAA,11,548337,Logan Verrett,641779,,4,2,2,1_3,SB,home
@@ -416,8 +437,10 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 645609,2021,AAA,73,673603,Luis Romero,642136,,2,3,2,1__,SB,second
 644811,2021,AAA,53,621068,Riley Ferrell,656289,,1,2,3,1__,SB,second
 645063,2021,AAA,35,660801,Jasier Herrera,578570,,3,2,1,12_,SB,second
+647470,2021,AAA,17,605232,Brandon Finnegan,592444,,4,2,1,1__,CS,second
 647470,2021,AAA,47,600887,Miguel Del Pozo,596144,,3,1,3,1__,SB,second
 647470,2021,AAA,71,656290,Drew Carlton,608360,,3,3,3,_2_,CS,third
+646663,2021,AAA,8,641482,Nestor Cortes,643603,,3,3,3,1__,CS,second
 646663,2021,AAA,34,642048,Tayler Saucedo,664314,,3,2,3,1__,SB,second
 646663,2021,AAA,43,656793,Nick Nelson,675656,,2,3,1,1__,SB,second
 646663,2021,AAA,55,607219,Sal Romano,518568,,3,2,3,1__,SB,second
@@ -445,6 +468,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 647044,2021,AAA,3,675912,Zac Lowther,657757,,2,1,1,123,SB,third
 647044,2021,AAA,31,675912,Zac Lowther,593523,,3,2,2,12_,SB,second
 647044,2021,AAA,56,657203,Will Carter,602104,,4,2,1,12_,SB,second
+649977,2021,AAA,6,641576,Bernardo Flores Jr.,543401,,4,2,1,1__,CS,second
 649977,2021,AAA,46,676891,Alex FaGalde,570560,,4,2,0,1__,SB,second
 649977,2021,AAA,64,624526,Garrett Williams,570560,,3,1,0,12_,SB,second
 646742,2021,AAA,16,622446,Jefry Rodriguez,660875,,1,3,1,1__,SB,second
@@ -452,6 +476,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 646742,2021,AAA,45,642609,Joan Baez,664916,,2,0,3,1__,SB,second
 650184,2021,AAA,48,596111,Jordan Stephens,621005,,1,3,3,1__,CS,second
 647759,2021,AAA,1,641447,Daniel Castano,677551,,2,1,0,1_3,SB,second
+647759,2021,AAA,3,641447,Daniel Castano,656821,,3,2,3,1__,CS,second
 647759,2021,AAA,40,608650,Dietrich Enns,622700,,2,3,1,1__,SB,second
 647759,2021,AAA,45,669746,Tommy Eveld,624416,,0,3,3,1__,CS,second
 647634,2021,AAA,10,650911,Cristopher Sánchez,543302,,3,3,3,1__,SB,second
@@ -468,6 +493,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 646636,2021,AAA,2,643340,Nick Green,591971,,3,2,2,1__,SB,second
 646636,2021,AAA,4,643340,Nick Green,675925,,2,1,3,1__,SB,second
 649976,2021,AAA,13,668868,Zack Thompson,570560,,1,2,0,123,SB,second
+649976,2021,AAA,17,668868,Zack Thompson,622666,,4,1,1,12_,CS,third
 650161,2021,AAA,2,676520,Manuel Alvarez,640460,,4,2,2,_2_,CS,third
 650161,2021,AAA,12,676520,Manuel Alvarez,622226,,4,2,1,1__,SB,second
 647755,2021,AAA,2,650347,Luís Madero,666139,,4,2,1,1__,SB,second
@@ -478,6 +504,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 644785,2021,AAA,45,543734,Chris Rusin,592680,,2,2,2,123,SB,second
 644785,2021,AAA,55,543734,Chris Rusin,676694,,1,2,3,_2_,SB,third
 649797,2021,AAA,34,621074,Michael Rucker,542513,,2,3,3,1__,SB,second
+644929,2021,AAA,18,596071,Dillon Peters,592261,,0,3,2,1__,CS,second
 644929,2021,AAA,27,596071,Dillon Peters,641779,,1,0,2,12_,CS,second
 645792,2021,AAA,47,592438,Chase Johnson,519303,,2,3,3,1__,SB,second
 645792,2021,AAA,58,676601,Logan Salow,623182,,3,3,3,1__,SB,second
@@ -566,6 +593,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 646888,2021,AAA,25,592716,Adrian Sampson,643436,,1,2,2,12_,SB,second
 644781,2021,AAA,15,670057,Ryan Hartman,664883,,2,3,3,123,CS,second
 644781,2021,AAA,53,642840,Joe Harvey,650559,,0,2,3,1__,SB,second
+644906,2021,AAA,13,596071,Dillon Peters,660731,,1,1,3,1__,CS,second
 644906,2021,AAA,53,681810,Austin Warren,665750,,4,2,2,1__,SB,second
 645777,2021,AAA,53,572021,James Pazos,571917,,1,2,1,12_,SB,second
 647434,2021,AAA,36,641995,Roel Ramírez,592444,,1,3,2,1__,SB,second
@@ -579,6 +607,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 650247,2021,AAA,12,641743,Anthony Kay,676378,,2,3,3,1__,SB,second
 650247,2021,AAA,14,641384,Akeem Bostick,665227,,3,3,1,1__,SB,second
 650247,2021,AAA,15,641384,Akeem Bostick,492802,,1,2,2,_23,SB,third
+650247,2021,AAA,24,641384,Akeem Bostick,643603,,3,2,3,1_3,CS,home
 650247,2021,AAA,33,641384,Akeem Bostick,665227,,3,3,1,1__,SB,second
 650247,2021,AAA,40,596271,Casey Lawrence,664850,,2,2,3,12_,SB,second
 650247,2021,AAA,54,666204,Dany Jiménez,623515,,2,3,2,1__,SB,second
@@ -616,6 +645,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 645460,2021,AAA,11,606162,Yefry Ramírez,679727,,3,2,3,1__,SB,second
 645912,2021,AAA,43,641709,Brian Howard,595885,,2,3,3,12_,SB,third
 650166,2021,AAA,5,641703,Brent Honeywell,642162,,3,3,3,1__,SB,second
+650166,2021,AAA,45,670046,Kenny Rosenberg,669200,,0,3,2,1__,CS,second
 650245,2021,AAA,18,680430,Nick Allgeyer,541600,,1,3,1,12_,SB,third
 650245,2021,AAA,32,595191,Jerad Eickhoff,675925,,2,2,3,1__,SB,second
 650016,2021,AAA,79,669746,Tommy Eveld,572365,,0,3,2,12_,SB,third
@@ -667,6 +697,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 647199,2021,AAA,43,643327,Zack Godley,621529,,2,2,2,1__,SB,second
 647199,2021,AAA,53,622246,Bubba Derby,670462,,2,3,1,1__,SB,second
 646474,2021,AAA,20,593619,Domingo Tapia,542979,,4,1,1,12_,SB,third
+646474,2021,AAA,36,663992,Richard Lovelady,518614,,3,3,2,1__,CS,second
 646474,2021,AAA,49,641656,Ian Hamilton,663402,,2,3,1,1__,SB,second
 645195,2021,AAA,33,605194,Jharel Cotton,657027,,4,2,0,1__,SB,second
 645452,2021,AAA,30,656981,Peter Solomon,656847,,4,2,2,1__,SB,second
@@ -676,15 +707,20 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 647302,2021,AAA,51,624526,Garrett Williams,671221,,1,2,0,_23,SB,third
 647302,2021,AAA,34,640453,Connor Jones,606115,,2,2,2,1_3,SB,second
 647302,2021,AAA,51,624526,Garrett Williams,671221,,1,2,0,_23,SB,third
+650124,2021,AAA,2,608650,Dietrich Enns,669394,,1,3,3,1__,CS,second
 650124,2021,AAA,6,625643,Reynaldo López,624416,,3,2,1,123,SB,third
 650124,2021,AAA,7,625643,Reynaldo López,665138,,1,3,2,1_3,SB,home
+650124,2021,AAA,14,625643,Reynaldo López,664954,,1,3,3,1__,CS,second
 646164,2021,AAA,2,666159,Matt Manning,596105,,2,2,1,12_,SB,second
 646164,2021,AAA,36,605232,Brandon Finnegan,670582,,2,1,2,_23,SB,third
 647733,2021,AAA,26,650347,Luís Madero,642736,,3,2,3,1__,SB,second
 647608,2021,AAA,55,670456,JD Hammer,474319,,3,3,3,1__,CS,second
 646470,2021,AAA,68,607755,Andrew Vasquez,613546,,4,1,1,12_,SB,third
+646300,2021,AAA,38,605254,Daniel Gossett,641645,,2,1,3,1__,CS,second
+646300,2021,AAA,41,605448,Bradley Roney,656308,,3,1,3,1__,CS,second
 646300,2021,AAA,57,592169,Austin Brice,623515,,4,1,2,1__,CS,second
 646162,2021,AAA,14,660749,Wladimir Pinto,642021,,4,2,0,1__,SB,second
+646162,2021,AAA,35,665665,Reiver Sanmartin,572863,,1,1,2,1__,CS,second
 646162,2021,AAA,74,608334,Carson Fulmer,572863,,4,1,1,12_,SB,second
 647711,2021,AAA,37,657093,Spenser Watkins,624417,,3,2,2,12_,SB,second
 647711,2021,AAA,44,664045,Thomas Eshelman,657064,,1,3,2,1__,SB,second
@@ -745,12 +781,14 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 649792,2021,AAA,18,592716,Adrian Sampson,676391,,2,0,2,12_,SB,second
 649792,2021,AAA,22,663531,Logan Allen,543829,,3,3,2,1__,SB,second
 649792,2021,AAA,33,592716,Adrian Sampson,665926,,3,2,2,1__,SB,second
+644924,2021,AAA,57,622063,Jack Wynkoop,670351,,3,2,3,1__,CS,second
 650232,2021,AAA,3,641743,Anthony Kay,664011,,2,3,3,1__,SB,second
 650232,2021,AAA,7,656793,Nick Nelson,643603,,3,2,3,1__,SB,second
 650232,2021,AAA,20,656793,Nick Nelson,518568,,2,3,2,1__,SB,second
 649786,2021,AAA,41,680940,Robert Broom,641684,,2,3,3,_2_,SB,third
 649786,2021,AAA,51,663510,Ben Leeper,640458,,2,1,3,1__,CS,second
 649786,2021,AAA,61,597113,DJ Johnson,623509,,1,3,3,1__,SB,second
+647288,2021,AAA,41,624526,Garrett Williams,570560,,0,2,1,1_3,CS,second
 647288,2021,AAA,51,607473,Chasen Bradford,682109,,2,0,3,1__,SB,second
 647288,2021,AAA,63,677369,Austin Warner,453527,,3,3,1,1__,SB,second
 647189,2021,AAA,34,676879,Aaron Ashby,657061,,4,0,0,1__,SB,second
@@ -843,6 +881,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 645341,2021,AAA,67,595988,Heath Holder,592656,,4,1,0,1_3,SB,second
 645156,2021,AAA,3,592717,Aaron Sanchez,670351,,4,2,2,1__,SB,second
 645156,2021,AAA,48,570240,Félix Peña,623323,,2,3,1,1__,SB,second
+646089,2021,AAA,30,519043,Matt Moore,660620,,2,2,3,1__,CS,second
 646089,2021,AAA,63,670062,Julian Garcia,622168,,2,0,3,_2_,CS,third
 650209,2021,AAA,47,680692,Jonathan Stiever,658061,,4,2,1,1__,SB,second
 650209,2021,AAA,48,657203,Will Carter,606336,,3,1,3,12_,CS,second
@@ -900,6 +939,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 645769,2021,AAA,35,664843,Jerry Keel,676694,,2,2,0,1__,SB,second
 645769,2021,AAA,61,571917,Parker Markel,656695,,4,1,1,1__,CS,second
 645769,2021,AAA,74,656726,Sam McWilliams,546994,,2,1,0,12_,SB,third
+650206,2021,AAA,13,605335,Brandon Leibrandt,620453,,1,3,2,1__,CS,second
 645169,2021,AAA,8,606162,Yefry Ramírez,543308,,2,3,3,12_,CS,third
 645169,2021,AAA,15,606162,Yefry Ramírez,641779,,1,3,3,1__,SB,second
 645169,2021,AAA,21,656271,Brock Burke,660294,,2,1,3,1__,SB,second
@@ -946,6 +986,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 646240,2021,AAA,50,670154,Nolan Blackwood,656568,,1,2,1,1__,SB,second
 647778,2021,AAA,60,543045,Adam Conley,624417,,2,0,1,12_,SB,second
 647583,2021,AAA,38,669711,Greg Weissert,605508,,0,1,3,1__,SB,second
+647583,2021,AAA,40,673862,Ethan Evanko,593647,,1,1,1,1__,CS,second
 647583,2021,AAA,41,673862,Ethan Evanko,664011,,4,2,1,1__,SB,second
 647583,2021,AAA,42,673862,Ethan Evanko,518618,,4,1,1,12_,SB,third
 647583,2021,AAA,65,580792,Nick Goody,669742,,3,2,1,1__,SB,second
@@ -955,6 +996,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 649634,2021,AAA,76,666974,Yennier Cano,641468,,2,2,1,12_,SB,second
 647182,2021,AAA,6,656725,Alex McRae,608339,,0,3,3,1__,SB,second
 646282,2021,AAA,3,663378,Thomas Szapucki,642133,,4,1,1,_2_,SB,third
+646282,2021,AAA,26,663378,Thomas Szapucki,642133,,3,3,2,1__,CS,second
 646293,2021,AAA,1,474699,Vance Worley,675925,,2,2,2,1__,CS,second
 646293,2021,AAA,21,474699,Vance Worley,591971,,2,1,2,1__,SB,second
 646293,2021,AAA,44,474699,Vance Worley,665227,,2,3,2,1__,SB,second
@@ -971,6 +1013,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 647026,2021,AAA,38,607473,Chasen Bradford,663330,,1,3,3,1__,SB,second
 647026,2021,AAA,72,606944,Cody Carroll,570560,,3,2,1,_2_,SB,third
 647596,2021,AAA,9,656793,Nick Nelson,641477,,3,2,3,1__,SB,second
+650154,2021,AAA,19,452027,Andrew Albers,665926,,1,3,3,1__,CS,second
 644756,2021,AAA,68,621068,Riley Ferrell,660688,,4,2,2,123,SB,third
 647181,2021,AAA,24,605541,Mike Wright Jr.,664877,,3,2,1,12_,SB,second
 645880,2021,AAA,16,641620,Brandon Gold,672284,,4,0,2,1__,CS,second
@@ -993,6 +1036,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 647595,2021,AAA,18,665620,Deivi García,605508,,2,1,1,12_,SB,second
 647595,2021,AAA,19,665620,Deivi García,514913,,2,2,2,12_,SB,second
 647595,2021,AAA,27,668754,Braden Bristo,641431,,2,3,2,12_,SB,second
+647170,2021,AAA,38,680692,Jonathan Stiever,621005,,0,1,3,1__,CS,second
 647170,2021,AAA,54,622256,Patrick Weigel,666164,,1,2,1,12_,SB,second
 647170,2021,AAA,57,622256,Patrick Weigel,669394,,1,0,3,1__,SB,second
 644738,2021,AAA,4,669952,Mitch White,676694,,4,2,0,1__,SB,second
@@ -1071,6 +1115,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 650196,2021,AAA,28,656725,Alex McRae,663527,,1,3,1,1__,SB,second
 650196,2021,AAA,36,656725,Alex McRae,623222,,1,2,1,12_,SB,second
 650196,2021,AAA,50,605240,Jace Fry,623180,,2,3,3,1__,SB,second
+650196,2021,AAA,101,623465,Evan Phillips,608703,,4,0,2,12_,CS,second
 649956,2021,AAA,57,676620,Blake Weiman,547172,,2,3,3,1__,SB,second
 647163,2021,AAA,16,670102,Bowden Francis,621011,,2,2,3,1__,CS,second
 647163,2021,AAA,22,670102,Bowden Francis,489149,,3,2,2,1__,CS,second
@@ -1084,6 +1129,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 649954,2021,AAA,35,682175,Joe Jacques,605361,,1,2,2,1__,SB,second
 647286,2021,AAA,29,671162,Connor Thomas,659407,,4,2,2,1__,SB,second
 647286,2021,AAA,87,640453,Connor Jones,669049,,4,2,1,1__,SB,second
+646059,2021,AAA,2,624427,Stephen Gonsalves,534606,,2,2,2,_2_,CS,third
 646059,2021,AAA,5,656793,Nick Nelson,657129,,1,3,1,1__,SB,second
 646059,2021,AAA,19,656793,Nick Nelson,657129,,2,3,2,1__,SB,second
 646059,2021,AAA,32,642659,Raynel Espinal,623205,,0,3,2,1__,SB,second
@@ -1100,9 +1146,11 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 646273,2021,AAA,6,643532,Sterling Sharp,596144,,4,2,1,1__,SB,second
 646273,2021,AAA,57,592630,Ronald Peña,592863,,3,2,0,12_,SB,second
 646273,2021,AAA,69,676344,Marcel Rentería,596119,,3,3,3,_2_,SB,third
+646059,2021,AAA,2,624427,Stephen Gonsalves,534606,,2,2,2,_2_,CS,third
 646059,2021,AAA,5,656793,Nick Nelson,657129,,1,3,1,1__,SB,second
 646059,2021,AAA,19,656793,Nick Nelson,657129,,2,3,2,1__,SB,second
 646059,2021,AAA,32,642659,Raynel Espinal,623205,,0,3,2,1__,SB,second
+646271,2021,AAA,21,660875,Jesús Reyes,594953,,4,2,1,1__,CS,second
 646273,2021,AAA,6,643532,Sterling Sharp,596144,,4,2,1,1__,SB,second
 646273,2021,AAA,57,592630,Ronald Peña,592863,,3,2,0,12_,SB,second
 646273,2021,AAA,69,676344,Marcel Rentería,596119,,3,3,3,_2_,SB,third
@@ -1126,6 +1174,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 645886,2021,AAA,5,664843,Jerry Keel,656582,,3,2,1,12_,SB,second
 645886,2021,AAA,51,571710,Mychal Givens,622668,,1,1,1,1__,SB,second
 647281,2021,AAA,9,682418,Tommy Parsons,659407,,4,0,2,1__,SB,second
+647281,2021,AAA,17,682418,Tommy Parsons,650331,,2,3,2,1__,CS,second
 650056,2021,AAA,56,607473,Chasen Bradford,656821,,0,2,1,_23,SB,third
 650193,2021,AAA,3,669424,Jimmy Lambert,663527,,0,1,3,1__,SB,second
 649966,2021,AAA,27,592866,Trevor Williams,596012,,1,2,3,1__,SB,second
@@ -1200,6 +1249,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 645222,2021,AAA,57,656924,Ryder Ryan,656953,,2,2,1,1_3,SB,second
 647173,2021,AAA,16,668881,Hunter Greene,670102,,1,2,2,1__,CS,second
 647173,2021,AAA,52,663574,Tony Santillan,669450,,1,1,3,1__,SB,second
+647334,2021,AAA,36,596049,Shawn Morimando,657041,,2,2,2,1__,CS,second
 647334,2021,AAA,54,676220,Seth Elledge,675649,,2,2,2,1__,CS,second
 645524,2021,AAA,15,623381,Thomas Pannone,676646,,0,1,2,12_,SB,second
 645907,2021,AAA,3,571710,Mychal Givens,623182,,1,2,3,_2_,CS,third
@@ -1347,9 +1397,11 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 651655,2021,AAA,48,656605,Mitch Keller,657629,,4,2,1,1__,SB,second
 651623,2021,AAA,31,676424,Alec Bettinger,605480,,2,3,3,1__,SB,second
 651642,2021,AAA,42,489295,Brian Schlitter,596117,,2,3,3,12_,SB,third
+651625,2021,AAA,5,665152,Dean Kremer,660766,,3,3,3,1__,CS,second
 651625,2021,AAA,59,519008,T.J. McFarland,623180,,4,0,2,1__,SB,second
 651646,2021,AAA,59,502593,Jake Petricka,657780,,3,3,2,1__,SB,second
 651656,2021,AAA,64,572021,James Pazos,465753,,4,2,1,1__,SB,second
+651652,2021,AAA,14,666200,Jesús Luzardo,657739,,4,2,1,1__,CS,second
 651652,2021,AAA,46,666200,Jesús Luzardo,645444,,3,2,2,123,CS,second
 651652,2021,AAA,71,592233,Stefan Crichton,656364,,1,2,3,1__,SB,second
 651624,2021,AAA,5,665620,Deivi García,614173,,0,1,2,1__,SB,second
@@ -1377,8 +1429,10 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 650190,2021,AAA,70,656727,Kodi Medeiros,671221,,4,1,2,1__,SB,second
 646243,2021,AAA,53,543726,Robbie Ross Jr.,622110,,3,2,1,12_,SB,second
 646243,2021,AAA,62,650530,Bryan Garcia,623214,,2,1,1,1__,SB,second
+649952,2021,AAA,34,571946,Shelby Miller,595956,,2,3,3,1_3,CS,second
 649952,2021,AAA,40,669114,Jace Vines,671246,,4,2,2,1__,CS,second
 647333,2021,AAA,19,682418,Tommy Parsons,663330,,3,0,2,1__,CS,second
+647333,2021,AAA,45,623465,Evan Phillips,670298,,2,3,3,1__,CS,second
 645897,2021,AAA,3,624418,Ryan Castellani,650559,,1,2,3,1__,SB,second
 645897,2021,AAA,60,595988,Heath Holder,546994,,2,1,3,1__,SB,second
 645897,2021,AAA,64,621248,Ralph Garza Jr.,676701,,4,1,2,1__,SB,second
@@ -1386,6 +1440,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 644595,2021,AAA,24,682171,Penn Murfee,656449,,3,3,3,1__,SB,second
 644669,2021,AAA,15,657697,Vinny Nittoli,641945,,1,2,1,1__,SB,second
 644669,2021,AAA,17,657697,Vinny Nittoli,666176,,1,2,3,1__,SB,second
+646009,2021,AAA,12,624427,Stephen Gonsalves,664060,,1,2,2,1__,CS,second
 646009,2021,AAA,47,596035,Reggie McClain,656807,,1,2,3,1__,SB,second
 646009,2021,AAA,51,624427,Stephen Gonsalves,681862,,0,2,1,123,SB,third
 646009,2021,AAA,57,596035,Reggie McClain,614173,,4,2,2,1__,SB,second
@@ -1419,6 +1474,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 647316,2021,AAA,8,663325,Kevin Smith,645305,,4,2,1,12_,SB,third
 647156,2021,AAA,3,676879,Aaron Ashby,592622,,2,2,1,123,SB,third
 647156,2021,AAA,5,676879,Aaron Ashby,650958,,2,2,2,123,SB,second
+646442,2021,AAA,2,533167,Matt Shoemaker,680911,,1,3,3,1__,CS,second
 646442,2021,AAA,17,533167,Matt Shoemaker,666134,,4,2,2,1__,CS,second
 645514,2021,AAA,65,660435,Chester Pimentel,660294,,3,2,1,12_,SB,second
 645514,2021,AAA,67,660435,Chester Pimentel,606189,,3,3,2,1__,SB,second
@@ -1437,6 +1493,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 646255,2021,AAA,20,641384,Akeem Bostick,594953,,3,3,3,1__,SB,second
 649938,2021,AAA,1,656605,Mitch Keller,663402,,4,2,0,1__,SB,second
 649938,2021,AAA,2,656605,Mitch Keller,658668,,2,2,1,12_,SB,third
+649938,2021,AAA,11,656605,Mitch Keller,613546,,2,3,3,1__,CS,second
 649938,2021,AAA,19,656605,Mitch Keller,663402,,2,3,1,1__,SB,second
 649938,2021,AAA,47,669180,Braeden Ogle,687349,,1,3,1,1__,SB,second
 647317,2021,AAA,40,665152,Dean Kremer,669357,,1,2,1,_23,SB,third
@@ -1467,6 +1524,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 647424,2021,AAA,39,649963,Bo Takahashi,660766,,4,2,2,1__,SB,second
 646862,2021,AAA,58,666974,Yennier Cano,665861,,1,1,2,123,SB,second
 646862,2021,AAA,67,607457,Kyle Barraclough,665650,,1,2,2,12_,SB,second
+645004,2021,AAA,22,656271,Brock Burke,592685,,2,3,3,1__,CS,second
 645004,2021,AAA,70,657610,Trevor Hildenberger,609274,,3,3,2,12_,SB,third
 650010,2021,AAA,7,680692,Jonathan Stiever,656821,,3,1,2,1__,SB,second
 650142,2021,AAA,17,643327,Zack Godley,461865,,2,2,0,123,SB,second
@@ -1477,6 +1535,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 646566,2021,AAA,35,593604,Alberto Baldonado,623205,,3,3,3,1__,SB,second
 646566,2021,AAA,50,514981,Diego Moreno,643590,,2,3,2,1__,SB,second
 647744,2021,AAA,31,669294,Paul Campbell,596012,,4,2,0,1__,SB,second
+647744,2021,AAA,32,643239,Parker Bugg,543278,,1,3,2,12_,CS,third
 647744,2021,AAA,38,543278,Blaine Hardy,624417,,4,1,1,1__,SB,second
 645510,2021,AAA,26,606162,Yefry Ramírez,641512,,2,2,0,1__,SB,second
 645510,2021,AAA,71,592233,Stefan Crichton,660688,,0,2,2,_23,SB,home
@@ -1569,6 +1628,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 649984,2021,AAA,7,593468,Claudio Custodio,661388,,1,2,3,1__,SB,second
 649984,2021,AAA,15,593468,Claudio Custodio,605253,,4,2,2,1_3,SB,home
 649984,2021,AAA,31,658742,Diogenes Almengo,570560,,1,1,1,1__,SB,second
+649984,2021,AAA,49,658742,Diogenes Almengo,665506,,1,2,1,1__,CS,second
 647741,2021,AAA,58,518464,Seth Blair,665155,,2,2,1,1__,SB,second
 647741,2021,AAA,59,518464,Seth Blair,663837,,3,3,2,_2_,SB,third
 644612,2021,AAA,38,660508,Norwith Gudiño,666211,,1,1,3,1__,SB,second
@@ -1621,6 +1681,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 645991,2021,AAA,55,664180,Matt Hall,643603,,4,2,2,1__,SB,second
 646993,2021,AAA,54,606944,Cody Carroll,670764,,3,3,3,1__,SB,second
 647010,2021,AAA,1,663325,Kevin Smith,670764,,2,3,2,1__,CS,second
+646365,2021,AAA,17,640454,Matt Krook,592863,,2,3,2,1__,CS,second
 646365,2021,AAA,26,640454,Matt Krook,592622,,4,0,1,1__,CS,second
 646365,2021,AAA,35,641886,Andrew Mitchell,669137,,2,2,1,123,SB,third
 650204,2021,AAA,17,665417,Kyle Kubat,624417,,4,1,2,1__,SB,second
@@ -1638,12 +1699,14 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 650183,2021,AAA,19,682010,Lane Ramsey,663743,,1,3,2,1__,SB,second
 650183,2021,AAA,20,682010,Lane Ramsey,657446,,3,3,3,_2_,SB,third
 650183,2021,AAA,46,656727,Kodi Medeiros,659407,,2,1,0,12_,SB,second
+650206,2021,AAA,13,605335,Brandon Leibrandt,620453,,1,3,2,1__,CS,second
 646307,2021,AAA,53,670050,Stephen Ridings,541600,,1,0,1,1__,SB,second
 646307,2021,AAA,63,664129,Geoff Hartlieb,669137,,3,3,3,1__,SB,second
 646150,2021,AAA,15,663804,Jackson Kowar,670582,,2,3,2,1__,SB,second
 646150,2021,AAA,39,663804,Jackson Kowar,665019,,3,3,3,1__,CS,second
 647155,2021,AAA,8,641571,Heath Fillmyer,596129,,2,3,1,1__,SB,second
 647155,2021,AAA,18,641571,Heath Fillmyer,596012,,4,2,0,1__,SB,second
+646418,2021,AAA,5,643230,Steven Brault,543482,,3,3,3,1__,CS,second
 646418,2021,AAA,8,533167,Matt Shoemaker,676632,,2,2,2,1__,SB,second
 644881,2021,AAA,13,547176,Daniel Camarena,657709,,2,2,3,1__,SB,second
 644881,2021,AAA,31,669468,Aaron Leasher,657709,,3,2,1,12_,SB,second
@@ -1720,6 +1783,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 645826,2021,AAA,71,661383,Oliver Ortega,676701,,4,1,2,1__,SB,second
 645594,2021,AAA,43,670036,Matt Festa,676782,,2,2,1,12_,SB,second
 644986,2021,AAA,72,683231,Shumpei Yoshikawa,663411,,4,2,2,1__,SB,second
+650054,2021,AAA,37,670046,Kenny Rosenberg,669357,,0,1,3,1__,CS,second
 650054,2021,AAA,69,640453,Connor Jones,656669,,4,2,2,1__,SB,second
 646583,2021,AAA,65,476589,Adam Warren,669023,,1,3,2,1__,SB,second
 650121,2021,AAA,21,572750,Eddie Butler,680700,,4,1,0,1__,SB,second
@@ -1739,6 +1803,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 649996,2021,AAA,67,623465,Evan Phillips,656568,,2,2,0,12_,SB,second
 649999,2021,AAA,15,605541,Mike Wright Jr.,671221,,1,3,3,1__,SB,second
 649999,2021,AAA,60,656794,Sean Newcomb,606213,,0,2,3,1__,SB,second
+646550,2021,AAA,16,676664,JP Sears,657740,,2,3,3,1__,CS,second
 646550,2021,AAA,48,664687,Durbin Feltman,593647,,0,2,0,12_,SB,second
 646550,2021,AAA,65,600853,Jose Adames,664060,,3,2,3,_2_,CS,third
 650120,2021,AAA,10,502748,Brad Peacock,663402,,1,3,3,1__,SB,second
@@ -1776,6 +1841,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 650119,2021,AAA,43,680940,Robert Broom,613546,,2,2,1,1__,SB,second
 650119,2021,AAA,59,667050,Grant Gavin,641468,,3,1,3,1__,SB,second
 647720,2021,AAA,18,680430,Nick Allgeyer,686792,,2,3,2,1__,CS,second
+647720,2021,AAA,25,680430,Nick Allgeyer,666160,,2,2,3,1__,CS,second
 647720,2021,AAA,73,675640,Braden Zarbnisky,672640,,4,1,0,1__,SB,second
 647133,2021,AAA,37,669804,Angel De Jesus,622569,,1,1,3,1__,CS,second
 646410,2021,AAA,14,668881,Hunter Greene,666163,,1,2,2,12_,SB,second
@@ -1793,6 +1859,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 650049,2021,AAA,19,670912,Johan Oviedo,670764,,4,1,1,1__,SB,second
 649997,2021,AAA,23,660623,Huascar Ynoa,650528,,1,1,1,12_,SB,second
 649997,2021,AAA,44,641420,Zack Burdi,606115,,2,3,2,1__,SB,second
+646577,2021,AAA,3,656671,Josh Maciejewski,656807,,2,2,2,12_,CS,third
 646577,2021,AAA,69,519393,Marcus Walden,664120,,1,3,3,1__,SB,second
 646577,2021,AAA,91,643590,Brandon Wagner,656807,,3,2,2,1__,SB,second
 646577,2021,AAA,94,664180,Matt Hall,664848,,3,3,1,1__,SB,second
@@ -1831,6 +1898,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 644974,2021,AAA,37,676961,Caleb Boushley,669369,,4,2,1,1__,SB,second
 644974,2021,AAA,60,670377,Evan Miller,643565,,1,1,1,1__,SB,second
 649986,2021,AAA,49,592145,Jesse Biddle,650528,,2,2,1,1__,CS,second
+649986,2021,AAA,54,605195,Kyle Crick,453527,,3,3,2,1__,CS,second
 649986,2021,AAA,61,682010,Lane Ramsey,606115,,1,1,2,1__,SB,second
 647718,2021,AAA,25,666563,Jeff Singer,675925,,1,3,3,12_,SB,third
 647718,2021,AAA,64,699499,Mike Adams,675656,,4,2,1,12_,SB,second
@@ -1914,6 +1982,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 647667,2021,AAA,16,605240,Jace Fry,657446,,1,2,2,123,SB,second
 647668,2021,AAA,9,641949,John Parke,663743,,2,1,2,_23,SB,third
 645692,2021,AAA,5,675652,Matt Tabor,670128,,2,0,0,12_,SB,second
+645692,2021,AAA,11,657681,Kyle McGrath,657739,,4,2,1,1__,CS,second
 645692,2021,AAA,58,621051,Steven Wilson,547173,,2,0,2,_23,SB,third
 645694,2021,AAA,39,598286,Nick Ramirez,666179,,3,1,2,12_,SB,third
 645694,2021,AAA,52,660435,Chester Pimentel,641741,,3,2,2,1__,SB,second
@@ -1934,6 +2003,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 645425,2021,AAA,59,668338,Tyson Miller,571602,,2,2,2,_2_,SB,third
 646822,2021,AAA,63,596027,Dillon Maples,668472,,3,3,1,1__,SB,second
 646822,2021,AAA,70,676604,Tyler Zuber,641878,,1,2,1,1_3,SB,second
+644870,2021,AAA,29,533167,Matt Shoemaker,595453,,3,3,3,1_3,CS,second
 644870,2021,AAA,57,624586,James Hoyt,613564,,3,3,3,1__,SB,second
 644573,2021,AAA,50,594056,Reymin Guduan,642451,,3,3,2,1__,SB,second
 642927,2021,AAA,37,664069,Ben Braymer,657088,,3,2,3,1__,SB,second
@@ -1967,6 +2037,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 644845,2021,AAA,13,663546,Sean Hjelle,641807,,0,1,2,12_,CS,third
 644845,2021,AAA,34,623381,Thomas Pannone,669369,,1,2,2,123,SB,second
 644845,2021,AAA,35,623381,Thomas Pannone,643289,,2,2,3,1__,SB,second
+644570,2021,AAA,2,656954,Justus Sheffield,621450,,4,2,2,1__,CS,second
 646815,2021,AAA,27,663804,Jackson Kowar,667493,,3,2,3,12_,SB,second
 646815,2021,AAA,32,663804,Jackson Kowar,641684,,4,2,0,1__,SB,second
 646815,2021,AAA,37,663804,Jackson Kowar,682119,,2,3,3,1__,SB,second
@@ -2016,6 +2087,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 650179,2021,AAA,65,642585,Félix Bautista,650520,,3,2,2,12_,SB,second
 645949,2021,AAA,14,657376,Clarke Schmidt,644407,,3,3,2,1__,SB,second
 645949,2021,AAA,26,677161,Zack Kelly,669137,,1,0,2,_23,SB,third
+645949,2021,AAA,51,600853,Jose Adames,664011,,1,2,3,_2_,CS,third
 650047,2021,AAA,1,676720,Tommy Romero,624417,,4,2,0,1__,SB,second
 650047,2021,AAA,23,676720,Tommy Romero,663743,,1,2,2,1__,SB,second
 650047,2021,AAA,37,543258,Preston Guilmet,670764,,2,3,2,1__,SB,second
@@ -2023,6 +2095,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 646116,2021,AAA,24,656638,Alex Lange,595943,,3,2,2,1__,CS,second
 646811,2021,AAA,11,656492,Foster Griffin,641468,,4,0,1,12_,SB,third
 646811,2021,AAA,27,663531,Logan Allen,643436,,4,0,2,1__,SB,second
+646811,2021,AAA,70,660906,Francisco Pérez,680118,,0,0,2,1__,CS,second
 646393,2021,AAA,57,571993,Chris Nunn,605361,,3,3,2,1__,SB,second
 646393,2021,AAA,61,571561,Tony Cingrani,676628,,3,2,1,123,SB,third
 646393,2021,AAA,63,571561,Tony Cingrani,666163,,1,2,2,123,SB,third
@@ -2046,6 +2119,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 650043,2021,AAA,41,643239,Parker Bugg,670712,,2,0,2,12_,SB,second
 650178,2021,AAA,24,641949,John Parke,642721,,0,3,3,1__,SB,second
 650178,2021,AAA,41,657203,Will Carter,676625,,2,2,1,123,SB,third
+646809,2021,AAA,54,642100,Gabe Speier,670092,,1,0,3,1__,CS,second
 645104,2021,AAA,21,666720,Yerry Rodríguez,641741,,2,2,2,1__,CS,second
 645104,2021,AAA,32,666720,Yerry Rodríguez,676946,,2,3,2,12_,SB,third
 644698,2021,AAA,64,667445,Marshall Kasowski,621008,,4,0,2,1__,SB,second
@@ -2068,8 +2142,10 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 650042,2021,AAA,2,668964,Tobias Myers,650331,,1,2,2,1__,SB,second
 650042,2021,AAA,39,670288,Jake Fishman,665138,,4,1,0,12_,SB,second
 650042,2021,AAA,41,670288,Jake Fishman,670712,,4,0,2,1_3,CS,second
+650042,2021,AAA,51,670046,Kenny Rosenberg,657064,,1,3,2,1__,CS,second
 650202,2021,AAA,5,682010,Lane Ramsey,642162,,3,3,3,123,SB,second
 650202,2021,AAA,11,682010,Lane Ramsey,624419,,4,0,1,1__,SB,second
+650202,2021,AAA,34,621383,Tanner Banks,676625,,2,3,3,1__,CS,second
 646114,2021,AAA,16,622797,Pedro Payano,657061,,1,3,2,1__,CS,second
 646731,2021,AAA,10,608723,Austin Voth,665561,,2,2,2,1__,SB,second
 644860,2021,AAA,11,598271,Brian Johnson,656413,,1,3,3,1__,CS,second
@@ -2169,6 +2245,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 646138,2021,AAA,38,657746,Joe Ryan,682985,,3,2,3,1__,SB,second
 650199,2021,AAA,15,641949,John Parke,663605,,2,3,3,1__,CS,second
 650199,2021,AAA,38,641949,John Parke,665138,,3,2,2,123,SB,third
+646941,2021,AAA,12,605335,Brandon Leibrandt,680438,,4,2,1,1__,CS,second
 646941,2021,AAA,57,621098,Eric Hanhold,657064,,4,0,2,1__,SB,second
 647565,2021,AAA,16,663982,David Parkinson,664848,,4,1,2,1_3,SB,second
 649629,2021,AAA,10,640470,Adbert Alzolay,613546,,4,2,1,1__,SB,second
@@ -2222,6 +2299,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 647232,2021,AAA,18,663765,Jake Woodford,672356,,2,3,3,1__,CS,second
 647232,2021,AAA,20,502748,Brad Peacock,663911,,3,3,1,1__,SB,second
 647232,2021,AAA,31,502748,Brad Peacock,668843,,1,0,2,1__,CS,second
+645861,2021,AAA,39,669020,Ryan Rolison,673962,,0,0,3,1__,CS,second
 645861,2021,AAA,58,571656,Buck Farmer,666213,,4,2,2,1__,SB,second
 645268,2021,AAA,17,666818,Luis Frías,643289,,4,2,1,1__,SB,second
 645268,2021,AAA,38,571676,Seth Frankoff,643565,,3,3,3,1__,SB,second
@@ -2278,6 +2356,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 647088,2021,AAA,45,642233,Eric Yardley,605253,,2,3,3,1__,SB,second
 645859,2021,AAA,22,656924,Ryder Ryan,666213,,4,1,2,1__,SB,second
 645859,2021,AAA,33,656924,Ryder Ryan,676841,,1,3,3,1__,SB,second
+645859,2021,AAA,44,642759,Julian Fernández,641779,,0,3,3,1__,CS,second
 645678,2021,AAA,62,657624,Josh James,670128,,2,3,3,1__,SB,second
 645265,2021,AAA,1,675652,Matt Tabor,643289,,2,2,1,1__,SB,second
 645265,2021,AAA,12,675652,Matt Tabor,665285,,1,0,1,1_3,SB,second
@@ -2413,6 +2492,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 646794,2021,AAA,48,620982,Ricardo Pinto,668472,,1,1,2,1_3,SB,second
 645386,2021,AAA,22,502212,Austin Bibens-Dirkx,595885,,3,1,1,12_,SB,second
 644948,2021,AAA,7,669081,Jack Dashwood,663698,,0,1,3,1__,SB,second
+644948,2021,AAA,31,669081,Jack Dashwood,643565,,2,0,3,1__,CS,second
 650091,2021,AAA,23,663535,Juan Hillman,677965,,4,2,0,1__,SB,second
 650091,2021,AAA,25,657611,Cam Hill,595438,,2,2,2,1_3,SB,second
 650091,2021,AAA,60,665968,Juan Mota,643348,,2,1,0,1_3,SB,second
@@ -2460,6 +2540,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 645284,2021,AAA,54,622338,Jesús Liranzo,593700,,2,1,2,1__,CS,second
 645284,2021,AAA,67,518748,Justin Grimm,606993,,0,2,3,12_,SB,second
 644943,2021,AAA,34,681867,Cooper Criswell,671218,,0,3,3,1__,CS,second
+642931,2021,AAA,25,656657,Zach Logue,541600,,2,1,2,1__,CS,second
 642931,2021,AAA,42,503569,Rafael Dolis,666137,,4,2,0,1__,SB,second
 642931,2021,AAA,53,642584,Franklyn Kilome,643603,,4,0,2,1_3,SB,second
 650089,2021,AAA,28,663752,Cody Morris,664966,,1,3,3,_2_,SB,third
@@ -2510,6 +2591,9 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 644832,2021,AAA,22,606162,Yefry Ramírez,670351,,4,0,2,1__,CS,second
 645632,2021,AAA,63,656206,Jeff Bain,670148,,3,2,2,123,SB,second
 650166,2021,AAA,5,641703,Brent Honeywell,642162,,3,3,3,1__,SB,second
+650166,2021,AAA,45,670046,Kenny Rosenberg,669200,,0,3,2,1__,CS,second
+645849,2021,AAA,6,547176,Daniel Camarena,660707,,1,0,3,1__,CS,second
+645849,2021,AAA,28,641538,Frank Duncan,660857,,0,1,3,1__,CS,second
 647642,2021,AAA,28,666129,Braxton Garrett,641470,,1,2,2,12_,SB,second
 647631,2021,AAA,17,605335,Brandon Leibrandt,669394,,4,2,2,12_,SB,second
 647631,2021,AAA,22,656986,Bennett Sousa,675649,,4,2,2,1__,SB,second
@@ -2545,10 +2629,12 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 647103,2021,AAA,63,656977,Chad Sobotka,680977,,2,1,3,1__,CS,second
 645621,2021,AAA,41,456701,Homer Bailey,545121,,3,2,0,1_3,SB,second
 644537,2021,AAA,32,657122,Ronnie Williams,596107,,4,2,2,_2_,SB,third
+644535,2021,AAA,16,669214,Conner Menez,641584,,1,1,2,1_3,CS,second
 644537,2021,AAA,32,657122,Ronnie Williams,596107,,4,2,2,_2_,SB,third
 645070,2021,AAA,12,668338,Tyson Miller,665161,,4,2,2,1__,SB,second
 645070,2021,AAA,65,656450,Joe Gatto,622100,,0,3,3,1__,SB,second
 645070,2021,AAA,72,656450,Joe Gatto,656695,,1,3,3,1__,SB,second
+645835,2021,AAA,1,669020,Ryan Rolison,670128,,0,1,2,1__,CS,second
 645835,2021,AAA,62,669947,Jesse Scholtens,595885,,2,3,2,1__,SB,second
 645620,2021,AAA,30,663856,Mack Lemieux,642456,,0,2,1,12_,SB,second
 646677,2021,AAA,69,502578,Aaron Barrett,518568,,2,2,3,1__,SB,second
@@ -2563,6 +2649,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 646945,2021,AAA,3,663325,Kevin Smith,657446,,4,1,2,_2_,SB,third
 646945,2021,AAA,56,608691,Mason Melotakis,668939,,1,2,2,12_,SB,second
 647543,2021,AAA,6,676664,JP Sears,663897,,1,3,2,1__,SB,second
+647543,2021,AAA,21,676664,JP Sears,665561,,1,3,2,1__,CS,second
 647543,2021,AAA,34,676103,Damon Jones,623205,,1,2,1,12_,SB,second
 647543,2021,AAA,37,676103,Damon Jones,542963,,3,2,3,12_,SB,third
 647543,2021,AAA,46,676664,JP Sears,663897,,3,2,1,12_,SB,second
@@ -2618,11 +2705,14 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 644723,2021,AAA,16,663567,Peter Lambert,460077,,2,3,2,1__,SB,second
 645662,2021,AAA,50,667498,Robert Dugger,676946,,3,3,3,1__,SB,second
 645280,2021,AAA,62,570240,Félix Peña,677950,,1,0,1,12_,SB,second
+646667,2021,AAA,13,664069,Ben Braymer,492802,,0,2,1,1__,CS,second
+646252,2021,AAA,32,606996,Kyle Hart,596144,,1,0,3,1__,CS,second
 650237,2021,AAA,3,669424,Jimmy Lambert,650907,,2,3,3,1__,SB,second
 650237,2021,AAA,73,676596,Josh Fleming,593523,,2,3,3,1__,SB,second
 646124,2021,AAA,21,641571,Heath Fillmyer,606988,,3,2,1,1__,SB,second
 649939,2021,AAA,34,607473,Chasen Bradford,640460,,2,2,2,1__,SB,second
 646923,2021,AAA,18,680694,Kyle Bradish,675649,,1,2,1,1_3,SB,second
+646923,2021,AAA,36,650347,Luís Madero,669200,,2,3,3,1__,CS,second
 647490,2021,AAA,23,676111,Shawn Semple,593528,,4,0,1,1__,SB,second
 647490,2021,AAA,36,580792,Nick Goody,664761,,2,3,2,1__,SB,second
 647490,2021,AAA,60,674342,Jakob Hernandez,669137,,2,3,3,12_,SB,third
@@ -2662,6 +2752,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 650236,2021,AAA,56,621383,Tanner Banks,650907,,0,3,1,1__,SB,second
 646925,2021,AAA,5,666129,Braxton Garrett,669065,,2,3,2,1__,SB,second
 646925,2021,AAA,68,592644,Adam Plutko,624417,,1,2,1,123,SB,second
+646925,2021,AAA,69,592644,Adam Plutko,656509,,1,3,3,1__,CS,second
 649841,2021,AAA,51,641656,Ian Hamilton,676632,,2,3,2,1__,SB,second
 649841,2021,AAA,55,622492,Keury Mella,595438,,2,2,2,123,SB,second
 645658,2021,AAA,14,670766,Darren McCaughan,623182,,2,0,2,_23,SB,third
@@ -2677,6 +2768,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 646921,2021,AAA,32,571951,Bryan Mitchell,669200,,2,1,3,1__,SB,second
 647478,2021,AAA,25,676664,JP Sears,664761,,1,3,1,1__,SB,second
 647478,2021,AAA,42,666563,Jeff Singer,664011,,4,2,0,1__,SB,second
+647478,2021,AAA,61,669180,Braeden Ogle,669137,,3,2,3,1__,CS,second
 649828,2021,AAA,5,675977,Drew Strotman,676632,,2,1,2,1__,SB,second
 646091,2021,AAA,61,650493,Henry Martinez,666181,,4,2,0,1__,SB,second
 646932,2021,AAA,36,621143,Jackson McClelland,625510,,3,2,2,1__,CS,second
@@ -2778,7 +2870,9 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 659023,2021,AAA,75,656986,Bennett Sousa,669065,,1,3,3,1__,SB,second
 659023,2021,AAA,78,518435,Manny Barreda,593523,,3,2,2,1_3,SB,second
 659015,2021,AAA,20,641703,Brent Honeywell,641513,,3,2,2,12_,SB,second
+659015,2021,AAA,27,641703,Brent Honeywell,624523,,1,3,3,1__,CS,second
 659015,2021,AAA,30,657140,Kyle Wright,670712,,2,2,2,1__,SB,second
+659015,2021,AAA,34,641703,Brent Honeywell,572365,,1,1,3,1__,CS,second
 659015,2021,AAA,52,592145,Jesse Biddle,571679,,2,2,1,12_,SB,second
 660751,2021,AAA,5,663855,Jordan Hicks,624417,,4,0,0,1__,SB,second
 660751,2021,AAA,65,672911,Jesus Cruz,656388,,2,2,1,1_3,SB,second
@@ -2797,6 +2891,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 659055,2021,AAA,31,656578,Andre Jackson,680393,,2,3,2,1__,SB,second
 659055,2021,AAA,48,641899,Ryan Moseley,657267,,2,1,2,12_,SB,second
 659055,2021,AAA,56,592833,Bobby Wahl,642456,,3,2,1,12_,SB,second
+659108,2021,AAA,38,641576,Bernardo Flores Jr.,669450,,4,1,2,1__,CS,second
 659108,2021,AAA,39,622786,Jesus Tinoco,656403,,2,3,3,1__,SB,second
 659067,2021,AAA,20,676194,Jackson Tetreault,671213,,2,3,3,_2_,SB,third
 659067,2021,AAA,24,605254,Daniel Gossett,542419,,3,2,1,123,SB,third
@@ -2814,6 +2909,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 658978,2021,AAA,58,571863,Matt Koch,622569,,2,2,3,1__,CS,second
 659060,2021,AAA,51,641585,J.P. France,670128,,1,3,1,1__,SB,second
 659060,2021,AAA,54,641585,J.P. France,640492,,0,1,2,12_,SB,second
+659059,2021,AAA,14,661332,Luke Westphal,673476,,3,3,3,1__,CS,second
 659059,2021,AAA,25,650556,Bryan Abreu,641741,,2,3,2,1__,CS,second
 659059,2021,AAA,29,641988,Alex Powers,694175,,3,3,1,1__,SB,second
 659059,2021,AAA,31,641988,Alex Powers,621008,,1,1,3,_2_,SB,third
@@ -2857,6 +2953,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 659075,2021,AAA,54,643410,Mark Leiter Jr.,607733,,2,2,3,1__,SB,second
 659007,2021,AAA,18,676641,Beau Sulser,642133,,3,3,2,1_3,SB,second
 659007,2021,AAA,59,660787,Yerry De los Santos,542979,,1,3,3,1__,SB,second
+659012,2021,AAA,47,641425,Thomas Burrows,641583,,2,2,2,1__,CS,second
 658997,2021,AAA,31,674342,Jakob Hernandez,680776,,0,1,0,12_,SB,second
 658997,2021,AAA,33,674342,Jakob Hernandez,671213,,0,1,2,1_3,SB,second
 658997,2021,AAA,73,665759,Ramón Rosso,622168,,1,3,3,1__,SB,second
@@ -2905,6 +3002,7 @@ gamePk,season,level_name,play_idx,pitcher_id,pitcher_name,batter_id,runner_id,ba
 659004,2021,AAA,45,641409,Zack Brown,676632,,2,2,3,1__,CS,second
 659004,2021,AAA,55,687352,Grant Ford,668930,,1,1,1,1__,SB,second
 658981,2021,AAA,18,657756,Connor Seabold,665155,,4,2,1,1__,SB,second
+658981,2021,AAA,28,600944,David Paulino,640902,,4,1,1,1__,CS,second
 659049,2021,AAA,32,661332,Luke Westphal,606189,,1,2,1,12_,SB,second
 659049,2021,AAA,35,701240,Ethan Routzahn,542992,,4,2,2,1__,SB,second
 659049,2021,AAA,40,606162,Yefry Ramírez,622668,,1,1,2,12_,SB,second
