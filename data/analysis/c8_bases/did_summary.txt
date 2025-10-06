@@ -1,0 +1,31 @@
+================================================================================
+C8: AAA 2021 LARGER BASES EFFECT - MODEL SUMMARY
+================================================================================
+
+Treatment: AAA received 18" bases in 2021; AA did not
+Identification: 2x2 DiD (AAA vs AA, 2019 vs 2021)
+Model: PPML with cluster-robust SE (pitcher_id)
+
+================================================================================
+MAIN MODEL
+================================================================================
+                 Generalized Linear Model Regression Results                  
+==============================================================================
+Dep. Variable:                     sb   No. Observations:                 3334
+Model:                            GLM   Df Residuals:                     3330
+Model Family:                 Poisson   Df Model:                            3
+Link Function:                    Log   Scale:                          1.0000
+Method:                          IRLS   Log-Likelihood:                -7163.1
+Date:                Mon, 06 Oct 2025   Deviance:                       6090.7
+Time:                        16:13:12   Pearson chi2:                 5.89e+03
+No. Iterations:                     5   Pseudo R-squ. (CS):            0.07089
+Covariance Type:              cluster                                         
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept     -2.4731      0.027    -91.896      0.000      -2.526      -2.420
+treat         -0.3404      0.036     -9.506      0.000      -0.411      -0.270
+post           0.0119      0.038      0.312      0.755      -0.063       0.087
+treat:post     0.2253      0.053      4.221      0.000       0.121       0.330
+==============================================================================
+

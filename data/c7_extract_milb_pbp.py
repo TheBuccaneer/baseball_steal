@@ -140,7 +140,8 @@ def extract_steal_event(play_event):
             
             return ('SB', base, runner_id)
         
-        elif event_type in ['Caught Stealing 2B', 'Caught Stealing 3B', 'Caught Stealing Home']:
+        elif event_type in ['Caught Stealing 2B', 'Caught Stealing 3B', 'Caught Stealing Home',
+                            'Pickoff Caught Stealing 2B', 'Pickoff Caught Stealing 3B', 'Pickoff Caught Stealing Home']:
             if '2B' in event_type:
                 base = 'second'
             elif '3B' in event_type:
