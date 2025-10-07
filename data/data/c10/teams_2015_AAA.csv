@@ -1,0 +1,46 @@
+season,sport_id,team_id,team_name,team_abbrev,league_name,division_name,venue_id,venue_name
+2015,11,512,Toledo Mud Hens,TOL,International League,International League West,2767,Fifth Third Field
+2015,11,1410,Lehigh Valley IronPigs,LHV,International League,International League North,3230,Coca-Cola Park
+2015,11,579,Guerreros de Oaxaca,OAX,Mexican League,Mexican League Sur,2951,Parque Lic. Eduardo Vasconcelos
+2015,11,451,Iowa Cubs,IOW,Pacific Coast League,Pacific Coast League American Northern,2844,Principal Park
+2015,11,259,Fresno Grizzlies,FRE,Pacific Coast League,Pacific Coast League Pacific Northern,2640,Chukchansi Park
+2015,11,2310,Reno Aces,RNO,Pacific Coast League,Pacific Coast League Pacific Northern,3789,Aces Ballpark
+2015,11,520,Pericos de Puebla,PUE,Mexican League,Mexican League Sur,2869,Estadio Hermanos Serdan
+2015,11,523,Piratas de Campeche,CAM,Mexican League,Mexican League Sur,2949,Parque Nelson Barrera Romellon
+2015,11,528,Rieleros de Aguascalientes,AGS,Mexican League,Mexican League Norte,2929,Estadio Alberto Romo Chavez
+2015,11,400,Las Vegas 51s,LV,Pacific Coast League,Pacific Coast League Pacific Southern,2503,Cashman Field
+2015,11,529,Tacoma Rainiers,TAC,Pacific Coast League,Pacific Coast League Pacific Northern,2745,Cheney Stadium
+2015,11,5010,Toros de Tijuana,TIJ,Mexican League,Mexican League Norte,2957,Estadio Gasmart
+2015,11,531,Scranton/Wilkes-Barre RailRiders,SWB,International League,International League North,2797,PNC Field
+2015,11,532,Diablos Rojos del Mexico,MEX,Mexican League,Mexican League Norte,4970,Estadio de Beisbol 'Fray Nano'
+2015,11,533,Pawtucket Red Sox,PAW,International League,International League North,2808,McCoy Stadium
+2015,11,342,Albuquerque Isotopes,ABQ,Pacific Coast League,Pacific Coast League Pacific Southern,2683,Isotopes Park
+2015,11,534,Rochester Red Wings,ROC,International League,International League North,2773,Frontier Field
+2015,11,536,Rojos del Aguila de Veracruz,VER,Mexican League,Mexican League Sur,2958,Parque Deportivo Universitario Beto Avila
+2015,11,4444,Delfines de Ciudad del Carmen,CDC,Mexican League,Mexican League Sur,4369,Estadio Resurgimiento
+2015,11,541,Omaha Storm Chasers,OMA,Pacific Coast League,Pacific Coast League American Northern,4271,Werner Park
+2015,11,416,Louisville Bats,LOU,International League,International League West,2724,Louisville Slugger Field
+2015,11,484,Indianapolis Indians,IND,International League,International League West,2858,Victory Field
+2015,11,102,Round Rock Express,RR,Pacific Coast League,Pacific Coast League American Southern,2528,Dell Diamond
+2015,11,422,Buffalo Bisons,BUF,International League,International League North,2756,Coca-Cola Field
+2015,11,551,Colorado Springs Sky Sox,COL,Pacific Coast League,Pacific Coast League American Northern,2846,Security Service Field
+2015,11,4904,El Paso Chihuahuas,ELP,Pacific Coast League,Pacific Coast League Pacific Southern,4669,Southwest University Park
+2015,11,552,Syracuse Chiefs,SYR,International League,International League North,2823,NBT Bank Stadium
+2015,11,105,Sacramento River Cats,SAC,Pacific Coast League,Pacific Coast League Pacific Northern,2529,Raley Field
+2015,11,234,Durham Bulls,DUR,International League,Triple-A East - Southeast Division,2541,Durham Bulls Athletic Park
+2015,11,235,Memphis Redbirds,MEM,Pacific Coast League,Pacific Coast League American Southern,2542,AutoZone Park
+2015,11,556,Nashville Sounds,NAS,Pacific Coast League,Pacific Coast League American Southern,4715,First Tennessee Park
+2015,11,494,Charlotte Knights,CLT,International League,Triple-A East - Southeast Division,4670,BB&T Ballpark
+2015,11,238,Oklahoma City Dodgers,OKC,Pacific Coast League,Pacific Coast League American Northern,2843,Chickasaw Bricktown Ballpark
+2015,11,431,Gwinnett Braves,GWN,International League,Triple-A East - Southeast Division,3810,Coolray Field
+2015,11,496,Leones de Yucatan,YUC,Mexican League,Mexican League Sur,2959,Parque Kukulkan
+2015,11,560,Acereros del Norte,MVA,Mexican League,Mexican League Norte,2950,Estadio Monclova
+2015,11,561,Salt Lake Bees,SL,Pacific Coast League,Pacific Coast League Pacific Southern,2772,Smith's Ballpark
+2015,11,562,Sultanes de Monterrey,MTY,Mexican League,Mexican League Norte,2701,Estadio de Beisbol Monterrey
+2015,11,434,Broncos de Tamaulipas,TAM,Mexican League,Mexican League Norte,3909,Estadio Adolfo Lopez Mateos
+2015,11,502,Saraperos de Saltillo,SLT,Mexican League,Mexican League Norte,2953,Parque Francisco I. Madero
+2015,11,568,Norfolk Tides,NOR,International League,Triple-A East - Southeast Division,2781,Harbor Park
+2015,11,569,Tigres de Quintana Roo,TIG,Mexican League,Mexican League Sur,3929,Estadio De Beisbol Beto Avila
+2015,11,442,Olmecas de Tabasco,TAB,Mexican League,Mexican League Sur,2955,Parque Centenario del 27 de Febrero
+2015,11,445,Columbus Clippers,COL,International League,International League West,3970,Huntington Park
+2015,11,447,Vaqueros de la Laguna,LAG,Mexican League,Mexican League Norte,2956,Estadio de la Revolucion
