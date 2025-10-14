@@ -1,8 +1,5 @@
 """
-MLB-StatsAPI Season Downloader - Monatliche CSV-Dateien
-Lädt Play-by-Play Daten für Regular Season (März-September)
-
-Nutzung: python script.py --year 2024 --output data/mlb_stats/
+We download play by play data. See README.md for more
 """
 
 import statsapi
@@ -22,9 +19,11 @@ SEASON_MONTHS = {
     8: 'august',
     9: 'september'
 }
-
+"""
+We download games month for month
+"""
 def get_month_games(year, month):
-    """Hole alle Regular Season Spiele eines Monats"""
+
     # Erster und letzter Tag des Monats
     first_day = datetime(year, month, 1)
     if month == 12:
@@ -37,13 +36,12 @@ def get_month_games(year, month):
     
     games = statsapi.schedule(start_date=start_date, end_date=end_date)
     
-    # Nur Regular Season (game_type='R') und abgeschlossen
     regular_season = [g for g in games if g.get('game_type') == 'R' and g['status'] == 'Final']
     
     return regular_season
 
 def extract_play_data(game_id, game_info):
-    """Extrahiert Play-by-Play Daten aus einem Spiel"""
+    """Play-by-Play data"""
     try:
         playbyplay = statsapi.get('game_playByPlay', {'gamePk': game_id})
         plays_data = []
@@ -116,18 +114,17 @@ def extract_play_data(game_id, game_info):
         return []
 
 def download_month(year, month, output_dir):
-    """Lädt alle Spiele eines Monats und speichert als CSV"""
+    """we download given month in given year and save monthly csv-file"""
     
     month_name = SEASON_MONTHS[month]
-    print(f"\n{'='*80}")
-    print(f"{month_name.upper()} {year}")
-    print(f"{'='*80}")
+    print(f"\n{'#'*50}")
+    print(f"{month_name}, {year}")
     
-    # Hole Spiele
+    # get games
     games = get_month_games(year, month)
     
     if not games:
-        print(f"Keine Regular Season Spiele im {month_name} {year}")
+        print(f"no regular season games in {month_name}")
         return
     
     print(f"Spiele gefunden: {len(games)}")
@@ -137,17 +134,17 @@ def download_month(year, month, output_dir):
     for i, game in enumerate(games, 1):
         game_id = game['game_id']
         
-        if i % 10 == 0 or i == 1:
-            print(f"  [{i}/{len(games)}] Game {game_id}: {game['away_name']} @ {game['home_name']}")
+        
+        print(f"  [{i}/{len(games)}] Game {game_id}: {game['away_name']} @ {game['home_name']}")
         
         plays = extract_play_data(game_id, game)
         all_plays.extend(plays)
         
-        # Rate limiting
+        # Rate limit so mlb stats doesn't reject our request
         if i % 20 == 0:
             time.sleep(1)
     
-    # Speichere als CSV
+    # Save as csv
     if all_plays:
         df = pd.DataFrame(all_plays)
         output_file = output_dir / f"mlb_stats_{year}_{month:02d}_{month_name}.csv"
@@ -160,7 +157,7 @@ def download_month(year, month, output_dir):
         print(f"Keine Daten für {month_name} {year}")
 
 def main():
-    parser = argparse.ArgumentParser(description='Download MLB-StatsAPI Season (monatlich)')
+    parser = argparse.ArgumentParser(description='Download MLB-StatsAPI Season (monthly)')
     parser.add_argument('--year', type=int, required=True, help='Jahr (z.B. 2024)')
     parser.add_argument('--output', type=str, required=True, help='Output-Ordner')
     
@@ -172,16 +169,15 @@ def main():
         print(f"Jahr muss zwischen 2008 und {current_year} sein")
         return
     
-    # Erstelle Output-Ordner
+    # create output dir
     output_dir = Path(args.output)
     output_dir.mkdir(parents=True, exist_ok=True)
     
-    print(f"\n{'='*80}")
-    print(f"MLB-STATSAPI SEASON DOWNLOADER - {args.year}")
-    print(f"{'='*80}")
-    print(f"Output: {output_dir}")
+    print(f"\n{'#'*50}")
+    print(f"download year - {args.year}")
+    print(f"\n{'#'*50}")
+    print(f"Output folder: {output_dir}")
     
-    # Lade jeden Monat einzeln
     start_time = time.time()
     
     for month in sorted(SEASON_MONTHS.keys()):
@@ -193,13 +189,10 @@ def main():
     csv_files = list(output_dir.glob(f"mlb_stats_{args.year}_*.csv"))
     total_size = sum(f.stat().st_size for f in csv_files) / 1024 / 1024
     
-    print(f"\n{'='*80}")
-    print(f"FERTIG")
-    print(f"{'='*80}")
-    print(f"Dateien erstellt: {len(csv_files)}")
-    print(f"Gesamtgröße: {total_size:.1f} MB")
-    print(f"Dauer: {elapsed/60:.1f} Minuten")
-    print(f"\nDateien:")
+    print(f"\n{'#'*50}")
+    print(f"DONE \n")
+    print(f"time: {elapsed/60:.1f} Minutes")
+    print(f"\n files:")
     for f in sorted(csv_files):
         print(f"  - {f.name}")
 

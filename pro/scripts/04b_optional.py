@@ -1,12 +1,4 @@
-"""
-Computes season-relative pop time metrics
-Adds league means and standardized differences
 
-Input: team_poptime_2018_2025.csv
-Output: team_poptime_2018_2025_relative.csv
-
-Usage: python 03b_relative_poptime_metrics.py --input data/analysis/intermediate/team_poptime_2018_2025.csv
-"""
 
 import pandas as pd
 import numpy as np
@@ -18,9 +10,9 @@ def compute_relative_metrics(input_file):
     Compute league means and relative pop time metrics
     """
     
-    print("=" * 80)
-    print("COMPUTING RELATIVE POP TIME METRICS")
-    print("=" * 80)
+    print("#########################")
+    print("relative pop time")
+
     
     # Load team data
     df = pd.read_csv(input_file)
@@ -107,7 +99,7 @@ def compute_relative_metrics(input_file):
     df['pop3b_percentile'] = df.groupby('season')['pop_time_3b_avg'].rank(pct=True) * 100
     
     # 4. Save
-    output_file = Path(input_file).parent / "team_poptime_2018_2025_relative.csv"
+    output_file = Path(input_file).parent / "04_b_team_poptime_2018_2025_relative.csv"
     df.to_csv(output_file, index=False)
     
     # 5. Summary

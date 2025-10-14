@@ -1,10 +1,5 @@
 """
-Computes team-level Pop Time aggregated from individual catchers
-Weighted by steal attempts for better accuracy
 
-Output: team_poptime_2018_2025.csv
-
-Usage: python 03_compute_team_poptime.py --data data/leaderboards --output data/analysis/intermediate
 """
 
 import pandas as pd
@@ -14,13 +9,11 @@ import argparse
 
 def compute_team_poptime(leaderboards_path, output_path):
     """
-    Aggregate catcher pop times to team-season level
-    Weight by attempts (pop_2b_sba_count) for accuracy
+    Aggregate catcher pop times to team level. Weighted!
     """
     
-    print("=" * 80)
-    print("COMPUTING TEAM-LEVEL POP TIME")
-    print("=" * 80)
+    print("#########################")
+    print("computing team level pop time")
     
     leaderboards_path = Path(leaderboards_path)
     all_teams = []
@@ -29,13 +22,12 @@ def compute_team_poptime(leaderboards_path, output_path):
         file = leaderboards_path / f"poptime_{year}.csv"
         
         if not file.exists():
-            print(f"\nWarning: Missing {file.name}")
+            print(f"\n  Missing {file.name}")
             continue
         
         print(f"\nProcessing {year}...")
         df = pd.read_csv(file)
         
-        # Check required columns
         required = ['team_id', 'pop_2b_sba', 'pop_2b_sba_count']
         missing = [col for col in required if col not in df.columns]
         if missing:
@@ -63,9 +55,9 @@ def compute_team_poptime(leaderboards_path, output_path):
                 print(f"  WARNING: {multi_team_count} catchers with multiple teams (mid-season trades)")
                 print(f"           Attempts are attributed to current team_id in data")
         
-        # Compute weighted average and std per team
+
         def safe_weighted_avg(group, value_col, weight_col):
-            """Attempts-weighted average with zero-weight protection"""
+            """zero-weight protection"""
             valid = (group[value_col].notna()) & (group[weight_col] > 0)
             if not valid.any() or group.loc[valid, weight_col].sum() == 0:
                 return np.nan
@@ -135,7 +127,7 @@ def compute_team_poptime(leaderboards_path, output_path):
     # Combine all years
     result = pd.concat(all_teams, ignore_index=True)
     
-    # Flag unreliable estimates in final data
+    #Flag unreliable estimates in final data
     result['low_reliability'] = (result['total_attempts_2b'] < 10).astype(int)
     
     # Sort
@@ -145,22 +137,21 @@ def compute_team_poptime(leaderboards_path, output_path):
     output_path = Path(output_path)
     output_path.mkdir(parents=True, exist_ok=True)
     
-    output_file = output_path / "team_poptime_2018_2025.csv"
+    output_file = output_path / "04_team_poptime_2018_2025.csv"
     result.to_csv(output_file, index=False)
     
     # Summary
-    print("\n" + "=" * 80)
-    print("SUMMARY")
-    print("=" * 80)
+    print("#########################")
+    print("\n")
     print(f"\nTotal team-seasons: {len(result):,}")
     print(f"Unique teams: {result['team_id'].nunique()}")
     print(f"Seasons: {result['season'].min()}-{result['season'].max()}")
     
-    # Check season coverage
+
     teams_per_season = result.groupby('season')['team_id'].nunique()
     print(f"\nTeams per season:")
     for season, count in teams_per_season.items():
-        flag = "" if count == 30 else " ⚠️"
+        flag = "" if count == 30 else " not good"
         print(f"  {season}: {count}{flag}")
     
     print(f"\nAvg catchers per team: {result['n_catchers'].mean():.1f}")
@@ -180,11 +171,9 @@ def compute_team_poptime(leaderboards_path, output_path):
     print("\nComplete")
 
 def main():
-    parser = argparse.ArgumentParser(description='Compute team-level pop time metrics')
-    parser.add_argument('--data', type=str, default='data/leaderboards',
-                       help='Path to leaderboards folder')
-    parser.add_argument('--output', type=str, default='data/analysis/intermediate',
-                       help='Output folder for intermediate files')
+    parser = argparse.ArgumentParser(description='Compute team-level pop time')
+    parser.add_argument('--data', type=str, required=True, default='./../data/analysed')
+    parser.add_argument('--output', type=str, default='data/analysis')
     
     args = parser.parse_args()
     

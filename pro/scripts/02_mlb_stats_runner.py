@@ -1,13 +1,5 @@
 """
-Downloads MLB runner event data with eventType fields
-Complements existing mlb_stats CSVs with runner_event_type information
-
-Creates monthly CSV files that can be joined with existing mlb_stats data via:
-- game_id
-- runner_id  
-- at_bat_index (inning, half_inning, outs, batter_id as composite key)
-
-Usage: python 10_download_runner_events.py --year 2023 --output data/mlb_runner_events
+purpose is to supplement data from frist script with runner information
 """
 
 import statsapi
@@ -17,10 +9,19 @@ import argparse
 from pathlib import Path
 import time
 
+SEASON_MONTHS = {
+    3: 'march',
+    4: 'april', 
+    5: 'may',
+    6: 'june',
+    7: 'july',
+    8: 'august',
+    9: 'september'
+}
+
 def download_runner_events_for_month(year, month):
     """
     Download all runner events for a specific month
-    Returns DataFrame with runner_event_type and movement details
     """
     
     # Determine date range for month
@@ -35,12 +36,12 @@ def download_runner_events_for_month(year, month):
     
     end_date = f"{end_year}-{end_month:02d}-01"
     
-    print(f"\n  Fetching schedule: {start_date} to {end_date}")
+    print(f"\n  getting date: {start_date} to {end_date}")
     
     schedule = statsapi.schedule(start_date=start_date, end_date=end_date)
     
     if len(schedule) == 0:
-        print(f"  No games found")
+        print(f"  no games!")
         return pd.DataFrame()
     
     print(f"  Found {len(schedule)} games")
@@ -51,8 +52,8 @@ def download_runner_events_for_month(year, month):
         game_id = game['game_id']
         game_date = game['game_date']
         
-        if i % 10 == 0:
-            print(f"    Processing game {i}/{len(schedule)}...")
+
+        print(f"games {i}/{len(schedule)}...")
         
         try:
             game_data = statsapi.get('game', {'gamePk': game_id})
@@ -66,14 +67,11 @@ def download_runner_events_for_month(year, month):
                 if 'runners' not in play:
                     continue
                 
-                # Extract at-bat context for joining
                 about = play.get('about', {})
                 inning = about.get('inning')
-                half_inning = about.get('halfInning', '').lower()  # top/bottom
-                
+                half_inning = about.get('halfInning', '').lower()  # top/bottom              
                 matchup = play.get('matchup', {})
-                batter_id = matchup.get('batter', {}).get('id')
-                
+                batter_id = matchup.get('batter', {}).get('id')                
                 count = play.get('count', {})
                 balls = count.get('balls')
                 strikes = count.get('strikes')
@@ -108,7 +106,7 @@ def download_runner_events_for_month(year, month):
                     
                     all_events.append(event_row)
             
-            # Rate limiting
+            # we sleep to get some time rest, so the API won't deny lots of requests 
             time.sleep(0.1)
             
         except Exception as e:
@@ -124,17 +122,14 @@ def download_runner_events_for_month(year, month):
     return df
 
 def main():
-    parser = argparse.ArgumentParser(description='Download MLB runner event data')
-    parser.add_argument('--year', type=int, required=True,
-                       help='Year to download (e.g., 2023)')
-    parser.add_argument('--output', type=str, default='data/mlb_runner_events',
-                       help='Output folder')
+    parser = argparse.ArgumentParser(description='Download runner event data')
+    parser.add_argument('--year', type=int, required=True)
+    parser.add_argument('--output', type=str, required=True)
     
     args = parser.parse_args()
     
-    print("=" * 80)
-    print(f"DOWNLOADING RUNNER EVENTS: {args.year}")
-    print("=" * 80)
+    print("#########################")
+    print(f"year: {args.year}")
     
     output_path = Path(args.output)
     year_folder = output_path / f"mlb_runner_events_{args.year}"
@@ -142,31 +137,29 @@ def main():
     
     print(f"\nOutput folder: {year_folder.absolute()}")
     
-    # MLB season typically runs March-October
-    months = range(3, 11)  # March to October
+    # marc to october
+    months = range(3, 11)  
     
     for month in months:
         month_name = datetime(args.year, month, 1).strftime('%B').lower()
-        print(f"\n{'='*80}")
-        print(f"MONTH: {month_name.upper()} {args.year}")
-        print(f"{'='*80}")
+        print("\n")
+        print(f"monat: {month_name.upper()} {args.year}")
         
         df = download_runner_events_for_month(args.year, month)
         
         if df.empty:
-            print(f"  No data for {month_name}")
+            print(f"  No date {month_name}")
             continue
         
         # Save
         output_file = year_folder / f"mlb_{args.year}_{month:02d}_{month_name}.csv"
         df.to_csv(output_file, index=False)
         
-        print(f"  Saved: {output_file.name}")
         print(f"  Size: {output_file.stat().st_size / 1024:.1f} KB")
     
-    print("\n" + "=" * 80)
+    print("\n" + "##################" )
     print("COMPLETE")
-    print("=" * 80)
+    print("\n")
     print(f"\nDownloaded runner events for {args.year}")
     print(f"Output: {year_folder.absolute()}")
     

@@ -1,8 +1,5 @@
 """
-Statcast Season Downloader - Monatliche CSV-Dateien
-Lädt Pitch-by-Pitch Daten für Regular Season (März-September)
-
-Nutzung: python script.py --year 2024 --output data/statcast/
+Statcast Season Downloader
 """
 
 import argparse
@@ -25,15 +22,14 @@ SEASON_MONTHS = {
 
 def download_month_statcast(year, month):
     """Lädt alle Statcast-Daten eines Monats"""
-    
-    # Erster und letzter Tag des Monats
+
     first_day = datetime(year, month, 1)
     if month == 12:
         last_day = datetime(year + 1, 1, 1) - timedelta(days=1)
     else:
         last_day = datetime(year, month + 1, 1) - timedelta(days=1)
     
-    # Download in 5-Tage-Chunks (API Limit)
+    # Download in 5 days chunks
     all_data = []
     current_date = first_day
     chunk_days = 5
@@ -60,7 +56,6 @@ def download_month_statcast(year, month):
             else:
                 print("keine Daten")
             
-            # Rate limiting
             time.sleep(2)
             
         except Exception as e:
@@ -68,7 +63,7 @@ def download_month_statcast(year, month):
         
         current_date = chunk_end + timedelta(days=1)
     
-    # Kombiniere alle Chunks
+    # combines chunks
     if all_data:
         df_month = pd.concat(all_data, ignore_index=True)
         return df_month
@@ -76,9 +71,7 @@ def download_month_statcast(year, month):
         return None
 
 def optimize_datatypes(df):
-    """Optimiert Datentypen für CSV-Export"""
     
-    # IDs als Integer
     id_cols = ['game_pk', 'pitcher', 'batter', 'fielder_2', 'fielder_3', 
                'fielder_4', 'fielder_5', 'fielder_6', 'fielder_7', 
                'fielder_8', 'fielder_9']
@@ -109,28 +102,26 @@ def optimize_datatypes(df):
     return df
 
 def download_and_save_month(year, month, output_dir):
-    """Lädt einen Monat und speichert als CSV"""
+    """loads one month"""
     
     month_name = SEASON_MONTHS[month]
     
-    print(f"\n{'='*80}")
+    print("#######################")
     print(f"{month_name.upper()} {year}")
-    print(f"{'='*80}")
+    print("\n")
     
-    # Download
+
     df = download_month_statcast(year, month)
     
     if df is None or len(df) == 0:
-        print(f"Keine Daten für {month_name} {year}")
+        print(f"no data {month_name} {year}")
         return
     
-    print(f"\nGesamt Pitches: {len(df):,}")
+    print(f"\n how many pitches: {len(df):,}")
     
-    # Optimiere Datentypen
     print("Optimiere Datentypen...")
     df = optimize_datatypes(df)
     
-    # Speichere als CSV
     output_file = output_dir / f"statcast_{year}_{month:02d}_{month_name}.csv"
     print(f"Speichere {output_file.name}...")
     df.to_csv(output_file, index=False, quoting=1, sep=',', encoding='utf-8-sig')
@@ -142,9 +133,9 @@ def download_and_save_month(year, month, output_dir):
     print(f"Spalten: {len(df.columns)}")
 
 def main():
-    parser = argparse.ArgumentParser(description='Download Statcast Season (monatlich)')
-    parser.add_argument('--year', type=int, required=True, help='Jahr (z.B. 2024)')
-    parser.add_argument('--output', type=str, required=True, help='Output-Ordner')
+    parser = argparse.ArgumentParser(description='Download Statcast Season)')
+    parser.add_argument('--year', type=int, required=True')
+    parser.add_argument('--output', type=str, required=True)
     
     args = parser.parse_args()
     
