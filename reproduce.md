@@ -45,8 +45,10 @@ game_pk	game_date	game_year	inning	inning_topbot	at_bat_number	pitch_number	ball
 no
 
 **output**
+`statcast_pitches_YYYY_MM.csv`
 
 **location**
-
+`/data/raw/mlb/statcast/`
 
 **example usage**
+`python .\01_download_statcast.py --output ./../data/raw/mlb/statcast/ --year 2018`
