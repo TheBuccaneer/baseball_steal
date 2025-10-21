@@ -3,6 +3,23 @@
 `pip install pybaseball pandas tqdm MLB-StatsAPI`
 
 
+# Manually downloaded
+downloaded from <https://baseballsavant.mlb.com/statcast_leaderboard>
+
+baserunning_run_value_YYYY.csv
+basestealing_running_game_YYYY.csv
+catcher_throwing_YYYY.csv
+custom_stats_YYYY.csv
+pitcher_running_game_YYYY.csv
+pitcher_running_game_2B_YYYY.csv
+pitch_tempo_YYYY.csv
+pitch_timer_infractions_batters_YYYY.csv
+pitch_timer_infractions_catchers_YYYY.csv
+pitch_timer_infractions_pitchers_YYYY.csv
+poptime_2018.csv
+sprint_speed_2018.csv
+
+
 
 # Scripts
 

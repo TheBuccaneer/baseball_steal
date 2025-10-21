@@ -1,0 +1,12 @@
+RETROSHEET NOTICE
+
+The information used here was obtained free of charge from and is
+copyrighted by Retrosheet. Interested parties may contact Retrosheet
+at www.retrosheet.org.
+
+This data is provided "as is" without any warranty of any kind.
+Retrosheet does not make any representations or warranties about the
+accuracy, completeness, timeliness, reliability, or suitability of
+this data for any particular purpose.
+
+Source: https://www.retrosheet.org/notice.txt

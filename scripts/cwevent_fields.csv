@@ -1,0 +1,162 @@
+source,group,field_number,header,description,url
+cwevent,standard,0,GAME_ID,Game ID,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,1,AWAY_TEAM_ID,Visiting team,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,2,INN_CT,Inning,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,3,BAT_HOME_ID,Batting team,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,4,OUTS_CT,Outs,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,5,BALLS_CT,Balls,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,6,STRIKES_CT,Strikes,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,7,PITCH_SEQ_TX,Pitch sequence,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,8,AWAY_SCORE_CT,Visitor score,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,9,HOME_SCORE_CT,Home score,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,10,BAT_ID,Batter,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,11,BAT_HAND_CD,Batter hand,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,12,RESP_BAT_ID,Result batter,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,13,RESP_BAT_HAND_CD,Result batter hand,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,14,PIT_ID,Pitcher,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,15,PIT_HAND_CD,Pitcher hand,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,16,RESP_PIT_ID,Result pitcher,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,17,RESP_PIT_HAND_CD,Result pitcher hand,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,18,POS2_FLD_ID,Catcher,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,19,POS3_FLD_ID,First baseman,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,20,POS4_FLD_ID,Second baseman,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,21,POS5_FLD_ID,Third baseman,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,22,POS6_FLD_ID,Shortstop,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,23,POS7_FLD_ID,Left fielder,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,24,POS8_FLD_ID,Center fielder,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,25,POS9_FLD_ID,Right fielder,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,26,BASE1_RUN_ID,Runner on first,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,27,BASE2_RUN_ID,Runner on second,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,28,BASE3_RUN_ID,Runner on third,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,29,EVENT_TX,Event text,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,30,LEADOFF_FL,Leadoff flag,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,31,PH_FL,Pinch-hit flag,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,32,BAT_FLD_CD,Defensive position,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,33,BAT_LINEUP_ID,Lineup position,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,34,EVENT_CD,Event type,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,35,BAT_EVENT_FL,Batter event flag,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,36,AB_FL,Official time at bat flag,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,37,H_CD,Hit value,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,38,SH_FL,Sacrifice hit flag,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,39,SF_FL,Sacrifice fly flag,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,40,EVENT_OUTS_CT,Outs on play,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,41,DP_FL,Double play flag,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,42,TP_FL,Triple play flag,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,43,RBI_CT,RBI on play,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,44,WP_FL,Wild pitch flag,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,45,PB_FL,Passed ball flag,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,46,FLD_CD,Fielded by,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,47,BATTEDBALL_CD,Batted ball type,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,48,BUNT_FL,Bunt flag,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,49,FOUL_FL,Foul flag,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,50,BATTEDBALL_LOC_TX,Hit location,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,51,ERR_CT,Number of errors,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,52,ERR1_FLD_CD,1st error player,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,53,ERR1_CD,1st error type,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,54,ERR2_FLD_CD,2nd error player,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,55,ERR2_CD,2nd error type,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,56,ERR3_FLD_CD,3rd error player,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,57,ERR3_CD,3rd error type,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,58,BAT_DEST_ID,Batter destination,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,59,RUN1_DEST_ID,Runner on first destination,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,60,RUN2_DEST_ID,Runner on second destination,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,61,RUN3_DEST_ID,Runner on third destination,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,62,BAT_PLAY_TX,Play on batter,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,63,RUN1_PLAY_TX,Play on runner on first,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,64,RUN2_PLAY_TX,Play on runner on second,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,65,RUN3_PLAY_TX,Play on runner on third,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,66,RUN1_SB_FL,Stolen base for runner on first,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,67,RUN2_SB_FL,Stolen base for runner on second,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,68,RUN3_SB_FL,Stolen base for runner on third,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,69,RUN1_CS_FL,Caught stealing for runner on first,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,70,RUN2_CS_FL,Caught stealing for runner on second,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,71,RUN3_CS_FL,Caught stealing for runner on third,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,72,RUN1_PK_FL,Pickoff of runner on first,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,73,RUN2_PK_FL,Pickoff of runner on second,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,74,RUN3_PK_FL,Pickoff of runner on third,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,75,RUN1_RESP_PIT_ID,Pitcher charged with runner on first,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,76,RUN2_RESP_PIT_ID,Pitcher charged with runner on second,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,77,RUN3_RESP_PIT_ID,Pitcher charged with runner on third,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,78,GAME_NEW_FL,New game flag,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,79,GAME_END_FL,End game flag,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,80,PR_RUN1_FL,Pinch-runner on first,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,81,PR_RUN2_FL,Pinch-runner on second,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,82,PR_RUN3_FL,Pinch-runner on third,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,83,REMOVED_FOR_PR_RUN1_ID,Runner removed for pinch-runner on first,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,84,REMOVED_FOR_PR_RUN2_ID,Runner removed for pinch-runner on second,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,85,REMOVED_FOR_PR_RUN3_ID,Runner removed for pinch-runner on third,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,86,REMOVED_FOR_PH_BAT_ID,Batter removed for pinch-hitter,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,87,REMOVED_FOR_PH_BAT_FLD_CD,Position of batter removed for pinch-hitter,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,88,PO1_FLD_CD,Fielder with first putout,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,89,PO2_FLD_CD,Fielder with second putout,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,90,PO3_FLD_CD,Fielder with third putout,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,91,ASS1_FLD_CD,Fielder with first assist,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,92,ASS2_FLD_CD,Fielder with second assist,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,93,ASS3_FLD_CD,Fielder with third assist,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,94,ASS4_FLD_CD,Fielder with fourth assist,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,95,ASS5_FLD_CD,Fielder with fifth assist,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,96,EVENT_ID,Event number,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,0,HOME_TEAM_ID,home team id,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,1,BAT_TEAM_ID,batting team id,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,2,FLD_TEAM_ID,fielding team id,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,3,BAT_LAST_ID,half inning (differs from batting team if home team bats first),https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,4,INN_NEW_FL,start of half inning flag,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,5,INN_END_FL,end of half inning flag,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,6,START_BAT_SCORE_CT,score for team on offense,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,7,START_FLD_SCORE_CT,score for team on defense,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,8,INN_RUNS_CT,runs scored in this half inning,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,9,GAME_PA_CT,number of plate appearances in game for team on offense,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,10,INN_PA_CT,number of plate appearances in inning for team on offense,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,11,PA_NEW_FL,start of plate appearance flag,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,12,PA_TRUNC_FL,truncated plate appearance flag,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,13,START_BASES_CD,base state at start of play,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,14,END_BASES_CD,base state at end of play,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,15,BAT_START_FL,batter is starter flag,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,16,RESP_BAT_START_FL,result batter is starter flag,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,17,BAT_ON_DECK_ID,ID of the batter on deck,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,18,BAT_IN_HOLD_ID,ID of the batter in the hold,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,19,PIT_START_FL,pitcher is starter flag,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,20,RESP_PIT_START_FL,result pitcher is starter flag,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,21,RUN1_FLD_CD,defensive position of runner on first,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,22,RUN1_LINEUP_CD,lineup position of runner on first,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,23,RUN1_ORIGIN_EVENT_ID,event number on which runner on first reached base,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,24,RUN2_FLD_CD,defensive position of runner on second,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,25,RUN2_LINEUP_CD,lineup position of runner on second,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,26,RUN2_ORIGIN_EVENT_ID,event number on which runner on second reached base,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,27,RUN3_FLD_CD,defensive position of runner on third,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,28,RUN3_LINEUP_CD,lineup position of runner on third,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,29,RUN3_ORIGIN_EVENT_ID,event number on which runner on third reached base,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,30,RUN1_RESP_CAT_ID,responsible catcher for runner on first,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,31,RUN2_RESP_CAT_ID,responsible catcher for runner on second,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,32,RUN3_RESP_CAT_ID,responsible catcher for runner on third,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,33,PA_BALL_CT,number of balls in plate appearance,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,34,PA_CALLED_BALL_CT,number of called balls in plate appearance,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,35,PA_INTENT_BALL_CT,number of intentional balls in plate appearance,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,36,PA_PITCHOUT_BALL_CT,number of pitchouts in plate appearance,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,37,PA_HITBATTER_BALL_CT,number of pitches hitting batter in plate appearance,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,38,PA_OTHER_BALL_CT,number of other balls in plate appearance,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,39,PA_STRIKE_CT,number of strikes in plate appearance,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,40,PA_CALLED_STRIKE_CT,number of called strikes in plate appearance,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,41,PA_SWINGMISS_STRIKE_CT,number of swinging strikes in plate appearance,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,42,PA_FOUL_STRIKE_CT,number of foul balls in plate appearance,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,43,PA_INPLAY_STRIKE_CT,number of balls in play in plate appearance,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,44,PA_OTHER_STRIKE_CT,number of other strikes in plate appearance,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,45,EVENT_RUNS_CT,number of runs on play,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,46,FLD_ID,id of player fielding batted ball,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,47,BASE2_FORCE_FL,force play at second flag,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,48,BASE3_FORCE_FL,force play at third flag,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,49,BASE4_FORCE_FL,force play at home flag,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,50,BAT_SAFE_ERR_FL,batter safe on error flag,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,51,BAT_FATE_ID,fate of batter (base ultimately advanced to),https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,52,RUN1_FATE_ID,fate of runner on first,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,53,RUN2_FATE_ID,fate of runner on second,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,54,RUN3_FATE_ID,fate of runner on third,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,55,FATE_RUNS_CT,runs scored in half inning after this event,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,56,ASS6_FLD_CD,fielder with sixth assist,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,57,ASS7_FLD_CD,fielder with seventh assist,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,58,ASS8_FLD_CD,fielder with eighth assist,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,59,ASS9_FLD_CD,fielder with ninth assist,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,60,ASS10_FLD_CD,fielder with tenth assist,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,61,UNKNOWN_OUT_EXC_FL,unknown fielding credit flag,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,62,UNCERTAIN_PLAY_EXC_FL,uncertain play flag,https://chadwick.readthedocs.io/en/latest/cwevent.html
+cwevent,standard,63,COUNT_TX,text of count as appears in event file,https://chadwick.readthedocs.io/en/latest/cwevent.html

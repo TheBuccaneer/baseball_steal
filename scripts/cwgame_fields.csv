@@ -1,0 +1,180 @@
+source,group,field_number,header,description,url
+cwgame,standard,0,GAME_ID,Game ID,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,1,GAME_DT,Date,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,2,GAME_CT,Game number,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,3,GAME_DY,Day of week,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,4,START_GAME_TM,Start time,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,5,DH_FL,DH used flag,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,6,DAYNIGHT_PARK_CD,Day/night flag,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,7,AWAY_TEAM_ID,Visiting team,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,8,HOME_TEAM_ID,Home team,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,9,PARK_ID,Game site,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,10,AWAY_START_PIT_ID,Visitors starting pitcher,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,11,HOME_START_PIT_ID,Home starting pitcher,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,12,BASE4_UMP_ID,Home plate umpire,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,13,BASE1_UMP_ID,First base umpire,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,14,BASE2_UMP_ID,Second base umpire,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,15,BASE3_UMP_ID,Third base umpire,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,16,LF_UMP_ID,Left field umpire,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,17,RF_UMP_ID,Right field umpire,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,18,ATTEND_PARK_CT,Attendance,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,19,SCORER_RECORD_ID,PS scorer,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,20,TRANSLATOR_RECORD_ID,Translator,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,21,INPUTTER_RECORD_ID,Inputter,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,22,INPUT_RECORD_TS,Input time,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,23,EDIT_RECORD_TS,Edit time,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,24,METHOD_RECORD_CD,How scored,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,25,PITCHES_RECORD_CD,Pitches entered,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,26,TEMP_PARK_CT,Temperature,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,27,WIND_DIRECTION_PARK_CD,Wind direction,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,28,WIND_SPEED_PARK_CT,Wind speed,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,29,FIELD_PARK_CD,Field condition,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,30,PRECIP_PARK_CD,Precipitation,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,31,SKY_PARK_CD,Sky,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,32,MINUTES_GAME_CT,Time of game,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,33,INN_CT,Number of innings,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,34,AWAY_SCORE_CT,Visitor final score,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,35,HOME_SCORE_CT,Home final score,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,36,AWAY_HITS_CT,Visitor hits,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,37,HOME_HITS_CT,Home hits,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,38,AWAY_ERR_CT,Visitor errors,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,39,HOME_ERR_CT,Home errors,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,40,AWAY_LOB_CT,Visitor left on base,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,41,HOME_LOB_CT,Home left on base,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,42,WIN_PIT_ID,Winning pitcher,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,43,LOSE_PIT_ID,Losing pitcher,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,44,SAVE_PIT_ID,Save,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,45,GWRBI_BAT_ID,Game-winning RBI,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,46,AWAY_LINEUP1_BAT_ID,Visitor batter 1,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,47,AWAY_LINEUP1_FLD_CD,Visitor batter 1 position,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,48,AWAY_LINEUP2_BAT_ID,Visitor batter 2,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,49,AWAY_LINEUP2_FLD_CD,Visitor batter 2 position,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,50,AWAY_LINEUP3_BAT_ID,Visitor batter 3,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,51,AWAY_LINEUP3_FLD_CD,Visitor batter 3 position,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,52,AWAY_LINEUP4_BAT_ID,Visitor batter 4,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,53,AWAY_LINEUP4_FLD_CD,Visitor batter 4 position,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,54,AWAY_LINEUP5_BAT_ID,Visitor batter 5,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,55,AWAY_LINEUP5_FLD_CD,Visitor batter 5 position,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,56,AWAY_LINEUP6_BAT_ID,Visitor batter 6,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,57,AWAY_LINEUP6_FLD_CD,Visitor batter 6 position,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,58,AWAY_LINEUP7_BAT_ID,Visitor batter 7,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,59,AWAY_LINEUP7_FLD_CD,Visitor batter 7 position,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,60,AWAY_LINEUP8_BAT_ID,Visitor batter 8,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,61,AWAY_LINEUP8_FLD_CD,Visitor batter 8 position,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,62,AWAY_LINEUP9_BAT_ID,Visitor batter 9,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,63,AWAY_LINEUP9_FLD_CD,Visitor batter 9 position,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,64,HOME_LINEUP1_BAT_ID,Home batter 1,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,65,HOME_LINEUP1_FLD_CD,Home batter 1 position,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,66,HOME_LINEUP2_BAT_ID,Home batter 2,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,67,HOME_LINEUP2_FLD_CD,Home batter 2 position,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,68,HOME_LINEUP3_BAT_ID,Home batter 3,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,69,HOME_LINEUP3_FLD_CD,Home batter 3 position,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,70,HOME_LINEUP4_BAT_ID,Home batter 4,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,71,HOME_LINEUP4_FLD_CD,Home batter 4 position,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,72,HOME_LINEUP5_BAT_ID,Home batter 5,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,73,HOME_LINEUP5_FLD_CD,Home batter 5 position,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,74,HOME_LINEUP6_BAT_ID,Home batter 6,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,75,HOME_LINEUP6_FLD_CD,Home batter 6 position,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,76,HOME_LINEUP7_BAT_ID,Home batter 7,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,77,HOME_LINEUP7_FLD_CD,Home batter 7 position,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,78,HOME_LINEUP8_BAT_ID,Home batter 8,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,79,HOME_LINEUP8_FLD_CD,Home batter 8 position,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,80,HOME_LINEUP9_BAT_ID,Home batter 9,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,81,HOME_LINEUP9_FLD_CD,Home batter 9 position,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,82,AWAY_FINISH_PIT_ID,Visitor finishing pitcher,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,83,HOME_FINISH_PIT_ID,Home finishing pitcher,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,0,AWAY_TEAM_LEAGUE_ID,visiting team league,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,1,HOME_TEAM_LEAGUE_ID,home team league,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,2,AWAY_TEAM_GAME_CT,visiting team game number,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,3,HOME_TEAM_GAME_CT,home team game number,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,4,OUTS_CT,length of game in outs,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,5,COMPLETION_TX,information on completion of game,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,6,FORFEIT_TX,information on forfeit of game,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,7,PROTEST_TX,information on protest of game,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,8,AWAY_LINE_TX,visiting team linescore,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,9,HOME_LINE_TX,home team linescore,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,10,AWAY_AB_CT,visiting team AB,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,11,AWAY_2B_CT,visiting team 2B,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,12,AWAY_3B_CT,visiting team 3B,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,13,AWAY_HR_CT,visiting team HR,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,14,AWAY_BI_CT,visiting team RBI,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,15,AWAY_SH_CT,visiting team SH,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,16,AWAY_SF_CT,visiting team SF,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,17,AWAY_HP_CT,visiting team HP,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,18,AWAY_BB_CT,visiting team BB,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,19,AWAY_IBB_CT,visiting team IBB,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,20,AWAY_SO_CT,visiting team SO,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,21,AWAY_SB_CT,visiting team SB,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,22,AWAY_CS_CT,visiting team CS,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,23,AWAY_GDP_CT,visiting team GDP,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,24,AWAY_XI_CT,visiting team reach on interference,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,25,AWAY_PITCHER_CT,number of pitchers used by visiting team,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,26,AWAY_ER_CT,visiting team individual ER allowed,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,27,AWAY_TER_CT,visiting team team ER allowed,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,28,AWAY_WP_CT,visiting team WP,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,29,AWAY_BK_CT,visiting team BK,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,30,AWAY_PO_CT,visiting team PO,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,31,AWAY_A_CT,visiting team A,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,32,AWAY_PB_CT,visiting team PB,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,33,AWAY_DP_CT,visiting team DP,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,34,AWAY_TP_CT,visiting team TP,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,35,HOME_AB_CT,home team AB,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,36,HOME_2B_CT,home team 2B,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,37,HOME_3B_CT,home team 3B,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,38,HOME_HR_CT,home team HR,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,39,HOME_RBI_CT,home team RBI,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,40,HOME_SH_CT,home team SH,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,41,HOME_SF_CT,home team SF,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,42,HOME_HP_CT,home team HP,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,43,HOME_BB_CT,home team BB,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,44,HOME_IBB_CT,home team IBB,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,45,HOME_SO_CT,home team SO,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,46,HOME_SB_CT,home team SB,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,47,HOME_CS_CT,home team CS,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,48,HOME_GDP_CT,home team GDP,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,49,HOME_XI_CT,home team reach on interference,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,50,HOME_PITCHER_CT,number of pitchers used by home team,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,51,HOME_ER_CT,home team individual ER allowed,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,52,HOME_TER_CT,home team team ER allowed,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,53,HOME_WP_CT,home team WP,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,54,HOME_BK_CT,home team BK,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,55,HOME_PO_CT,home team PO,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,56,HOME_A_CT,home team A,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,57,HOME_PB_CT,home team PB,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,58,HOME_DP_CT,home team DP,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,59,HOME_TP_CT,home team TP,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,60,UMP_HOME_NAME_TX,home plate umpire name,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,61,UMP_1B_NAME_TX,first base umpire name,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,62,UMP_2B_NAME_TX,second base umpire name,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,63,UMP_3B_NAME_TX,third base umpire name,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,64,UMP_LF_NAME_TX,left field umpire name,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,65,UMP_RF_NAME_TX,right field umpire name,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,66,AWAY_MANAGER_ID,visitors manager ID,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,67,AWAY_MANAGER_NAME_TX,visitors manager name,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,68,HOME_MANAGER_ID,home manager ID,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,69,HOME_MANAGER_NAME_TX,home manager name,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,70,WIN_PIT_NAME_TX,winning pitcher name,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,71,LOSE_PIT_NAME_TX,losing pitcher name,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,72,SAVE_PIT_NAME_TX,save pitcher name,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,73,GOAHEAD_RBI_ID,batter with goahead RBI ID,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,74,GOAHEAD_RBI_NAME_TX,batter with goahead RBI,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,75,AWAY_LINEUP1_BAT_NAME_TX,visitor batter 1 name,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,76,AWAY_LINEUP2_BAT_NAME_TX,visitor batter 2 name,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,77,AWAY_LINEUP3_BAT_NAME_TX,visitor batter 3 name,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,78,AWAY_LINEUP4_BAT_NAME_TX,visitor batter 4 name,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,79,AWAY_LINEUP5_BAT_NAME_TX,visitor batter 5 name,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,80,AWAY_LINEUP6_BAT_NAME_TX,visitor batter 6 name,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,81,AWAY_LINEUP7_BAT_NAME_TX,visitor batter 7 name,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,82,AWAY_LINEUP8_BAT_NAME_TX,visitor batter 8 name,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,83,AWAY_LINEUP9_BAT_NAME_TX,visitor batter 9 name,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,84,HOME_LINEUP1_BAT_NAME_TX,home batter 1 name,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,85,HOME_LINEUP2_BAT_NAME_TX,home batter 2 name,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,86,HOME_LINEUP3_BAT_NAME_TX,home batter 3 name,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,87,HOME_LINEUP4_BAT_NAME_TX,home batter 4 name,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,88,HOME_LINEUP5_BAT_NAME_TX,home batter 5 name,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,89,HOME_LINEUP6_BAT_NAME_TX,home batter 6 name,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,90,HOME_LINEUP7_BAT_NAME_TX,home batter 7 name,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,91,HOME_LINEUP8_BAT_NAME_TX,home batter 8 name,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,92,HOME_LINEUP9_BAT_NAME_TX,home batter 9 name,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,93,ADD_INFO_TX,additional information,https://chadwick.sourceforge.net/doc/cwgame.html
+cwgame,standard,94,ACQ_INFO_TX,acquisition information,https://chadwick.sourceforge.net/doc/cwgame.html
