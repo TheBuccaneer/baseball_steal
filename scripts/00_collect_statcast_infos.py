@@ -15,7 +15,6 @@ cache.enable()
 
 
 def get_field_descriptions():
-    """Vollständiges Dictionary aller Statcast-Felder mit Beschreibungen."""
     return {
         # Pitch Identifiers
         'pitch_type': 'Pitch type code (FF=4-seam FB, SI=Sinker, FC=Cutter, SL=Slider, CU=Curve, CH=Change, FS=Splitter)',

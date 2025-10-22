@@ -1,7 +1,0 @@
-endpoint,function,description,parameters,returns,useful_for
-schedule,statsapi.schedule(),Get game schedule for date range,"start_date, end_date, team, opponent, sportId","List of games with game_pk, game_type, teams, scores","Finding game IDs, filtering by game_type (R/S/P)"
-game,"statsapi.get(""game"", {""gamePk"": gamePk})",Get detailed game data,gamePk,"Complete game data including plays, at-bats, runners",Detailed play-by-play analysis
-game_pace,statsapi.game_pace(),Get game pace metrics by year,season,"Average game length, pace metrics","Tempo analysis, rule change impact"
-people,"statsapi.get(""people"", {""personIds"": ids})",Get player biographical data,personIds,"Player names, positions, teams",Player ID to name mapping
-teams,"statsapi.get(""teams"", {""sportId"": 1})",Get team information,"sportId, season","Team IDs, names, abbreviations",Team lookups
-stats,statsapi.player_stats(),Get player statistics,"personId, type, season",Batting/pitching statistics,Player performance metrics

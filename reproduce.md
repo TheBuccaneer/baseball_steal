@@ -1,6 +1,6 @@
 # Python (packages)
 `python --version Python 3.13.9`
-`pip install pybaseball pandas tqdm MLB-StatsAPI`
+`pip install pybaseball pandas tqdm MLB-StatsAPI requests urllib3`
 
 
 # Manually downloaded
@@ -36,6 +36,36 @@ no
 
 **output**
 `00_statcast_columns.csv`
+
+**location**
+`/data/raw/mlb/statcast/`
+
+**example usage**
+`python 00_collect_statcast_infos --output ./../data/raw/mlb/statcast/`
+
+
+## 00b_collect_more_infos.py
+
+**purpose**
+Retrosheet/Chadwick/MLB StatsAPI Data Availability Checker
+
+**arguments**
+--output (required) - outputpath
+--include-eventfile-notes (optional) - if set, we get additional eventfiles
+--check-mlb-api (optional) - add mlb api fields with the script
+--mlb-start-year (optional Default: 2018) - set start year
+--mlb-end-year (optional Default: 2025) - set end year
+
+**input files**
+no
+
+**output**
+`cwevent_fields.csv`
+`cwgame_fields.csv`
+`mlb_statsapi_availability.csv`
+`mlb_statsapi_endpoints.csv`
+`retrosheet_headers_catalog.csv`
+
 
 **location**
 `/data/raw/mlb/statcast/`

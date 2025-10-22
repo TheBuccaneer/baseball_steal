@@ -1,9 +1,0 @@
-year,source,regular_season_games,spring_training_games,postseason_games,total_games,available,checked_at
-2018,mlb_statsapi,2487,488,33,3024,True,2025-10-21T16:24:37.345110+00:00
-2019,mlb_statsapi,2472,483,38,3010,True,2025-10-21T16:25:23.344653+00:00
-2020,mlb_statsapi,973,344,54,1375,True,2025-10-21T16:25:41.374370+00:00
-2021,mlb_statsapi,0,0,0,0,False,2025-10-21T16:25:57.624769+00:00
-2022,mlb_statsapi,0,0,0,0,False,2025-10-21T16:26:13.434686+00:00
-2023,mlb_statsapi,2476,467,41,3009,True,2025-10-21T16:26:44.110780+00:00
-2024,mlb_statsapi,2469,472,43,2998,True,2025-10-21T16:27:06.126494+00:00
-2025,mlb_statsapi,0,0,0,0,False,2025-10-21T16:27:37.886283+00:00
