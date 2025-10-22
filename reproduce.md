@@ -76,7 +76,7 @@ no
 
 ## 01_download_statcast.py
 
-**purpse**
+**purpose**
 downloads data on pitch level. with columns:
 game_pk	game_date	game_year	inning	inning_topbot	at_bat_number	pitch_number	balls	strikes	outs_when_up	home_team	away_team	batter	pitcher	on_1b	on_2b	on_3b	fielder_2	fielder_3	fielder_4	fielder_5	fielder_6	type	events	description	des	home_score	away_score	bat_score	fld_score	delta_run_exp	delta_home_win_exp	game_type	pitch_name	release_speed	stand	p_throws
 
@@ -99,3 +99,32 @@ no
 
 **example usage**
 `python .\01_download_statcast.py --output ./../data/raw/mlb/statcast/ --year 2018`
+
+
+
+
+## 02_statsapi_pbp_monthly
+
+**purpose**
+downloads additional data for runner movement purposes. Data will later be merged with other data. We use mlb stat api, because season 2025 is already included.
+game_pk	game_date	inning	inning_topbot	at_bat_index	pitch_in_pa	balls	strikes	outs	home_team_id	away_team_id	batter_id	pitcher_id	event_type	event	play_desc	is_pa_last	RUN1_SB_FL	RUN2_SB_FL	RUN3_SB_FL	RUN1_CS_FL	RUN2_CS_FL	RUN3_CS_FL	RUN1_PK_FL	RUN2_PK_FL	RUN3_PK_FL	runner_id	start_base	end_base	is_out	out_number	runner_event	runner_event_type	movement_reason	is_scoring_event	rbi	earned	catcher_id
+
+**arguments**
+
+--output (required) - outputpath
+--year (required) - outputyear
+--sleep-seconds (optional - Default: 1.5) - 'Sleep duration between API requests
+--retry (optional - Default: 1.5) - Number of retry attempts for failed requests 
+--test-mode (optional) - downloads test data of month of april
+
+**input files**
+no
+
+**output**
+`pbp_YYYY_MM.csv`
+
+**location**
+`/data/raw/mlb/mlb_stats/`
+
+**example usage**
+`python .\02_statsapi_pbp_monthly.py --output ./../data/raw/mlb/statcast/ --year 2018`
