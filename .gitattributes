@@ -21,4 +21,5 @@
 /data/raw/retro/2024/retrosheet_events/TEAM2024 filter=lfs diff=lfs merge=lfs -text
 *.txt filter=lfs diff=lfs merge=lfs -text
 *.py filter=lfs diff=lfs merge=lfs -text
+*.md filter=lfs diff=lfs merge=lfs -text
 *plays.csv filter=lfs diff=lfs merge=lfs -text
